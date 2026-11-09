@@ -1,6 +1,6 @@
 import { useId } from 'react'
 import { getFinish } from '../../data/finishes'
-import { RAMP_OFFSETS, rrect, safeId } from './geometry'
+import { RAMP_OFFSETS, RIM_A, RIM_B, rrect, safeId } from './geometry'
 
 const VB = '0 0 320 320'
 const DARK_CAP = getFinish('midnight').cap
@@ -27,6 +27,16 @@ function Ramp({ id, colors, vertical = false }) {
 function CommonDefs({ id, f }) {
   return (
     <>
+      <linearGradient id={id('rimA')} x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0" stopColor={RIM_A} stopOpacity="0" />
+        <stop offset="0.3" stopColor={RIM_A} stopOpacity="0.9" />
+        <stop offset="1" stopColor={RIM_A} stopOpacity="0.2" />
+      </linearGradient>
+      <linearGradient id={id('rimB')} x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0" stopColor={RIM_B} stopOpacity="0" />
+        <stop offset="0.3" stopColor={RIM_B} stopOpacity="0.9" />
+        <stop offset="1" stopColor={RIM_B} stopOpacity="0.2" />
+      </linearGradient>
       <linearGradient id={id('falloff')} x1="0" x2="0" y1="0" y2="1">
         <stop offset="0" stopColor="#fff" stopOpacity="0.06" />
         <stop offset="0.4" stopColor="#fff" stopOpacity="0" />
@@ -71,7 +81,7 @@ function svgProps(className, style, title) {
 }
 
 /* ── Smart cap ─────────────────────────────────────────────── */
-export function CapVisual({ finish = 'midnight', className, style, title }) {
+export function CapVisual({ finish = 'midnight', live = false, className, style, title }) {
   const { id, url } = useIds()
   const f = getFinish(finish)
   const side = 'M74,112 L74,214 A86,22 0 0 0 246,214 L246,112 Z'
@@ -116,10 +126,12 @@ export function CapVisual({ finish = 'midnight', className, style, title }) {
         ))}
         <rect x="74" y="100" width="172" height="150" fill={url('falloff')} />
         <rect x="104" y="116" width="14" height="110" rx="7" fill={url('spec')} filter={url('soft')} />
+        <rect x="76" y="112" width="8" height="120" fill={url('rimA')} filter={url('soft')} opacity="0.8" />
+        <rect x="235" y="112" width="9" height="120" fill={url('rimB')} filter={url('soft')} opacity="0.8" />
       </g>
 
       {/* Glow ring */}
-      <path d="M74,212 A86,22 0 0 0 246,212" fill="none" stroke={f.led} strokeWidth="9" filter={url('bloom')} className="animate-glow" />
+      <path d="M74,212 A86,22 0 0 0 246,212" fill="none" stroke={f.led} strokeWidth="9" filter={url('bloom')} className={live ? 'animate-glow' : undefined} />
       <path d="M74,212 A86,22 0 0 0 246,212" fill="none" stroke={f.led} strokeWidth="3" />
       <path d="M110,229 A86,22 0 0 0 210,229" fill="none" stroke="#fff" strokeOpacity="0.7" strokeWidth="1" />
 
@@ -127,14 +139,14 @@ export function CapVisual({ finish = 'midnight', className, style, title }) {
       <ellipse cx="160" cy="112" rx="86" ry="22" fill={url('top')} />
       <ellipse cx="160" cy="112" rx="86" ry="22" fill="none" stroke="#fff" strokeOpacity="0.22" />
       <ellipse cx="160" cy="113" rx="54" ry="13.5" fill="#000" fillOpacity="0.25" stroke="#fff" strokeOpacity="0.18" />
-      <ellipse cx="160" cy="113" rx="9" ry="3" fill={f.led} opacity="0.7" filter={url('bloom')} className="animate-glow" />
+      <ellipse cx="160" cy="113" rx="9" ry="3" fill={f.led} opacity="0.7" filter={url('bloom')} className={live ? 'animate-glow' : undefined} />
       <ellipse cx="160" cy="113" rx="3.6" ry="1.4" fill={f.led} />
     </svg>
   )
 }
 
 /* ── Charging dock ─────────────────────────────────────────── */
-export function DockVisual({ finish = 'midnight', className, style, title }) {
+export function DockVisual({ finish = 'midnight', live = false, className, style, title }) {
   const { id, url } = useIds()
   const f = getFinish(finish)
   const side = 'M48,176 L48,202 A112,30 0 0 0 272,202 L272,176 Z'
@@ -165,6 +177,8 @@ export function DockVisual({ finish = 'midnight', className, style, title }) {
       <path d={side} fill={url('side')} />
       <g clipPath={url('sideClip')}>
         <rect x="48" y="170" width="224" height="70" fill={url('falloff')} />
+        <rect x="50" y="172" width="12" height="44" fill={url('rimA')} filter={url('soft')} opacity="0.8" />
+        <rect x="258" y="172" width="12" height="44" fill={url('rimB')} filter={url('soft')} opacity="0.8" />
       </g>
       <ellipse cx="160" cy="226" rx="6" ry="2" fill={f.led} opacity="0.9" filter={url('soft')} />
 
@@ -172,7 +186,7 @@ export function DockVisual({ finish = 'midnight', className, style, title }) {
       <ellipse cx="160" cy="176" rx="112" ry="30" fill={url('top')} />
       <path d="M48,176 A112,30 0 0 0 272,176" fill="none" stroke="#fff" strokeOpacity="0.28" strokeWidth="1.2" />
       <ellipse cx="160" cy="176" rx="76" ry="20" fill="#03050c" fillOpacity="0.88" stroke="#fff" strokeOpacity="0.08" />
-      <ellipse cx="160" cy="176" rx="64" ry="16.8" fill="none" stroke={f.led} strokeWidth="7" filter={url('bloom')} className="animate-glow" />
+      <ellipse cx="160" cy="176" rx="64" ry="16.8" fill="none" stroke={f.led} strokeWidth="7" filter={url('bloom')} className={live ? 'animate-glow' : undefined} />
       <ellipse cx="160" cy="176" rx="64" ry="16.8" fill="none" stroke={f.led} strokeWidth="2.2" />
       <ellipse cx="160" cy="176" rx="4" ry="1.5" fill={f.led} />
     </svg>

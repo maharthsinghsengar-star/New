@@ -29,7 +29,7 @@ export function Toast() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.96 }}
             transition={{ duration: 0.45, ease: EASE }}
-            className="pointer-events-auto flex w-full max-w-md items-center gap-3 rounded-2xl border border-white/10 bg-ink-900/90 p-2.5 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9)] backdrop-blur-xl"
+            className="glass-strong pointer-events-auto flex w-full max-w-md items-center gap-3 rounded-2xl border p-2.5"
           >
             <div className="relative size-14 shrink-0 overflow-hidden rounded-xl">
               <Stage accent={getFinish(toast.finish).led} spotlight={false}>

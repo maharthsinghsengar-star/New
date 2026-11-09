@@ -1,8 +1,9 @@
 # AQUORA — Hydration, Reimagined
 
 A premium, futuristic e-commerce website for **AQUORA**, an original smart-hydration brand.
-Dark cinematic design, electric-blue → purple gradients with ember-orange accents, smooth
-scroll animations and a fully working shopping experience.
+Dark cinematic design with 3D-style product renders, animated electric-blue and purple studio
+lighting, glassmorphism surfaces, scroll-driven storytelling and a fully working shopping
+experience — designed for iPhone first.
 
 Built with **React 19 · Vite · Tailwind CSS v4 · Framer Motion · Lucide icons**.
 
@@ -12,10 +13,12 @@ Built with **React 19 · Vite · Tailwind CSS v4 · Framer Motion · Lucide icon
 
 | Section | Highlights |
 | --- | --- |
-| **Navigation** | Glass navbar, active-section indicator, scroll progress bar, full-screen mobile menu, live cart count |
-| **Hero** | "Hydration, Reimagined." headline reveal, animated aurora background, floating bottle with mouse parallax, live data chips |
+| **Intro** | Elegant preloader (waits for fonts) that lifts away with a curtain reveal into the hero |
+| **Navigation** | Floating glass bar that tucks away while scrolling on iPhone, active-section pill, scroll progress line, animated menu icon, full-screen glass mobile menu with featured product |
+| **Hero** | "Hydration, Reimagined." headline reveal, light beams, 3D bottle whose reflections follow the pointer (or gently sway on touch screens), live data chips |
+| **Scroll story** | Pinned cinematic section — scrolling moves the bottle through Sense → Read → Glow while the lighting shifts from blue to purple to amber |
 | **About** | Brand story, design philosophy pillars, key numbers |
-| **Shop** | 8 products, category filters, sorting, colour swatches, quick-view modal, add to cart |
+| **Shop** | 8 products, glass filter bar, sorting, interactive 3D-tilt cards with glare, glow borders and colour previews, quick-view sheet, add to cart |
 | **Product showcase** | Model switcher (Pulse / Flux / Halo Ti), interactive hotspots, finish picker, technical specifications |
 | **Features** | Animated hydration tracking, interactive temperature monitor, materials cross-section, design preview |
 | **Footer** | Newsletter with validation, shop/explore/support links, support & legal dialogs, social icons |
@@ -24,8 +27,9 @@ Built with **React 19 · Vite · Tailwind CSS v4 · Framer Motion · Lucide icon
 free-shipping progress, demo checkout with order confirmation, product filtering & sorting,
 newsletter validation, smooth scrolling, keyboard-accessible dialogs, and reduced-motion support.
 
-> All product visuals are original vector "studio renders" drawn in code
+> All product visuals are original 3D-style vector "studio renders" drawn in code
 > (`src/components/visuals`), so there are no image files to break or license.
+> Animations respect the iPhone "Reduce Motion" setting.
 
 ---
 

@@ -34,13 +34,14 @@ function FeatureCard({ className, children }) {
     <Reveal className={cn('h-full', className)}>
       <article
         onPointerMove={onPointerMove}
-        className="group relative h-full overflow-hidden rounded-[2rem] border border-white/[0.07] bg-linear-to-b from-white/[0.045] to-white/[0.01] p-6 transition-colors duration-500 hover:border-white/[0.14] sm:p-8"
+        className="glass-card glow-border group relative h-full overflow-hidden rounded-[2rem] p-6 transition-colors duration-500 [--glow-opacity:0] hover:[--glow-opacity:1] sm:p-8"
       >
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
           style={{
-            background: 'radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(74,168,255,0.1), transparent 60%)',
+            background:
+              'radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(74,168,255,0.12), rgba(139,92,246,0.05) 40%, transparent 65%)',
           }}
         />
         <div className="relative h-full">{children}</div>
@@ -61,9 +62,9 @@ function CardHeader({ icon: Icon, kicker, title, text, accent = 'electric' }) {
         >
           <Icon className="size-5" />
         </span>
-        <span className="text-xs font-medium uppercase tracking-[0.2em] text-white/45">{kicker}</span>
+        <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/45">{kicker}</span>
       </div>
-      <h3 className="mt-6 font-display text-2xl font-semibold tracking-tight sm:text-[1.75rem]">{title}</h3>
+      <h3 className="mt-6 font-display text-title font-semibold">{title}</h3>
       <p className="mt-3 max-w-md text-sm leading-relaxed text-white/60 sm:text-base">{text}</p>
     </div>
   )
@@ -443,6 +444,7 @@ export function Features() {
       <div className="shell">
         <SectionHeading
           eyebrow="Features"
+          index="04"
           title="Smarter with every sip."
           description="Precise sensing, real-time temperature, honest materials and a design you’ll want to carry everywhere — perfected in one object."
           titleId="features-title"
@@ -458,7 +460,7 @@ export function Features() {
         <div className="mt-4 grid grid-cols-2 gap-4 lg:grid-cols-4">
           {TILES.map(({ icon: Icon, title, text }, i) => (
             <Reveal key={title} delay={i * 0.06} className="h-full">
-              <div className="h-full rounded-[1.5rem] border border-white/[0.07] bg-white/[0.02] p-5 transition duration-500 hover:-translate-y-1 hover:border-white/15 sm:p-6">
+              <div className="glass-card glow-border h-full rounded-[1.5rem] p-5 transition duration-500 [--glow-opacity:0] hover:-translate-y-1 hover:[--glow-opacity:1] sm:p-6">
                 <Icon className="size-5 text-electric-300" aria-hidden="true" />
                 <h3 className="mt-4 font-display font-semibold tracking-tight">{title}</h3>
                 <p className="mt-1.5 text-sm leading-relaxed text-white/55">{text}</p>

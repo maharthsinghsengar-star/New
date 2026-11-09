@@ -39,17 +39,19 @@ export function Shop() {
       <div className="shell">
         <SectionHeading
           eyebrow="The collection"
+          index="02"
           title="Choose your ritual."
           description="Smart bottles, thermal flagships and the accessories that complete them. Free carbon-neutral shipping on every order over $150."
           titleId="shop-title"
         />
 
         <Reveal>
-          <div className="mt-12 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div className="mt-12 flex flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-4">
+            <div className="glass-card overflow-hidden rounded-full p-1">
             <div
               role="group"
               aria-label="Filter products by category"
-              className="no-scrollbar -mx-5 flex gap-2 overflow-x-auto px-5 pb-1 sm:mx-0 sm:px-0"
+              className="no-scrollbar flex gap-1 overflow-x-auto"
             >
               {CATEGORIES.map((c) => {
                 const active = category === c.id
@@ -60,37 +62,38 @@ export function Shop() {
                     aria-pressed={active}
                     onClick={() => setCategory(c.id)}
                     className={cn(
-                      'relative inline-flex h-10 shrink-0 items-center gap-2 rounded-full border px-4 text-sm transition-colors duration-300',
-                      active ? 'border-transparent text-white' : 'border-white/10 text-white/60 hover:border-white/25 hover:text-white',
+                      'relative inline-flex h-10 shrink-0 items-center gap-2 rounded-full px-4 text-sm transition-colors duration-300',
+                      active ? 'text-white' : 'text-white/55 hover:bg-white/[0.05] hover:text-white',
                     )}
                   >
                     {active && (
                       <motion.span
                         layoutId="filter-pill"
-                        className="absolute inset-0 rounded-full bg-[linear-gradient(110deg,rgba(43,127,255,0.9),rgba(139,92,246,0.9))] shadow-[0_8px_30px_-8px_rgba(43,127,255,0.8)]"
+                        className="absolute inset-0 rounded-full bg-[linear-gradient(110deg,rgba(43,127,255,0.95),rgba(139,92,246,0.95))] shadow-[inset_0_1px_0_rgba(255,255,255,0.3),0_8px_30px_-8px_rgba(43,127,255,0.8)]"
                         transition={{ type: 'spring', stiffness: 380, damping: 32 }}
                       />
                     )}
                     <span className="relative">{c.label}</span>
-                    <span className={cn('relative text-xs tabular-nums', active ? 'text-white/80' : 'text-white/35')}>
+                    <span className={cn('relative font-mono text-[10px] tabular-nums', active ? 'text-white/85' : 'text-white/35')}>
                       {COUNTS[c.id]}
                     </span>
                   </button>
                 )
               })}
             </div>
+            </div>
 
-            <div className="flex items-center justify-between gap-4">
-              <p className="text-sm text-white/45" aria-live="polite">
+            <div className="flex items-center justify-between gap-4 pl-2 md:pl-0">
+              <p className="shrink-0 font-mono text-[11px] uppercase tracking-[0.14em] text-white/45" aria-live="polite">
                 {products.length} {products.length === 1 ? 'product' : 'products'}
               </p>
-              <label className="relative inline-flex h-10 items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] pl-4 pr-9 text-sm text-white/80 transition focus-within:border-electric-400/60 hover:border-white/25">
+              <label className="glass-card relative inline-flex h-12 min-w-0 items-center gap-2 rounded-full pl-4 pr-9 text-sm text-white/80 transition focus-within:border-electric-400/60 hover:border-white/25">
                 <SlidersHorizontal className="size-4 text-white/50" aria-hidden="true" />
                 <span className="sr-only">Sort products</span>
                 <select
                   value={sort}
                   onChange={(event) => setSort(event.target.value)}
-                  className="appearance-none bg-transparent pr-1 text-white outline-none focus-visible:outline-none"
+                  className="min-w-0 appearance-none truncate bg-transparent pr-1 text-white outline-none focus-visible:outline-none"
                 >
                   {SORT_OPTIONS.map((o) => (
                     <option key={o.id} value={o.id} className="bg-ink-900 text-white">

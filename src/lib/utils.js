@@ -6,10 +6,15 @@ import { extendTailwindMerge } from 'tailwind-merge'
 // as their own groups so they are never merged away.
 const twMerge = extendTailwindMerge({
   extend: {
+    // Custom fluid type scale from @theme in index.css (text-hero, text-display…)
+    theme: { text: ['hero', 'display', 'title', 'lead', 'label'] },
     classGroups: {
-      'text-fx': ['text-gradient', 'text-gradient-cool', 'text-gradient-silver', 'text-ghost'],
+      'text-fx': ['text-gradient', 'text-gradient-cool', 'text-gradient-silver', 'text-ghost', 'text-shimmer'],
       'bg-fx': ['bg-grid', 'noise'],
-      surface: ['glass', 'gradient-border', 'shell', 'no-scrollbar'],
+      surface: ['glass', 'glass-strong', 'glass-card', 'glass-nav', 'shell', 'no-scrollbar'],
+      'border-fx': ['gradient-border', 'glow-border'],
+      'glow-fx': ['glow-live'],
+      safe: ['pt-safe', 'pb-safe'],
     },
   },
 })

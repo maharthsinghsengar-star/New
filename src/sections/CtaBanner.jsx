@@ -1,3 +1,5 @@
+import { useRef } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowRight, Leaf, RotateCcw, ShieldCheck, Truck } from 'lucide-react'
 import { Bottle } from '../components/visuals/Bottle'
 import { Button } from '../components/ui/Button'
@@ -11,12 +13,21 @@ const PERKS = [
   { icon: Leaf, label: 'Carbon-neutral delivery' },
 ]
 
+const BEAM = 'polygon(44% 0, 56% 0, 100% 100%, 0 100%)'
+const FEATHER = 'linear-gradient(90deg, transparent 5%, #000 40%, #000 60%, transparent 95%)'
+
 export function CtaBanner() {
+  const ref = useRef(null)
+  const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] })
+  const sideY = useTransform(scrollYProgress, [0, 1], ['14%', '-8%'])
+  const centerY = useTransform(scrollYProgress, [0, 1], ['22%', '-14%'])
+  const highlightX = useTransform(scrollYProgress, [0, 1], [-10, 10])
+
   return (
-    <section aria-labelledby="cta-title" className="relative pb-20 pt-4 sm:pb-24">
+    <section ref={ref} aria-labelledby="cta-title" className="relative pb-20 pt-4 sm:pb-24">
       <div className="shell">
         <Reveal>
-          <div className="gradient-border relative overflow-hidden rounded-[2.25rem] bg-navy-950">
+          <div className="glow-border glow-live relative overflow-hidden rounded-[2.25rem] bg-navy-950">
             <div
               aria-hidden="true"
               className="absolute inset-0"
@@ -50,9 +61,25 @@ export function CtaBanner() {
               </div>
 
               <div className="relative mx-auto flex h-[340px] w-full max-w-md items-end justify-center sm:h-[420px] lg:h-[480px]">
-                <Bottle model="mini" finish="nebula" level={0.5} reflection={false} className="relative -mr-[4%] h-[64%] w-auto" />
-                <Bottle model="flux" finish="midnight" level={0.9} reflection={false} temp={6} className="relative z-10 h-[94%] w-auto" />
-                <Bottle model="pulse" finish="ember" level={0.6} reflection={false} className="relative -ml-[4%] h-[78%] w-auto" />
+                <div
+                  aria-hidden="true"
+                  className="animate-beam absolute -top-[4%] left-1/2 h-full w-[90%] -translate-x-1/2 origin-top"
+                  style={{
+                    background: 'linear-gradient(180deg, rgba(140,200,255,0.3), rgba(139,92,246,0.08) 55%, transparent 85%)',
+                    clipPath: BEAM,
+                    maskImage: FEATHER,
+                    WebkitMaskImage: FEATHER,
+                  }}
+                />
+                <motion.div style={{ y: sideY }} className="relative -mr-[4%] h-[64%]">
+                  <Bottle model="mini" finish="nebula" level={0.5} reflection={false} className="h-full w-auto" />
+                </motion.div>
+                <motion.div style={{ y: centerY }} className="relative z-10 h-[94%]">
+                  <Bottle model="flux" finish="midnight" level={0.9} reflection={false} temp={6} live highlightX={highlightX} className="h-full w-auto" />
+                </motion.div>
+                <motion.div style={{ y: sideY }} className="relative -ml-[4%] h-[78%]">
+                  <Bottle model="pulse" finish="ember" level={0.6} reflection={false} className="h-full w-auto" />
+                </motion.div>
               </div>
             </div>
 

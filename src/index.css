@@ -6,6 +6,23 @@
 @theme {
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-display: "Sora Variable", "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Fluid type scale — tuned for iPhone first, scaling up to desktop */
+  --text-hero: clamp(2.95rem, 12.6vw, 7.6rem);
+  --text-hero--line-height: 0.92;
+  --text-hero--letter-spacing: -0.048em;
+  --text-display: clamp(2.3rem, 8.4vw, 4.6rem);
+  --text-display--line-height: 1;
+  --text-display--letter-spacing: -0.042em;
+  --text-title: clamp(1.55rem, 5.2vw, 2.35rem);
+  --text-title--line-height: 1.08;
+  --text-title--letter-spacing: -0.032em;
+  --text-lead: clamp(1.0625rem, 2.5vw, 1.2rem);
+  --text-lead--line-height: 1.62;
+  --text-label: 0.6875rem;
+  --text-label--line-height: 1;
+  --text-label--letter-spacing: 0.22em;
 
   /* Surfaces */
   --color-ink-950: #02030a;
@@ -34,17 +51,28 @@
   --color-ember-600: #e85f00;
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
 
   --animate-marquee: marquee 40s linear infinite;
+  --animate-marquee-reverse: marquee 46s linear infinite reverse;
   --animate-spin-slow: spin 24s linear infinite;
   --animate-spin-slower: spin 60s linear infinite;
   --animate-float: float 7s ease-in-out infinite;
   --animate-aurora: aurora 22s ease-in-out infinite alternate;
   --animate-aurora-reverse: aurora 28s ease-in-out infinite alternate-reverse;
+  --animate-drift: drift 26s ease-in-out infinite alternate;
+  --animate-drift-reverse: drift 32s ease-in-out infinite alternate-reverse;
   --animate-glow: glow 3.2s ease-in-out infinite;
+  --animate-rim-a: rim 6s ease-in-out infinite;
+  --animate-rim-b: rim 6s ease-in-out -3s infinite;
+  --animate-beam: beam 9s ease-in-out infinite alternate;
+  --animate-beam-reverse: beam 11s ease-in-out infinite alternate-reverse;
+  --animate-mote: mote 9s linear infinite;
   --animate-ripple: ripple 5s cubic-bezier(0.2, 0.6, 0.3, 1) infinite;
   --animate-seg-in: seg-in 0.7s ease-out both;
   --animate-scroll-dot: scroll-dot 2.2s ease-in-out infinite;
+  --animate-shimmer: shimmer 3.5s ease-in-out infinite;
+  --animate-pulse-dot: pulse-dot 2.4s ease-in-out infinite;
 
   @keyframes marquee {
     to { transform: translateX(-50%); }
@@ -58,9 +86,28 @@
     50% { transform: translate3d(7%, -5%, 0) scale(1.1); }
     100% { transform: translate3d(-6%, 6%, 0) scale(0.95); }
   }
+  @keyframes drift {
+    0% { transform: translate3d(0, 0, 0) rotate(0deg) scale(1); }
+    50% { transform: translate3d(12%, 8%, 0) rotate(25deg) scale(1.12); }
+    100% { transform: translate3d(-8%, 14%, 0) rotate(-15deg) scale(0.92); }
+  }
   @keyframes glow {
     0%, 100% { opacity: 0.55; }
     50% { opacity: 1; }
+  }
+  @keyframes rim {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.95; }
+  }
+  @keyframes beam {
+    0% { transform: rotate(-7deg); opacity: 0.55; }
+    100% { transform: rotate(6deg); opacity: 1; }
+  }
+  @keyframes mote {
+    0% { transform: translate3d(0, 0, 0); opacity: 0; }
+    15% { opacity: 1; }
+    85% { opacity: 0.8; }
+    100% { transform: translate3d(14px, -120px, 0); opacity: 0; }
   }
   @keyframes ripple {
     0% { transform: scale(0.35); opacity: 0.7; }
@@ -75,6 +122,36 @@
     30% { opacity: 1; }
     100% { transform: translateY(14px); opacity: 0; }
   }
+  @keyframes shimmer {
+    0% { background-position: 200% 50%; }
+    100% { background-position: -200% 50%; }
+  }
+  @keyframes pulse-dot {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.6); opacity: 0.4; }
+  }
+}
+
+/* Animatable angle for the rotating glow border (Safari 16.4+, Chrome, Firefox 128+). */
+@property --glow-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes glow-spin {
+  to { --glow-angle: 360deg; }
+}
+
+/* Light sweep that glides across the 3D bottle renders. */
+@keyframes bottle-sweep {
+  0% { transform: translateX(0); }
+  38%, 100% { transform: translateX(520%); }
+}
+
+.bottle-sweep {
+  transform-box: fill-box;
+  animation: bottle-sweep 7.5s cubic-bezier(0.45, 0, 0.2, 1) 1.2s infinite;
 }
 
 /* ────────────────────────────────────────────────────────────
@@ -95,13 +172,24 @@
     background-color: var(--color-ink-950);
     color: #fff;
     font-family: var(--font-sans);
+    font-feature-settings: "cv11", "ss01", "ss03";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
 
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
   section[id] {
-    scroll-margin-top: 4.5rem;
+    scroll-margin-top: 4.75rem;
   }
 
   ::selection {
@@ -168,17 +256,72 @@
 }
 
 @utility text-gradient-silver {
-  background-image: linear-gradient(180deg, #ffffff 0%, #c9d2e6 55%, #7d879f 100%);
+  background-image: linear-gradient(180deg, #ffffff 0%, #d5dcec 50%, #8690a8 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
+/* Moving light reflection across text */
+@utility text-shimmer {
+  background-image: linear-gradient(100deg, #9aa6c2 20%, #ffffff 40%, #c4b5fd 50%, #9aa6c2 62%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: var(--animate-shimmer);
+}
+
+/* Large faded "ghost" lettering used behind content */
+@utility text-ghost {
+  background-image: linear-gradient(180deg, rgb(255 255 255 / 0.11) 0%, rgb(255 255 255 / 0.015) 85%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Frosted glass with real backdrop blur — for overlays (nav, menus, dialogs, chips). */
 @utility glass {
-  background-color: rgb(255 255 255 / 0.04);
-  border: 1px solid rgb(255 255 255 / 0.09);
-  -webkit-backdrop-filter: blur(18px) saturate(140%);
-  backdrop-filter: blur(18px) saturate(140%);
+  background-image: linear-gradient(180deg, rgb(255 255 255 / 0.085), rgb(255 255 255 / 0.025));
+  border: 1px solid rgb(255 255 255 / 0.11);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.14),
+    0 18px 50px -20px rgb(0 0 0 / 0.75);
+  -webkit-backdrop-filter: blur(20px) saturate(170%);
+  backdrop-filter: blur(20px) saturate(170%);
+}
+
+/* Heavier glass for full panels (drawer, dialogs, mobile menu). */
+@utility glass-strong {
+  background-color: rgb(6 9 20 / 0.82);
+  background-image: linear-gradient(180deg, rgb(255 255 255 / 0.06), rgb(255 255 255 / 0.01) 40%);
+  border-color: rgb(255 255 255 / 0.1);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.1),
+    0 40px 120px -20px rgb(0 0 0 / 0.9);
+  -webkit-backdrop-filter: blur(28px) saturate(170%);
+  backdrop-filter: blur(28px) saturate(170%);
+}
+
+/* Glass look without backdrop blur — cheap enough for every card on iPhone. */
+@utility glass-card {
+  background-image: linear-gradient(180deg, rgb(255 255 255 / 0.062), rgb(255 255 255 / 0.014));
+  border: 1px solid rgb(255 255 255 / 0.085);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.075),
+    0 30px 70px -40px rgb(0 0 0 / 0.8);
+}
+
+/* Floating navigation bar */
+@utility glass-nav {
+  background-color: rgb(8 11 24 / 0.5);
+  background-image: linear-gradient(180deg, rgb(255 255 255 / 0.08), rgb(255 255 255 / 0.015));
+  border: 1px solid rgb(255 255 255 / 0.1);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.12),
+    0 16px 40px -18px rgb(0 0 0 / 0.8);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  backdrop-filter: blur(22px) saturate(180%);
 }
 
 /* 1px gradient hairline border that follows border-radius */
@@ -204,6 +347,46 @@
   }
 }
 
+/* Rotating electric-blue → purple → ember light running around the border.
+   The element controls visibility with the --glow-opacity variable. */
+@utility glow-border {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: conic-gradient(
+      from var(--glow-angle),
+      transparent 0deg,
+      rgb(74 168 255 / 0.95) 60deg,
+      rgb(139 92 246 / 0.95) 120deg,
+      transparent 180deg,
+      transparent 250deg,
+      rgb(255 122 26 / 0.8) 310deg,
+      transparent 360deg
+    );
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: var(--glow-opacity, 1);
+    transition: opacity 0.5s ease;
+    animation: glow-spin 6s linear infinite;
+    /* Paused unless hovered (or `glow-live`) so idle cards cost nothing to paint. */
+    animation-play-state: var(--glow-state, paused);
+    pointer-events: none;
+  }
+  &:hover {
+    --glow-state: running;
+  }
+}
+
+/* Keeps a glow-border spinning without hover (hero-level elements only). */
+@utility glow-live {
+  --glow-state: running;
+}
+
 @utility bg-grid {
   background-image:
     linear-gradient(rgb(255 255 255 / 0.045) 1px, transparent 1px),
@@ -218,14 +401,15 @@
   }
 }
 
-/* Large faded "ghost" lettering used behind content */
-@utility text-ghost {
-  background-image: linear-gradient(180deg, rgb(255 255 255 / 0.11) 0%, rgb(255 255 255 / 0.015) 85%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
 @utility noise {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* Safe-area helpers for iPhones with a notch / Dynamic Island */
+@utility pt-safe {
+  padding-top: max(0.75rem, env(safe-area-inset-top));
+}
+
+@utility pb-safe {
+  padding-bottom: max(1.25rem, env(safe-area-inset-bottom));
 }

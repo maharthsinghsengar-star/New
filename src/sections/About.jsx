@@ -1,5 +1,8 @@
+import { useRef } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import { Cpu, Gem, Leaf } from 'lucide-react'
 import { Bottle } from '../components/visuals/Bottle'
+import { CountUp } from '../components/ui/CountUp'
 import { Reveal } from '../components/ui/Reveal'
 import { SectionHeading } from '../components/ui/SectionHeading'
 import { Stage } from '../components/ui/Stage'
@@ -30,9 +33,16 @@ const STATS = [
 ]
 
 function AboutVisual() {
+  const ref = useRef(null)
+  const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] })
+  // Three depths of parallax: back bottles drift slower than the hero bottle.
+  const backY = useTransform(scrollYProgress, [0, 1], ['10%', '-6%'])
+  const frontY = useTransform(scrollYProgress, [0, 1], ['16%', '-12%'])
+  const highlightX = useTransform(scrollYProgress, [0, 1], [-10, 10])
+
   return (
-    <div className="gradient-border relative aspect-[4/5] overflow-hidden rounded-[2rem]">
-      <Stage accent="#6d7cff">
+    <div ref={ref} className="gradient-border relative aspect-[4/5] overflow-hidden rounded-[2rem]">
+      <Stage accent="#6d7cff" beams particles>
         {/* Ripples on the studio floor */}
         <div aria-hidden="true" className="absolute inset-x-0 bottom-[8%] flex h-0 items-center justify-center">
           {[0, 1, 2].map((i) => (
@@ -43,13 +53,19 @@ function AboutVisual() {
             />
           ))}
         </div>
-        <div className="absolute inset-0 flex items-end justify-center gap-0 pb-[6%]">
-          <Bottle model="halo" finish="aurora" level={0.5} className="-mr-[6%] h-[74%] w-auto opacity-90" />
-          <Bottle model="pulse" finish="arctic" level={0.8} className="relative h-[82%] w-auto" />
-          <Bottle model="mini" finish="ember" level={0.6} className="-ml-[6%] h-[74%] w-auto opacity-90" />
+        <div className="absolute inset-0 flex items-end justify-center pb-[6%]">
+          <motion.div style={{ y: backY }} className="-mr-[6%] h-[72%]">
+            <Bottle model="halo" finish="aurora" level={0.5} className="h-full w-auto opacity-90" />
+          </motion.div>
+          <motion.div style={{ y: frontY }} className="relative z-10 h-[82%]">
+            <Bottle model="pulse" finish="arctic" level={0.8} highlightX={highlightX} className="h-full w-auto" />
+          </motion.div>
+          <motion.div style={{ y: backY }} className="-ml-[6%] h-[72%]">
+            <Bottle model="mini" finish="ember" level={0.6} className="h-full w-auto opacity-90" />
+          </motion.div>
         </div>
       </Stage>
-      <div className="glass absolute left-5 top-5 rounded-full px-3.5 py-1.5 text-xs font-medium text-white/80">
+      <div className="glass absolute left-5 top-5 rounded-full px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.16em] text-white/80">
         Est. 2021 · Studio designed
       </div>
     </div>
@@ -74,11 +90,12 @@ export function About() {
             <SectionHeading
               align="left"
               eyebrow="Our story"
+              index="01"
               title="Water is a ritual. We made it intelligent."
               titleId="about-title"
             />
             <Reveal delay={0.15}>
-              <div className="mt-8 space-y-5 text-base leading-relaxed text-white/65 sm:text-lg">
+              <div className="mt-8 space-y-5 text-lead text-white/65">
                 <p>
                   AQUORA began with a simple frustration. We tracked our steps, our sleep and our heart rate — yet the
                   most essential thing our bodies need was still guesswork. So a small team of industrial designers,
@@ -91,11 +108,12 @@ export function About() {
               </div>
             </Reveal>
             <Reveal delay={0.2}>
-              <blockquote className="mt-10 border-l-2 border-ember-500/80 pl-6">
-                <p className="font-display text-xl leading-snug text-white/90 sm:text-2xl">
+              <blockquote className="glass-card relative mt-10 overflow-hidden rounded-[1.5rem] p-6 sm:p-7">
+                <span aria-hidden="true" className="absolute inset-y-6 left-0 w-[2px] rounded-full bg-linear-to-b from-electric-400 via-plasma-500 to-ember-500" />
+                <p className="font-display text-xl leading-snug tracking-tight text-white/90 sm:text-2xl">
                   “The best technology is the kind you feel rather than see.”
                 </p>
-                <footer className="mt-3 text-sm text-white/45">— AQUORA design principle №1</footer>
+                <footer className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-white/45">AQUORA design principle №1</footer>
               </blockquote>
             </Reveal>
           </div>
@@ -104,7 +122,7 @@ export function About() {
         <div className="mt-20 grid grid-cols-1 gap-4 md:grid-cols-3 lg:mt-28">
           {PILLARS.map(({ icon: Icon, title, text }, i) => (
             <Reveal key={title} delay={i * 0.08}>
-              <article className="group relative h-full overflow-hidden rounded-[1.75rem] border border-white/[0.07] bg-linear-to-b from-white/[0.045] to-white/[0.01] p-7 transition duration-500 hover:-translate-y-1 hover:border-white/[0.15] sm:p-8">
+              <article className="glass-card glow-border group relative h-full overflow-hidden rounded-[1.75rem] p-7 transition duration-500 [--glow-opacity:0] hover:-translate-y-1 hover:[--glow-opacity:1] sm:p-8">
                 <div
                   aria-hidden="true"
                   className="absolute -right-16 -top-16 size-48 rounded-full opacity-0 transition duration-700 group-hover:opacity-100"
@@ -114,9 +132,9 @@ export function About() {
                   <span className="grid size-12 place-items-center rounded-2xl bg-linear-to-br from-electric-500/25 to-plasma-500/20 text-electric-300 ring-1 ring-white/10">
                     <Icon className="size-5" />
                   </span>
-                  <span className="font-display text-sm text-white/25">0{i + 1}</span>
+                  <span className="font-mono text-xs text-white/30">0{i + 1}</span>
                 </div>
-                <h3 className="mt-8 font-display text-xl font-semibold tracking-tight">{title}</h3>
+                <h3 className="mt-8 font-display text-[1.35rem] font-semibold tracking-tight">{title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-white/60 sm:text-base">{text}</p>
               </article>
             </Reveal>
@@ -128,10 +146,12 @@ export function About() {
             {STATS.map((stat) => (
               <div
                 key={stat.label}
-                className="flex flex-col-reverse rounded-[1.5rem] border border-white/[0.07] bg-white/[0.02] p-6"
+                className="glass-card flex flex-col-reverse rounded-[1.5rem] p-5 sm:p-6"
               >
-                <dt className="mt-2 text-xs uppercase tracking-[0.14em] text-white/45">{stat.label}</dt>
-                <dd className="text-gradient-cool font-display text-4xl font-semibold tracking-tight sm:text-5xl">{stat.value}</dd>
+                <dt className="mt-2 font-mono text-[10px] uppercase tracking-[0.16em] text-white/45">{stat.label}</dt>
+                <dd>
+                  <CountUp value={stat.value} className="text-gradient-cool font-display text-4xl font-semibold tracking-[-0.04em] sm:text-5xl" />
+                </dd>
               </div>
             ))}
           </dl>

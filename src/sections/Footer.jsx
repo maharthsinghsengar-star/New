@@ -1,7 +1,7 @@
-import { InstagramIcon, TikTokIcon, XIcon, YouTubeIcon } from '../components/icons/SocialIcons'
 import { Newsletter } from '../components/Newsletter'
 import { Logo } from '../components/ui/Logo'
 import { useUI } from '../context/contexts'
+import { SOCIAL_LINKS } from '../data/social'
 import { scrollToSection } from '../lib/utils'
 
 const YEAR = new Date().getFullYear()
@@ -28,19 +28,13 @@ const SUPPORT_LINKS = [
   { label: 'FAQ', topic: 'faq' },
 ]
 
-const SOCIALS = [
-  { label: 'Instagram', href: 'https://www.instagram.com/', icon: InstagramIcon },
-  { label: 'X', href: 'https://x.com/', icon: XIcon },
-  { label: 'YouTube', href: 'https://www.youtube.com/', icon: YouTubeIcon },
-  { label: 'TikTok', href: 'https://www.tiktok.com/', icon: TikTokIcon },
-]
 
 const linkClass = 'text-sm text-white/55 transition-colors duration-300 hover:text-white'
 
 function Column({ title, children }) {
   return (
     <div>
-      <h3 className="text-xs font-medium uppercase tracking-[0.2em] text-white/40">{title}</h3>
+      <h3 className="font-mono text-[10px] uppercase tracking-[0.24em] text-white/40">{title}</h3>
       <ul className="mt-5 space-y-3">{children}</ul>
     </div>
   )
@@ -61,7 +55,7 @@ export function Footer() {
   }
 
   return (
-    <footer className="relative overflow-hidden border-t border-white/[0.06] pt-20">
+    <footer className="relative overflow-hidden border-t border-white/[0.06] pt-20 pb-safe">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-[30rem]"
@@ -76,7 +70,7 @@ export function Footer() {
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/55">
               Premium smart bottles that measure every sip, monitor temperature and glow when it’s time to drink.
             </p>
-            <div className="mt-10">
+            <div className="glass-card mt-10 rounded-[1.75rem] p-5 sm:p-7">
               <Newsletter />
             </div>
           </div>
@@ -125,7 +119,7 @@ export function Footer() {
             </div>
           </div>
           <ul className="flex items-center gap-2" aria-label="Social media">
-            {SOCIALS.map(({ label, href, icon: Icon }) => (
+            {SOCIAL_LINKS.map(({ label, href, icon: Icon }) => (
               <li key={label}>
                 <a
                   href={href}

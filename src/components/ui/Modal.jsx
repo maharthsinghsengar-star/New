@@ -48,7 +48,7 @@ export function Modal({ open, onClose, labelledBy, variant = 'center', className
             aria-labelledby={labelledBy}
             tabIndex={-1}
             className={cn(
-              'relative flex flex-col border-white/10 bg-ink-900/95 shadow-[0_40px_120px_-20px_rgba(0,0,0,0.9)] outline-none backdrop-blur-2xl',
+              'glass-strong relative flex flex-col outline-none',
               variant === 'right'
                 ? 'h-full w-full max-w-md border-l'
                 : 'max-h-[92svh] w-full overflow-y-auto overscroll-contain rounded-t-[2rem] border sm:rounded-[2rem]',
@@ -59,6 +59,12 @@ export function Modal({ open, onClose, labelledBy, variant = 'center', className
             exit={motionProps.exit}
             transition={{ duration: 0.55, ease: EASE }}
           >
+            {variant === 'center' && (
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute left-1/2 top-2.5 z-20 h-1 w-10 -translate-x-1/2 rounded-full bg-white/30 sm:hidden"
+              />
+            )}
             {children}
           </motion.div>
         </div>

@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "AQUORA \u2014 premium smart hydration e-commerce website",
+  "description": "AQUORA — premium smart hydration e-commerce website",
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
   },
@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
     "@fontsource-variable/sora": "^5.3.0",
     "clsx": "^2.1.1",
     "framer-motion": "^14.10.1",

@@ -42,7 +42,7 @@ function ProductDetail({ product, initialFinish, onClose }) {
       </button>
 
       <div className="relative h-[46svh] min-h-[300px] md:h-auto md:min-h-[600px]">
-        <Stage accent={f.led}>
+        <Stage accent={f.led} beams particles>
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={finish}
@@ -52,7 +52,7 @@ function ProductDetail({ product, initialFinish, onClose }) {
               exit={{ opacity: 0, scale: 0.98 }}
               transition={{ duration: 0.45, ease: EASE }}
             >
-              <ProductVisual product={product} finish={finish} animated />
+              <ProductVisual product={product} finish={finish} animated live />
             </motion.div>
           </AnimatePresence>
         </Stage>

@@ -9,7 +9,16 @@ const ACCESSORIES = { cap: CapVisual, dock: DockVisual, pods: PodsVisual }
  * Renders the right visual for a product. If the product has an `image`
  * (real photography), that is shown instead of the vector render.
  */
-export function ProductVisual({ product, finish, className, bottleClassName, accessoryClassName, animated = false }) {
+export function ProductVisual({
+  product,
+  finish,
+  className,
+  bottleClassName,
+  accessoryClassName,
+  animated = false,
+  live = false,
+  highlightX,
+}) {
   const selected = finish ?? product.finishes[0]
   const title = `${product.name} in ${getFinish(selected).name}`
 
@@ -32,11 +41,13 @@ export function ProductVisual({ product, finish, className, bottleClassName, acc
           finish={sleeve ? base : selected}
           sleeve={sleeve ? selected : null}
           animated={animated}
+          live={live}
+          highlightX={highlightX}
           title={title}
           className={cn('h-[88%] w-auto', bottleClassName)}
         />
       ) : (
-        <Accessory finish={selected} title={title} className={cn('h-auto w-[86%]', accessoryClassName)} />
+        <Accessory finish={selected} live={live} title={title} className={cn('h-auto w-[86%]', accessoryClassName)} />
       )}
     </div>
   )

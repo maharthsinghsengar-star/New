@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import { ChevronDown, Plus, ShoppingBag, Zap } from 'lucide-react'
 import { Bottle } from '../components/visuals/Bottle'
 import { BOTTLE_VB, getBottleHotspots } from '../components/visuals/geometry'
@@ -25,6 +25,11 @@ export function Showcase() {
   const [activePart, setActivePart] = useState('cap')
 
   const f = getFinish(finish)
+  // Pointer over the stage slides the bottle's reflections and tilts it slightly.
+  const pointer = useMotionValue(0)
+  const smooth = useSpring(pointer, { stiffness: 80, damping: 20 })
+  const highlightX = useTransform(smooth, [-1, 1], [-10, 10])
+  const tilt = useTransform(smooth, [-1, 1], [-6, 6])
   const spots = getBottleHotspots(product.visual.model)
   const activeIndex = model.hotspots.findIndex((h) => h.part === activePart)
   const activeSpot = model.hotspots[activeIndex]
@@ -47,6 +52,7 @@ export function Showcase() {
       <div className="shell">
         <SectionHeading
           eyebrow="Product showcase"
+          index="03"
           title="Engineered down to the last drop."
           description="Explore the technology inside every AQUORA. Choose a model, then tap the hotspots to see how each detail works."
           titleId="tech-title"
@@ -94,8 +100,16 @@ export function Showcase() {
         >
           {/* Stage with hotspots */}
           <Reveal>
-            <div className="gradient-border relative h-[min(128vw,620px)] overflow-hidden rounded-[2rem] lg:h-[680px]">
-              <Stage accent={f.led}>
+            <div
+              className="gradient-border relative h-[min(128vw,620px)] overflow-hidden rounded-[2rem] lg:h-[680px]"
+              onPointerMove={(event) => {
+                if (event.pointerType !== 'mouse') return
+                const rect = event.currentTarget.getBoundingClientRect()
+                pointer.set(((event.clientX - rect.left) / rect.width) * 2 - 1)
+              }}
+              onPointerLeave={() => pointer.set(0)}
+            >
+              <Stage accent={f.led} beams particles>
                 <AnimatePresence mode="wait">
                   <motion.p
                     key={model.id}
@@ -111,7 +125,10 @@ export function Showcase() {
                 </AnimatePresence>
 
                 <div className="absolute inset-0 flex items-center justify-center pb-2 pt-8">
-                  <div className="relative h-[90%]" style={{ aspectRatio: `${BOTTLE_VB.width} / ${BOTTLE_VB.height}` }}>
+                  <motion.div
+                    className="relative h-[90%]"
+                    style={{ aspectRatio: `${BOTTLE_VB.width} / ${BOTTLE_VB.height}`, rotateY: tilt, transformPerspective: 1200 }}
+                  >
                     <AnimatePresence mode="wait">
                       <motion.div
                         key={`${model.id}-${finish}`}
@@ -125,6 +142,8 @@ export function Showcase() {
                           model={product.visual.model}
                           finish={finish}
                           level={0.8}
+                          live
+                          highlightX={highlightX}
                           temp={6}
                           className="h-full w-full"
                           title={`${product.name} in ${f.name}`}
@@ -184,7 +203,7 @@ export function Showcase() {
                         </motion.div>
                       )}
                     </AnimatePresence>
-                  </div>
+                  </motion.div>
                 </div>
 
                 <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between text-xs text-white/50">
@@ -292,7 +311,7 @@ export function Showcase() {
             {model.tech.map((t) => (
               <li
                 key={t}
-                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-white/75"
+                className="glass-card inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm text-white/75"
               >
                 <Zap className="size-3.5 text-ember-400" aria-hidden="true" />
                 {t}
@@ -303,7 +322,7 @@ export function Showcase() {
 
         {/* Specifications */}
         <Reveal>
-          <div className="mt-6 rounded-[2rem] border border-white/[0.07] bg-white/[0.02] p-6 sm:p-10">
+          <div className="glass-card mt-6 rounded-[2rem] p-6 sm:p-10">
             <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
               <h3 className="font-display text-2xl font-semibold tracking-tight">Technical specifications</h3>
               <p className="text-sm text-white/45">{product.name}</p>
