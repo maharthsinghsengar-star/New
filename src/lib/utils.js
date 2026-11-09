@@ -45,7 +45,10 @@ export function scrollToSection(id) {
     if (!el) return
     el.scrollIntoView({ behavior, block: 'start' })
   }
-  if (window.history?.replaceState) {
+  try {
+    // Keep the URL shareable; some embedded/sandboxed frames refuse history updates.
     window.history.replaceState(null, '', id === 'home' ? window.location.pathname : `#${id}`)
+  } catch {
+    // Scrolling already happened — the URL hash is a nice-to-have.
   }
 }
