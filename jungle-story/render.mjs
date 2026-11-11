@@ -25,6 +25,7 @@ async function open() {
   page.on('console', m => { if (m.type() === 'error') console.error('console:', m.text()); });
   await page.goto(url);
   await page.waitForFunction('window.READY === true', null, { timeout: 120000 });
+  if (process.env.CLEAN) await page.addStyleTag({ content: '#sub, .pill { display: none !important; }' });   // CLEAN=1: no captions or labels
   return page;
 }
 const shot = async (page, t, file) => {
@@ -39,7 +40,7 @@ if (times.length) {
   for (const t of times) await shot(page, t, path.join(ROOT, `build/stills/t${t.toFixed(1).padStart(5, '0')}.jpg`));
 } else {
   const START = Number(process.env.START || 0);   // START=n resumes an interrupted render at frame n
-  const dir = path.join(ROOT, 'build/frames'); if (!START) fs.rmSync(dir, { recursive: true, force: true }); fs.mkdirSync(dir, { recursive: true });
+  const dir = path.join(ROOT, process.env.CLEAN ? 'build/frames-clean' : 'build/frames'); if (!START) fs.rmSync(dir, { recursive: true, force: true }); fs.mkdirSync(dir, { recursive: true });
   const pages = await Promise.all(Array.from({ length: WORKERS }, open));
   const total = Math.ceil((await pages[0].evaluate('window.DURATION')) * FPS);
   let done = 0; const t0 = Date.now();
