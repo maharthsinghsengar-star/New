@@ -8,7 +8,7 @@ REL=https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1
 [ -f models/kokoro-v1.0.onnx ] || curl -sSL -o models/kokoro-v1.0.onnx $REL/kokoro-v1.0.onnx
 [ -f models/voices-v1.0.bin ]  || curl -sSL -o models/voices-v1.0.bin  $REL/voices-v1.0.bin
 [ -d node_modules ] || npm install
-[ -f build/voice.wav ] && [ -z "${REVOICE:-}" ] || python3 narration.py
+python3 narration.py
 python3 music.py
 NODE_PATH="${NODE_PATH:-$(npm root -g)}" node render.mjs
 # voice: low-end weight, less mud, presence boost for clarity; music sits low and ducks under the voice
