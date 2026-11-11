@@ -32,7 +32,7 @@ SCENES = [
 PRE, POST, GAP = 0.7, 0.9, 0.38
 INTRO, OUTRO = 2.3, 3.2      # extra time for the title card / end card
 
-def chunks(text, t0, t1, maxc=26):
+def chunks(text, t0, t1, maxc=13):
     """Split a sentence into short subtitle chunks, timed by character share."""
     words, out, cur = text.split(), [], ""
     for w in words:
@@ -41,7 +41,7 @@ def chunks(text, t0, t1, maxc=26):
         else:
             cur = (cur + " " + w).strip()
     if cur: out.append(cur)
-    if len(out) > 1 and len(out[-1]) < 8:      # avoid orphan words
+    if len(out) > 1 and len(out[-1]) < 4:      # avoid orphan words
         out[-2] += " " + out.pop()
     total, t, res = sum(len(c) for c in out), t0, []
     for c in out:

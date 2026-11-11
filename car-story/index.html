@@ -9,20 +9,20 @@
 @font-face { font-family: Poppins; font-weight: 800; src: url(node_modules/@fontsource/poppins/files/poppins-latin-800-normal.woff2) format('woff2'); }
 html, body { margin: 0; background: #000; overflow: hidden; }
 #stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: Poppins, sans-serif; color: #fff; }
-#c { position: absolute; inset: 0; width: 1080px; height: 1920px; filter: saturate(1.22) contrast(1.06) brightness(1.03); }
+#c { position: absolute; inset: 0; width: 1080px; height: 1920px; filter: saturate(1.1) contrast(1.04); }
 .shade { position: absolute; left: 0; right: 0; pointer-events: none; }
-#shadeTop { top: 0; height: 560px; background: linear-gradient(rgba(0,0,0,.34), rgba(0,0,0,0)); }
-#shadeBot { bottom: 0; height: 620px; background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.3)); }
+#shadeTop { top: 0; height: 560px; background: linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,0)); }
+#shadeBot { bottom: 0; height: 620px; background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.12)); }
 #head { position: absolute; top: 190px; left: 0; right: 0; text-align: center; }
-#year { font-weight: 800; font-size: 168px; line-height: 1; letter-spacing: 4px; text-shadow: 0 6px 0 rgba(0,0,0,.28), 0 10px 40px rgba(0,0,0,.45); }
+#year { font-weight: 800; font-size: 160px; line-height: 1; letter-spacing: 4px; -webkit-text-stroke: 18px #000; paint-order: stroke fill; }
 #label { display: inline-block; margin-top: 22px; padding: 12px 34px; border-radius: 40px; background: #ffc93c; color: #1b1b1b; font-weight: 600; font-size: 38px; box-shadow: 0 8px 26px rgba(0,0,0,.3); }
 #title { position: absolute; top: 300px; left: 0; right: 0; text-align: center; }
-#title small, #end small { display: block; font-weight: 600; font-size: 40px; letter-spacing: 12px; color: #ffc93c; text-shadow: 0 3px 14px rgba(0,0,0,.6); }
-#title b, #end b { display: block; font-weight: 800; font-size: 128px; line-height: 1.04; margin-top: 14px; text-shadow: 0 7px 0 rgba(0,0,0,.3), 0 12px 50px rgba(0,0,0,.55); }
+#title small, #end small { display: block; font-weight: 800; font-size: 44px; letter-spacing: 10px; color: #ffc93c; -webkit-text-stroke: 10px #000; paint-order: stroke fill; }
+#title b, #end b { display: block; font-weight: 800; font-size: 124px; line-height: 1.06; margin-top: 14px; -webkit-text-stroke: 18px #000; paint-order: stroke fill; }
 #end { position: absolute; top: 250px; left: 0; right: 0; text-align: center; }
 #end b { font-size: 104px; }
 #end i { display: inline-block; margin-top: 30px; padding: 12px 36px; border-radius: 40px; background: rgba(12,12,16,.78); font-style: normal; font-weight: 500; font-size: 44px; text-shadow: 0 3px 14px rgba(0,0,0,.7); }
-#sub { position: absolute; left: 50%; bottom: 400px; transform: translateX(-50%); white-space: nowrap; padding: 18px 40px; border-radius: 26px; background: rgba(12,12,16,.78); font-weight: 600; font-size: 56px; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+#sub { position: absolute; left: 50%; bottom: 350px; transform: translateX(-50%); white-space: nowrap; font-weight: 800; font-size: 104px; line-height: 1; color: #fff; -webkit-text-stroke: 20px #000; paint-order: stroke fill; }
 #strokes { position: absolute; top: 560px; left: 0; right: 0; display: flex; justify-content: center; gap: 14px; }
 #strokes span { padding: 10px 20px; border-radius: 14px; background: rgba(0,0,0,.45); font-weight: 600; font-size: 28px; color: rgba(255,255,255,.6); }
 #strokes span.on { background: #ffc93c; color: #1b1b1b; }

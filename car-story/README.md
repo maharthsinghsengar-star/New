@@ -1,6 +1,6 @@
 # The Invention of the Car — animated stick-man short (9:16)
 
-`the-invention-of-the-car.mp4` — 1080×1920, 30 fps, ~79 s. 2D stick figures in a low-poly 3D world,
+`the-invention-of-the-car.mp4` — 1080×1920, 30 fps, ~79 s. 2D stick figures in a cel-shaded, anime-style 3D world,
 male narration, soft background music, burned-in subtitles.
 
 Everything is generated from code:
