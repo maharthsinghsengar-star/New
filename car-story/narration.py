@@ -42,7 +42,7 @@ def chunks(text, t0, t1, maxc=13):
             cur = (cur + " " + w).strip()
     if cur: out.append(cur)
     if len(out) > 1 and len(out[-1]) < 4:      # avoid orphan words
-        out[-2] += " " + out.pop()
+        last = out.pop(); out[-1] += " " + last
     total, t, res = sum(len(c) for c in out), t0, []
     for c in out:
         d = (t1 - t0) * len(c) / total

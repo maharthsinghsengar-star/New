@@ -50,7 +50,7 @@ def chunks(text, t0, t1, who, maxc=20):
         if cur and len(cur) + 1 + len(w) > maxc: out.append(cur); cur = w
         else: cur = (cur + " " + w).strip()
     if cur: out.append(cur)
-    if len(out) > 1 and len(out[-1]) < 5: out[-2] += " " + out.pop()
+    if len(out) > 1 and len(out[-1]) < 5: last = out.pop(); out[-1] += " " + last
     total, t, res = sum(len(c) for c in out), t0, []
     for c in out:
         d = (t1 - t0) * len(c) / total

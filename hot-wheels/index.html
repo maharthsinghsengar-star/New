@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The History of Hot Wheels</title>
+<style>
+@font-face { font-family: Poppins; font-weight: 600; src: url(node_modules/@fontsource/poppins/files/poppins-latin-600-normal.woff2) format('woff2'); }
+@font-face { font-family: Poppins; font-weight: 800; src: url(node_modules/@fontsource/poppins/files/poppins-latin-800-normal.woff2) format('woff2'); }
+@font-face { font-family: Poppins; font-weight: 900; src: url(node_modules/@fontsource/poppins/files/poppins-latin-900-normal.woff2) format('woff2'); }
+html, body { margin: 0; background: #000; overflow: hidden; }
+#stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; font-family: Poppins, sans-serif; color: #fff; }
+#c { position: absolute; inset: 0; width: 1920px; height: 1080px; filter: saturate(1.1) contrast(1.04); }
+.st { -webkit-text-stroke: 12px #000; paint-order: stroke fill; }
+#sub { position: absolute; left: 0; right: 0; bottom: 70px; text-align: center; font-weight: 600; font-size: 44px; -webkit-text-stroke: 9px #000; paint-order: stroke fill; }
+#chip { position: absolute; left: 70px; top: 60px; opacity: 0; }
+#year { font-weight: 800; font-size: 96px; line-height: 1; -webkit-text-stroke: 14px #000; paint-order: stroke fill; }
+#note { display: inline-block; margin-top: 14px; padding: 8px 26px; border-radius: 30px; background: #ffc93c; color: #1b1b1b; font-weight: 600; font-size: 30px; box-shadow: 0 6px 18px rgba(0,0,0,.3); }
+#title, #end { position: absolute; left: 0; right: 0; text-align: center; opacity: 0; }
+#title { top: 110px; } #end { top: 300px; }
+#title small, #end small { display: block; font-weight: 800; font-size: 44px; letter-spacing: 12px; color: #fff; -webkit-text-stroke: 10px #000; paint-order: stroke fill; }
+#title b, #end b { display: block; font-weight: 900; font-size: 170px; line-height: 1.05; color: #ff7a00; -webkit-text-stroke: 22px #000; paint-order: stroke fill; }
+#end i { display: inline-block; margin-top: 26px; padding: 10px 40px; border-radius: 40px; background: #ffc93c; color: #1b1b1b; font-style: normal; font-weight: 600; font-size: 40px; }
+#endShade { position: absolute; inset: 0; background: rgba(20,8,30,.6); opacity: 0; }
+#count { position: absolute; left: 70px; top: 190px; opacity: 0; }
+#num { font-weight: 900; font-size: 120px; line-height: 1; color: #ffc93c; -webkit-text-stroke: 16px #000; paint-order: stroke fill; font-variant-numeric: tabular-nums; }
+#count span { display: block; font-weight: 800; font-size: 40px; -webkit-text-stroke: 9px #000; paint-order: stroke fill; }
+#rate { margin-top: 18px; display: inline-block; padding: 8px 26px; border-radius: 30px; background: #fff; color: #1b1b1b; font-weight: 600; font-size: 32px; }
+#barWrap { position: absolute; left: 0; right: 0; bottom: 0; height: 8px; background: rgba(255,255,255,.18); }
+#bar { height: 100%; width: 0; background: #ff7a00; }
+#fade { position: absolute; inset: 0; background: #000; opacity: 1; }
+</style>
+<script type="importmap">{ "imports": { "three": "./node_modules/three/build/three.module.js" } }</script>
+</head>
+<body>
+<div id="stage">
+  <canvas id="c" width="1920" height="1080"></canvas>
+  <div id="endShade"></div>
+  <div id="chip"><div id="year"></div><div id="note"></div></div>
+  <div id="count"><div id="num">0</div><span>Hot Wheels made</span><div id="rate">≈ 16 sold every second &nbsp;·&nbsp; +<b id="sold">0</b></div></div>
+  <div id="title"><small>THE HISTORY OF</small><b>HOT WHEELS</b></div>
+  <div id="end"><small>THE HISTORY OF</small><b>HOT WHEELS</b><i>Small cars. Big dreams.</i></div>
+  <div id="sub"></div>
+  <div id="barWrap"><div id="bar"></div></div>
+  <div id="fade"></div>
+</div>
+<script type="module" src="scene.js"></script>
+</body>
+</html>

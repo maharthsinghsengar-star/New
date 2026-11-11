@@ -1,0 +1,8 @@
+{
+  "name": "hot-wheels",
+  "private": true,
+  "type": "module",
+  "description": "Stick-man animated short: The History of Hot Wheels (16:9)",
+  "scripts": { "build": "bash build.sh" },
+  "dependencies": { "three": "^0.170.0", "@fontsource/poppins": "^5.1.0" }
+}
