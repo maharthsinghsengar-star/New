@@ -1,0 +1,26 @@
+"""Scene timeline for the supplied voiceover (voiceover.mp3).
+Line timings were measured from the recording (pause detection + per-segment speech recognition).
+Each scene: list of (speaker, start, end) for the lines spoken in it; n = narrator, m = monkey, d = deer."""
+import json
+SCENES = [
+ [("n", 0.00, 7.28)],                                              # कहते हैं... अपनों का धोखा अंदर तक तोड़ देता है
+ [("n", 8.27, 12.09)],                                             # एक जंगल में...
+ [("n", 12.90, 14.63), ("m", 15.16, 19.28), ("n", 20.02, 22.88)],  # बंदर हमेशा कहता / तुम बस... / हिरण भी...
+ [("n", 23.59, 25.32), ("m", 25.85, 31.06)],                       # एक दिन... / चलो, आज तुम्हें...
+ [("n", 31.72, 33.90)],                                            # हिरण खुशी-खुशी...
+ [("n", 34.54, 36.43), ("n", 36.93, 39.74)],                       # लेकिन जैसे ही... / ...शिकारी का जाल बिछा था
+ [("n", 40.42, 43.53), ("d", 44.02, 45.42)],                       # बचकर निकला... पूछा / तुम्हें पता था...?
+ [("n", 45.96, 48.23)],                                            # बंदर की चुप्पी...
+ [("n", 48.95, 52.35), ("d", 53.04, 54.96), ("d", 55.62, 60.27)],  # आँखें नम... / दर्द जाल में... / दर्द तो इस बात का...
+ [("n", 60.99, 64.87)],                                            # और उस दिन...
+ [("n", 65.73, 66.23), ("n", 66.81, 71.07), ("n", 71.60, 74.37), ("n", 74.99, 77.75)],  # सीख...
+]
+VO_END, OUTRO = 78.03, 2.6
+out, start = [], 0.0
+for i, sc in enumerate(SCENES):
+    end = (sc[-1][2] + SCENES[i + 1][0][1]) / 2 if i < len(SCENES) - 1 else VO_END + OUTRO
+    out.append({"start": round(start, 3), "end": round(end, 3), "subs": [],
+                "lines": [{"who": w, "t0": a, "t1": b} for w, a, b in sc]})
+    start = end
+json.dump({"duration": round(start, 3), "scenes": out}, open("build/timeline.json", "w"), ensure_ascii=False, indent=1)
+print("duration", start, [round(s["end"] - s["start"], 2) for s in out])

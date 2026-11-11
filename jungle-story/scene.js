@@ -420,7 +420,7 @@ const S = [
     const x = -4 + 1.9 * t; put(deer, x, 0, DZ, 1); poseDeer(deer, t, { walk: 1, pace: 10 });
     put(monkey, x - 0.15, 1.5 + deer.userData.body.position.y, DZ + 0.02, 1);
     poseMonkey(monkey, t, { hipL: 1.3, kneeL: -1.5, hipR: 1.1, kneeR: -1.4, shL: 2.7 + 0.3 * Math.sin(t * 8), elL: 0.3, shR: 2.3 + 0.3 * Math.sin(t * 8 + 1), elR: 0.3, lean: -0.1 });
-    setTrap(0); EM.heart.userData.show(x + 0.3, 3.5 + 0.2 * Math.sin(t * 3), DZ, smooth((t - 2.2) / 0.5) * (1 - smooth((t - d + 0.8) / 0.5)));
+    setTrap(0); EM.heart.userData.show(x + 0.3, 3.5 + 0.2 * Math.sin(t * 3), DZ, smooth((t - d * 0.35) / 0.5) * (1 - smooth((t - d + 0.8) / 0.5)));
     orbit(x, lerp(0.8, 0.45, smooth(t / d)), 9, 1.4, 1.7, 0.4);
   } },
   // 2 — "just trust me"
@@ -452,7 +452,7 @@ const S = [
   } },
   // 5 — the trap
   { mood: 'deep', update(t, d) {
-    const l2 = since(5, 1, t), arrive = smooth(t / 3.0), x = lerp(TRAP_X - 6.5, TRAP_X - 2.2, arrive), walking = arrive < 0.98;
+    const l2 = since(5, 1, t), arrive = smooth(t / Math.max(1.2, lineOf(5, 1).t0 - sStart(5) - 0.2)), x = lerp(TRAP_X - 6.5, TRAP_X - 2.2, arrive), walking = arrive < 0.98;
     put(deer, x, 0, DZ, 1); poseDeer(deer, t, { walk: walking ? 1 : 0, neck: l2 > 0 ? -0.2 : 0.05 });
     const mx = lerp(TRAP_X - 5.2, TRAP_X - 4.6, smooth(t / 1.4)); put(monkey, mx - (arrive > 0.5 ? (arrive - 0.5) * 2.6 : 0), MONKEY_Y, MZ, 1);
     poseMonkey(monkey, t, t < 1.4 ? walkPose(t * 9) : { hipL: 0.05, hipR: -0.05, shL: 0.4, elL: 1.9, shR: -0.2, elR: 0.3, lean: -0.05 }, { sly: l2 > 0 ? 1 : 0 });
@@ -464,23 +464,23 @@ const S = [
   } },
   // 6 — the net snaps; the deer escapes and turns to the monkey
   { mood: 'deep', update(t, d) {
-    const j = clamp((t - 0.55) / 0.75), lift = smooth((t - 0.55) / 0.5), q = since(6, 1, t), turned = t > 3.2;
+    const j = clamp((t - 0.55) / 0.75), lift = smooth((t - 0.55) / 0.5), q = since(6, 1, t), tTurn = Math.max(1.6, lineOf(6, 1).t0 - sStart(6) - 1.5), turned = t > tTurn;
     const x = lerp(TRAP_X - 2.0, TRAP_X - 4.0, smooth(j));
-    put(deer, x, 1.3 * Math.sin(j * Math.PI) + (j >= 1 && t < 3.2 ? 0.03 * Math.sin(t * 16) : 0), DZ, turned ? -1 : 1);
+    put(deer, x, 1.3 * Math.sin(j * Math.PI) + (j >= 1 && !turned ? 0.03 * Math.sin(t * 16) : 0), DZ, turned ? -1 : 1);
     poseDeer(deer, t, { walk: j > 0 && j < 1 ? 0.8 : 0, neck: turned ? 0 : -0.15, talk: during(6, 1, t) ? 1 : 0, sad: turned ? 0.5 : 0, pace: 14 });
     put(monkey, TRAP_X - 6.9, MONKEY_Y, MZ, 1); poseMonkey(monkey, t, { hipL: 0.05, hipR: -0.05, shL: 0.3, elL: 0.4, shR: -0.2, elR: 0.3, lean: -0.08 }, { shame: turned ? 0.6 : 0 });
     setTrap(lift); pose(hunter, { hipL: 0.1, hipR: -0.1, shL: 2.6, elL: 0.3, shR: 2.4, elR: 0.3, lean: -0.1 });
     $('alarm').style.opacity = 0.5 * clamp(1 - Math.abs(t - 0.7) / 0.5);
     EM.ask.userData.show(x - 0.75, 3.1, DZ, clamp(q / 0.3) * (1 - smooth((t - d + 0.5) / 0.3)));
     const sh = 0.12 * Math.exp(-Math.max(0, t - 0.55) * 5) * Math.sin(t * 60) * (t > 0.55 ? 1 : 0);
-    if (!turned) orbit(TRAP_X - 2.4 + sh, lerp(0.2, 0.05, smooth(t / 3.2)), 10.2, 1.8 + sh, 1.9, 0);
-    else orbit(TRAP_X - 5.4, lerp(-0.1, 0.1, smooth((t - 3.2) / (d - 3.2))), 7.8, 1.5, 1.4, 0);
+    if (!turned) orbit(TRAP_X - 2.4 + sh, lerp(0.2, 0.05, smooth(t / tTurn)), 10.2, 1.8 + sh, 1.9, 0);
+    else orbit(TRAP_X - 5.4, lerp(-0.1, 0.1, smooth((t - tTurn) / (d - tTurn))), 7.8, 1.5, 1.4, 0);
   } },
   // 7 — the monkey's silence
   { mood: 'deep', update(t, d) {
     put(deer, TRAP_X - 4.0, 0, DZ, -1); poseDeer(deer, t, { sad: 0.6 });
-    put(monkey, TRAP_X - 6.9, MONKEY_Y, MZ, t > 1.2 ? -1 : 1);
-    poseMonkey(monkey, t, { hipL: 0.05, hipR: -0.05, shL: 0.1, elL: 0.15, shR: -0.1, elR: 0.1, lean: 0.22, head: t > 1.2 ? 0.35 : -0.3 * smooth(t / 0.8) }, { shame: 1 });
+    put(monkey, TRAP_X - 6.9, MONKEY_Y, MZ, t > d * 0.45 ? -1 : 1);
+    poseMonkey(monkey, t, { hipL: 0.05, hipR: -0.05, shL: 0.1, elL: 0.15, shR: -0.1, elR: 0.1, lean: 0.22, head: t > d * 0.45 ? 0.35 : -0.3 * smooth(t / 0.8) }, { shame: 1 });
     setTrap(1); pose(hunter, standPose());
     EM.dots.userData.show(TRAP_X - 6.9, 2.5, MZ, clamp((t - 0.5) / 0.4) * (1 - smooth((t - d + 0.5) / 0.3)));
     orbit(TRAP_X - 6.6, lerp(-0.45, -0.25, smooth(t / d)), lerp(6.4, 5.6, t / d), 1.2, 0.95, 0);

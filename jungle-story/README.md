@@ -9,6 +9,7 @@ Hindi storytelling narration with separate character voices, background score an
 | `music.py` | Synthesized score: warm theme, trap tension, sad theme, birdsong |
 | `scene.js`, `index.html` | three.js jungle, character rigs, choreography, captions |
 | `render.mjs` | Frame capture in headless Chromium (`node render.mjs 12 40` renders preview stills) |
+| `timeline_vo.py`, `build-vo.sh` | Version cut to a supplied voiceover (`voiceover.mp3`): scene timing from the recording, no captions → `hiran-aur-bandar-voiceover.mp4` |
 | `build.sh` | Runs the whole pipeline and mixes the final MP4 with ffmpeg |
 
 Rebuild: `pip install kokoro-onnx soundfile numpy && ./build.sh` (needs ffmpeg, Node and Playwright's Chromium).
