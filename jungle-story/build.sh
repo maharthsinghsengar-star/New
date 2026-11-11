@@ -9,8 +9,7 @@ REL=https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1
 [ -f "$MODELS/kokoro-v1.0.onnx" ] || curl -sSL -o "$MODELS/kokoro-v1.0.onnx" $REL/kokoro-v1.0.onnx
 [ -f "$MODELS/voices-v1.0.bin" ]  || curl -sSL -o "$MODELS/voices-v1.0.bin"  $REL/voices-v1.0.bin
 [ -d node_modules ] || npm install
-python3 narration.py
-python3 music.py
+if [ -z "${START:-}" ]; then python3 narration.py; python3 music.py; fi   # START=n resumes the frame render
 NODE_PATH="${NODE_PATH:-$(npm root -g)}" node render.mjs
 # voice: warmth, less mud, presence for clarity, a touch of room; music sits low and ducks under the voice
 ffmpeg -y -v error -framerate 30 -i build/frames/f%05d.jpg -i build/voice.wav -i build/music.wav -filter_complex "

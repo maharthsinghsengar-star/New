@@ -38,12 +38,13 @@ if (times.length) {
   const page = await open();
   for (const t of times) await shot(page, t, path.join(ROOT, `build/stills/t${t.toFixed(1).padStart(5, '0')}.jpg`));
 } else {
-  const dir = path.join(ROOT, 'build/frames'); fs.rmSync(dir, { recursive: true, force: true }); fs.mkdirSync(dir, { recursive: true });
+  const START = Number(process.env.START || 0);   // START=n resumes an interrupted render at frame n
+  const dir = path.join(ROOT, 'build/frames'); if (!START) fs.rmSync(dir, { recursive: true, force: true }); fs.mkdirSync(dir, { recursive: true });
   const pages = await Promise.all(Array.from({ length: WORKERS }, open));
   const total = Math.ceil((await pages[0].evaluate('window.DURATION')) * FPS);
   let done = 0; const t0 = Date.now();
   await Promise.all(pages.map(async (page, w) => {
-    for (let f = w; f < total; f += WORKERS) {
+    for (let f = START + w; f < total; f += WORKERS) {
       await shot(page, f / FPS, path.join(dir, `f${String(f).padStart(5, '0')}.jpg`));
       if (++done % 200 === 0) console.log(`${done}/${total} frames  ${((Date.now() - t0) / 1000).toFixed(0)}s`);
     }
