@@ -8,13 +8,13 @@ REL=https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1
 [ -f models/kokoro-v1.0.onnx ] || curl -sSL -o models/kokoro-v1.0.onnx $REL/kokoro-v1.0.onnx
 [ -f models/voices-v1.0.bin ]  || curl -sSL -o models/voices-v1.0.bin  $REL/voices-v1.0.bin
 [ -d node_modules ] || npm install
-python3 narration.py
+[ -f build/voice.wav ] && [ -z "${REVOICE:-}" ] || python3 narration.py
 python3 music.py
 NODE_PATH="${NODE_PATH:-$(npm root -g)}" node render.mjs
-# voice gets a gentle warm EQ; music sits low and ducks further under the voice
+# voice: low-end weight, less mud, presence boost for clarity; music sits low and ducks under the voice
 ffmpeg -y -v error -framerate 30 -i build/frames/f%05d.jpg -i build/voice.wav -i build/music.wav -filter_complex "
-  [1:a]aresample=48000,aformat=channel_layouts=stereo,highpass=f=70,equalizer=f=160:t=q:w=1:g=2,acompressor=threshold=-18dB:ratio=2.5:attack=8:release=120,asplit=2[v][sc];
-  [2:a]aresample=48000,volume=0.5[m];
+  [1:a]aresample=48000,aformat=channel_layouts=stereo,highpass=f=65,equalizer=f=110:t=q:w=1:g=2.5,equalizer=f=320:t=q:w=1.2:g=-2,equalizer=f=3400:t=q:w=1:g=3.5,highshelf=f=8000:g=2,acompressor=threshold=-20dB:ratio=3:attack=6:release=120:makeup=2,asplit=2[v][sc];
+  [2:a]aresample=48000,volume=0.42[m];
   [m][sc]sidechaincompress=threshold=0.03:ratio=5:attack=40:release=700[md];
   [v][md]amix=inputs=2:normalize=0,alimiter=limit=0.95,loudnorm=I=-15:TP=-1.5:LRA=11[a]" \
   -map 0:v -map "[a]" -c:v libx264 -preset slow -crf 19 -pix_fmt yuv420p -r 30 -c:a aac -b:a 192k -ar 48000 \

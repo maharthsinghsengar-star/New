@@ -1,8 +1,9 @@
-"""Generate the narration (Kokoro TTS, male voice) and the scene timeline."""
+"""Generate the narration (Kokoro TTS, deep male voice) and the scene timeline."""
 import json, numpy as np, soundfile as sf
 from kokoro_onnx import Kokoro
 
-VOICE, SPEED, LANG = "bm_george", 0.94, "en-gb"
+# Deep, steady documentary voice: blend of two Kokoro male voices
+BLEND, SPEED, LANG = {"bm_lewis": 0.55, "am_michael": 0.45}, 0.92, "en-us"
 # Each scene: list of (spoken text, on-screen subtitle text)
 SCENES = [
  [("For thousands of years, the world moved at the speed of a horse.",
@@ -49,6 +50,7 @@ def chunks(text, t0, t1, maxc=26):
     return res
 
 k = Kokoro("models/kokoro-v1.0.onnx", "models/voices-v1.0.bin")
+VOICE = sum(k.get_voice_style(n) * w for n, w in BLEND.items())
 sr, t, audio, timeline = 24000, 0.0, [], []
 def silence(d):
     global t
