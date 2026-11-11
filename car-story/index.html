@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Invention of the Car</title>
+<style>
+@font-face { font-family: Poppins; font-weight: 500; src: url(node_modules/@fontsource/poppins/files/poppins-latin-500-normal.woff2) format('woff2'); }
+@font-face { font-family: Poppins; font-weight: 600; src: url(node_modules/@fontsource/poppins/files/poppins-latin-600-normal.woff2) format('woff2'); }
+@font-face { font-family: Poppins; font-weight: 800; src: url(node_modules/@fontsource/poppins/files/poppins-latin-800-normal.woff2) format('woff2'); }
+html, body { margin: 0; background: #000; overflow: hidden; }
+#stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: Poppins, sans-serif; color: #fff; }
+#c { position: absolute; inset: 0; width: 1080px; height: 1920px; }
+.shade { position: absolute; left: 0; right: 0; pointer-events: none; }
+#shadeTop { top: 0; height: 560px; background: linear-gradient(rgba(0,0,0,.42), rgba(0,0,0,0)); }
+#shadeBot { bottom: 0; height: 620px; background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.5)); }
+#head { position: absolute; top: 190px; left: 0; right: 0; text-align: center; }
+#year { font-weight: 800; font-size: 168px; line-height: 1; letter-spacing: 4px; text-shadow: 0 6px 0 rgba(0,0,0,.28), 0 10px 40px rgba(0,0,0,.45); }
+#label { display: inline-block; margin-top: 22px; padding: 12px 34px; border-radius: 40px; background: #ffc93c; color: #1b1b1b; font-weight: 600; font-size: 38px; box-shadow: 0 8px 26px rgba(0,0,0,.3); }
+#title { position: absolute; top: 300px; left: 0; right: 0; text-align: center; }
+#title small, #end small { display: block; font-weight: 600; font-size: 40px; letter-spacing: 12px; color: #ffc93c; text-shadow: 0 3px 14px rgba(0,0,0,.6); }
+#title b, #end b { display: block; font-weight: 800; font-size: 128px; line-height: 1.04; margin-top: 14px; text-shadow: 0 7px 0 rgba(0,0,0,.3), 0 12px 50px rgba(0,0,0,.55); }
+#end { position: absolute; top: 250px; left: 0; right: 0; text-align: center; }
+#end b { font-size: 104px; }
+#end i { display: inline-block; margin-top: 30px; padding: 12px 36px; border-radius: 40px; background: rgba(12,12,16,.78); font-style: normal; font-weight: 500; font-size: 44px; text-shadow: 0 3px 14px rgba(0,0,0,.7); }
+#sub { position: absolute; left: 50%; bottom: 400px; transform: translateX(-50%); white-space: nowrap; padding: 18px 40px; border-radius: 26px; background: rgba(12,12,16,.78); font-weight: 600; font-size: 56px; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+#strokes { position: absolute; top: 560px; left: 0; right: 0; display: flex; justify-content: center; gap: 14px; }
+#strokes span { padding: 10px 20px; border-radius: 14px; background: rgba(0,0,0,.45); font-weight: 600; font-size: 28px; color: rgba(255,255,255,.6); }
+#strokes span.on { background: #ffc93c; color: #1b1b1b; }
+#barWrap { position: absolute; left: 0; right: 0; bottom: 0; height: 10px; background: rgba(255,255,255,.18); }
+#bar { height: 100%; width: 0; background: #ffc93c; }
+#fade { position: absolute; inset: 0; background: #000; opacity: 1; }
+#endShade { position: absolute; inset: 0; background: linear-gradient(rgba(8,8,24,.78) 0, rgba(8,8,24,.55) 38%, rgba(8,8,24,0) 62%); opacity: 0; }
+</style>
+<script type="importmap">{ "imports": { "three": "./node_modules/three/build/three.module.js" } }</script>
+</head>
+<body>
+<div id="stage">
+  <canvas id="c" width="1080" height="1920"></canvas>
+  <div class="shade" id="shadeTop"></div><div class="shade" id="shadeBot"></div>
+  <div id="endShade"></div>
+  <div id="head"><div id="year"></div><div id="label"></div></div>
+  <div id="title"><small>THE STORY OF</small><b>THE INVENTION<br>OF THE CAR</b></div>
+  <div id="strokes"></div>
+  <div id="end"><small>FROM HORSE TO HORSEPOWER</small><b>THE INVENTION<br>OF THE CAR</b><i>The journey continues…</i></div>
+  <div id="sub"></div>
+  <div id="barWrap"><div id="bar"></div></div>
+  <div id="fade"></div>
+</div>
+<script type="module" src="scene.js"></script>
+</body>
+</html>

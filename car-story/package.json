@@ -1,0 +1,8 @@
+{
+  "name": "car-story",
+  "private": true,
+  "type": "module",
+  "description": "Stick-man animated short: The Invention of the Car (9:16)",
+  "scripts": { "build": "bash build.sh" },
+  "dependencies": { "three": "^0.170.0", "@fontsource/poppins": "^5.1.0" }
+}
