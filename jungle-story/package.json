@@ -1,0 +1,8 @@
+{
+  "name": "jungle-story",
+  "private": true,
+  "type": "module",
+  "description": "Animated Hindi moral story: the deer and the monkey (9:16)",
+  "scripts": { "build": "bash build.sh" },
+  "dependencies": { "three": "^0.170.0", "@fontsource/poppins": "^5.1.0" }
+}

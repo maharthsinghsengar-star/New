@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>हिरण और बंदर</title>
+<style>
+@font-face { font-family: Poppins; font-weight: 600; src: url(node_modules/@fontsource/poppins/files/poppins-devanagari-600-normal.woff2) format('woff2'); unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FF; }
+@font-face { font-family: Poppins; font-weight: 700; src: url(node_modules/@fontsource/poppins/files/poppins-devanagari-700-normal.woff2) format('woff2'); unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FF; }
+@font-face { font-family: Poppins; font-weight: 800; src: url(node_modules/@fontsource/poppins/files/poppins-devanagari-800-normal.woff2) format('woff2'); unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FF; }
+@font-face { font-family: Poppins; font-weight: 600; src: url(node_modules/@fontsource/poppins/files/poppins-latin-600-normal.woff2) format('woff2'); unicode-range: U+0000-00FF, U+2013-2014, U+2018-201D, U+2026; }
+@font-face { font-family: Poppins; font-weight: 700; src: url(node_modules/@fontsource/poppins/files/poppins-latin-700-normal.woff2) format('woff2'); unicode-range: U+0000-00FF, U+2013-2014, U+2018-201D, U+2026; }
+@font-face { font-family: Poppins; font-weight: 800; src: url(node_modules/@fontsource/poppins/files/poppins-latin-800-normal.woff2) format('woff2'); unicode-range: U+0000-00FF, U+2013-2014, U+2018-201D, U+2026; }
+html, body { margin: 0; background: #000; overflow: hidden; }
+#stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: Poppins, sans-serif; color: #fff; }
+#c { position: absolute; inset: 0; width: 1080px; height: 1920px; filter: saturate(1.1) contrast(1.04); }
+.shade { position: absolute; left: 0; right: 0; bottom: 0; height: 620px; background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.22)); }
+#alarm { position: absolute; inset: 0; opacity: 0; background: radial-gradient(ellipse at center, rgba(255,0,0,0) 45%, rgba(255,20,20,.75) 100%); }
+#sub { position: absolute; left: 50%; bottom: 330px; transform: translateX(-50%); white-space: nowrap; font-weight: 700; font-size: 58px; line-height: 1.3; -webkit-text-stroke: 11px #000; paint-order: stroke fill; }
+#sub.big { font-size: 68px; font-weight: 800; }
+.pill { position: absolute; left: 50%; transform: translateX(-50%); padding: 12px 40px; border-radius: 50px; background: #ffc93c; color: #1b1b1b; font-weight: 700; box-shadow: 0 8px 26px rgba(0,0,0,.3); white-space: nowrap; opacity: 0; }
+#tag { top: 210px; font-size: 44px; }
+#moral { top: 230px; font-size: 64px; padding: 10px 56px; }
+#barWrap { position: absolute; left: 0; right: 0; bottom: 0; height: 10px; background: rgba(255,255,255,.18); }
+#bar { height: 100%; width: 0; background: #ffc93c; }
+#fade { position: absolute; inset: 0; background: #000; opacity: 1; }
+</style>
+<script type="importmap">{ "imports": { "three": "./node_modules/three/build/three.module.js" } }</script>
+</head>
+<body>
+<div id="stage">
+  <canvas id="c" width="1080" height="1920"></canvas>
+  <div class="shade"></div><div id="alarm"></div>
+  <div class="pill" id="tag">हिरण और बंदर की कहानी</div>
+  <div class="pill" id="moral">सीख</div>
+  <div id="sub"></div>
+  <div id="barWrap"><div id="bar"></div></div>
+  <div id="fade"></div>
+</div>
+<script type="module" src="scene.js"></script>
+</body>
+</html>
