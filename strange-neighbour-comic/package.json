@@ -1,0 +1,15 @@
+{
+  "name": "strange-neighbour",
+  "private": true,
+  "type": "module",
+  "description": "PS2-style 3D horror short: The Strange Neighbour (16:9)",
+  "scripts": {
+    "build": "bash build.sh"
+  },
+  "dependencies": {
+    "@fontsource/bangers": "^5.3.0",
+    "@fontsource/comic-neue": "^5.3.0",
+    "@fontsource/poppins": "^5.1.0",
+    "three": "^0.170.0"
+  }
+}
