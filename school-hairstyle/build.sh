@@ -20,6 +20,6 @@ ffmpeg -y -v error -framerate 24 -i build/frames/f%05d.jpg -i build/voice.wav -i
   [m][sc]sidechaincompress=threshold=0.03:ratio=5:attack=20:release=350[md];
   [3:a]aresample=48000,volume=0.8[fx];
   [v][md][fx]amix=inputs=3:normalize=0,alimiter=limit=0.95,loudnorm=I=-15:TP=-1.5:LRA=11[a]" \
-  -map "[vid]" -map "[a]" -c:v libx264 -preset slow -tune animation -crf 19 -pix_fmt yuv420p -r 24 -c:a aac -b:a 160k -ar 48000 \
+  -map "[vid]" -map "[a]" -c:v libx264 -preset slow -tune animation -crf 23 -pix_fmt yuv420p -r 24 -c:a aac -b:a 160k -ar 48000 \
   -movflags +faststart -shortest school-hairstyle-checking.mp4
 echo "done: school-hairstyle-checking.mp4"
