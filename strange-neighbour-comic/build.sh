@@ -17,6 +17,6 @@ ffmpeg -y -v error -framerate 24 -i build/frames/f%05d.jpg -i build/voice.wav -i
   [2:a]aresample=48000,volume=0.95[m];
   [m][sc]sidechaincompress=threshold=0.03:ratio=4:attack=30:release=500[md];
   [v][md]amix=inputs=2:normalize=0,alimiter=limit=0.95,loudnorm=I=-16:TP=-1.5:LRA=13[a]" \
-  -map "[vid]" -map "[a]" -c:v libx264 -preset slow -tune animation -crf 26 -maxrate 1150k -bufsize 4M -pix_fmt yuv420p -r 24 -c:a aac -b:a 128k -ar 48000 \
+  -map "[vid]" -map "[a]" -c:v libx264 -preset slow -tune animation -crf 26 -maxrate 940k -bufsize 4M -pix_fmt yuv420p -r 24 -c:a aac -b:a 128k -ar 48000 \
   -movflags +faststart -shortest the-strange-neighbour-comic.mp4
 echo "done: the-strange-neighbour-comic.mp4"
