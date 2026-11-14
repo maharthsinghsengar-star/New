@@ -45,7 +45,8 @@ if (times.length) {
   const total = Math.ceil((await pages[0].evaluate('window.DURATION')) * FPS);
   let done = 0; const t0 = Date.now();
   await Promise.all(pages.map(async (page, w) => {
-    for (let f = START + w; f < total; f += WORKERS) {
+    const END = Number(process.env.END || total);   // END=n stops before frame n (re-render a range)
+    for (let f = START + w; f < Math.min(END, total); f += WORKERS) {
       await shot(page, f / FPS, path.join(dir, `f${String(f).padStart(5, '0')}.jpg`));
       if (++done % 200 === 0) console.log(`${done}/${total} frames  ${((Date.now() - t0) / 1000).toFixed(0)}s`);
     }
