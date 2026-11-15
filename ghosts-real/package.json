@@ -1,0 +1,8 @@
+{
+  "name": "ghosts-real",
+  "private": true,
+  "type": "module",
+  "description": "2D stickman explainer story: Are Ghosts Real? (16:9)",
+  "scripts": { "build": "bash build.sh" },
+  "dependencies": { "three": "^0.170.0", "@fontsource/poppins": "^5.1.0" }
+}
