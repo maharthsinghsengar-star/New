@@ -314,7 +314,7 @@ const SHOT = {
     mood('hot'); sunAt(LX, 0, 0); thermo.visible = true; const k = smooth(seg(t, 2.6, 5.0)); setThermo(0.2 + 0.8 * k); expand(trL, k); matRail.emissiveIntensity = 0.3 * k;
     thermo.position.set(LX - 0.9, 0, 1.9);
     camL([LX + 1.1, 1.15, 2.0, LX, 0.42, 0.72, 34], [LX + 0.9, 1.0, 1.7, LX, 0.42, 0.72, 32], seg(t, 1.6, d)); DOF[1] = 0.9; thermo.position.set(LX - 1.5, 0, 2.6); },
-  clack(t, d) { sunAt(LX, 0, 0); wheelArm.visible = true; const x = lerp(LX + 2.6, LX - 2.6, t / d), j = Math.abs(x - LX) < 0.05 ? 1 : 0;
+  clack(t, d) { sunAt(LX, 0, 0); wheelArm.visible = true; const x = lerp(LX + 1.1, LX - 1.1, t / d), j = Math.abs(x - LX) < 0.05 ? 1 : 0;
     wheelArm.position.set(x, RAIL_TOP + 0.46 - 0.012 * (Math.abs(x - LX) < 0.08 ? 1 : 0), RAIL_Z - 0.02); bigWheel.rotation.z = (x - LX) / 0.46;
     cam(LX + 0.1, 0.8, RAIL_Z + 2.7, LX, 0.55, RAIL_Z, 40, 0.3); if (Math.abs(x - LX) < 0.12) shake(0.006); DOF[1] = 0.8; },
   leo(t, d) { sunAt(0, 0, 2); duo({ face: 'happy', hop: Math.abs(Math.sin(t * 9)) * 0.06, armR: [-2.7, 0, -0.2], armL: [-2.5, 0, -0.2] }, { face: 'happy', armR: [-1.6, 0, -1.2] }); cam(0.1, 1.75, -1.0, -0.15, 1.7, 2.75, 44); DOF[1] = 1.6; },
