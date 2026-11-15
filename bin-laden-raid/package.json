@@ -1,0 +1,8 @@
+{
+  "name": "bin-laden-raid",
+  "private": true,
+  "type": "module",
+  "description": "Documentary reconstruction: the raid on Abbottabad (16:9)",
+  "scripts": { "build": "bash build.sh" },
+  "dependencies": { "three": "^0.170.0", "@fontsource/poppins": "^5.1.0" }
+}
