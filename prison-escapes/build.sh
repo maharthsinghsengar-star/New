@@ -14,12 +14,12 @@ if [ -z "${START:-}${SKIP_AUDIO:-}" ]; then python3 narration.py; python3 music.
 python3 subs.py
 if [ -z "${SKIP_RENDER:-}" ]; then NODE_PATH="${NODE_PATH:-$(npm root -g)}" node render.mjs; fi
 ffmpeg -y -v error -framerate 24 -i build/frames/f%05d.jpg -i build/voice.wav -i build/music.wav -i build/sfx.wav -filter_complex "
-  [0:v]ass=build/subs.ass:fontsdir=fonts[vid];
+  [0:v]drawbox=x=0:y=0:w=iw:h=ih:color=0xFFFDF4:t=22,drawbox=x=22:y=22:w=iw-44:h=ih-44:color=0x141218:t=9,ass=build/subs.ass:fontsdir=fonts[vid];
   [1:a]aresample=48000,aformat=channel_layouts=stereo,highpass=f=80,equalizer=f=300:t=q:w=1.2:g=-2,equalizer=f=3200:t=q:w=1:g=4,highshelf=f=8000:g=2,acompressor=threshold=-20dB:ratio=3:attack=6:release=120:makeup=3,asplit=2[v][sc];
   [2:a]aresample=48000,volume=0.5[m];
   [m][sc]sidechaincompress=threshold=0.03:ratio=5:attack=20:release=350[md];
   [3:a]aresample=48000,volume=0.8[fx];
   [v][md][fx]amix=inputs=3:normalize=0,alimiter=limit=0.95,loudnorm=I=-15:TP=-1.5:LRA=11[a]" \
   -map "[vid]" -map "[a]" -c:v libx264 -preset slow -crf 21 -pix_fmt yuv420p -r 24 -c:a aac -b:a 160k -ar 48000 \
-  -movflags +faststart -shortest greatest-prison-escapes.mp4
-echo "done: greatest-prison-escapes.mp4"
+  -movflags +faststart -shortest greatest-prison-escapes-comic.mp4
+echo "done: greatest-prison-escapes-comic.mp4"

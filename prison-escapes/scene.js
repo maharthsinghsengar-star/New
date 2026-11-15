@@ -252,12 +252,29 @@ const blurMat = new THREE.ShaderMaterial({ uniforms: { tex: { value: null }, dir
 const compMat = new THREE.ShaderMaterial({ uniforms: { sharp: { value: rtMain.texture }, blur: { value: rtB.texture }, depth: { value: rtMain.depthTexture }, near: { value: 0.05 }, far: { value: 900 }, focus: { value: 3 }, range: { value: 2 }, maxB: { value: 1 }, tint: { value: new THREE.Vector3(1.03, 1.0, 0.96) }, heat: { value: 0 }, time: { value: 0 }, flash: { value: 0 }, flashC: { value: new THREE.Vector3(1, 1, 1) } }, vertexShader: VS,
   fragmentShader: `uniform sampler2D sharp, blur, depth; uniform float near, far, focus, range, maxB, heat, time, flash; uniform vec3 tint, flashC; varying vec2 vUv;
   float lin(float d){ float z = d * 2. - 1.; return 2. * near * far / (far + near - z * (far - near)); }
+  float luma(vec3 c){ return dot(c, vec3(.299, .587, .114)); }
   void main(){ vec2 uv = vUv; uv.x += heat * 0.0025 * sin(uv.y * 140. + time * 9.) * smoothstep(0.75, 0.3, uv.y);
-    float z = lin(texture2D(depth, uv).r); float coc = clamp(abs(z - focus) / range - 0.15, 0., 1.) * maxB;
+    vec2 o = vec2(1.7 / 1080., 1.7 / 1920.);
+    float z = lin(texture2D(depth, uv).r); float coc = clamp(abs(z - focus) / range - 0.3, 0., 1.) * maxB * 0.35;
     vec3 c = mix(texture2D(sharp, uv).rgb, texture2D(blur, uv).rgb, coc);
-    c *= tint * 1.18; c = c / (1. + c * 0.08) * 1.06; float l = dot(c, vec3(.299,.587,.114)); c = mix(vec3(l), c, 1.42); c = max(c, 0.);
-    vec2 v = vUv - .5; c *= 1. - dot(v * vec2(0.9, 0.6), v * vec2(0.9, 0.6)) * 0.45;
-    c = mix(c, flashC, flash); c = pow(clamp(c, 0., 1.), vec3(1. / 2.2)); gl_FragColor = vec4(c, 1.); }` });
+    // comic ink: depth creases (relative) + strong colour edges
+    float zl = lin(texture2D(depth, uv - vec2(o.x, 0.)).r), zr = lin(texture2D(depth, uv + vec2(o.x, 0.)).r), zu = lin(texture2D(depth, uv + vec2(0., o.y)).r), zd = lin(texture2D(depth, uv - vec2(0., o.y)).r);
+    float de = smoothstep(0.05, 0.14, abs(zl + zr + zu + zd - 4. * z) / z);
+    vec3 cl = texture2D(sharp, uv - vec2(o.x, 0.)).rgb, cr = texture2D(sharp, uv + vec2(o.x, 0.)).rgb, cu = texture2D(sharp, uv + vec2(0., o.y)).rgb, cd = texture2D(sharp, uv - vec2(0., o.y)).rgb;
+    float ce = smoothstep(0.13, 0.34, length(cl - cr) + length(cu - cd));
+    float ink = clamp(max(de, ce * 0.85), 0., 1.) * (1. - coc * 1.5);
+    // punchy grade, then flat-ish posterised colour like printed comics
+    c *= tint * 1.32; c = c / (1. + c * 0.05); float l = luma(c); c = mix(vec3(l), c, 1.75); c = max(c, 0.);
+    c = pow(clamp(c, 0., 1.), vec3(1. / 2.2));
+    c = mix(c, floor(c * 6. + 0.5) / 6., 0.7);
+    // halftone dots in the mid-tones and shadows (45 degree screen)
+    float L = luma(c); vec2 q = mat2(.7071, -.7071, .7071, .7071) * gl_FragCoord.xy / 8.; float r = length(fract(q) - .5);
+    float dr = sqrt(clamp(1. - L * 1.3, 0., 1.)) * 0.56; float dm = 1. - smoothstep(dr - 0.07, dr + 0.07, r);
+    c *= 1. - dm * 0.32;
+    float hl = smoothstep(0.82, 0.95, L); float wr = 0.22 * hl; c = mix(c, vec3(1.), (1. - smoothstep(wr - 0.06, wr + 0.06, r)) * hl * 0.5);
+    c = mix(c, vec3(0.05, 0.04, 0.08), ink);
+    vec2 v = vUv - .5; c *= 1. - dot(v * vec2(0.9, 0.6), v * vec2(0.9, 0.6)) * 0.3;
+    c = mix(c, flashC, flash); gl_FragColor = vec4(clamp(c, 0., 1.), 1.); }` });
 function postRender(dof) {
   renderer.setRenderTarget(rtMain); renderer.render(scene, camera);
   quad.material = blurMat; blurMat.uniforms.tex.value = rtMain.texture; blurMat.uniforms.dir.value.set(1.6 / (W / 4), 0); renderer.setRenderTarget(rtA); renderer.render(quadScene, quadCam);
@@ -362,7 +379,7 @@ const SHOT = {
       else if (t < 1.55) { mood('dusk'); sunAt(YX, 0, 0); cam(YX - 6, 1.2, 4, YX - 11, 9, -7, 46); DOF[1] = 20; DOF[2] = 0.3; }
       else { mood('night'); sunAt(IX, 0, 0); cam(IX - 30, 1.2, 40, IX, 4, 0, 40); beamG.rotation.y = t * 0.8; DOF[1] = 60; DOF[2] = 0.3; }
     } else { mood('cellN'); sunAt(0, 0, 0); lamp.position.set(0.3, 1.4, -1.0); lamp.intensity = 4; ventGrille[3].visible = false; holes[3].visible = true;
-      sparkle.visible = t > e(1) - 0.9; sparkle.position.set(0.2, 0.05, -2.24); sparkle.scale.setScalar(0.22 * Math.max(0, Math.sin((t - (e(1) - 0.9)) * 4)) + 0.02);
+      sparkle.visible = t > e(1) - 0.9; sparkle.material.opacity = 0.55; sparkle.position.set(0.2, 0.05, -2.24); sparkle.scale.setScalar(0.22 * Math.max(0, Math.sin((t - (e(1) - 0.9)) * 4)) + 0.02);
       camL([0.75, 0.55, -1.2, 0.2, 0.02, -2.3, 40], [0.45, 0.32, -1.75, 0.22, 0.02, -2.3, 34], seg(t, l(1), e(1))); DOF[1] = 0.4; }
   },
 };
