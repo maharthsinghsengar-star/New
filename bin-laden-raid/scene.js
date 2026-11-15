@@ -519,7 +519,7 @@ const SHOT = {
     if (t < l(1)) { camL(SR(0.3, 1.6, -0.6), SR(0.1, 1.65, -1.3), t / l(1)); const a = camera.position; cam(a.x, a.y, a.z, 60, IY + 1.75, -2.55, 34, 0.3); }
     else if (t < l(2)) { camL(SR(-2.6, 1.4, 1.8), SR(-2.2, 1.4, 1.5), seg(t, l(1), l(2))); const a = camera.position; cam(a.x, a.y, a.z, 60, IY + 1.2, 0, 38, 0.2); }
     else { camL(SR(3.0, 1.5, 0.3), SR(2.4, 1.45, 0.2), seg(t, l(2), d)); const a = camera.position; cam(a.x, a.y, a.z, 60 - 1.0, IY + 1.2, 0, 34, 0.15); } dof(1.5, 0.8); },
-  intel(t, d) { mood('inside'); intel.visible = true; U.mode.value = 1; U.expo.value = 6; roomLights[1].intensity = 0.8; roomLights[1].position.set(170, IY + 2.4, 0);
+  intel(t, d) { mood('inside'); intel.visible = true; U.mode.value = 1; U.expo.value = 9; roomLights[1].intensity = 2.2; roomLights[1].position.set(0.6, 2.5, 0.8);
     SEALS.slice(0, 3).forEach((f, i) => { putf(f, 170 - 1.4 + i * 1.3, IY, -1.0 + (i % 2) * 0.6, Math.PI + (i - 1) * 0.4); posef(f, { aim: i === 2 ? 1 : 0, crouch: i === 1 ? 0.7 : 0.2, armR: -1.2, armL: -1.0 }); });
     camL([170 + 2.4, IY + 1.7, 2.0, 170 - 0.8, IY + 1.0, -1.6, 44], [170 + 1.8, IY + 1.6, 1.4, 170 - 0.8, IY + 1.0, -1.8, 44], t / d); dof(10, 0); },
   destroy(t, d, l) { if (t < l(1) - 0.2) { mood('night'); U.mode.value = 1; U.expo.value = 10; const xt = l(0) + 3.8; heli(BH1, -20, 3.4, 8, 0.7, -0.14, 0.1, 0); BH1.visible = t < xt + 0.15;
