@@ -1,13 +1,14 @@
 """Dialogue (Kokoro Hindi voices) -> build/voice.wav + build/timeline.json (lines, speakers, mouth envelopes, scenes)."""
 import json, os, re, numpy as np, soundfile as sf
-from kokoro_onnx import Kokoro
+from piper import PiperVoice, SynthesisConfig
+from scipy.signal import lfilter, butter
 
-MODELS = os.environ.get("MODELS", "../car-story/models")
-k = Kokoro(f"{MODELS}/kokoro-v1.0.onnx", f"{MODELS}/voices-v1.0.bin")
-SR, FPS = 24000, 30
-SPEED = float(os.environ.get("SPEED", "1.35"))
-VOICE = {"J": "hm_omega", "R": "hm_psi", "W": "hf_alpha", "N": "hf_beta"}
-PITCH = {"J": 1.0, "R": 1.0, "W": 1.0, "N": 1.0}
+# Piper neural Hindi voices (native speakers): Jitu = Pratham, Raj = Rohan, wife = Priyamvada; closing line in Jitu's voice
+VOICES = {k: PiperVoice.load(f"voices/hi_IN-{v}-medium.onnx") for k, v in {"J": "pratham", "R": "rohan", "W": "priyamvada"}.items()}
+VOICES["N"] = VOICES["J"]
+SR, FPS = 22050, 30
+LENGTH = float(os.environ.get("LENGTH", "1.0"))          # 1.0 = the voice's natural speaking rate
+CFG = SynthesisConfig(length_scale=LENGTH, noise_scale=0.45, noise_w_scale=0.6)
 # (scene, speaker, spoken text, caption text, pause after, lead-in before)
 L = [
  (1, "J", "अरे भाई! हैप्पी दिवाली! कैसी चल रही है ज़िंदगी, और कैसा चल रहा है बिज़नेस?", "अरे भाई! हैप्पी दिवाली! कैसी चल रही है जिंदगी और कैसा चल रहा है बिजनेस?", 0.3, 2.6),
@@ -32,10 +33,17 @@ L = [
  (5, "N", "सही लोग, सही पहचान, और बिज़नेस ग्रोथ की नई उड़ान! आइए, जुड़िए सही क्लिक से।", "सही लोग, सही पहचान और बिजनेस ग्रोथ की नई उड़ान!", 2.2, 0.3),
 ]
 
+def clarity(a):
+    """gentle high-pass + presence lift so speech stays crisp over the music"""
+    b, c = butter(2, 90 / (SR / 2), "high"); a = lfilter(b, c, a)
+    b, c = butter(2, [2500 / (SR / 2), 5500 / (SR / 2)], "band"); a = a + 0.35 * lfilter(b, c, a)
+    return (a / (np.abs(a).max() + 1e-9) * 0.92).astype(np.float32)
+
 def tts(text, who):
-    a, sr = k.create(text, voice=VOICE[who], speed=SPEED, lang="hi")
-    nz = np.nonzero(np.abs(a) > 0.008)[0]
-    return a[max(0, nz[0] - 200): nz[-1] + 600].astype(np.float32) if len(nz) else a
+    a = np.concatenate([c.audio_float_array for c in VOICES[who].synthesize(text, syn_config=CFG)])
+    nz = np.nonzero(np.abs(a) > 0.01)[0]
+    a = a[max(0, nz[0] - 200): nz[-1] + 900] if len(nz) else a
+    return clarity(a)
 
 def envelope(a):
     hop = SR // FPS; n = len(a) // hop + 1
