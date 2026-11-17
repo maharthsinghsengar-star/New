@@ -441,13 +441,9 @@ function setCam(set, pos, tgt, fov) { const o = SETS[set].position; camera.posit
 const elWM = document.getElementById('wm'), elCap = document.getElementById('cap'), elFin = document.getElementById('fin'), elFade = document.getElementById('fade');
 const WHO = { J: ['जीतू भैया', '#ffd23f'], R: ['राज', '#4fc3f7'], W: ['राज की पत्नी', '#ff8ab3'], JRW: ['तीनों', '#b9f6ca'], N: ['', ''] };
 function chunkCaption(l, t) {
-  const words = l.text.split(' '), chunks = []; let cur = '';
-  for (const w of words) { if (cur && (cur + ' ' + w).length > 34) { chunks.push(cur); cur = w; } else cur = (cur + ' ' + w).trim(); }
-  if (cur) chunks.push(cur);
-  const pairs = []; for (let i = 0; i < chunks.length; i += 2) pairs.push(chunks.slice(i, i + 2).join('<br>'));
-  const tot = pairs.reduce((s, p) => s + p.length, 0); let acc = l.start;
-  for (const p of pairs) { const d = (l.end - l.start) * p.length / tot; if (t < acc + d + 0.05) return p; acc += d; }
-  return pairs[pairs.length - 1];
+  let cur = l.segs[0];
+  for (const sg of l.segs) if (t >= sg.start - 0.08) cur = sg;
+  return cur.text;
 }
 
 function showCard(c, set, x, y, z, t0, t1, t, opts = {}) {
@@ -506,26 +502,26 @@ window.renderFrame = async t => {
     if (t > lj(5).start - 1.6) placeChar(chars.W, set, lerp(3.0, 1.3, wIn), -0.75, charState('W', t, { yaw: -0.4, smile: -0.2, brow: -0.6, walk: wIn < 1 ? t * 7 : -1, talk: [['relax', 'chest'], ['relax', 'present'], ['shrug', 'shrug']] }), 1.02);
     // problem graphics
     const r3 = lj(3), r4 = lj(4), w5 = lj(5), D3 = r3.end - r3.start;
-    showUI(C_MONEY, set, 0, 0.56, 0.72, r3.start + 0.6, r3.start + D3 * 0.42, t);
-    showUI(C_ADS, set, 0, 0.56, 0.6, r3.start + D3 * 0.42, r3.start + D3 * 0.66, t);
-    showUI(C_DOWN, set, 0, 0.54, 0.7, r3.start + D3 * 0.66, r3.end + 0.1, t);
-    showUI(C_REACH, set, 0, 0.54, 0.78, r4.start + 0.3, r4.end, t);
-    showUI(C_CITY, set, 0, 0.54, 0.76, w5.start + 0.6, w5.end, t);
+    showUI(C_MONEY, set, 0, 0.56, 0.72, r3.marks[1], r3.marks[2] - 0.2, t);
+    showUI(C_ADS, set, 0, 0.56, 0.6, r3.marks[2], r3.marks[3] - 0.2, t);
+    showUI(C_DOWN, set, 0, 0.54, 0.7, r3.marks[3], r3.end + 0.2, t);
+    showUI(C_REACH, set, 0, 0.54, 0.78, r4.marks[1], r4.end + 0.2, t);
+    showUI(C_CITY, set, 0, 0.54, 0.76, w5.marks[2], w5.end + 0.2, t);
   }
   // ---------------- SCENE 3: Jitu explains, SAHI CLICK reveal, network
   else if (t < s3[1]) {
-    const j6 = lj(6), j7 = lj(7), j8 = lj(8), j9 = lj(9);
+    const j6 = lj(6), j7 = lj(7), j8 = lj(8), j9 = lj(9), rv = j7.marks[1] - 0.05;
     if (t < j8.start - 0.2) {
       set = 'int';
-      setCam(set, ...camPath([[s3[0], [-0.2, 1.62, 3.5], [-0.4, 1.5, -1], 38], [j6.end, [-0.4, 1.62, 2.8], [-0.55, 1.55, -1], 33], [j7.start - 0.05, [-0.4, 1.62, 2.8], [-0.55, 1.55, -1], 33, 1],
-        [j7.start, [0.35, 1.7, 5.2], [0.35, 1.7, -1], 44], [j8.start, [0.35, 1.7, 4.5], [0.35, 1.75, -1], 42]], t));
-      const reveal = t >= j7.start;
+      setCam(set, ...camPath([[s3[0], [-0.2, 1.62, 3.5], [-0.4, 1.5, -1], 38], [j6.end, [-0.4, 1.62, 2.8], [-0.55, 1.55, -1], 33], [rv - 0.05, [-0.4, 1.62, 2.8], [-0.55, 1.55, -1], 33, 1],
+        [rv, [0.35, 1.7, 5.2], [0.35, 1.7, -1], 44], [j8.start, [0.35, 1.7, 4.5], [0.35, 1.75, -1], 42]], t));
+      const reveal = t >= rv;
       placeChar(chars.J, set, -0.6, -0.6, charState('J', t, { yaw: reveal ? 0.0 : 0.35, smile: 0.85, brow: 0.5, talk: reveal ? [['present', 'present']] : [['up', 'relax'], ['explain', 'relax'], ['chest', 'relax'], ['present', 'relax']] }), 1.02);
       placeChar(chars.R, set, 0.45, -0.9, charState('R', t, { yaw: -0.35, smile: reveal ? 0.6 : -0.1, brow: reveal ? 0.6 : 0.1, armR: 'relax', armL: 'relax' }), 1.02);
       placeChar(chars.W, set, 1.3, -0.75, charState('W', t, { yaw: -0.45, smile: reveal ? 0.7 : 0.1, brow: reveal ? 0.7 : 0.1, armR: 'relax', armL: 'relax' }), 1.02);
-      if (reveal) { showUI(C_LOGO, set, 0, 0.18, 0.72, j7.start + 0.05, j8.start + 0.5, t); rays.visible = true; rays.position.copy(C_LOGO.m.position); rays.position.z -= 0.15; rays.scale.setScalar(1);
-        rays.quaternion.copy(camera.quaternion); rays.rotateZ(t * 0.4); rays.material.opacity = ss(j7.start, j7.start + 0.3, t) * 0.4; rays.scale.setScalar((0.6 + ss(j7.start, j7.start + 0.6, t) * 0.4) * 0.7);
-        updateConfetti(t, j7.start + 0.05, new THREE.Vector3(100.2, 1.6, 0.4)); bloomS = 0.35; fade = Math.max(0, 1 - (t - j7.start) / 0.2) * 0.3; }
+      if (reveal) { showUI(C_LOGO, set, 0, 0.18, 0.72, rv + 0.05, j8.start + 0.5, t); rays.visible = true; rays.position.copy(C_LOGO.m.position); rays.position.z -= 0.15; rays.scale.setScalar(1);
+        rays.quaternion.copy(camera.quaternion); rays.rotateZ(t * 0.4); rays.material.opacity = ss(rv, rv + 0.3, t) * 0.4; rays.scale.setScalar((0.6 + ss(rv, rv + 0.6, t) * 0.4) * 0.7);
+        updateConfetti(t, rv + 0.05, new THREE.Vector3(100.2, 1.6, 0.4)); bloomS = 0.35; fade = Math.max(0, 1 - (t - rv) / 0.2) * 0.3; }
     } else {
       set = 'net';
       const k = ss(j8.start - 0.2, j9.end, t), a = lerp(-0.35, 0.35, k);
@@ -538,7 +534,7 @@ window.renderFrame = async t => {
       netEdges.forEach((e, i) => { const on = ss(j8.start + D8 * 0.25 + i * 0.05, j8.start + D8 * 0.25 + i * 0.05 + 0.5, t); e.tube.material.opacity = on * 0.85;
         e.tube.material.color.setRGB(lerp(0.3, 1.0, gold), lerp(0.83, 0.78, gold), lerp(1.0, 0.2, gold));
         const u = ((t * 0.45 + e.ph) % 1); e.pulse.position.copy(e.curve.getPoint(u)); e.pulse.material.opacity = on; });
-      NETP.forEach((c, i) => showUI(c, set, [-0.38, 0.38, -0.38, 0.38][i], [0.62, 0.48, -0.42, -0.56][i], 0.52, j8.start + D8 * (0.08 + i * 0.22), j9.start + 0.2, t));
+      NETP.forEach((c, i) => showUI(c, set, [-0.38, 0.38, -0.38, 0.38][i], [0.62, 0.48, -0.42, -0.56][i], 0.52, j8.marks[i + 1], j9.start + 0.2, t));
       const ar = NET.userData.arrow; ar.position.y = lerp(-6, -2.0, ss(j9.start, j9.start + 1.4, t)); ar.scale.setScalar(lerp(0.3, 0.75, ss(j9.start, j9.start + 1.4, t)));
       NET.userData.bars.forEach((b, i) => { const h = ss(j9.start + 0.2 + i * 0.15, j9.start + 0.8 + i * 0.15, t) * (0.6 + i * 0.5); b.visible = h > 0.01; b.scale.y = Math.max(0.001, h); b.position.y = -3.4 + h / 2; b.position.z = -0.6; });
       showUI(C_GROW, set, 0, 0.6, 0.86, j9.start + 0.3, s3[1], t);
@@ -556,9 +552,9 @@ window.renderFrame = async t => {
     placeChar(chars.J, set, -0.65, 0.2, charState('J', t, { yaw: cheer ? 0 : 0.25, smile: 0.9, brow: 0.5, talk: cheer ? [['cheer', 'cheer']] : [['present', 'relax'], ['thumb', 'relax'], ['explain', 'relax'], ['up', 'relax'], ['present', 'present']] }), 1.0);
     placeChar(chars.R, set, 0.12, 0.0, charState('R', t, { yaw: cheer ? 0 : -0.3, smile: t > r11.start ? 0.85 : 0.6, brow: t > r11.start ? 0.8 : 0.4, talk: cheer ? [['cheer', 'cheer']] : [['shrug', 'relax']] }), 1.0);
     placeChar(chars.W, set, 0.85, 0.1, charState('W', t, { yaw: cheer ? 0 : -0.35, smile: 0.85, brow: 0.5, talk: cheer ? [['cheer', 'cheer']] : null, armR: 'relax', armL: 'relax' }), 1.0);
-    showUI(C_CAL, set, 0, 0.5, 0.48, j10.start + 0.5, r11.end, t, { flip: 1 });
+    showUI(C_CAL, set, 0, 0.5, 0.48, j10.marks[1], r11.end + 0.2, t, { flip: 1 });
     const D12 = j12.end - j12.start;
-    BEN.forEach((c, i) => showUI(c, set, [-0.4, 0.4, -0.4, 0.4][i], [0.66, 0.66, 0.5, 0.5][i], 0.47, j12.start + D12 * (0.03 + i * 0.22), all.start - 0.1, t));
+    BEN.forEach((c, i) => showUI(c, set, [-0.4, 0.4, -0.4, 0.4][i], [0.66, 0.66, 0.5, 0.5][i], 0.47, j12.marks[i], all.start - 0.1, t));
     updateFireworks(fireworks[0], t - s4[0] + 0.5, cheer ? 3.2 : 6.5);
     if (cheer) updateConfetti(t, all.start, new THREE.Vector3(0.1, 3.4, 0.6));
     fade = Math.max(0, 1 - (t - s4[0]) / 0.3) * 0.8;
@@ -578,7 +574,7 @@ window.renderFrame = async t => {
   bloom.strength = bloomS;
   // overlays
   elWM.style.opacity = t < s5[0] - 0.1 ? 1 : 0;
-  const l = L.find(x => t >= x.start - 0.05 && t < x.end + 0.25 && x.who !== 'N');
+  const l = L.find(x => t >= x.start - 0.08 && t < x.end + 0.35);
   if (l && t < s5[0]) { const w = WHO[l.who]; elCap.innerHTML = `<span class="who" style="background:${w[1]}">${w[0]}</span><br><span class="box">${chunkCaption(l, t)}</span>`; elCap.style.opacity = 1; } else elCap.style.opacity = 0;
   const fk = ss(s5[0], s5[0] + 0.8, t); elFin.style.opacity = fk;
   [...elFin.children].forEach((e, i) => { const k = ss(s5[0] + 0.2 + i * 0.25, s5[0] + 0.7 + i * 0.25, t); e.style.opacity = k; e.style.transform = `translateY(${(1 - k) * 40}px) scale(${0.9 + 0.1 * easeOutBack(k)})`; });

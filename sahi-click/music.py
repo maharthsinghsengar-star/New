@@ -22,11 +22,11 @@ def reverb(B, secs=2.2, mix=0.22):
     return B * (1 - mix) + wet * mix
 
 s1, s2, s3, s4, s5 = SC[1], SC[2], SC[3], SC[4], SC[5]
-reveal = L[7]["start"]; cheer = L[13]["start"]
+reveal = L[7]["marks"][1]; cheer = L[13]["start"]; cheer_end = L[13]["end"]
 # energy per instrument over time
 def env(points): t, v = zip(*points); return np.interp(tt, t, v)
-E_dhol = env([(0, 0.8), (s1[1] - 0.3, 0.8), (s1[1] + 0.3, 0.0), (reveal - 0.05, 0.0), (reveal, 1.0), (s4[1], 1.0), (cheer, 1.2), (s5[0] + 2.0, 0.6), (dur - 1.5, 0.0), (dur, 0)])
-E_pluck = env([(0, 0.8), (s1[1], 0.7), (s1[1] + 0.5, 0.25), (s3[0], 0.3), (reveal, 1.0), (dur - 2, 0.8), (dur, 0)])
+E_dhol = env([(0, 0.0), (1.0, 0.35), (s1[1] - 0.3, 0.35), (s1[1] + 0.3, 0.0), (reveal - 0.05, 0.0), (reveal, 0.65), (s4[0], 0.65), (s4[0] + 1.0, 1.0), (cheer, 1.1), (s5[0] + 2.0, 0.6), (dur - 1.5, 0.0), (dur, 0)])
+E_pluck = env([(0, 0.55), (s1[1], 0.55), (s1[1] + 0.5, 0.2), (s3[0], 0.25), (reveal, 0.85), (s4[0], 0.85), (s4[0] + 1, 1.0), (dur - 2, 0.8), (dur, 0)])
 E_build = env([(0, 0), (s3[0], 0.0), (reveal - 0.1, 1.0), (reveal + 0.05, 0.0), (dur, 0)])
 minor = env([(0, 0), (s1[1] - 0.2, 0), (s1[1] + 0.6, 1), (s3[0], 1), (reveal, 0), (dur, 0)])
 
@@ -73,8 +73,8 @@ for i in range(int(dur / step)):
     if SHK[j]: tk = T(0.06); add(D, bp(rng.normal(0, 1, len(tk)), 6000, 12000) * np.exp(-tk * 70) * (0.05 if j % 2 else 0.08) * e, t0, 0.3)
     if j in (3, 13) and e > 0.9: tk = T(0.25); add(D, np.sin(2 * np.pi * (520 - 120 * tk) * tk) * np.exp(-tk * 14) * 0.18 * e, t0, 0.7)   # tabla "na"
 # riser into the reveal
-rt = T(5.0); riser = bp(rng.normal(0, 1, len(rt)), 500, 6000) * (rt / 5.0) ** 3
-add(D, riser * 0.25, reveal - 5.0, 0.5)
+RL = max(4.0, reveal - s3[0]); rt = T(RL); riser = bp(rng.normal(0, 1, len(rt)), 500, 6000) * (rt / RL) ** 3
+add(D, riser * 0.18, reveal - RL, 0.5)
 add(D, np.sin(2 * np.pi * hz(50) * T(3)) * np.exp(-T(3) * 1.5) * 0.4, reveal, 0.5)
 M = M + D
 # final resolving chord
@@ -99,20 +99,20 @@ def burst(t0, g=0.5):
     t = T(0.9); w = np.sin(2 * np.pi * np.cumsum(1200 + 1800 * t / 0.9) / sr) * np.exp(-((t - 0.45) / 0.3) ** 2) * 0.15; add(S, w, t0 - 0.9, 0.5, g)  # whistle
     t = T(1.4); b = lp(rng.normal(0, 1, len(t)), 900) * np.exp(-t * 4) + np.sin(2 * np.pi * 60 * t) * np.exp(-t * 6); add(S, b / np.abs(b).max(), t0, rng.random() * 0.6 + 0.2, g); cracker(t0 + 0.2, g * 0.6)
 # fireworks in scene 1 and scene 4 (match the visual bursts loosely)
-for tb in (1.0, 2.3, 3.6, 5.2, 7.0, 9.4): burst(tb, 0.32)
-for tb in (s4[0] + 0.8, s4[0] + 3.5, s4[0] + 7.0, cheer + 0.2, cheer + 1.1, cheer + 2.0, cheer + 2.8): burst(tb, 0.4)
-cracker(cheer + 0.4, 0.5); cracker(cheer + 1.6, 0.5)
+for tb in (0.5, 1.6): burst(tb, 0.32)
+for tb in (cheer_end + 0.1, cheer_end + 0.6): burst(tb, 0.4)
+cracker(cheer_end + 0.3, 0.45)
 # scene transitions
 for t0 in (s2[0], s3[0], s4[0], s5[0]): whoosh(t0 - 0.35, 0.7, 0.45)
 whoosh(L[8]["start"] - 0.5, 0.8, 0.5)
 # graphics pops
 r3, r4, w5, j8, j9, j10, j12 = L[3], L[4], L[5], L[8], L[9], L[10], L[12]
 D3, D8, D12 = r3["end"] - r3["start"], j8["end"] - j8["start"], j12["end"] - j12["start"]
-for t0 in [r3["start"] + 0.6, r3["start"] + D3 * 0.42, r3["start"] + D3 * 0.66, r4["start"] + 0.3, w5["start"] + 0.6, j9["start"] + 0.3, j10["start"] + 0.5] + \
-          [j8["start"] + D8 * (0.08 + i * 0.22) for i in range(4)] + [j12["start"] + D12 * (0.03 + i * 0.22) for i in range(4)]:
+for t0 in [r3["marks"][1], r3["marks"][2], r3["marks"][3], r4["marks"][1], w5["marks"][2], j9["start"] + 0.3, j10["marks"][1]] + \
+          [j8["marks"][i + 1] for i in range(4)] + [j12["marks"][i] for i in range(4)]:
     pop(t0, 0.32)
 for i in range(12): pop(j8["start"] + i * 0.18, 0.1)
-sparkle(reveal, 0.5); sparkle(s5[0] + 0.3, 0.35); cracker(reveal + 0.05, 0.35)
+sparkle(reveal, 0.45); sparkle(s5[0] + 0.3, 0.35)
 S = reverb(S, 1.6, 0.18); S /= np.abs(S).max() + 1e-9
 sf.write("build/sfx.wav", (S.T * 0.75).astype(np.float32), sr)
 print("ok", round(dur, 2))
