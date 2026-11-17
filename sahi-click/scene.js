@@ -1,10 +1,6 @@
 // SAHI CLICK – Mega Visitor Day: human-like 2D characters in vibrant 3D Diwali sets. Deterministic window.renderFrame(t).
 import * as THREE from 'three';
-import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
-import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
-import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
-import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
-import { drawPerson, SPECS, defaultState, CW, CH } from './people.js';
+import { drawPerson, SPECS, defaultState, CW, CH } from './toon.js';
 
 const RW = 720, RH = 1280, FPS = 30;
 const TL = await (await fetch('build/timeline.json')).json();
@@ -13,15 +9,42 @@ await Promise.all(['500', '600', '700', '800'].map(w => document.fonts.load(`${w
 
 const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('c'), antialias: true, preserveDrawingBuffer: true });
 renderer.setPixelRatio(1); renderer.setSize(RW, RH, false);
-renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 0.9;
+renderer.toneMapping = THREE.NoToneMapping;
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(40, RW / RH, 0.05, 400);
-const composer = new EffectComposer(renderer);
-composer.addPass(new RenderPass(scene, camera));
-const bloom = new UnrealBloomPass(new THREE.Vector2(RW, RH), 0.5, 0.45, 0.92); composer.addPass(bloom);
-composer.addPass(new OutputPass());
+// ---- toon post: ink outlines from depth + colour edges, saturation, soft glow; UI layer drawn on top afterwards
+const rtMain = new THREE.WebGLRenderTarget(RW, RH, { samples: 4, depthTexture: new THREE.DepthTexture(RW, RH) });
+rtMain.texture.colorSpace = THREE.SRGBColorSpace;
+const rtA = new THREE.WebGLRenderTarget(RW / 4, RH / 4), rtB = rtA.clone();
+const quadCam = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1), quad = new THREE.Mesh(new THREE.PlaneGeometry(2, 2)), quadScene = new THREE.Scene(); quadScene.add(quad);
+const VS = 'varying vec2 vUv; void main(){ vUv = uv; gl_Position = vec4(position.xy, 0., 1.); }';
+const blurMat = new THREE.ShaderMaterial({ uniforms: { tex: { value: null }, dir: { value: new THREE.Vector2() } }, vertexShader: VS,
+  fragmentShader: 'uniform sampler2D tex; uniform vec2 dir; varying vec2 vUv; void main(){ vec3 c = texture2D(tex, vUv).rgb * .227; float w[4]; w[0]=.195; w[1]=.122; w[2]=.054; w[3]=.016; for(int i=0;i<4;i++){ c += texture2D(tex, vUv + dir*float(i+1)).rgb*w[i]; c += texture2D(tex, vUv - dir*float(i+1)).rgb*w[i]; } gl_FragColor = vec4(c, 1.); }' });
+const compMat = new THREE.ShaderMaterial({ uniforms: { sharp: { value: rtMain.texture }, blur: { value: rtB.texture }, depth: { value: rtMain.depthTexture }, glowK: { value: 0.6 }, inkK: { value: 1 } }, vertexShader: VS,
+  fragmentShader: `uniform sampler2D sharp, blur, depth; uniform float glowK, inkK; varying vec2 vUv;
+  float lin(float d){ float z = d * 2. - 1.; return 2. * .05 * 400. / (400. + .05 - z * (400. - .05)); }
+  void main(){ vec2 o = vec2(1.25 / ${RW}., 1.25 / ${RH}.);
+    vec3 c = texture2D(sharp, vUv).rgb; float z = lin(texture2D(depth, vUv).r);
+    float zl = lin(texture2D(depth, vUv - vec2(o.x, 0.)).r), zr = lin(texture2D(depth, vUv + vec2(o.x, 0.)).r), zu = lin(texture2D(depth, vUv + vec2(0., o.y)).r), zd = lin(texture2D(depth, vUv - vec2(0., o.y)).r);
+    float de = smoothstep(0.04, 0.1, abs(zl + zr + zu + zd - 4. * z) / z);
+    vec3 cl = texture2D(sharp, vUv - vec2(o.x, 0.)).rgb, cr = texture2D(sharp, vUv + vec2(o.x, 0.)).rgb, cu = texture2D(sharp, vUv + vec2(0., o.y)).rgb, cd = texture2D(sharp, vUv - vec2(0., o.y)).rgb;
+    float ce = smoothstep(0.22, 0.45, length(cl - cr) + length(cu - cd));
+    float ink = clamp(max(de, ce * 0.7), 0., 1.) * inkK;
+    float l = dot(c, vec3(.299, .587, .114)); c = mix(vec3(l), c, 1.22);
+    vec3 b = texture2D(blur, vUv).rgb; c += max(b - 0.62, 0.) * glowK * 1.6;
+    c = mix(c, vec3(.09, .067, .12), ink);
+    gl_FragColor = vec4(clamp(c, 0., 1.), 1.); }` });
+const bloom = { strength: 0.5 };
+const UI = 2;   // render layer for graphics drawn over the ink pass
+function postRender() {
+  camera.layers.set(0); renderer.setRenderTarget(rtMain); renderer.clear(); renderer.render(scene, camera);
+  quad.material = blurMat; const pass = (src, dst, x, y) => { blurMat.uniforms.tex.value = src.texture; blurMat.uniforms.dir.value.set(x, y); renderer.setRenderTarget(dst); renderer.render(quadScene, quadCam); };
+  pass(rtMain, rtA, 2 / (RW / 4), 0); pass(rtA, rtB, 0, 2 / (RH / 4)); pass(rtB, rtA, 3.5 / (RW / 4), 0); pass(rtA, rtB, 0, 3.5 / (RH / 4));
+  compMat.uniforms.glowK.value = bloom.strength; quad.material = compMat; renderer.setRenderTarget(null); renderer.clear(); renderer.render(quadScene, quadCam);
+  renderer.autoClear = false; renderer.clearDepth(); camera.layers.set(UI); const bg = scene.background; scene.background = null; renderer.render(scene, camera); scene.background = bg; renderer.autoClear = true; camera.layers.set(0);
+}
 
 // ---------------------------------------------------------------- helpers
 let NOW = 0;
@@ -29,7 +52,8 @@ const clamp = (x, a, b) => Math.max(a, Math.min(b, x)), lerp = (a, b, k) => a + 
 const ss = (a, b, x) => { const k = clamp((x - a) / (b - a), 0, 1); return k * k * (3 - 2 * k); };
 const easeOutBack = k => { const c = 1.7; return 1 + (c + 1) * Math.pow(k - 1, 3) + c * Math.pow(k - 1, 2); };
 function RNG(s) { return () => { s |= 0; s = s + 0x6D2B79F5 | 0; let t = Math.imul(s ^ s >>> 15, 1 | s); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
-const std = (c, o = {}) => new THREE.MeshStandardMaterial({ color: c, roughness: 0.7, metalness: 0, ...o });
+const GRAD = (() => { const d = new Uint8Array([90, 175, 255]); const t = new THREE.DataTexture(d, 3, 1, THREE.RedFormat); t.minFilter = t.magFilter = THREE.NearestFilter; t.needsUpdate = true; return t; })();
+const std = (c, o = {}) => { const { roughness, metalness, ...rest } = o; return new THREE.MeshToonMaterial({ color: c, gradientMap: GRAD, ...rest }); };
 const glowM = (c, o = {}) => new THREE.MeshBasicMaterial({ color: c, toneMapped: false, ...o });
 function mesh(geo, mat, x = 0, y = 0, z = 0, parent = scene, shadow = true) { const m = new THREE.Mesh(geo, mat); m.position.set(x, y, z); m.castShadow = shadow; m.receiveShadow = true; parent.add(m); return m; }
 const box = (w, h, d, mat, x, y, z, p) => mesh(new THREE.BoxGeometry(w, h, d), mat, x, y, z, p);
@@ -110,13 +134,13 @@ const EXT = makeSet('ext', 0);
   const sky = new THREE.Mesh(new THREE.SphereGeometry(150, 32, 16), new THREE.ShaderMaterial({ side: THREE.BackSide, depthWrite: false, uniforms: {},
     vertexShader: 'varying vec3 vP; void main(){ vP = normalize(position); gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.); }',
     fragmentShader: `varying vec3 vP; float h(vec3 p){ return fract(sin(dot(p, vec3(12.9898,78.233,45.164))) * 43758.5453); }
-      void main(){ float y = vP.y; vec3 c = mix(vec3(.95,.42,.22), vec3(.28,.09,.36), smoothstep(-.02,.18,y)); c = mix(c, vec3(.03,.02,.12), smoothstep(.18,.7,y));
+      void main(){ float y = vP.y; vec3 c = mix(vec3(1.,.62,.4), vec3(.45,.45,1.), smoothstep(-.02,.14,y)); c = mix(c, vec3(.12,.3,.95), smoothstep(.14,.55,y));
       vec3 q = floor(vP * 260.); float s = step(.9975, h(q)) * smoothstep(.1,.4,y); gl_FragColor = vec4(c + s * .9, 1.); }` }));
   EXT.add(sky);
   const tiles = canvasTex(512, 512, (x, w) => { x.fillStyle = '#8a6a55'; x.fillRect(0, 0, w, w); for (let i = 0; i < 4; i++) for (let j = 0; j < 4; j++) { x.fillStyle = (i + j) % 2 ? '#a5826a' : '#987660'; x.fillRect(i * 128 + 3, j * 128 + 3, 122, 122); } }, [14, 14]);
   const ground = mesh(new THREE.PlaneGeometry(60, 60).rotateX(-Math.PI / 2), std(0xffffff, { map: tiles, roughness: 0.55 }), 0, 0, 0, EXT); ground.castShadow = false;
   // house facade
-  const wallM = std(0xf6dcb4, { roughness: 0.85 }), trimM = std(0xb84a2a, { roughness: 0.6 }), woodM = std(0x6b3518, { roughness: 0.5 }), goldM = std(0xe7b542, { metalness: 0.6, roughness: 0.35 });
+  const wallM = std(0xfff0b8, { roughness: 0.85 }), trimM = std(0x2f7de1, { roughness: 0.6 }), woodM = std(0x6b3518, { roughness: 0.5 }), goldM = std(0xe7b542, { metalness: 0.6, roughness: 0.35 });
   box(12, 7.6, 0.5, wallM, 0, 3.8, -2.6, EXT);
   box(12.4, 0.35, 0.8, trimM, 0, 3.5, -2.3, EXT); box(12.4, 0.4, 0.9, trimM, 0, 7.6, -2.3, EXT);
   for (const x of [-5.9, 5.9]) box(0.5, 7.6, 0.8, trimM, x, 3.8, -2.3, EXT);
@@ -169,10 +193,10 @@ const EXT = makeSet('ext', 0);
     stringLights(EXT, sag([x - 2.2, h - 0.1, z + 1.55], [x + 2.2, h - 0.1, z + 1.55], 0.3, 8), 20, ['#ffd27a', '#ff3b6b', '#3bd1ff', '#7dff6a']);
     for (let k = 0; k < 4; k++) box(0.7, 0.8, 0.05, winM, x - 1.5 + k * 1.0, h * 0.55, z + 1.52, EXT); }
   // lights
-  EXT.add(new THREE.HemisphereLight(0x8a6ac8, 0x3a2418, 0.42));
-  const moon = new THREE.DirectionalLight(0xa8b8ff, 0.35); moon.position.set(-8, 14, 10); EXT.add(moon);
-  const key = new THREE.SpotLight(0xffc27a, 16, 30, 0.7, 0.6, 1.4); key.position.set(3, 6, 6); key.target.position.set(0, 1, -1); key.castShadow = true; key.shadow.mapSize.set(1024, 1024); EXT.add(key, key.target);
-  const doorLight = new THREE.PointLight(0xffa24a, 4, 9, 1.5); doorLight.position.set(0, 2.2, -1.2); EXT.add(doorLight);
+  EXT.add(new THREE.HemisphereLight(0xd8e4ff, 0x7a6a8a, 1.5));
+  const moon = new THREE.DirectionalLight(0xfff0e0, 1.6); moon.position.set(-8, 14, 10); EXT.add(moon);
+  const key = new THREE.SpotLight(0xffc27a, 10, 30, 0.7, 0.6, 1.4); key.position.set(3, 6, 6); key.target.position.set(0, 1, -1); key.castShadow = true; key.shadow.mapSize.set(1024, 1024); EXT.add(key, key.target);
+  const doorLight = new THREE.PointLight(0xffc27a, 2.5, 9, 1.5); doorLight.position.set(0, 2.2, -1.2); EXT.add(doorLight);
   for (const s of [-1, 1]) { const p = new THREE.PointLight(0xff8a2a, 1.6, 5, 1.6); p.position.set(s * 4, 1.2, 0); EXT.add(p); }
   fireworkSystem(EXT, [-16, 16, 11, 20, -30, -20], 7, 14, 0, 6);
 }
@@ -182,10 +206,10 @@ const INT = makeSet('int', 100);
 {
   const floorT = canvasTex(512, 512, (x, w) => { x.fillStyle = '#d8c3a5'; x.fillRect(0, 0, w, w); for (let i = 0; i < 2; i++) for (let j = 0; j < 2; j++) { const g = x.createLinearGradient(i * 256, j * 256, i * 256 + 256, j * 256 + 256); g.addColorStop(0, '#efe3cf'); g.addColorStop(1, '#d9c6aa'); x.fillStyle = g; x.fillRect(i * 256 + 2, j * 256 + 2, 252, 252); } }, [8, 8]);
   mesh(new THREE.PlaneGeometry(20, 20).rotateX(-Math.PI / 2), std(0xffffff, { map: floorT, roughness: 0.28, metalness: 0.05 }), 0, 0, 0, INT).castShadow = false;
-  const wallT = canvasTex(512, 512, (x, w) => { x.fillStyle = '#e88a4f'; x.fillRect(0, 0, w, w); x.strokeStyle = 'rgba(255,220,170,.28)'; x.lineWidth = 6;
+  const wallT = canvasTex(512, 512, (x, w) => { x.fillStyle = '#7d6cf7'; x.fillRect(0, 0, w, w); x.strokeStyle = 'rgba(255,255,255,.22)'; x.lineWidth = 6;
     for (let i = 0; i < 4; i++) for (let j = 0; j < 4; j++) { const cx = i * 128 + 64 + (j % 2) * 64, cy = j * 128 + 64; x.beginPath(); for (let k = 0; k < 8; k++) { const a = k / 8 * Math.PI * 2; x.ellipse(cx + Math.cos(a) * 22, cy + Math.sin(a) * 22, 22, 9, a, 0, 7); } x.stroke(); } }, [4, 2]);
   box(12, 6, 0.2, std(0xffffff, { map: wallT, roughness: 0.9 }), 0, 3, -3, INT);
-  box(0.2, 6, 10, std(0xf2b27a, { roughness: 0.9 }), -5.5, 3, 2, INT); box(0.2, 6, 10, std(0xf2b27a, { roughness: 0.9 }), 5.5, 3, 2, INT);
+  box(0.2, 6, 10, std(0x9b8fff, { roughness: 0.9 }), -5.5, 3, 2, INT); box(0.2, 6, 10, std(0x9b8fff, { roughness: 0.9 }), 5.5, 3, 2, INT);
   box(12, 0.25, 0.3, std(0xffffff), 0, 0.12, -2.86, INT);
   // window on the back wall (night outside, string lights)
   mesh(new THREE.PlaneGeometry(2.2, 1.9), glowM(0x1a1640), -3.2, 2.6, -2.88, INT, false);
@@ -217,8 +241,8 @@ const INT = makeSet('int', 100);
   // plant
   cyl(0.25, 0.2, 0.55, std(0xd9c2a3), -4.6, 0.28, -2.3, INT); for (let i = 0; i < 7; i++) { const l = mesh(new THREE.SphereGeometry(0.22, 10, 8), std(0x2e7d32, { roughness: 0.9 }), -4.6 + Math.cos(i) * 0.25, 0.85 + i * 0.12, -2.3 + Math.sin(i) * 0.2, INT); l.scale.set(0.6, 1.4, 0.6); }
   // lights
-  INT.add(new THREE.HemisphereLight(0xffe0c0, 0x6a3a2a, 0.5));
-  const key = new THREE.SpotLight(0xfff0dd, 15, 25, 0.75, 0.7, 1.3); key.position.set(-2, 5.5, 5); key.target.position.set(0.5, 1, -1.5); key.castShadow = true; key.shadow.mapSize.set(1024, 1024); INT.add(key, key.target);
+  INT.add(new THREE.HemisphereLight(0xfff0e0, 0x9a6a5a, 1.6)); { const d = new THREE.DirectionalLight(0xffffff, 1.4); d.position.set(-3, 6, 6); INT.add(d); }
+  const key = new THREE.SpotLight(0xfff0dd, 8, 25, 0.75, 0.7, 1.3); key.position.set(-2, 5.5, 5); key.target.position.set(0.5, 1, -1.5); key.castShadow = true; key.shadow.mapSize.set(1024, 1024); INT.add(key, key.target);
   const lampL = new THREE.PointLight(0xffb060, 3, 7, 1.5); lampL.position.set(-1.6, 1.4, -2.0); INT.add(lampL);
   const shelfL = new THREE.PointLight(0xff9a3a, 2, 5, 1.5); shelfL.position.set(1.4, 2.7, -2.3); INT.add(shelfL);
 }
@@ -289,7 +313,7 @@ const cards = [];
 function card(set, w, h, draw, opts = {}) {
   const tex = canvasTex(Math.round(w * 400), Math.round(h * 400), draw);
   const m = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ map: tex, color: 0xd8d8d8, transparent: true, depthWrite: false, toneMapped: false, side: THREE.DoubleSide }));
-  m.renderOrder = 10; SETS[set].add(m); m.visible = false; const c = { m, ...opts }; cards.push(c); return c;
+  m.renderOrder = 10; m.layers.set(UI); SETS[set].add(m); m.visible = false; const c = { m, ...opts }; cards.push(c); return c;
 }
 const pillDraw = (txt, bg = '#ffd23f', fg = '#1a1030', icon = null) => (x, w, h) => { x.fillStyle = 'rgba(0,0,0,.25)'; rr(x, 8, 14, w - 16, h - 20, (h - 20) / 2); x.fill();
   const g = x.createLinearGradient(0, 0, 0, h); g.addColorStop(0, bg); g.addColorStop(1, shadeHex(bg, 0.82)); x.fillStyle = g; rr(x, 4, 4, w - 16, h - 20, (h - 20) / 2); x.fill();
@@ -321,12 +345,12 @@ const C_GROW = card('net', 3.6, 0.62, pillDraw('तरक्की के रा
 const C_LOGO = card('int', 2.0, 2.0, (x, w, h) => { x.fillStyle = '#ffffff'; rr(x, 20, 20, w - 40, h - 40, 120); x.fill(); x.lineWidth = 18; x.strokeStyle = '#ffd23f'; rr(x, 20, 20, w - 40, h - 40, 120); x.stroke();
   const lw = w * 0.8, lh = lw * LOGO.height / LOGO.width; x.drawImage(LOGO, (w - lw) / 2, (h - lh) / 2, lw, lh); });
 const rays = new THREE.Mesh(new THREE.PlaneGeometry(7, 7), new THREE.MeshBasicMaterial({ map: canvasTex(512, 512, (x, w) => { x.translate(w / 2, w / 2); for (let i = 0; i < 24; i++) { x.rotate(Math.PI * 2 / 24); const g = x.createLinearGradient(0, 0, 0, -w / 2); g.addColorStop(0, 'rgba(255,230,140,.9)'); g.addColorStop(1, 'rgba(255,230,140,0)'); x.fillStyle = g; x.beginPath(); x.moveTo(-14, 0); x.lineTo(14, 0); x.lineTo(40, -w / 2); x.lineTo(-40, -w / 2); x.fill(); } }), transparent: true, blending: THREE.AdditiveBlending, depthWrite: false, toneMapped: false }));
-rays.renderOrder = 9; INT.add(rays); rays.visible = false;
+rays.renderOrder = 9; rays.layers.set(UI); INT.add(rays); rays.visible = false;
 // confetti
 const confetti = (() => { const N = 500, r = RNG(5), im = new THREE.InstancedMesh(new THREE.PlaneGeometry(0.06, 0.1), new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, toneMapped: false }), N); const data = [];
   const cols = ['#ffd23f', '#ff3b6b', '#3bd1ff', '#7dff6a', '#ff8c2a', '#c66bff', '#ffffff']; const c = new THREE.Color();
   for (let i = 0; i < N; i++) { data.push({ v: new THREE.Vector3((r() - 0.5) * 6, 2 + r() * 4, (r() - 0.5) * 2), w: new THREE.Vector3(r() * 8, r() * 8, r() * 8), d: r() * 0.4 }); im.setColorAt(i, c.set(cols[i % cols.length])); }
-  im.frustumCulled = false; im.visible = false; scene.add(im); return { im, data, N }; })();
+  im.frustumCulled = false; im.visible = false; im.layers.set(UI); scene.add(im); return { im, data, N }; })();
 function updateConfetti(t, t0, origin) {
   const { im, data, N } = confetti, m4 = new THREE.Matrix4(), q = new THREE.Quaternion(), e = new THREE.Euler(), s = new THREE.Vector3(1, 1, 1), p = new THREE.Vector3();
   const dt = t - t0; im.visible = dt > 0 && dt < 4.5; if (!im.visible) return;
@@ -363,7 +387,7 @@ function placeChar(c, set, x, z, st, tint = 1) {
   c.g.visible = true; SETS[set].add(c.g); c.g.position.set(x, 0, z);
   const cam = camera.position.clone(); SETS[set].worldToLocal(cam); c.m.rotation.y = Math.atan2(cam.x - x, cam.z - z);
   c.ctx.clearRect(0, 0, CW, CH); drawPerson(c.ctx, SPECS[c.k], st, NOW); c.tex.needsUpdate = true;
-  if (set === 'ext') tint = [0.95, 0.88, 0.8]; else if (set === 'int') tint = [1.0, 0.95, 0.9];
+  tint = 1;
   if (Array.isArray(tint)) c.m.material.color.setRGB(...tint); else c.m.material.color.setScalar(tint);
 }
 
@@ -443,7 +467,7 @@ window.renderFrame = async t => {
   for (const c of Object.values(chars)) c.g.visible = false;
   for (const c of cards) c.m.visible = false;
   rays.visible = false; confetti.im.visible = false;
-  let set, fade = 0, bloomS = 0.5;
+  let set, fade = 0, bloomS = 0.45;
   const [s1, s2, s3, s4, s5] = [SC[1], SC[2], SC[3], SC[4], SC[5]];
   const lj = i => L[i];
   // ---------------- SCENE 1: exterior, Jitu arrives with sweets
@@ -544,10 +568,10 @@ window.renderFrame = async t => {
   // overlays
   elWM.style.opacity = t < s5[0] - 0.1 ? 1 : 0;
   const l = L.find(x => t >= x.start - 0.05 && t < x.end + 0.25 && x.who !== 'N');
-  if (l && t < s5[0]) { const w = WHO[l.who]; elCap.innerHTML = `<span class="box"><span class="who" style="background:${w[1]}">${w[0]}</span>${chunkCaption(l, t)}</span>`; elCap.style.opacity = 1; } else elCap.style.opacity = 0;
+  if (l && t < s5[0]) { const w = WHO[l.who]; elCap.innerHTML = `<span class="who" style="background:${w[1]}">${w[0]}</span><br><span class="box">${chunkCaption(l, t)}</span>`; elCap.style.opacity = 1; } else elCap.style.opacity = 0;
   const fk = ss(s5[0], s5[0] + 0.8, t); elFin.style.opacity = fk;
   [...elFin.children].forEach((e, i) => { const k = ss(s5[0] + 0.2 + i * 0.25, s5[0] + 0.7 + i * 0.25, t); e.style.opacity = k; e.style.transform = `translateY(${(1 - k) * 40}px) scale(${0.9 + 0.1 * easeOutBack(k)})`; });
   elFade.style.opacity = fade.toFixed(3);
-  composer.render();
+  postRender();
 };
 window.READY = true;
