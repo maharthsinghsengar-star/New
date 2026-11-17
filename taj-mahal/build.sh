@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Full pipeline: narration -> music -> frames -> final 1080x1920 MP4.
+# Needs: ffmpeg, node + playwright (chromium), python3 with kokoro-onnx, soundfile, numpy.
+set -euo pipefail
+cd "$(dirname "$0")"
+mkdir -p build models
+if [ -z "${SKIP_AUDIO:-}" ]; then python3 narration.py; python3 music.py; fi
+[ -n "${SKIP_RENDER:-}" ] || NODE_PATH="${NODE_PATH:-$(npm root -g)}" node render.mjs
+# voice: low-end weight, less mud, presence boost for clarity; music sits low and ducks under the voice
+ffmpeg -y -v error -framerate 30 -i build/frames/f%05d.jpg -i build/voice.wav -i build/music.wav -filter_complex "
+  [1:a]aresample=48000,aformat=channel_layouts=stereo,highpass=f=65,equalizer=f=110:t=q:w=1:g=2.5,equalizer=f=320:t=q:w=1.2:g=-2,equalizer=f=3400:t=q:w=1:g=3.5,highshelf=f=8000:g=2,acompressor=threshold=-20dB:ratio=3:attack=6:release=120:makeup=2,asplit=2[v][sc];
+  [2:a]aresample=48000,volume=0.42[m];
+  [m][sc]sidechaincompress=threshold=0.03:ratio=5:attack=40:release=700[md];
+  [v][md]amix=inputs=2:normalize=0,alimiter=limit=0.95,loudnorm=I=-15:TP=-1.5:LRA=11[a]" \
+  -map 0:v -map "[a]" -c:v libx264 -preset slow -crf 19 -pix_fmt yuv420p -r 30 -c:a aac -b:a 192k -ar 48000 \
+  -movflags +faststart -shortest the-building-of-the-taj-mahal.mp4
+echo "done: the-building-of-the-taj-mahal.mp4"
