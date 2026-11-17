@@ -169,13 +169,13 @@ function drawLabels(st, beat, camDir) {
     let fs = clamp(rpx * (lines.length > 1 ? 0.55 : 0.42), 0, f ? 50 : 40);
     fs = Math.min(fs, rpx * 4.2 / len);
     if (f) fs = Math.max(fs, 24);
-    if (fs < 15) continue;
+    if (fs < 13) continue;
     const w = len * fs * 0.74, h = lines.length * fs * 1.08, bx = [x - w / 2 - 6, y - h / 2 - 4, x + w / 2 + 6, y + h / 2 + 4];
     if (bx[0] < 10 || bx[2] > W - 10) continue;
     if (boxes.some(b => bx[0] < b[2] && bx[2] > b[0] && bx[1] < b[3] && bx[3] > b[1])) continue;
     boxes.push(bx);
     const d = lab(n++); d.innerHTML = lines.join('<br>'); d.className = 'lb' + (f ? ' f' : '');
-    d.style.fontSize = fs.toFixed(1) + 'px'; d.style.opacity = (op * ss(0.42, 0.6, facing)).toFixed(3);
+    d.style.fontSize = fs.toFixed(1) + 'px'; d.style.opacity = (op * ss(0.42, 0.6, facing) * (f ? 1 : ss(13, 19, fs))).toFixed(3);
     d.style.transform = `translate(${(x).toFixed(1)}px, ${(y).toFixed(1)}px) translate(-50%, -50%)`; d.style.display = 'block';
   }
   for (let i = n; i < pool.length; i++) pool[i].style.display = 'none';
