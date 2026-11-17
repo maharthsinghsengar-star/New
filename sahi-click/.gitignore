@@ -3,3 +3,4 @@ node_modules
 preview.html
 assets/logo_src.jpg
 voices/*.onnx
+rec/*.wav

@@ -3,7 +3,7 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 export NODE_PATH="${NODE_PATH:-$(npm root -g)}"
-if [ -z "${SKIP_AUDIO:-}" ]; then python3 narration.py; python3 music.py; fi
+if [ -z "${SKIP_AUDIO:-}" ]; then python3 narration_rec.py; python3 music.py; fi
 [ -n "${SKIP_RENDER:-}" ] || node render.mjs
 OUT=sahi-click-mega-visitor-day.mp4
 ffmpeg -y -loglevel error -stats -framerate 30 -i build/frames/f%05d.jpg -i build/voice.wav -i build/music.wav -i build/sfx.wav \
