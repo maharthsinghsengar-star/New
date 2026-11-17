@@ -284,11 +284,11 @@ const netNodes = [], netEdges = [], netPills = [];
   });
   const pos = [];
   PROF.forEach((p, i) => { const a = i / PROF.length * Math.PI * 2 + 0.3, ring = i % 2 ? 4.2 : 3.0; pos.push(new THREE.Vector3(Math.cos(a) * ring, Math.sin(a) * ring * 1.35 + 0.2, -2 - (i % 3) * 1.2)); });
-  pos.forEach((p, i) => { const m = mesh(new THREE.PlaneGeometry(1.25, 1.46), new THREE.MeshBasicMaterial({ map: nodeTex(PROF[i], i), transparent: true, toneMapped: false }), p.x, p.y, p.z, NET, false);
+  pos.forEach((p, i) => { const m = mesh(new THREE.PlaneGeometry(1.25, 1.46), new THREE.MeshBasicMaterial({ map: nodeTex(PROF[i], i), transparent: true, alphaTest: 0.5, toneMapped: false }), p.x, p.y, p.z, NET, false);
     const gl = glow(0x6ad7ff, 2.4, p.x, p.y, p.z - 0.05, NET, 0.35); netNodes.push({ m, gl, p, i }); });
   // centre: logo node
   const ct = canvasTex(600, 600, (x) => { x.fillStyle = '#ffffff'; x.beginPath(); x.arc(300, 300, 290, 0, 7); x.fill(); x.drawImage(LOGO, 300 - 220, 300 - 220 * LOGO.height / LOGO.width - 40, 440, 440 * LOGO.height / LOGO.width); });
-  const center = mesh(new THREE.PlaneGeometry(2.1, 2.1), new THREE.MeshBasicMaterial({ map: ct, color: 0xd0d0d0, transparent: true, toneMapped: false }), 0, 0.2, -1, NET, false);
+  const center = mesh(new THREE.PlaneGeometry(2.1, 2.1), new THREE.MeshBasicMaterial({ map: ct, color: 0xd0d0d0, transparent: true, alphaTest: 0.5, toneMapped: false }), 0, 0.2, -1, NET, false);
   glow(0x6ad7ff, 3.2, 0, 0.2, -1.1, NET, 0.18); netNodes.center = center;
   // edges: centre to all + ring neighbours + some chords
   const edgeList = []; pos.forEach((p, i) => { edgeList.push([null, i]); edgeList.push([i, (i + 1) % pos.length]); if (i % 3 === 0) edgeList.push([i, (i + 5) % pos.length]); });
