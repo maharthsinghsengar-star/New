@@ -32,8 +32,9 @@ const compMat = new THREE.ShaderMaterial({ uniforms: { sharp: { value: rtMain.te
     vec3 cl = texture2D(sharp, vUv - vec2(o.x, 0.)).rgb, cr = texture2D(sharp, vUv + vec2(o.x, 0.)).rgb, cu = texture2D(sharp, vUv + vec2(0., o.y)).rgb, cd = texture2D(sharp, vUv - vec2(0., o.y)).rgb;
     float ce = smoothstep(0.22, 0.45, length(cl - cr) + length(cu - cd));
     float ink = clamp(max(de, ce * 0.7), 0., 1.) * inkK;
-    float l = dot(c, vec3(.299, .587, .114)); c = mix(vec3(l), c, 1.22);
-    vec3 b = texture2D(blur, vUv).rgb; c += max(b - 0.62, 0.) * glowK * 1.6;
+    c = pow(max(c, 0.), vec3(1. / 2.2));
+    float l = dot(c, vec3(.299, .587, .114)); c = mix(vec3(l), c, 1.35);
+    vec3 b = pow(max(texture2D(blur, vUv).rgb, 0.), vec3(1. / 2.2)); c += max(b - 0.75, 0.) * glowK * 1.6;
     c = mix(c, vec3(.09, .067, .12), ink);
     gl_FragColor = vec4(clamp(c, 0., 1.), 1.); }` });
 const bloom = { strength: 0.5 };
@@ -52,7 +53,7 @@ const clamp = (x, a, b) => Math.max(a, Math.min(b, x)), lerp = (a, b, k) => a + 
 const ss = (a, b, x) => { const k = clamp((x - a) / (b - a), 0, 1); return k * k * (3 - 2 * k); };
 const easeOutBack = k => { const c = 1.7; return 1 + (c + 1) * Math.pow(k - 1, 3) + c * Math.pow(k - 1, 2); };
 function RNG(s) { return () => { s |= 0; s = s + 0x6D2B79F5 | 0; let t = Math.imul(s ^ s >>> 15, 1 | s); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
-const GRAD = (() => { const d = new Uint8Array([90, 175, 255]); const t = new THREE.DataTexture(d, 3, 1, THREE.RedFormat); t.minFilter = t.magFilter = THREE.NearestFilter; t.needsUpdate = true; return t; })();
+const GRAD = (() => { const d = new Uint8Array([155, 215, 255]); const t = new THREE.DataTexture(d, 3, 1, THREE.RedFormat); t.minFilter = t.magFilter = THREE.NearestFilter; t.needsUpdate = true; return t; })();
 const std = (c, o = {}) => { const { roughness, metalness, ...rest } = o; return new THREE.MeshToonMaterial({ color: c, gradientMap: GRAD, ...rest }); };
 const glowM = (c, o = {}) => new THREE.MeshBasicMaterial({ color: c, toneMapped: false, ...o });
 function mesh(geo, mat, x = 0, y = 0, z = 0, parent = scene, shadow = true) { const m = new THREE.Mesh(geo, mat); m.position.set(x, y, z); m.castShadow = shadow; m.receiveShadow = true; parent.add(m); return m; }
@@ -94,6 +95,13 @@ function marigold(parent, pts, n = 40) {
   const geo = new THREE.SphereGeometry(0.045, 8, 6), mats = [std(0xff8c00, { roughness: 0.95 }), std(0xffc300, { roughness: 0.95 })];
   for (let i = 0; i < n; i++) { const p = curve.getPoint(i / (n - 1)); const m = new THREE.Mesh(geo, mats[i % 2]); m.position.copy(p); parent.add(m); }
 }
+function bunting(parent, a, b, n, d = 0.35) {
+  const cols = [0xff3b6b, 0xffd23f, 0x3bc9ff, 0x7ee06a, 0xff8c2a, 0xb06bff];
+  const tri = new THREE.ShapeGeometry(new THREE.Shape([new THREE.Vector2(-0.12, 0), new THREE.Vector2(0.12, 0), new THREE.Vector2(0, -0.26)]));
+  for (let i = 0; i < n; i++) { const k = (i + 0.5) / n, p = [lerp(a[0], b[0], k), lerp(a[1], b[1], k) - Math.sin(k * Math.PI) * d, lerp(a[2], b[2], k)];
+    const m = new THREE.Mesh(tri, std(cols[i % cols.length], { side: THREE.DoubleSide })); m.position.set(...p); parent.add(m); }
+  parent.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(sag(a, b, d, 12).map(q => new THREE.Vector3(...q))), 40, 0.008, 4), std(0x333333)));
+}
 function hangingStrand(parent, x, y, z, len = 0.7) { for (let i = 0; i < 9; i++) { const m = new THREE.Mesh(new THREE.SphereGeometry(0.04, 8, 6), std(i % 2 ? 0xff8c00 : 0xffc300, { roughness: 0.95 })); m.position.set(x, y - i * len / 9, z); parent.add(m); } }
 function lantern(parent, x, y, z, color) {
   const g = new THREE.Group(); g.position.set(x, y, z); parent.add(g);
@@ -134,19 +142,19 @@ const EXT = makeSet('ext', 0);
   const sky = new THREE.Mesh(new THREE.SphereGeometry(150, 32, 16), new THREE.ShaderMaterial({ side: THREE.BackSide, depthWrite: false, uniforms: {},
     vertexShader: 'varying vec3 vP; void main(){ vP = normalize(position); gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.); }',
     fragmentShader: `varying vec3 vP; float h(vec3 p){ return fract(sin(dot(p, vec3(12.9898,78.233,45.164))) * 43758.5453); }
-      void main(){ float y = vP.y; vec3 c = mix(vec3(1.,.62,.4), vec3(.45,.45,1.), smoothstep(-.02,.14,y)); c = mix(c, vec3(.12,.3,.95), smoothstep(.14,.55,y));
+      void main(){ float y = vP.y; vec3 c = mix(vec3(1.,.55,.6), vec3(.55,.5,1.), smoothstep(-.02,.14,y)); c = mix(c, vec3(.15,.42,1.), smoothstep(.14,.55,y));
       vec3 q = floor(vP * 260.); float s = step(.9975, h(q)) * smoothstep(.1,.4,y); gl_FragColor = vec4(c + s * .9, 1.); }` }));
   EXT.add(sky);
-  const tiles = canvasTex(512, 512, (x, w) => { x.fillStyle = '#8a6a55'; x.fillRect(0, 0, w, w); for (let i = 0; i < 4; i++) for (let j = 0; j < 4; j++) { x.fillStyle = (i + j) % 2 ? '#a5826a' : '#987660'; x.fillRect(i * 128 + 3, j * 128 + 3, 122, 122); } }, [14, 14]);
+  const tiles = canvasTex(512, 512, (x, w) => { x.fillStyle = '#e8789a'; x.fillRect(0, 0, w, w); for (let i = 0; i < 4; i++) for (let j = 0; j < 4; j++) { x.fillStyle = (i + j) % 2 ? '#ffd0dc' : '#ffb0c4'; x.fillRect(i * 128 + 3, j * 128 + 3, 122, 122); } }, [14, 14]);
   const ground = mesh(new THREE.PlaneGeometry(60, 60).rotateX(-Math.PI / 2), std(0xffffff, { map: tiles, roughness: 0.55 }), 0, 0, 0, EXT); ground.castShadow = false;
   // house facade
-  const wallM = std(0xfff0b8, { roughness: 0.85 }), trimM = std(0x2f7de1, { roughness: 0.6 }), woodM = std(0x6b3518, { roughness: 0.5 }), goldM = std(0xe7b542, { metalness: 0.6, roughness: 0.35 });
+  const wallM = std(0xfff0b8, { roughness: 0.85 }), trimM = std(0x2f7de1, { roughness: 0.6 }), woodM = std(0xe8322c, { roughness: 0.5 }), goldM = std(0xe7b542, { metalness: 0.6, roughness: 0.35 });
   box(12, 7.6, 0.5, wallM, 0, 3.8, -2.6, EXT);
   box(12.4, 0.35, 0.8, trimM, 0, 3.5, -2.3, EXT); box(12.4, 0.4, 0.9, trimM, 0, 7.6, -2.3, EXT);
   for (const x of [-5.9, 5.9]) box(0.5, 7.6, 0.8, trimM, x, 3.8, -2.3, EXT);
   // doorway (open) glowing inside
   box(2.0, 2.9, 0.2, trimM, 0, 1.45, -2.28, EXT);
-  mesh(new THREE.PlaneGeometry(1.5, 2.5), new THREE.MeshBasicMaterial({ color: 0xbbbbbb, map: canvasTex(300, 500, (x, w, h) => { const g = x.createLinearGradient(0, 0, 0, h); g.addColorStop(0, '#8a3e1e'); g.addColorStop(0.6, '#d9763a'); g.addColorStop(1, '#5a2a14'); x.fillStyle = g; x.fillRect(0, 0, w, h);
+  mesh(new THREE.PlaneGeometry(1.5, 2.5), new THREE.MeshBasicMaterial({ color: 0xbbbbbb, map: canvasTex(300, 500, (x, w, h) => { const g = x.createLinearGradient(0, 0, 0, h); g.addColorStop(0, '#7d6cf7'); g.addColorStop(0.6, '#9b8fff'); g.addColorStop(1, '#ff9ec4'); x.fillStyle = g; x.fillRect(0, 0, w, h);
     x.fillStyle = '#ffd27a'; x.beginPath(); x.arc(150, 70, 26, 0, 7); x.fill(); const rg = x.createRadialGradient(150, 70, 10, 150, 70, 140); rg.addColorStop(0, 'rgba(255,210,120,.6)'); rg.addColorStop(1, 'rgba(255,210,120,0)'); x.fillStyle = rg; x.fillRect(0, 0, w, 260);
     x.fillStyle = '#4a2410'; x.fillRect(30, 250, 240, 12); for (let i = 0; i < 5; i++) { x.fillStyle = '#ffb347'; x.beginPath(); x.arc(55 + i * 48, 240, 7, 0, 7); x.fill(); }
     x.fillStyle = '#c9952e'; x.fillRect(80, 120, 140, 100); x.fillStyle = '#2a6f97'; x.fillRect(90, 130, 120, 80); x.fillStyle = '#1c7c8c'; x.fillRect(20, 380, 260, 70); x.fillStyle = '#ffc300'; x.fillRect(40, 360, 60, 40); x.fillStyle = '#d81b60'; x.fillRect(190, 360, 60, 40); }) }), 0, 1.3, -2.17, EXT, false);
@@ -182,18 +190,19 @@ const EXT = makeSet('ext', 0);
   // diyas: steps, rangoli ring, boundary walls
   for (let i = 0; i < 7; i++) diya(EXT, -1.35 + i * 0.45, 0.16, -1.36);
   for (let i = 0; i < 12; i++) { const a = i / 12 * Math.PI * 2; diya(EXT, Math.cos(a) * 1.12, 0.0, -0.55 + Math.sin(a) * 1.12); }
-  const wallLow = std(0xe9c9a0);
+  const wallLow = std(0xff7eb3);
   for (const s of [-1, 1]) { box(3.6, 0.8, 0.35, wallLow, s * 4.2, 0.4, -0.6, EXT); box(3.7, 0.08, 0.42, trimM, s * 4.2, 0.82, -0.6, EXT); for (let i = 0; i < 7; i++) diya(EXT, s * (2.6 + i * 0.52), 0.86, -0.6); }
   // potted plants
   for (const s of [-1, 1]) { cyl(0.28, 0.2, 0.5, std(0xb5532a), s * 1.7, 0.25, -1.7, EXT); mesh(new THREE.SphereGeometry(0.42, 14, 10), std(0x2e7d32, { roughness: 0.9 }), s * 1.7, 0.85, -1.7, EXT).scale.set(1, 1.2, 1); }
+  bunting(EXT, [-6, 6.3, -1.7], [6, 6.3, -1.7], 34, 0.5); bunting(EXT, [-5.5, 3.2, -1.4], [-1.3, 3.2, -1.4], 12, 0.3); bunting(EXT, [1.3, 3.2, -1.4], [5.5, 3.2, -1.4], 12, 0.3);
   lantern(EXT, -1.6, 2.6, -1.6, 0xff4d6d); lantern(EXT, 1.6, 2.6, -1.6, 0xffb000); lantern(EXT, -4.5, 6.4, -1.5, 0x3bd1ff); lantern(EXT, 4.5, 6.4, -1.5, 0xc66bff);
   // neighbours' houses in the distance with lights
   const r = RNG(4);
-  for (let i = 0; i < 10; i++) { const x = -26 + i * 5.6 + r() * 2, h = 4 + r() * 6, z = -14 - r() * 6; box(4.5, h, 3, std(0x3b2b4a), x, h / 2, z, EXT);
+  for (let i = 0; i < 10; i++) { const x = -26 + i * 5.6 + r() * 2, h = 4 + r() * 6, z = -14 - r() * 6; box(4.5, h, 3, std(['#ff6b9a', '#4fc3f7', '#ffd23f', '#7ee06a', '#b388ff', '#ff8a65'][i % 6]), x, h / 2, z, EXT);
     stringLights(EXT, sag([x - 2.2, h - 0.1, z + 1.55], [x + 2.2, h - 0.1, z + 1.55], 0.3, 8), 20, ['#ffd27a', '#ff3b6b', '#3bd1ff', '#7dff6a']);
     for (let k = 0; k < 4; k++) box(0.7, 0.8, 0.05, winM, x - 1.5 + k * 1.0, h * 0.55, z + 1.52, EXT); }
   // lights
-  EXT.add(new THREE.HemisphereLight(0xd8e4ff, 0x7a6a8a, 1.5));
+  EXT.add(new THREE.HemisphereLight(0xeef3ff, 0xb08ab0, 1.9));
   const moon = new THREE.DirectionalLight(0xfff0e0, 1.6); moon.position.set(-8, 14, 10); EXT.add(moon);
   const key = new THREE.SpotLight(0xffc27a, 10, 30, 0.7, 0.6, 1.4); key.position.set(3, 6, 6); key.target.position.set(0, 1, -1); key.castShadow = true; key.shadow.mapSize.set(1024, 1024); EXT.add(key, key.target);
   const doorLight = new THREE.PointLight(0xffc27a, 2.5, 9, 1.5); doorLight.position.set(0, 2.2, -1.2); EXT.add(doorLight);
@@ -204,7 +213,7 @@ const EXT = makeSet('ext', 0);
 // ---------- INTERIOR: festive living room
 const INT = makeSet('int', 100);
 {
-  const floorT = canvasTex(512, 512, (x, w) => { x.fillStyle = '#d8c3a5'; x.fillRect(0, 0, w, w); for (let i = 0; i < 2; i++) for (let j = 0; j < 2; j++) { const g = x.createLinearGradient(i * 256, j * 256, i * 256 + 256, j * 256 + 256); g.addColorStop(0, '#efe3cf'); g.addColorStop(1, '#d9c6aa'); x.fillStyle = g; x.fillRect(i * 256 + 2, j * 256 + 2, 252, 252); } }, [8, 8]);
+  const floorT = canvasTex(512, 512, (x, w) => { x.fillStyle = '#f0b860'; x.fillRect(0, 0, w, w); for (let i = 0; i < 2; i++) for (let j = 0; j < 2; j++) { const g = x.createLinearGradient(i * 256, j * 256, i * 256 + 256, j * 256 + 256); g.addColorStop(0, (i + j) % 2 ? '#fff4d6' : '#ffe08a'); g.addColorStop(1, (i + j) % 2 ? '#ffe9b8' : '#ffd166'); x.fillStyle = g; x.fillRect(i * 256 + 2, j * 256 + 2, 252, 252); } }, [8, 8]);
   mesh(new THREE.PlaneGeometry(20, 20).rotateX(-Math.PI / 2), std(0xffffff, { map: floorT, roughness: 0.28, metalness: 0.05 }), 0, 0, 0, INT).castShadow = false;
   const wallT = canvasTex(512, 512, (x, w) => { x.fillStyle = '#7d6cf7'; x.fillRect(0, 0, w, w); x.strokeStyle = 'rgba(255,255,255,.22)'; x.lineWidth = 6;
     for (let i = 0; i < 4; i++) for (let j = 0; j < 4; j++) { const cx = i * 128 + 64 + (j % 2) * 64, cy = j * 128 + 64; x.beginPath(); for (let k = 0; k < 8; k++) { const a = k / 8 * Math.PI * 2; x.ellipse(cx + Math.cos(a) * 22, cy + Math.sin(a) * 22, 22, 9, a, 0, 7); } x.stroke(); } }, [4, 2]);
@@ -212,36 +221,38 @@ const INT = makeSet('int', 100);
   box(0.2, 6, 10, std(0x9b8fff, { roughness: 0.9 }), -5.5, 3, 2, INT); box(0.2, 6, 10, std(0x9b8fff, { roughness: 0.9 }), 5.5, 3, 2, INT);
   box(12, 0.25, 0.3, std(0xffffff), 0, 0.12, -2.86, INT);
   // window on the back wall (night outside, string lights)
-  mesh(new THREE.PlaneGeometry(2.2, 1.9), glowM(0x1a1640), -3.2, 2.6, -2.88, INT, false);
+  mesh(new THREE.PlaneGeometry(2.2, 1.9), glowM(0x3a5cff), -3.2, 2.6, -2.88, INT, false);
   for (let i = 0; i < 18; i++) glow(['#ffd27a', '#ff3b6b', '#3bd1ff'][i % 3], 0.18, -4.2 + i * 0.12, 3.3 - Math.sin(i / 17 * Math.PI) * 0.2, -2.87, INT, 0.9);
   for (let i = 0; i < 5; i++) glow(0xffc070, 0.25, -4 + i * 0.4, 1.95 + (i % 2) * 0.3, -2.87, INT, 0.6);
-  box(2.4, 0.1, 0.2, std(0x7a3a1a), -3.2, 1.6, -2.8, INT); box(2.4, 0.1, 0.12, std(0x7a3a1a), -3.2, 3.6, -2.82, INT);
+  box(2.4, 0.1, 0.2, std(0xff5722), -3.2, 1.6, -2.8, INT); box(2.4, 0.1, 0.12, std(0xff5722), -3.2, 3.6, -2.82, INT);
   for (const x of [-4.55, -1.85]) { const cur = box(0.5, 2.6, 0.08, std(0xc2185b, { roughness: 0.95 }), x, 2.4, -2.75, INT); }
   // framed art + shelf with diyas + toran across wall
   for (const [x, w, h, c] of [[0.6, 1.3, 0.9, '#2a6f97'], [2.4, 0.8, 1.1, '#9c27b0']]) {
     box(w + 0.12, h + 0.12, 0.05, std(0xc9952e, { metalness: 0.5, roughness: 0.4 }), x, 3.4, -2.88, INT);
     mesh(new THREE.PlaneGeometry(w, h), std(0xffffff, { map: canvasTex(256, 256, (g, s) => { const gr = g.createLinearGradient(0, 0, s, s); gr.addColorStop(0, c); gr.addColorStop(1, '#ffd23f'); g.fillStyle = gr; g.fillRect(0, 0, s, s); g.fillStyle = 'rgba(255,255,255,.5)'; g.beginPath(); g.arc(s * 0.5, s * 0.5, s * 0.22, 0, 7); g.fill(); }) }), x, 3.4, -2.85, INT, false);
   }
-  box(3.4, 0.08, 0.32, std(0x7a3a1a), 1.4, 2.35, -2.75, INT); for (let i = 0; i < 7; i++) diya(INT, 0 + i * 0.46, 2.39, -2.72);
+  box(3.4, 0.08, 0.32, std(0xff5722), 1.4, 2.35, -2.75, INT); for (let i = 0; i < 7; i++) diya(INT, 0 + i * 0.46, 2.39, -2.72);
   marigold(INT, sag([-5.4, 5.6, -2.85], [5.4, 5.6, -2.85], 0.45, 8), 80); for (let i = 0; i < 11; i++) hangingStrand(INT, -5 + i * 1.0, 5.55 - Math.sin(i / 10 * Math.PI) * 0.45, -2.82, 0.6 + (i % 2) * 0.3);
   stringLights(INT, sag([-5.4, 5.3, -2.8], [5.4, 5.3, -2.8], 0.4, 10), 60, ['#ffd27a', '#fff2c0', '#ffb347', '#ff6b9a']);
+  bunting(INT, [-5.4, 4.9, -2.7], [5.4, 4.9, -2.7], 30, 0.45);
+  lantern(INT, -4.6, 4.2, -2.2, 0xff4d6d); lantern(INT, 4.6, 4.2, -2.2, 0x3bc9ff); lantern(INT, 0.4, 4.5, -2.4, 0xffb000);
   // sofa
-  const sofaM = std(0x1c7c8c, { roughness: 0.85 }), cushM = [std(0xffc300), std(0xd81b60), std(0xff7043)];
+  const sofaM = std(0x00c8d8, { roughness: 0.85 }), cushM = [std(0xffc300), std(0xd81b60), std(0xff7043)];
   box(3.2, 0.45, 0.95, sofaM, 2.6, 0.42, -2.25, INT); box(3.2, 0.75, 0.25, sofaM, 2.6, 0.95, -2.68, INT); for (const s of [-1, 1]) box(0.25, 0.65, 0.95, sofaM, 2.6 + s * 1.48, 0.62, -2.25, INT);
   for (let i = 0; i < 3; i++) { const c = box(0.5, 0.45, 0.15, cushM[i], 1.7 + i * 0.9, 0.9, -2.48, INT); c.rotation.z = (i - 1) * 0.12; }
   // side table + lamp
-  cyl(0.3, 0.3, 0.6, std(0x5d3a1a), -1.6, 0.3, -2.4, INT); const lamp = cyl(0.25, 0.35, 0.4, new THREE.MeshStandardMaterial({ color: 0xfff1d6, emissive: 0xffb860, emissiveIntensity: 1.4 }), -1.6, 1.25, -2.4, INT); cyl(0.03, 0.03, 0.5, std(0xc9952e), -1.6, 0.85, -2.4, INT);
+  cyl(0.3, 0.3, 0.6, std(0xff9800), -1.6, 0.3, -2.4, INT); const lamp = cyl(0.25, 0.35, 0.4, new THREE.MeshStandardMaterial({ color: 0xfff1d6, emissive: 0xffb860, emissiveIntensity: 1.4 }), -1.6, 1.25, -2.4, INT); cyl(0.03, 0.03, 0.5, std(0xc9952e), -1.6, 0.85, -2.4, INT);
   glow(0xffb860, 1.4, -1.6, 1.25, -2.35, INT, 0.3);
   // rug + coffee table with sweets
-  const rugT = canvasTex(512, 320, (x, w, h) => { x.fillStyle = '#7b1e3a'; x.fillRect(0, 0, w, h); x.strokeStyle = '#ffc300'; x.lineWidth = 14; x.strokeRect(20, 20, w - 40, h - 40); x.strokeStyle = '#18b7c9'; x.lineWidth = 6; x.strokeRect(46, 46, w - 92, h - 92);
+  const rugT = canvasTex(512, 320, (x, w, h) => { x.fillStyle = '#ff3d7f'; x.fillRect(0, 0, w, h); x.strokeStyle = '#ffe14d'; x.lineWidth = 14; x.strokeRect(20, 20, w - 40, h - 40); x.strokeStyle = '#18b7c9'; x.lineWidth = 6; x.strokeRect(46, 46, w - 92, h - 92);
     x.fillStyle = '#ffc300'; for (let i = 0; i < 6; i++) { x.beginPath(); x.arc(w / 2, h / 2, 110 - i * 16, 0, 7); x.fillStyle = ['#ffc300', '#d81b60', '#18b7c9', '#ff7043', '#ffffff', '#7ac943'][i]; x.fill(); } });
   mesh(new THREE.PlaneGeometry(4.4, 2.8).rotateX(-Math.PI / 2), std(0xffffff, { map: rugT, roughness: 1 }), 0.6, 0.01, -0.9, INT, false);
-  box(1.4, 0.06, 0.7, std(0x6d4022, { roughness: 0.4 }), 2.6, 0.45, -1.4, INT); for (const [x, z] of [[-0.6, -0.28], [0.6, -0.28], [-0.6, 0.28], [0.6, 0.28]]) box(0.06, 0.42, 0.06, std(0x4a2a14), 2.6 + x, 0.21, -1.4 + z, INT);
+  box(1.4, 0.06, 0.7, std(0xffd23f, { roughness: 0.4 }), 2.6, 0.45, -1.4, INT); for (const [x, z] of [[-0.6, -0.28], [0.6, -0.28], [-0.6, 0.28], [0.6, 0.28]]) box(0.06, 0.42, 0.06, std(0x4a2a14), 2.6 + x, 0.21, -1.4 + z, INT);
   box(0.36, 0.14, 0.26, std(0xe8336d), 2.35, 0.55, -1.45, INT); for (let i = 0; i < 3; i++) diya(INT, 2.75 + i * 0.16, 0.48, -1.3, 0.8);
   // plant
   cyl(0.25, 0.2, 0.55, std(0xd9c2a3), -4.6, 0.28, -2.3, INT); for (let i = 0; i < 7; i++) { const l = mesh(new THREE.SphereGeometry(0.22, 10, 8), std(0x2e7d32, { roughness: 0.9 }), -4.6 + Math.cos(i) * 0.25, 0.85 + i * 0.12, -2.3 + Math.sin(i) * 0.2, INT); l.scale.set(0.6, 1.4, 0.6); }
   // lights
-  INT.add(new THREE.HemisphereLight(0xfff0e0, 0x9a6a5a, 1.6)); { const d = new THREE.DirectionalLight(0xffffff, 1.4); d.position.set(-3, 6, 6); INT.add(d); }
+  INT.add(new THREE.HemisphereLight(0xfff6ee, 0xc09a9a, 1.9)); { const d = new THREE.DirectionalLight(0xffffff, 1.4); d.position.set(-3, 6, 6); INT.add(d); }
   const key = new THREE.SpotLight(0xfff0dd, 8, 25, 0.75, 0.7, 1.3); key.position.set(-2, 5.5, 5); key.target.position.set(0.5, 1, -1.5); key.castShadow = true; key.shadow.mapSize.set(1024, 1024); INT.add(key, key.target);
   const lampL = new THREE.PointLight(0xffb060, 3, 7, 1.5); lampL.position.set(-1.6, 1.4, -2.0); INT.add(lampL);
   const shelfL = new THREE.PointLight(0xff9a3a, 2, 5, 1.5); shelfL.position.set(1.4, 2.7, -2.3); INT.add(shelfL);

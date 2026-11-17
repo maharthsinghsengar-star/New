@@ -6,9 +6,9 @@ const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
 function hexk(c, k) { const n = parseInt(c.slice(1), 16); const f = v => clamp(Math.round(v * k), 0, 255); return `rgb(${f(n >> 16)},${f((n >> 8) & 255)},${f(n & 255)})`; }
 
 export const SPECS = {
-  J: { H: 1430, male: true, girth: 1.12, skin: '#c9844e', hair: '#1b1210', kurta: '#ff9a1f', jacket: '#c2185b', trim: '#ffd23f', pyjama: '#f6f0e4', shoe: '#6d3a1a', beard: true, hairStyle: 'side' },
-  R: { H: 1450, male: true, girth: 1.0, skin: '#e8ad80', hair: '#1b1210', kurta: '#12a4b8', placket: '#ffd23f', pyjama: '#f6f0e4', shoe: '#5b3420', hairStyle: 'puff' },
-  W: { H: 1380, male: false, girth: 0.92, skin: '#e6a87e', hair: '#1b1210', saree: '#ff2d7a', border: '#ffd23f', blouse: '#ffd23f', lips: '#d8264a', hairStyle: 'bun' },
+  J: { H: 1430, male: true, girth: 1.12, skin: '#b9784a', hair: '#1b1210', kurta: '#ff9a1f', jacket: '#c2185b', trim: '#ffd23f', pyjama: '#f6f0e4', shoe: '#6d3a1a', beard: true, hairStyle: 'side' },
+  R: { H: 1450, male: true, girth: 1.0, skin: '#e0a074', hair: '#1b1210', kurta: '#12a4b8', placket: '#ffd23f', pyjama: '#f6f0e4', shoe: '#5b3420', hairStyle: 'puff' },
+  W: { H: 1380, male: false, girth: 0.92, skin: '#dda07a', hair: '#1b1210', saree: '#ff2d7a', border: '#ffd23f', blouse: '#ffd23f', lips: '#d8264a', hairStyle: 'bun' },
 };
 export function defaultState() {
   return { yaw: 0, tilt: 0, lean: 0, breathe: 0, bob: 0, walk: -1, brow: 0, smile: 0.3, open: 1, mouth: 0, lookX: 0, lookY: 0,
