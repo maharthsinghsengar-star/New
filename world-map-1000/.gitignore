@@ -1,0 +1,5 @@
+build/
+out/
+data/
+node_modules
+build_prep.log

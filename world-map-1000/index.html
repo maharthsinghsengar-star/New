@@ -1,0 +1,35 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>World Map 1000 Years</title>
+<style>
+@font-face { font-family: Pop; font-weight: 600; src: url(node_modules/@fontsource/poppins/files/poppins-latin-600-normal.woff2) format('woff2'); }
+@font-face { font-family: Pop; font-weight: 700; src: url(node_modules/@fontsource/poppins/files/poppins-latin-700-normal.woff2) format('woff2'); }
+@font-face { font-family: Pop; font-weight: 800; src: url(node_modules/@fontsource/poppins/files/poppins-latin-800-normal.woff2) format('woff2'); }
+html, body { margin: 0; background: #000; overflow: hidden; width: 1080px; height: 1920px; font-family: Pop, sans-serif; }
+#c { display: block; width: 1080px; height: 1920px; position: absolute; inset: 0; }
+#vig { position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse 85% 60% at 50% 50%, rgba(0,0,0,0) 55%, rgba(0,0,0,.55) 100%),
+              linear-gradient(to bottom, rgba(0,0,0,.55) 0%, rgba(0,0,0,0) 22%, rgba(0,0,0,0) 62%, rgba(0,0,0,.5) 100%); }
+#labels { position: absolute; inset: 0; pointer-events: none; }
+.lb { position: absolute; left: 0; top: 0; color: #fff; text-transform: uppercase; font-weight: 700; letter-spacing: .07em; line-height: 1.04; text-align: center; white-space: nowrap;
+  text-shadow: 0 0 2px rgba(0,0,0,.9), 0 1px 3px rgba(0,0,0,.95), 0 0 10px rgba(0,0,0,.65); }
+.lb.f { color: #ffe27a; }
+#year { position: absolute; left: 0; right: 0; top: 118px; text-align: center; color: #fff; font-weight: 800; font-size: 150px; line-height: 1; letter-spacing: .01em;
+  text-shadow: 0 4px 18px rgba(0,0,0,.8), 0 0 3px rgba(0,0,0,.9); font-variant-numeric: tabular-nums; }
+#year small { font-size: 46px; font-weight: 700; margin-left: 14px; color: #ffd23f; letter-spacing: .06em; vertical-align: 62px; }
+#call { position: absolute; left: 50%; top: 300px; transform: translateX(-50%); text-align: center; white-space: nowrap; }
+#call .t { display: inline-block; background: rgba(8,14,26,.72); border: 2px solid rgba(255,210,63,.85); color: #ffd23f; font-weight: 800; font-size: 40px; letter-spacing: .08em;
+  padding: 10px 26px 8px; border-radius: 14px; text-transform: uppercase; box-shadow: 0 6px 24px rgba(0,0,0,.45); }
+#call .s { margin-top: 12px; color: #fff; font-weight: 600; font-size: 31px; text-shadow: 0 2px 8px rgba(0,0,0,.9); }
+#title { position: absolute; left: 0; right: 0; top: 150px; text-align: center; }
+#title .a { color: #fff; font-weight: 800; font-size: 76px; line-height: 1.05; text-shadow: 0 4px 20px rgba(0,0,0,.8); }
+#title .b { color: #ffd23f; font-weight: 800; font-size: 76px; line-height: 1.05; text-shadow: 0 4px 20px rgba(0,0,0,.8); }
+#sub { position: absolute; left: 60px; right: 60px; top: 1395px; text-align: center; color: #fff; font-weight: 800; font-size: 60px; line-height: 1.12;
+  -webkit-text-stroke: 11px #000; paint-order: stroke fill; text-shadow: 0 6px 16px rgba(0,0,0,.6); }
+#sub b { color: #ffd23f; font-weight: 800; }
+#credit { position: absolute; left: 0; right: 0; bottom: 120px; text-align: center; color: rgba(255,255,255,.8); font-weight: 600; font-size: 22px; line-height: 1.5; text-shadow: 0 2px 6px #000; }
+</style>
+<script type="importmap">{ "imports": { "three": "./node_modules/three/build/three.module.js" } }</script></head>
+<body><canvas id="c" width="1080" height="1920"></canvas><div id="labels"></div><div id="vig"></div>
+<div id="title"><div class="a">HOW THE WORLD MAP</div><div class="b">CHANGED IN 1000 YEARS</div></div>
+<div id="year"></div><div id="call"></div><div id="sub"></div><div id="credit"></div>
+<script type="module" src="scene.js"></script></body></html>
