@@ -60,7 +60,7 @@ def main():
     for i, ((who, a0, a1), (sc, swho, text, *_rest)) in enumerate(zip(CUTS, SCRIPT)):
         lead = _rest[3]
         a = trim(SRC[who][int(a0 * SR):int(a1 * SR)])
-        if swho == "JRW": a = group_voice(a)
+        if swho == "JRW": swho = "J"          # closing line: Jitu bhaiya alone (no group voice)
         gap = 0 if prev is None else (0.8 if i == 8 else GAP_SAME if prev == swho else GAP_SPEAKER)
         gap = max(gap, lead)
         out.append(np.zeros(int(gap * SR), np.float32)); t += gap
