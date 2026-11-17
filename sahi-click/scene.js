@@ -502,11 +502,11 @@ window.renderFrame = async t => {
     if (t > lj(5).start - 1.6) placeChar(chars.W, set, lerp(3.0, 1.3, wIn), -0.75, charState('W', t, { yaw: -0.4, smile: -0.2, brow: -0.6, walk: wIn < 1 ? t * 7 : -1, talk: [['relax', 'chest'], ['relax', 'present'], ['shrug', 'shrug']] }), 1.02);
     // problem graphics
     const r3 = lj(3), r4 = lj(4), w5 = lj(5), D3 = r3.end - r3.start;
-    showUI(C_MONEY, set, 0, 0.56, 0.72, r3.marks[1], r3.marks[2] - 0.2, t);
-    showUI(C_ADS, set, 0, 0.56, 0.6, r3.marks[2], r3.marks[3] - 0.2, t);
-    showUI(C_DOWN, set, 0, 0.54, 0.7, r3.marks[3], r3.end + 0.2, t);
-    showUI(C_REACH, set, 0, 0.54, 0.78, r4.marks[1], r4.end + 0.2, t);
-    showUI(C_CITY, set, 0, 0.54, 0.76, w5.marks[2], w5.end + 0.2, t);
+    // (pop-up removed) showUI(C_MONEY, set, 0, 0.56, 0.72, r3.marks[1], r3.marks[2] - 0.2, t);
+    // (pop-up removed) showUI(C_ADS, set, 0, 0.56, 0.6, r3.marks[2], r3.marks[3] - 0.2, t);
+    // (pop-up removed) showUI(C_DOWN, set, 0, 0.54, 0.7, r3.marks[3], r3.end + 0.2, t);
+    // (pop-up removed) showUI(C_REACH, set, 0, 0.54, 0.78, r4.marks[1], r4.end + 0.2, t);
+    // (pop-up removed) showUI(C_CITY, set, 0, 0.54, 0.76, w5.marks[2], w5.end + 0.2, t);
   }
   // ---------------- SCENE 3: Jitu explains, SAHI CLICK reveal, network
   else if (t < s3[1]) {
@@ -534,10 +534,10 @@ window.renderFrame = async t => {
       netEdges.forEach((e, i) => { const on = ss(j8.start + D8 * 0.25 + i * 0.05, j8.start + D8 * 0.25 + i * 0.05 + 0.5, t); e.tube.material.opacity = on * 0.85;
         e.tube.material.color.setRGB(lerp(0.3, 1.0, gold), lerp(0.83, 0.78, gold), lerp(1.0, 0.2, gold));
         const u = ((t * 0.45 + e.ph) % 1); e.pulse.position.copy(e.curve.getPoint(u)); e.pulse.material.opacity = on; });
-      NETP.forEach((c, i) => showUI(c, set, [-0.38, 0.38, -0.38, 0.38][i], [0.62, 0.48, -0.42, -0.56][i], 0.52, j8.marks[i + 1], j9.start + 0.2, t));
+      // (pop-up removed) NETP.forEach((c, i) => showUI(c, set, [-0.38, 0.38, -0.38, 0.38][i], [0.62, 0.48, -0.42, -0.56][i], 0.52, j8.marks[i + 1], j9.start + 0.2, t));
       const ar = NET.userData.arrow; ar.position.y = lerp(-6, -2.0, ss(j9.start, j9.start + 1.4, t)); ar.scale.setScalar(lerp(0.3, 0.75, ss(j9.start, j9.start + 1.4, t)));
       NET.userData.bars.forEach((b, i) => { const h = ss(j9.start + 0.2 + i * 0.15, j9.start + 0.8 + i * 0.15, t) * (0.6 + i * 0.5); b.visible = h > 0.01; b.scale.y = Math.max(0.001, h); b.position.y = -3.4 + h / 2; b.position.z = -0.6; });
-      showUI(C_GROW, set, 0, 0.6, 0.86, j9.start + 0.3, s3[1], t);
+      // (pop-up removed) showUI(C_GROW, set, 0, 0.6, 0.86, j9.start + 0.3, s3[1], t);
       bloomS = 0.45; fade = Math.max(0, 1 - (t - (j8.start - 0.2)) / 0.3) * 0.5;
     }
   }
@@ -552,9 +552,9 @@ window.renderFrame = async t => {
     placeChar(chars.J, set, -0.65, 0.2, charState('J', t, { yaw: cheer ? 0 : 0.25, smile: 0.9, brow: 0.5, talk: cheer ? [['cheer', 'cheer']] : [['present', 'relax'], ['thumb', 'relax'], ['explain', 'relax'], ['up', 'relax'], ['present', 'present']] }), 1.0);
     placeChar(chars.R, set, 0.12, 0.0, charState('R', t, { yaw: cheer ? 0 : -0.3, smile: t > r11.start ? 0.85 : 0.6, brow: t > r11.start ? 0.8 : 0.4, talk: cheer ? [['cheer', 'cheer']] : [['shrug', 'relax']] }), 1.0);
     placeChar(chars.W, set, 0.85, 0.1, charState('W', t, { yaw: cheer ? 0 : -0.35, smile: 0.85, brow: 0.5, talk: cheer ? [['cheer', 'cheer']] : null, armR: 'relax', armL: 'relax' }), 1.0);
-    showUI(C_CAL, set, 0, 0.5, 0.48, j10.marks[1], r11.end + 0.2, t, { flip: 1 });
+    // (pop-up removed) showUI(C_CAL, set, 0, 0.5, 0.48, j10.marks[1], r11.end + 0.2, t, { flip: 1 });
     const D12 = j12.end - j12.start;
-    BEN.forEach((c, i) => showUI(c, set, [-0.4, 0.4, -0.4, 0.4][i], [0.66, 0.66, 0.5, 0.5][i], 0.47, j12.marks[i], all.start - 0.1, t));
+    // (pop-up removed) BEN.forEach((c, i) => showUI(c, set, [-0.4, 0.4, -0.4, 0.4][i], [0.66, 0.66, 0.5, 0.5][i], 0.47, j12.marks[i], all.start - 0.1, t));
     updateFireworks(fireworks[0], t - s4[0] + 0.5, cheer ? 3.2 : 6.5);
     if (cheer) updateConfetti(t, all.start, new THREE.Vector3(0.1, 3.4, 0.6));
     fade = Math.max(0, 1 - (t - s4[0]) / 0.3) * 0.8;

@@ -108,9 +108,7 @@ whoosh(L[8]["start"] - 0.5, 0.8, 0.5)
 # graphics pops
 r3, r4, w5, j8, j9, j10, j12 = L[3], L[4], L[5], L[8], L[9], L[10], L[12]
 D3, D8, D12 = r3["end"] - r3["start"], j8["end"] - j8["start"], j12["end"] - j12["start"]
-for t0 in [r3["marks"][1], r3["marks"][2], r3["marks"][3], r4["marks"][1], w5["marks"][2], j9["start"] + 0.3, j10["marks"][1]] + \
-          [j8["marks"][i + 1] for i in range(4)] + [j12["marks"][i] for i in range(4)]:
-    pop(t0, 0.32)
+# (graphic pop-ups removed: no pop sounds for them)
 for i in range(12): pop(j8["start"] + i * 0.18, 0.1)
 sparkle(reveal, 0.45); sparkle(s5[0] + 0.3, 0.35)
 S = reverb(S, 1.6, 0.18); S /= np.abs(S).max() + 1e-9
