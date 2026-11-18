@@ -9,7 +9,7 @@
 @font-face { font-family: Poppins; font-weight: 800; src: url(node_modules/@fontsource/poppins/files/poppins-latin-800-normal.woff2) format('woff2'); }
 html, body { margin: 0; background: #000; overflow: hidden; }
 #stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: Poppins, sans-serif; color: #fff; }
-#c { position: absolute; inset: 0; width: 1080px; height: 1920px; filter: saturate(1.1) contrast(1.04); }
+#c { position: absolute; inset: 0; width: 1080px; height: 1920px; filter: saturate(1.06) contrast(1.03); }
 .shade { position: absolute; left: 0; right: 0; pointer-events: none; }
 #shadeTop { top: 0; height: 560px; background: linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,0)); }
 #shadeBot { bottom: 0; height: 620px; background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.12)); }
@@ -39,11 +39,11 @@ html, body { margin: 0; background: #000; overflow: hidden; }
 #photo img { display: block; width: 100%; filter: sepia(.25) contrast(1.05); border-radius: 4px; }
 #photo span { position: absolute; left: 0; right: 0; bottom: 18px; font-weight: 800; font-size: 50px; color: #1b1b1b; }
 </style>
-<script type="importmap">{ "imports": { "three": "./node_modules/three/build/three.module.js" } }</script>
+<script type="importmap">{ "imports": { "three": "./node_modules/three/build/three.module.js", "three/addons/": "./node_modules/three/examples/jsm/" } }</script>
 </head>
 <body>
 <div id="stage">
-  <canvas id="c" width="1080" height="1920"></canvas>
+  <canvas id="c" width="720" height="1280"></canvas>
   <div class="shade" id="shadeTop"></div><div class="shade" id="shadeBot"></div>
   <div id="endShade"></div>
   <div id="head"><div id="year"></div><div id="label"></div></div>
