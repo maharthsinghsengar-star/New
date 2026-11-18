@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pika</title>
+<style>
+@font-face { font-family: Poppins; font-weight: 300; src: url(node_modules/@fontsource/poppins/files/poppins-latin-300-normal.woff2) format('woff2'); }
+@font-face { font-family: Poppins; font-weight: 400; src: url(node_modules/@fontsource/poppins/files/poppins-latin-400-normal.woff2) format('woff2'); }
+@font-face { font-family: Poppins; font-weight: 500; src: url(node_modules/@fontsource/poppins/files/poppins-latin-500-normal.woff2) format('woff2'); }
+html, body { margin: 0; background: #000; overflow: hidden; }
+#stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; font-family: Poppins, sans-serif; color: #fff; }
+#c { position: absolute; inset: 0; width: 1080px; height: 1920px; }
+#vig { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 62% at 50% 48%, rgba(0,0,0,0) 58%, rgba(0,0,0,.34) 100%); }
+#shadeBot { position: absolute; left: 0; right: 0; bottom: 0; height: 760px; background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.22)); }
+#shadeTop { position: absolute; left: 0; right: 0; top: 0; height: 420px; background: linear-gradient(rgba(0,0,0,.16), rgba(0,0,0,0)); }
+#tint { position: absolute; inset: 0; opacity: 0; }
+#tunnel { position: absolute; inset: 0; opacity: 0; }
+.title { position: absolute; top: 700px; left: 0; right: 0; text-align: center; opacity: 0; text-shadow: 0 4px 30px rgba(0,0,0,.45); }
+.title b { display: block; font-weight: 300; font-size: 128px; letter-spacing: 6px; line-height: 1.1; }
+.title small { display: block; margin-top: 18px; font-weight: 500; font-size: 36px; letter-spacing: 16px; opacity: .9; }
+#clock { position: absolute; top: 150px; left: 0; right: 0; text-align: center; opacity: 0; text-shadow: 0 2px 20px rgba(0,0,0,.45); }
+#clock .place { font-weight: 500; font-size: 26px; letter-spacing: 12px; opacity: .85; }
+#clock .line { width: 70px; height: 2px; margin: 16px auto 14px; background: rgba(255,255,255,.7); }
+#clock .tw { position: relative; height: 84px; }
+#clock .tw span { position: absolute; left: 0; right: 0; font-weight: 300; font-size: 72px; letter-spacing: 4px; line-height: 84px; }
+.cap { position: absolute; left: 60px; right: 60px; bottom: 330px; text-align: center; font-weight: 400; font-size: 46px; line-height: 1.38; opacity: 0;
+  text-shadow: 0 2px 18px rgba(0,0,0,.75), 0 0 6px rgba(0,0,0,.45); }
+.cap.mid { bottom: auto; top: 900px; font-weight: 300; font-size: 62px; letter-spacing: 3px; text-shadow: none; }
+#flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+#fade { position: absolute; inset: 0; background: #000; opacity: 1; }
+</style>
+<script type="importmap">{ "imports": { "three": "./node_modules/three/build/three.module.js", "three/addons/": "./node_modules/three/examples/jsm/" } }</script>
+</head>
+<body>
+<div id="stage">
+  <canvas id="c" width="720" height="1280"></canvas>
+  <div id="tint"></div><div id="vig"></div><div id="shadeTop"></div><div id="shadeBot"></div><div id="tunnel"></div>
+  <div id="titles"></div>
+  <div id="clock"><div class="place"></div><div class="line"></div><div class="tw"><span id="ckA"></span><span id="ckB"></span></div></div>
+  <div id="caps"></div>
+  <div id="flash"></div>
+  <div id="fade"></div>
+  <div id="capsM"></div>
+</div>
+<script type="module" src="scene.js"></script>
+</body>
+</html>

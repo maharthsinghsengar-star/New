@@ -1,0 +1,30 @@
+{
+  "duration": 84,
+  "burst": 27.5,
+  "blast": 41.5,
+  "after": 59.0,
+  "titles": [
+    { "t0": 0.6, "t1": 4.6, "big": "Hiroshima", "small": "6 AUGUST 1945" }
+  ],
+  "clock": [
+    { "t0": 4.8, "t1": 27.5, "place": "HIROSHIMA", "keys": [[4.8, "8:13 AM"], [13.2, "8:14 AM"], [23.4, "8:15 AM"]] }
+  ],
+  "captions": [
+    { "t0": 5.2, "t1": 9.2, "text": "A warm Monday morning.<br>The streets are already busy." },
+    { "t0": 9.6, "t1": 13.6, "text": "Trams, bicycles, students and workers.<br>A city of 350,000 people." },
+    { "t0": 14.0, "t1": 17.6, "text": "The air-raid alert ended<br>forty minutes ago." },
+    { "t0": 18.6, "t1": 22.8, "text": "High above, a silver B-29 bomber." },
+    { "t0": 23.6, "t1": 27.2, "text": "Something falls from it." },
+    { "t0": 30.6, "t1": 34.2, "text": "A flash brighter than the sun." },
+    { "t0": 34.6, "t1": 38.4, "text": "Everyone runs for cover." },
+    { "t0": 38.8, "t1": 41.3, "text": "The cloud keeps rising." },
+    { "t0": 44.4, "t1": 48.2, "text": "Then the blast wave hits." },
+    { "t0": 48.8, "t1": 53.6, "text": "Dust and broken glass.<br>People crying in the dark." },
+    { "t0": 56.9, "t1": 58.7, "text": "Minutes later", "mid": true },
+    { "t0": 59.8, "t1": 63.8, "text": "Houses lie in ruins.<br>Fires are breaking out everywhere." },
+    { "t0": 64.2, "t1": 68.2, "text": "Within the hour, black rain begins to fall." },
+    { "t0": 68.6, "t1": 72.6, "text": "Some 70,000 people died that day." },
+    { "t0": 73.0, "t1": 77.6, "text": "By the end of 1945,<br>about 140,000 had died." },
+    { "t0": 80.4, "t1": 83.4, "text": "No more Hiroshimas.", "mid": true }
+  ]
+}
