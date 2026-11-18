@@ -1,0 +1,9 @@
+build/*
+!build/track.json
+data/
+node_modules
+test*.js
+test*.html
+dbg.mjs
+top.mjs
+bench*.mjs

@@ -1,0 +1,59 @@
+// Renders frames with headless Chromium (WebGL) and saves them as JPEGs.
+// usage: node render.mjs            -> all frames, 4 parallel pages
+//        node render.mjs 3.5 12 40  -> preview stills at the given times (seconds)
+import { createRequire } from 'node:module';
+const { chromium } = createRequire(import.meta.url)('playwright'); // resolves a global install via NODE_PATH too
+import http from 'node:http';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const ROOT = path.dirname(new URL(import.meta.url).pathname);
+const FPS = +(process.env.FPS || 30), WORKERS = +(process.env.WORKERS || 2);
+const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.mjs': 'text/javascript', '.json': 'application/json', '.woff2': 'font/woff2' };
+const server = http.createServer((req, res) => {
+  const f = path.join(ROOT, decodeURIComponent(req.url.split('?')[0]).replace(/^\/$/, '/index.html'));
+  if (!f.startsWith(ROOT) || !fs.existsSync(f)) { res.writeHead(404); return res.end(); }
+  res.writeHead(200, { 'Content-Type': MIME[path.extname(f)] || 'application/octet-stream' });
+  fs.createReadStream(f).pipe(res);
+}).listen(0);
+const url = `http://127.0.0.1:${server.address().port}/`;
+
+const browser = await chromium.launch({ args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist', '--enable-webgl'] });
+async function open() {
+  const page = await browser.newPage({ viewport: { width: 1920, height: 1080 }, deviceScaleFactor: 1 });
+  page.on('pageerror', e => { console.error('PAGE ERROR', e.stack); process.exitCode = 1; process.exit(1); });
+  page.on('console', m => { if (m.type() === 'error') console.error('console:', m.text()); });
+  await page.goto(url + (process.env.PAGE || ''));
+  await page.waitForFunction('window.READY === true', null, { timeout: 120000 });
+  return page;
+}
+const CDP = new Map();
+const shot = async (page, t, file) => {
+  await page.evaluate(t => window.renderFrame(t), t);
+  if (!CDP.has(page)) CDP.set(page, await page.context().newCDPSession(page));
+  const r = await CDP.get(page).send('Page.captureScreenshot', { format: 'jpeg', quality: 93, optimizeForSpeed: true });
+  fs.writeFileSync(file, Buffer.from(r.data, 'base64'));
+};
+
+const times = process.argv.slice(2).map(Number);
+if (process.argv[2] === '--dump') {
+  fs.mkdirSync(path.join(ROOT, 'build'), { recursive: true });
+  const page = await open(); fs.writeFileSync(path.join(ROOT, 'build/track.json'), JSON.stringify(await page.evaluate('window.TRACK'))); console.log('track written');
+} else if (times.length) {
+  fs.mkdirSync(path.join(ROOT, 'build/stills'), { recursive: true });
+  const page = await open();
+  for (const t of times) await shot(page, t, path.join(ROOT, `build/stills/t${t.toFixed(1).padStart(5, '0')}.jpg`));
+} else {
+  const dir = path.join(ROOT, 'build/frames'); const START = +(process.env.START || 0); if (!START) fs.rmSync(dir, { recursive: true, force: true }); fs.mkdirSync(dir, { recursive: true });
+  const pages = await Promise.all(Array.from({ length: WORKERS }, open));
+  const total = Math.ceil((await pages[0].evaluate('window.DURATION')) * FPS), END = +(process.env.END || total);
+  let done = 0; const t0 = Date.now();
+  await Promise.all(pages.map(async (page, w) => {
+    for (let f = w + START; f < END; f += WORKERS) {
+      await shot(page, f / FPS, path.join(dir, `f${String(f).padStart(5, '0')}.jpg`));
+      if (++done % 200 === 0) console.log(`${done}/${total} frames  ${((Date.now() - t0) / 1000).toFixed(0)}s`);
+    }
+  }));
+  console.log('frames:', total);
+}
+await browser.close(); server.close();

@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Wanted Level</title>
+<style>
+@font-face { font-family: Poppins; font-weight: 500; src: url(node_modules/@fontsource/poppins/files/poppins-latin-500-normal.woff2) format('woff2'); }
+@font-face { font-family: Poppins; font-weight: 700; src: url(node_modules/@fontsource/poppins/files/poppins-latin-700-normal.woff2) format('woff2'); }
+@font-face { font-family: Poppins; font-weight: 900; src: url(node_modules/@fontsource/poppins/files/poppins-latin-900-normal.woff2) format('woff2'); }
+html, body { margin: 0; background: #000; overflow: hidden; }
+#stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; font-family: Poppins, 'Noto Color Emoji', sans-serif; color: #fff; }
+#c { position: absolute; inset: 0; width: 1920px; height: 1080px; }
+#tint { position: absolute; inset: 0; opacity: 0; mix-blend-mode: screen; }
+#vig { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 75% at 50% 50%, rgba(0,0,0,0) 60%, rgba(0,0,0,.5) 100%); opacity: .45; }
+#flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+#fade { position: absolute; inset: 0; background: #000; opacity: 0; }
+.stroke { -webkit-text-stroke: 3px #000; paint-order: stroke fill; text-shadow: 0 5px 0 rgba(0,0,0,.8), 0 0 22px rgba(0,0,0,.45); }
+
+/* wanted meter */
+#wanted { position: absolute; right: 48px; top: 40px; display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+#wanted .lab { font-weight: 900; font-size: 30px; letter-spacing: 6px; }
+#stars { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; max-width: 760px; }
+#stars svg { width: 52px; height: 52px; filter: drop-shadow(0 3px 0 rgba(0,0,0,.75)); }
+#wanted .num { font-weight: 900; font-size: 26px; padding: 2px 16px; border-radius: 22px; background: rgba(0,0,0,.55); border: 3px solid #ffd23f; }
+
+/* level-up popup */
+#pop { position: absolute; left: 0; right: 0; top: 190px; text-align: center; opacity: 0; }
+#pop .big { font-weight: 900; font-size: 112px; line-height: 1; color: #ffd23f; }
+#pop .why { margin-top: 18px; display: inline-block; font-weight: 700; font-size: 40px; padding: 8px 30px; border-radius: 14px; background: rgba(205,20,40,.92); border: 4px solid #000; }
+
+/* location tag */
+#loc { position: absolute; left: 56px; bottom: 64px; opacity: 0; display: flex; align-items: center; gap: 22px; padding: 14px 34px 14px 22px; border-radius: 20px; background: rgba(10,14,28,.72); border-left: 10px solid #ffd23f; }
+#loc .flag { font-size: 84px; line-height: 1; }
+#loc .cn { font-weight: 900; font-size: 64px; line-height: 1.05; }
+#loc .pl { font-weight: 500; font-size: 32px; opacity: .9; }
+
+/* title */
+#title { position: absolute; left: 0; right: 0; top: 300px; text-align: center; opacity: 0; }
+#title .t1 { font-weight: 700; font-size: 58px; }
+#title .t2 { font-weight: 900; font-size: 120px; line-height: 1.05; color: #ffd23f; }
+
+/* map */
+#mapui { position: absolute; left: 0; right: 0; top: 70px; text-align: center; opacity: 0; }
+#mapui .to { font-weight: 700; font-size: 44px; letter-spacing: 8px; }
+#mapui .cn { font-weight: 900; font-size: 128px; line-height: 1.05; }
+#mapui .km { font-weight: 700; font-size: 40px; margin-top: 8px; color: #ffd23f; }
+#mapui .via { display: inline-block; margin-top: 16px; font-weight: 700; font-size: 34px; padding: 6px 26px; border-radius: 30px; background: rgba(0,0,0,.55); }
+
+/* ending */
+#end { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: 0; }
+#end .big { font-weight: 900; font-size: 210px; line-height: 1; color: #ff3b3b; letter-spacing: 10px; }
+#end .sub { font-weight: 700; font-size: 52px; margin-top: 26px; }
+</style>
+<script type="importmap">{ "imports": { "three": "./node_modules/three/build/three.module.js", "three/addons/": "./node_modules/three/examples/jsm/" } }</script>
+</head>
+<body>
+<div id="stage">
+  <canvas id="c" width="1280" height="720"></canvas>
+  <div id="tint"></div><div id="vig"></div>
+  <div id="title" class="stroke"><div class="t1">WHAT IF YOUR</div><div class="t2">WANTED LEVEL<br>KEPT INCREASING?</div></div>
+  <div id="wanted" class="stroke"><div class="lab">WANTED</div><div id="stars"></div></div>
+  <div id="pop" class="stroke"><div class="big"></div><div class="why"></div></div>
+  <div id="loc" class="stroke"><div class="flag"></div><div><div class="cn"></div><div class="pl"></div></div></div>
+  <div id="mapui" class="stroke"><div class="to">FLYING TO</div><div class="cn"></div><div class="km"></div><div class="via"></div></div>
+  <div id="end" class="stroke"><div class="big">ARRESTED</div><div class="sub"></div></div>
+  <div id="flash"></div>
+  <div id="fade"></div>
+</div>
+<script type="module" src="main.js"></script>
+</body>
+</html>
