@@ -751,6 +751,7 @@ window.renderFrame = (t) => {
   // store door
   STORE.doorG.rotation.y = 1.35 * smooth((t - T_DOOR + 0.3) / 0.3) * (1 - smooth((t - T_SLAM + 0.22) / 0.22));
   overlay(t, night);
+  for (const lt of [...POOL, FILL, SGL]) lt.visible = lt.intensity > 1e-4;   // dark lights cost nothing
   renderer.render(scene, camera);
 };
 window.TRACK = { T_CLK, T_FRZ, T_PALE, T_EYE, T_GH, T_ZB, T_TURN, T_DARK, T_CHASE, T_RUN, T_DOOR, T_ARR, T_SLAM, T_SCARE, ghostT: PEOPLE.filter(q => q.fate === 'ghost' && !q.hide).map(q => q.tg).sort((a, b) => a - b) };
