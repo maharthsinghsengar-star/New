@@ -1,0 +1,564 @@
+{
+ "duration": 76.214,
+ "beats": [
+  {
+   "id": "hook",
+   "mood": "happy",
+   "start": 0.0,
+   "end": 7.357,
+   "lines": [
+    {
+     "t0": 0.6,
+     "t1": 4.944
+    },
+    {
+     "t0": 5.194,
+     "t1": 6.657
+    }
+   ],
+   "subs": [
+    {
+     "text": "What if,",
+     "t0": 0.6,
+     "t1": 1.16
+    },
+    {
+     "text": "one morning,",
+     "t0": 1.16,
+     "t1": 1.907
+    },
+    {
+     "text": "every human on Earth turned",
+     "t0": 1.907,
+     "t1": 3.354
+    },
+    {
+     "text": "into a ghost,",
+     "t0": 3.354,
+     "t1": 4.147
+    },
+    {
+     "text": "or a zombie?",
+     "t0": 4.147,
+     "t1": 4.894
+    },
+    {
+     "text": "Everyone...",
+     "t0": 5.194,
+     "t1": 5.901
+    },
+    {
+     "text": "except you.",
+     "t0": 5.901,
+     "t1": 6.607
+    }
+   ],
+   "sfx": [
+    {
+     "name": "whoosh",
+     "t": 0.0
+    },
+    {
+     "name": "sting",
+     "t": 5.194
+    }
+   ]
+  },
+  {
+   "id": "normal",
+   "mood": "happy",
+   "start": 7.357,
+   "end": 14.16,
+   "lines": [
+    {
+     "t0": 7.607,
+     "t1": 13.66
+    }
+   ],
+   "subs": [
+    {
+     "text": "It starts like any other day.",
+     "t0": 7.607,
+     "t1": 9.131
+    },
+    {
+     "text": "The sun is shining,",
+     "t0": 9.131,
+     "t1": 10.193
+    },
+    {
+     "text": "the streets are packed,",
+     "t0": 10.193,
+     "t1": 11.44
+    },
+    {
+     "text": "and you're heading out to grab",
+     "t0": 11.44,
+     "t1": 13.01
+    },
+    {
+     "text": "a coffee.",
+     "t0": 13.01,
+     "t1": 13.61
+    }
+   ],
+   "sfx": [
+    {
+     "name": "horn",
+     "t": 10.007
+    }
+   ]
+  },
+  {
+   "id": "people",
+   "mood": "happy",
+   "start": 14.16,
+   "end": 19.833,
+   "lines": [
+    {
+     "t0": 14.41,
+     "t1": 17.923
+    },
+    {
+     "t0": 18.123,
+     "t1": 19.233
+    }
+   ],
+   "subs": [
+    {
+     "text": "People are chatting,",
+     "t0": 14.41,
+     "t1": 15.475
+    },
+    {
+     "text": "scrolling on their phones,",
+     "t0": 15.475,
+     "t1": 16.807
+    },
+    {
+     "text": "and rushing to work.",
+     "t0": 16.807,
+     "t1": 17.873
+    },
+    {
+     "text": "Totally normal.",
+     "t0": 18.123,
+     "t1": 19.183
+    }
+   ],
+   "sfx": [
+    {
+     "name": "bell",
+     "t": 15.91
+    }
+   ]
+  },
+  {
+   "id": "freeze",
+   "mood": "stop",
+   "start": 19.833,
+   "end": 26.334,
+   "lines": [
+    {
+     "t0": 20.083,
+     "t1": 23.984
+    },
+    {
+     "t0": 24.334,
+     "t1": 25.034
+    }
+   ],
+   "subs": [
+    {
+     "text": "But then,",
+     "t0": 20.083,
+     "t1": 20.742
+    },
+    {
+     "text": "at exactly 8:00 a.m.,",
+     "t0": 20.742,
+     "t1": 22.009
+    },
+    {
+     "text": "everyone around you",
+     "t0": 22.009,
+     "t1": 23.174
+    },
+    {
+     "text": "suddenly...",
+     "t0": 23.174,
+     "t1": 23.934
+    },
+    {
+     "text": "stops.",
+     "t0": 24.334,
+     "t1": 24.984
+    }
+   ],
+   "sfx": [
+    {
+     "name": "tick",
+     "t": 22.384
+    },
+    {
+     "name": "freeze",
+     "t": 24.334
+    }
+   ]
+  },
+  {
+   "id": "stare",
+   "mood": "tense",
+   "start": 26.334,
+   "end": 33.335,
+   "lines": [
+    {
+     "t0": 26.584,
+     "t1": 28.683
+    },
+    {
+     "t0": 29.033,
+     "t1": 32.535
+    }
+   ],
+   "subs": [
+    {
+     "text": "No one moves.",
+     "t0": 26.584,
+     "t1": 27.579
+    },
+    {
+     "text": "No one blinks.",
+     "t0": 27.579,
+     "t1": 28.633
+    },
+    {
+     "text": "Their skin turns pale,",
+     "t0": 29.033,
+     "t1": 30.353
+    },
+    {
+     "text": "and their eyes go completely",
+     "t0": 30.353,
+     "t1": 31.978
+    },
+    {
+     "text": "white.",
+     "t0": 31.978,
+     "t1": 32.485
+    }
+   ],
+   "sfx": [
+    {
+     "name": "sting",
+     "t": 31.535
+    }
+   ]
+  },
+  {
+   "id": "ghosts",
+   "mood": "eerie",
+   "start": 33.335,
+   "end": 41.364,
+   "lines": [
+    {
+     "t0": 33.585,
+     "t1": 38.955
+    },
+    {
+     "t0": 39.255,
+     "t1": 40.564
+    }
+   ],
+   "subs": [
+    {
+     "text": "Then some of them start to",
+     "t0": 33.585,
+     "t1": 35.049
+    },
+    {
+     "text": "rise off the ground.",
+     "t0": 35.049,
+     "t1": 36.221
+    },
+    {
+     "text": "Their bodies turn see-through",
+     "t0": 36.221,
+     "t1": 37.831
+    },
+    {
+     "text": "and begin to glow.",
+     "t0": 37.831,
+     "t1": 38.905
+    },
+    {
+     "text": "They've become ghosts.",
+     "t0": 39.255,
+     "t1": 40.514
+    }
+   ],
+   "sfx": [
+    {
+     "name": "rise",
+     "t": 34.185
+    },
+    {
+     "name": "wail",
+     "t": 39.455
+    }
+   ]
+  },
+  {
+   "id": "zombies",
+   "mood": "eerie",
+   "start": 41.364,
+   "end": 47.521,
+   "lines": [
+    {
+     "t0": 41.614,
+     "t1": 45.448
+    },
+    {
+     "t0": 45.748,
+     "t1": 46.621
+    }
+   ],
+   "subs": [
+    {
+     "text": "The rest twitch, groan,",
+     "t0": 41.614,
+     "t1": 42.959
+    },
+    {
+     "text": "and slowly turn their heads...",
+     "t0": 42.959,
+     "t1": 44.651
+    },
+    {
+     "text": "toward you.",
+     "t0": 44.651,
+     "t1": 45.398
+    },
+    {
+     "text": "Zombies.",
+     "t0": 45.748,
+     "t1": 46.571
+    }
+   ],
+   "sfx": [
+    {
+     "name": "groan",
+     "t": 42.414
+    },
+    {
+     "name": "snap",
+     "t": 44.848
+    },
+    {
+     "name": "sting",
+     "t": 45.748
+    }
+   ]
+  },
+  {
+   "id": "dark",
+   "mood": "horror",
+   "start": 47.521,
+   "end": 55.006,
+   "lines": [
+    {
+     "t0": 47.771,
+     "t1": 50.417
+    },
+    {
+     "t0": 50.717,
+     "t1": 54.306
+    }
+   ],
+   "subs": [
+    {
+     "text": "The sky goes dark.",
+     "t0": 47.771,
+     "t1": 48.891
+    },
+    {
+     "text": "The streetlights flicker.",
+     "t0": 48.891,
+     "t1": 50.367
+    },
+    {
+     "text": "And you realize you're the",
+     "t0": 50.717,
+     "t1": 52.152
+    },
+    {
+     "text": "only human left on the entire",
+     "t0": 52.152,
+     "t1": 53.73
+    },
+    {
+     "text": "planet.",
+     "t0": 53.73,
+     "t1": 54.256
+    }
+   ],
+   "sfx": [
+    {
+     "name": "thunder",
+     "t": 48.071
+    },
+    {
+     "name": "thunder",
+     "t": 53.706
+    }
+   ]
+  },
+  {
+   "id": "chase",
+   "mood": "chase",
+   "start": 55.006,
+   "end": 61.769,
+   "lines": [
+    {
+     "t0": 55.256,
+     "t1": 58.018
+    },
+    {
+     "t0": 58.268,
+     "t1": 60.369
+    }
+   ],
+   "subs": [
+    {
+     "text": "Zombies can sense the warmth",
+     "t0": 55.256,
+     "t1": 56.894
+    },
+    {
+     "text": "of a living body.",
+     "t0": 56.894,
+     "t1": 57.968
+    },
+    {
+     "text": "So they all start coming...",
+     "t0": 58.268,
+     "t1": 59.747
+    },
+    {
+     "text": "for you.",
+     "t0": 59.747,
+     "t1": 60.319
+    }
+   ],
+   "sfx": [
+    {
+     "name": "roar",
+     "t": 59.969
+    }
+   ]
+  },
+  {
+   "id": "store",
+   "mood": "chase",
+   "start": 61.769,
+   "end": 67.291,
+   "lines": [
+    {
+     "t0": 62.019,
+     "t1": 64.67
+    },
+    {
+     "t0": 65.07,
+     "t1": 66.291
+    }
+   ],
+   "subs": [
+    {
+     "text": "You sprint into a store and",
+     "t0": 62.019,
+     "t1": 63.513
+    },
+    {
+     "text": "slam the door shut.",
+     "t0": 63.513,
+     "t1": 64.62
+    },
+    {
+     "text": "Safe...",
+     "t0": 65.07,
+     "t1": 65.63
+    },
+    {
+     "text": "for now.",
+     "t0": 65.63,
+     "t1": 66.241
+    }
+   ],
+   "sfx": [
+    {
+     "name": "slam",
+     "t": 64.37
+    },
+    {
+     "name": "bang",
+     "t": 65.17
+    }
+   ]
+  },
+  {
+   "id": "ghost",
+   "mood": "dread",
+   "start": 67.291,
+   "end": 71.833,
+   "lines": [
+    {
+     "t0": 67.541,
+     "t1": 69.433
+    }
+   ],
+   "subs": [
+    {
+     "text": "But ghosts...",
+     "t0": 67.541,
+     "t1": 68.365
+    },
+    {
+     "text": "don't need doors.",
+     "t0": 68.365,
+     "t1": 69.383
+    }
+   ],
+   "sfx": [
+    {
+     "name": "scare",
+     "t": 70.683
+    }
+   ]
+  },
+  {
+   "id": "end",
+   "mood": "end",
+   "start": 71.833,
+   "end": 76.214,
+   "lines": [
+    {
+     "t0": 72.233,
+     "t1": 73.614
+    }
+   ],
+   "subs": [
+    {
+     "text": "So...",
+     "t0": 72.233,
+     "t1": 72.62
+    },
+    {
+     "text": "would you survive?",
+     "t0": 72.62,
+     "t1": 73.564
+    }
+   ],
+   "sfx": []
+  }
+ ]
+}
