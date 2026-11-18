@@ -1,0 +1,31 @@
+{
+  "duration": 79,
+  "flashes": [41.6, 64.0],
+  "nagStart": 45.6,
+  "endStart": 65.6,
+  "titles": [
+    { "t0": 0.8, "t1": 5.0, "big": "Hiroshima", "small": "6 AUGUST 1945" },
+    { "t0": 46.4, "t1": 50.4, "big": "Nagasaki", "small": "9 AUGUST 1945" }
+  ],
+  "clock": [
+    { "t0": 5.0, "t1": 41.6, "place": "HIROSHIMA", "keys": [[5.0, "7:15 AM"], [14.6, "7:31 AM"], [19.2, "7:45 AM"], [23.8, "8:00 AM"], [28.4, "8:09 AM"], [33.0, "8:14 AM"], [37.4, "8:15 AM"]] },
+    { "t0": 50.6, "t1": 64.0, "place": "NAGASAKI", "keys": [[50.6, "10:30 AM"], [55.4, "10:50 AM"], [59.8, "11:00 AM"], [62.6, "11:02 AM"]] }
+  ],
+  "captions": [
+    { "t0": 5.4, "t1": 9.6, "text": "One hour before.<br>An air-raid alert is sounding." },
+    { "t0": 10.0, "t1": 14.2, "text": "A lone weather plane circles high above,<br>then flies away." },
+    { "t0": 14.6, "t1": 18.8, "text": "The all clear sounds.<br>The city goes back to its morning." },
+    { "t0": 19.2, "t1": 23.4, "text": "Trams fill with workers.<br>Children head to school." },
+    { "t0": 23.8, "t1": 28.0, "text": "Thousands of students work outdoors,<br>clearing firebreaks." },
+    { "t0": 28.4, "t1": 32.6, "text": "Only three planes, very high.<br>No siren sounds." },
+    { "t0": 33.0, "t1": 37.0, "text": "Their aiming point:<br>the T-shaped Aioi Bridge." },
+    { "t0": 37.4, "t1": 41.3, "text": "31,000 feet above —<br>the Enola Gay." },
+    { "t0": 42.6, "t1": 45.6, "text": "Three days later", "onWhite": true },
+    { "t0": 51.0, "t1": 55.0, "text": "The bomber Bockscar was bound for Kokura.<br>Haze and smoke hid the city." },
+    { "t0": 55.4, "t1": 59.4, "text": "Low on fuel,<br>it turned toward Nagasaki." },
+    { "t0": 59.8, "t1": 63.7, "text": "A break opens in the clouds,<br>over the Urakami valley." },
+    { "t0": 66.4, "t1": 70.3, "text": "By the end of 1945, about 140,000 people<br>had died in Hiroshima," },
+    { "t0": 70.6, "t1": 74.0, "text": "and about 74,000 in Nagasaki." },
+    { "t0": 74.3, "t1": 78.4, "text": "Every 6 August, lanterns float on<br>Hiroshima's rivers in their memory." }
+  ]
+}
