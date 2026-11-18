@@ -24,7 +24,8 @@ scene.fog = new THREE.FogExp2(0xbcd3ec, 0.00011);
 function RNG(a) { return () => { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x)), smooth = x => { x = clamp(x); return x * x * (3 - 2 * x); }, lerp = (a, b, t) => a + (b - a) * t;
 const STD = (c, o = {}) => new THREE.MeshStandardMaterial({ color: c, roughness: 0.85, metalness: 0, ...o });
-function mesh(geo, mat, x = 0, y = 0, z = 0) { const m = new THREE.Mesh(geo, typeof mat === 'number' ? STD(mat) : mat); m.position.set(x, y, z); m.castShadow = m.receiveShadow = true; return m; }
+const MATC = {};
+function mesh(geo, mat, x = 0, y = 0, z = 0) { const m = new THREE.Mesh(geo, typeof mat === 'number' ? (MATC[mat] ||= STD(mat)) : mat); m.position.set(x, y, z); m.castShadow = m.receiveShadow = true; return m; }
 const box = (w, h, d, c, x, y, z) => mesh(new THREE.BoxGeometry(w, h, d), c, x, y, z);
 const cyl = (r1, r2, h, c, x, y, z, s = 16) => mesh(new THREE.CylinderGeometry(r1, r2, h, s), c, x, y, z);
 function canvasTex(w, h, draw, srgb = true, rep = true) { const c = document.createElement('canvas'); c.width = w; c.height = h; draw(c.getContext('2d'), w, h); const t = new THREE.CanvasTexture(c); if (srgb) t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; if (rep) t.wrapS = t.wrapT = THREE.RepeatWrapping; return t; }
@@ -432,7 +433,7 @@ for (const c of CONC) { const d = c.z1 - c.z0, b = facadeBox(c.w, c.h, d, c.tex,
     if (r() < 0.55) { const sg = mesh(atlasPlane(0.55, 2.0, (r() * 8) | 0, 8), signMat, fx - s * 0.5, 3.4 + r() * 1.2, L.z + (r() - 0.5) * L.w * 0.6); sg.rotation.y = Math.PI / 2 * 0; BSTAT.add(sg); }
     if (r() < 0.35) { const k = (r() * 8) | 0, zz = L.z + (r() - 0.5) * L.w * 0.7; BSTAT.add(cyl(0.025, 0.025, 2.9, DARKW, fx - s * 0.9, 1.6, zz, 5)); const f = mesh(atlasPlane(0.55, 2.0, k, 8), flagMat, fx - s * 0.9, 1.95, zz + 0.3); BSTAT.add(f); }
     if (L.v === 'D' || (L.v === 'A' && r() < 0.4)) { const row = (r() * 4) | 0, v0 = row / 4 + 0.01, v1 = (row + 1) / 4 - 0.03, hw = L.w * 0.46, gb = new GB(); gb.quad([fx - s * 0.02, 2.95, L.z - hw], [fx - s * 0.02, 2.95, L.z + hw], [fx - s * 1.6, 2.35, L.z + hw], [fx - s * 1.6, 2.35, L.z - hw], [0, v0], [L.w / 4, v0], [L.w / 4, v1], [0, v1]); const aw = mesh(gb.geo(), awnMat); BSTAT.add(aw);
-      for (let i = 0; i < 3; i++) if (r() < 0.7) BSTAT.add(box(0.5 + r() * 0.4, 0.3 + r() * 0.35, 0.4 + r() * 0.3, STD(goods[(r() * goods.length) | 0], { roughness: 0.8 }), fx - s * (0.5 + r() * 0.4), 0.3, L.z + (r() - 0.5) * L.w * 0.7)); }
+      for (let i = 0; i < 3; i++) if (r() < 0.7) BSTAT.add(box(0.5 + r() * 0.4, 0.3 + r() * 0.35, 0.4 + r() * 0.3, C(goods[(r() * goods.length) | 0]).getHex(), fx - s * (0.5 + r() * 0.4), 0.3, L.z + (r() - 0.5) * L.w * 0.7)); }
     if (r() < 0.2) BSTAT.add(cyl(0.3, 0.26, 0.6, STD(0x7a5a3a, { roughness: 0.85 }), fx - s * 0.5, 0.45, L.z + (r() - 0.5) * 3, 10));
   }
 }
@@ -498,8 +499,9 @@ const WINL = SIDEWIN.map(w => { const l = new THREE.PointLight(0xfff4e4, 0, 16, 
 { const l = new THREE.PointLight(0xfff4e4, 0, 14, 2); l.position.set(12.6, 2.6, -35); COMMON.add(l); WINL.push(l); }
 // firebreak lot north of the bank: cleared ground with stacked timber from demolished houses
 { const r = RNG(81); for (let i = 0; i < 9; i++) { const x = 18 + r() * 40, z = -62 - r() * 11, g = new THREE.Group(); g.position.set(x, 0, z); g.rotation.y = r() * 3;
-    for (let k = 0; k < 7; k++) g.add(box(0.2, 0.2, 3 + r() * 2, STD(0x7a5a3c, { roughness: 0.9 }), (k % 4) * 0.24 - 0.36, 0.1 + Math.floor(k / 4) * 0.2, 0)); COMMON.add(g); } }
+    for (let k = 0; k < 7; k++) g.add(box(0.2, 0.2, 3 + r() * 2, 0x7a5a3c, (k % 4) * 0.24 - 0.36, 0.1 + Math.floor(k / 4) * 0.2, 0)); COMMON.add(g); } }
 
+bake(BSTAT); bake(BANKG);
 // =====================================================================================
 // trams, bicycles, carts
 // =====================================================================================
@@ -520,16 +522,16 @@ function cart() { const g = new THREE.Group(), wd = STD(0x7a5a3a, { roughness: 0
 // people: articulated low-poly figures (instanced), with walk/run/look/shield/crouch/cry poses
 // =====================================================================================
 const PG = (() => {
-  const cap = (r, l, y) => { const g = new THREE.CapsuleGeometry(r, l, 4, 10).deleteAttribute('uv'); g.translate(0, y, 0); return g; };
+  const cap = (r, l, y) => { const g = new THREE.CapsuleGeometry(r, l, 2, 7).deleteAttribute('uv'); g.translate(0, y, 0); return g; };
   const torso = cap(0.15, 0.3, 0.3); { const p = torso.attributes.position; for (let i = 0; i < p.count; i++) { const y = p.getY(i), k = 1.18 + 0.16 * smooth((y - 0.28) / 0.25); p.setX(i, p.getX(i) * k); p.setZ(i, p.getZ(i) * 0.74); } torso.computeVertexNormals(); }
-  const head = new THREE.SphereGeometry(0.105, 14, 10).deleteAttribute('uv'); head.scale(0.92, 1.05, 1); head.translate(0, 0.14, 0);
+  const head = new THREE.SphereGeometry(0.105, 11, 8).deleteAttribute('uv'); head.scale(0.92, 1.05, 1); head.translate(0, 0.14, 0);
   const neck = new THREE.CylinderGeometry(0.045, 0.05, 0.1, 8).deleteAttribute('uv'); neck.translate(0, 0.03, 0);
   const hg = mergeGeometries([neck, head]), hp = hg.attributes.position, hc = new Float32Array(hp.count * 3);
   for (let i = 0; i < hp.count; i++) { const y = hp.getY(i), z = hp.getZ(i); const hair = y > 0.215 || (y > 0.18 && z < 0.07) || (z < -0.035 && y > 0.1); hc.set(hair ? [0.05, 0.045, 0.04] : [1, 1, 1], i * 3); }
   hg.setAttribute('color', new THREE.BufferAttribute(hc, 3));
   const hat = mergeGeometries([new THREE.CylinderGeometry(0.112, 0.114, 0.075, 14).deleteAttribute('uv').translate(0, 0.235, 0), new THREE.BoxGeometry(0.15, 0.012, 0.1).deleteAttribute('uv').translate(0, 0.205, 0.1)]);
   const thigh = cap(0.07, 0.31, -0.215), shin = mergeGeometries([cap(0.056, 0.32, -0.215), new THREE.BoxGeometry(0.09, 0.06, 0.21).deleteAttribute('uv').translate(0, -0.44, 0.045)]);
-  const uarm = cap(0.05, 0.2, -0.145), farm = cap(0.042, 0.19, -0.135), hand = new THREE.SphereGeometry(0.045, 8, 6).deleteAttribute('uv'); hand.scale(0.8, 1.2, 0.6); hand.translate(0, -0.3, 0);
+  const uarm = cap(0.05, 0.2, -0.145), farm = cap(0.042, 0.19, -0.135), hand = new THREE.SphereGeometry(0.045, 6, 4).deleteAttribute('uv'); hand.scale(0.8, 1.2, 0.6); hand.translate(0, -0.3, 0);
   return { torso, head: hg, hat, thigh, shin, uarm, farm, hand };
 })();
 const _m4 = () => new THREE.Matrix4(), mT = (x, y, z) => _m4().makeTranslation(x, y, z), mRX = a => _m4().makeRotationX(a), mRY = a => _m4().makeRotationY(a), mRZ = a => _m4().makeRotationZ(a);
