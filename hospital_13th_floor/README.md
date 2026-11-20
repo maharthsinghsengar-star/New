@@ -31,7 +31,8 @@ The scripts in `scripts/` turn those files into a timed, mixed, rendered film.
 | `editing/reference_dialogue.srt` | Dialogue reference track (not burned into the picture) | ✅ |
 | `editing/stems/` | dialogue / sfx / ambience / music stems | ✅ generated |
 | `editing/contact_sheet.jpg` | Every keyframe on one page | ✅ |
-| `exports/hospital_13th_floor_animatic_1080p24.mp4` | The assembled film (animatic picture + final sound) | ✅ generated |
+| `exports/hospital_13th_floor_preview_720p.mp4` | The assembled film, 720p review copy (committed, 91 MB) | ✅ |
+| `exports/hospital_13th_floor_animatic_1080p24.mp4`, `_web_1080p24.mp4` | Full-quality master (1.5 GB) and 1080p web version (390 MB) — rebuilt locally, too large for git | ✅ generated |
 | `scene_images/generated/`, `video_clips/generated/` | **Empty — waiting for AI keyframes / clips** | ⏳ needs an external tool |
 
 Large generated media (WAVs, rendered shots, placeholder plates) are git-ignored because every one of

@@ -16,3 +16,4 @@ __pycache__/
 # Exports are delivered separately (large); see README
 exports/*.mp4
 exports/*.m4a
+!exports/hospital_13th_floor_preview_720p.mp4
