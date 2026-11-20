@@ -1,0 +1,3169 @@
+{
+  "summary": {
+    "updated": "2026-11-20T10:48:33+00:00",
+    "shots": 123,
+    "total_seconds": 663.417,
+    "keyframes_generated": 0,
+    "keyframes_placeholder": 123,
+    "clips_generated": 0,
+    "clips_animatic": 123,
+    "dialogue_cues": 50,
+    "tts_placeholder_cues": [
+      "P06",
+      "PA01",
+      "PA02",
+      "PH04"
+    ],
+    "cues_to_verify_by_ear": [
+      "J19",
+      "J21"
+    ],
+    "mix": true,
+    "exports": [
+      "exports/hospital_13th_floor_animatic_1080p24.mp4"
+    ]
+  },
+  "shots": [
+    {
+      "shot": "S001",
+      "chapter": 1,
+      "start": 0.0,
+      "duration": 7.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S001.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S001.mp4",
+      "prompts": "prompts/shots/S001.json",
+      "voice": [],
+      "sfx": [
+        "thunder_far"
+      ]
+    },
+    {
+      "shot": "S002",
+      "chapter": 1,
+      "start": 7.0,
+      "duration": 7.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S002.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S002.mp4",
+      "prompts": "prompts/shots/S002.json",
+      "voice": [],
+      "sfx": [
+        "ecg_beep",
+        "low_hit",
+        "ecg_flatline"
+      ]
+    },
+    {
+      "shot": "S003",
+      "chapter": 1,
+      "start": 14.0,
+      "duration": 6.25,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S003.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S003.mp4",
+      "prompts": "prompts/shots/S003.json",
+      "voice": [
+        {
+          "id": "S003_1",
+          "file": "voice/narrator/S003_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S003_2",
+          "file": "voice/narrator/S003_2.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "fluoro_buzz"
+      ]
+    },
+    {
+      "shot": "S004",
+      "chapter": 1,
+      "start": 20.25,
+      "duration": 11.1667,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S004.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S004.mp4",
+      "prompts": "prompts/shots/S004.json",
+      "voice": [
+        {
+          "id": "S004",
+          "file": "voice/narrator/S004.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S005",
+      "chapter": 1,
+      "start": 31.4167,
+      "duration": 10.875,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S005.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S005.mp4",
+      "prompts": "prompts/shots/S005.json",
+      "voice": [
+        {
+          "id": "S005",
+          "file": "voice/narrator/S005.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S006",
+      "chapter": 1,
+      "start": 42.2917,
+      "duration": 3.625,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S006.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S006.mp4",
+      "prompts": "prompts/shots/S006.json",
+      "voice": [
+        {
+          "id": "S006",
+          "file": "voice/narrator/S006.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "phone_ring"
+      ]
+    },
+    {
+      "shot": "S007",
+      "chapter": 1,
+      "start": 45.9167,
+      "duration": 10.125,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S007.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S007.mp4",
+      "prompts": "prompts/shots/S007.json",
+      "voice": [
+        {
+          "id": "PH04",
+          "file": "voice/phone_voice/PH04.wav",
+          "exists": true,
+          "placeholder": true
+        },
+        {
+          "id": "J01",
+          "file": "voice/john/J01.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "phone_pickup",
+        "phone_hangup"
+      ]
+    },
+    {
+      "shot": "S008",
+      "chapter": 1,
+      "start": 56.0417,
+      "duration": 3.25,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S008.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S008.mp4",
+      "prompts": "prompts/shots/S008.json",
+      "voice": [
+        {
+          "id": "S008",
+          "file": "voice/narrator/S008.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "clock_tick"
+      ]
+    },
+    {
+      "shot": "S009",
+      "chapter": 1,
+      "start": 59.2917,
+      "duration": 5.5833,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S009.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S009.mp4",
+      "prompts": "prompts/shots/S009.json",
+      "voice": [
+        {
+          "id": "S009",
+          "file": "voice/narrator/S009.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "footsteps_walk"
+      ]
+    },
+    {
+      "shot": "S010",
+      "chapter": 1,
+      "start": 64.875,
+      "duration": 6.6667,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S010.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S010.mp4",
+      "prompts": "prompts/shots/S010.json",
+      "voice": [
+        {
+          "id": "S010",
+          "file": "voice/narrator/S010.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S011",
+      "chapter": 2,
+      "start": 71.5417,
+      "duration": 4.5417,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S011.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S011.mp4",
+      "prompts": "prompts/shots/S011.json",
+      "voice": [
+        {
+          "id": "S011",
+          "file": "voice/narrator/S011.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "elevator_ding",
+        "button_press"
+      ]
+    },
+    {
+      "shot": "S012",
+      "chapter": 2,
+      "start": 76.0833,
+      "duration": 4.0417,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S012.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S012.mp4",
+      "prompts": "prompts/shots/S012.json",
+      "voice": [
+        {
+          "id": "S012",
+          "file": "voice/narrator/S012.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "elevator_doors",
+        "elevator_motor_start"
+      ]
+    },
+    {
+      "shot": "S013",
+      "chapter": 2,
+      "start": 80.125,
+      "duration": 4.7917,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S013.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S013.mp4",
+      "prompts": "prompts/shots/S013.json",
+      "voice": [
+        {
+          "id": "S013",
+          "file": "voice/narrator/S013.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S014",
+      "chapter": 2,
+      "start": 84.9167,
+      "duration": 3.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S014.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S014.mp4",
+      "prompts": "prompts/shots/S014.json",
+      "voice": [
+        {
+          "id": "S014",
+          "file": "voice/narrator/S014.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S015",
+      "chapter": 2,
+      "start": 87.9167,
+      "duration": 6.3333,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S015.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S015.mp4",
+      "prompts": "prompts/shots/S015.json",
+      "voice": [
+        {
+          "id": "S015_1",
+          "file": "voice/narrator/S015_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S015_2",
+          "file": "voice/narrator/S015_2.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "electric_flicker",
+        "elevator_jolt",
+        "cable_creak"
+      ]
+    },
+    {
+      "shot": "S016",
+      "chapter": 2,
+      "start": 94.25,
+      "duration": 9.5833,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S016.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S016.mp4",
+      "prompts": "prompts/shots/S016.json",
+      "voice": [
+        {
+          "id": "S016_1",
+          "file": "voice/narrator/S016_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S016_2",
+          "file": "voice/narrator/S016_2.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S016_3",
+          "file": "voice/narrator/S016_3.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "cable_creak"
+      ]
+    },
+    {
+      "shot": "S017",
+      "chapter": 2,
+      "start": 103.8333,
+      "duration": 7.9583,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S017.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S017.mp4",
+      "prompts": "prompts/shots/S017.json",
+      "voice": [
+        {
+          "id": "S017_1",
+          "file": "voice/narrator/S017_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S017_2",
+          "file": "voice/narrator/S017_2.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "J02",
+          "file": "voice/john/J02.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S017_3",
+          "file": "voice/narrator/S017_3.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "glitch",
+        "button_press",
+        "button_press",
+        "low_drone_swell"
+      ]
+    },
+    {
+      "shot": "S018",
+      "chapter": 2,
+      "start": 111.7917,
+      "duration": 5.0417,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S018.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S018.mp4",
+      "prompts": "prompts/shots/S018.json",
+      "voice": [
+        {
+          "id": "S018",
+          "file": "voice/narrator/S018.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "child_laugh"
+      ]
+    },
+    {
+      "shot": "S019",
+      "chapter": 2,
+      "start": 116.8333,
+      "duration": 3.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S019.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S019.mp4",
+      "prompts": "prompts/shots/S019.json",
+      "voice": [
+        {
+          "id": "G00",
+          "file": "voice/little_girl/G00.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "heartbeat_slow"
+      ]
+    },
+    {
+      "shot": "S020",
+      "chapter": 2,
+      "start": 119.8333,
+      "duration": 4.0417,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S020.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S020.mp4",
+      "prompts": "prompts/shots/S020.json",
+      "voice": [
+        {
+          "id": "S020_1",
+          "file": "voice/narrator/S020_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S020_2",
+          "file": "voice/narrator/S020_2.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "elevator_stop",
+        "elevator_ding_detuned"
+      ]
+    },
+    {
+      "shot": "S021",
+      "chapter": 3,
+      "start": 123.875,
+      "duration": 7.0417,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S021.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S021.mp4",
+      "prompts": "prompts/shots/S021.json",
+      "voice": [
+        {
+          "id": "S021_1",
+          "file": "voice/narrator/S021_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S021_2",
+          "file": "voice/narrator/S021_2.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "elevator_doors_slow",
+        "wind_gust"
+      ]
+    },
+    {
+      "shot": "S022",
+      "chapter": 3,
+      "start": 130.9167,
+      "duration": 4.125,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S022.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S022.mp4",
+      "prompts": "prompts/shots/S022.json",
+      "voice": [
+        {
+          "id": "S022",
+          "file": "voice/narrator/S022.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S023",
+      "chapter": 3,
+      "start": 135.0417,
+      "duration": 12.2917,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S023.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S023.mp4",
+      "prompts": "prompts/shots/S023.json",
+      "voice": [
+        {
+          "id": "S023_1",
+          "file": "voice/narrator/S023_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S023_2",
+          "file": "voice/narrator/S023_2.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S023_3",
+          "file": "voice/narrator/S023_3.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "wheelchair_creak"
+      ]
+    },
+    {
+      "shot": "S024",
+      "chapter": 3,
+      "start": 147.3333,
+      "duration": 6.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S024.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S024.mp4",
+      "prompts": "prompts/shots/S024.json",
+      "voice": [
+        {
+          "id": "S024_1",
+          "file": "voice/narrator/S024_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S024_2",
+          "file": "voice/narrator/S024_2.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "electric_flicker",
+        "electric_flicker",
+        "electric_flicker"
+      ]
+    },
+    {
+      "shot": "S025",
+      "chapter": 3,
+      "start": 153.3333,
+      "duration": 7.875,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S025.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S025.mp4",
+      "prompts": "prompts/shots/S025.json",
+      "voice": [
+        {
+          "id": "S025_1",
+          "file": "voice/narrator/S025_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S025_2",
+          "file": "voice/narrator/S025_2.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "sign_chain",
+        "low_hit"
+      ]
+    },
+    {
+      "shot": "S026",
+      "chapter": 3,
+      "start": 161.2083,
+      "duration": 3.0417,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S026.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S026.mp4",
+      "prompts": "prompts/shots/S026.json",
+      "voice": [
+        {
+          "id": "J07",
+          "file": "voice/john/J07.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S027",
+      "chapter": 3,
+      "start": 164.25,
+      "duration": 6.4167,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S027.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S027.mp4",
+      "prompts": "prompts/shots/S027.json",
+      "voice": [
+        {
+          "id": "S027_1",
+          "file": "voice/narrator/S027_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S027_2",
+          "file": "voice/narrator/S027_2.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S027_3",
+          "file": "voice/narrator/S027_3.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "elevator_doors",
+        "footsteps_run",
+        "button_press"
+      ]
+    },
+    {
+      "shot": "S028",
+      "chapter": 3,
+      "start": 170.6667,
+      "duration": 4.2083,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S028.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S028.mp4",
+      "prompts": "prompts/shots/S028.json",
+      "voice": [
+        {
+          "id": "S028_1",
+          "file": "voice/narrator/S028_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S028_2",
+          "file": "voice/narrator/S028_2.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S028_3",
+          "file": "voice/narrator/S028_3.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "button_press",
+        "button_press",
+        "button_press",
+        "button_press"
+      ]
+    },
+    {
+      "shot": "S029",
+      "chapter": 3,
+      "start": 174.875,
+      "duration": 6.3333,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S029.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S029.mp4",
+      "prompts": "prompts/shots/S029.json",
+      "voice": [
+        {
+          "id": "S029_1",
+          "file": "voice/narrator/S029_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S029_2",
+          "file": "voice/narrator/S029_2.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "low_drone_swell",
+        "wall_thud"
+      ]
+    },
+    {
+      "shot": "S030",
+      "chapter": 3,
+      "start": 181.2083,
+      "duration": 3.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S030.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S030.mp4",
+      "prompts": "prompts/shots/S030.json",
+      "voice": [],
+      "sfx": [
+        "heartbeat_slow"
+      ]
+    },
+    {
+      "shot": "S031",
+      "chapter": 3,
+      "start": 184.2083,
+      "duration": 3.5,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S031.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S031.mp4",
+      "prompts": "prompts/shots/S031.json",
+      "voice": [],
+      "sfx": []
+    },
+    {
+      "shot": "S032",
+      "chapter": 3,
+      "start": 187.7083,
+      "duration": 9.4167,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S032.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S032.mp4",
+      "prompts": "prompts/shots/S032.json",
+      "voice": [
+        {
+          "id": "S032_1",
+          "file": "voice/narrator/S032_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S032_2",
+          "file": "voice/narrator/S032_2.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "NW1",
+          "file": "voice/nurse/NW1.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S033",
+      "chapter": 3,
+      "start": 197.125,
+      "duration": 4.625,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S033.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S033.mp4",
+      "prompts": "prompts/shots/S033.json",
+      "voice": [
+        {
+          "id": "S033",
+          "file": "voice/narrator/S033.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "flashlight_click",
+        "footsteps_walk"
+      ]
+    },
+    {
+      "shot": "S034",
+      "chapter": 4,
+      "start": 201.75,
+      "duration": 6.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S034.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S034.mp4",
+      "prompts": "prompts/shots/S034.json",
+      "voice": [
+        {
+          "id": "S034_1",
+          "file": "voice/narrator/S034_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S034_2",
+          "file": "voice/narrator/S034_2.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S034_3",
+          "file": "voice/narrator/S034_3.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S035",
+      "chapter": 4,
+      "start": 207.75,
+      "duration": 4.6667,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S035.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S035.mp4",
+      "prompts": "prompts/shots/S035.json",
+      "voice": [
+        {
+          "id": "S035_1",
+          "file": "voice/narrator/S035_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S035_2",
+          "file": "voice/narrator/S035_2.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "breath_unison"
+      ]
+    },
+    {
+      "shot": "S036",
+      "chapter": 4,
+      "start": 212.4167,
+      "duration": 5.1667,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S036.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S036.mp4",
+      "prompts": "prompts/shots/S036.json",
+      "voice": [
+        {
+          "id": "S036",
+          "file": "voice/narrator/S036.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "J03",
+          "file": "voice/john/J03.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "J04",
+          "file": "voice/john/J04.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "footsteps_walk"
+      ]
+    },
+    {
+      "shot": "S037",
+      "chapter": 4,
+      "start": 217.5833,
+      "duration": 8.8333,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S037.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S037.mp4",
+      "prompts": "prompts/shots/S037.json",
+      "voice": [
+        {
+          "id": "S037_1",
+          "file": "voice/narrator/S037_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S037_2",
+          "file": "voice/narrator/S037_2.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S037_3",
+          "file": "voice/narrator/S037_3.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S037_4",
+          "file": "voice/narrator/S037_4.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "bed_creak"
+      ]
+    },
+    {
+      "shot": "S038",
+      "chapter": 4,
+      "start": 226.4167,
+      "duration": 3.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S038.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S038.mp4",
+      "prompts": "prompts/shots/S038.json",
+      "voice": [
+        {
+          "id": "P01",
+          "file": "voice/patients/P01.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S039",
+      "chapter": 4,
+      "start": 229.4167,
+      "duration": 3.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S039.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S039.mp4",
+      "prompts": "prompts/shots/S039.json",
+      "voice": [
+        {
+          "id": "J05",
+          "file": "voice/john/J05.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S040",
+      "chapter": 4,
+      "start": 232.4167,
+      "duration": 4.5833,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S040.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S040.mp4",
+      "prompts": "prompts/shots/S040.json",
+      "voice": [
+        {
+          "id": "P02",
+          "file": "voice/patients/P02.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "P03",
+          "file": "voice/patients/P03.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S041",
+      "chapter": 4,
+      "start": 237.0,
+      "duration": 5.6667,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S041.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S041.mp4",
+      "prompts": "prompts/shots/S041.json",
+      "voice": [
+        {
+          "id": "S041_1",
+          "file": "voice/narrator/S041_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S041_2",
+          "file": "voice/narrator/S041_2.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "whisper_swirl"
+      ]
+    },
+    {
+      "shot": "S042",
+      "chapter": 4,
+      "start": 242.6667,
+      "duration": 6.75,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S042.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S042.mp4",
+      "prompts": "prompts/shots/S042.json",
+      "voice": [
+        {
+          "id": "S042",
+          "file": "voice/narrator/S042.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "P04",
+          "file": "voice/patients/P04.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S043",
+      "chapter": 4,
+      "start": 249.4167,
+      "duration": 7.2083,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S043.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S043.mp4",
+      "prompts": "prompts/shots/S043.json",
+      "voice": [
+        {
+          "id": "S043_1",
+          "file": "voice/narrator/S043_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S043_2",
+          "file": "voice/narrator/S043_2.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "bed_creak",
+        "low_hit"
+      ]
+    },
+    {
+      "shot": "S044",
+      "chapter": 4,
+      "start": 256.625,
+      "duration": 6.625,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S044.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S044.mp4",
+      "prompts": "prompts/shots/S044.json",
+      "voice": [
+        {
+          "id": "S044",
+          "file": "voice/narrator/S044.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "P06",
+          "file": "voice/patients/P06.wav",
+          "exists": true,
+          "placeholder": true
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S045",
+      "chapter": 4,
+      "start": 263.25,
+      "duration": 3.5,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S045.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S045.mp4",
+      "prompts": "prompts/shots/S045.json",
+      "voice": [],
+      "sfx": [
+        "heartbeat_fast"
+      ]
+    },
+    {
+      "shot": "S046",
+      "chapter": 5,
+      "start": 266.75,
+      "duration": 3.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S046.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S046.mp4",
+      "prompts": "prompts/shots/S046.json",
+      "voice": [
+        {
+          "id": "S046",
+          "file": "voice/narrator/S046.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "footsteps_run"
+      ]
+    },
+    {
+      "shot": "S047",
+      "chapter": 5,
+      "start": 269.75,
+      "duration": 7.25,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S047.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S047.mp4",
+      "prompts": "prompts/shots/S047.json",
+      "voice": [
+        {
+          "id": "S047",
+          "file": "voice/narrator/S047.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "G01",
+          "file": "voice/little_girl/G01.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S048",
+      "chapter": 5,
+      "start": 277.0,
+      "duration": 6.1667,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S048.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S048.mp4",
+      "prompts": "prompts/shots/S048.json",
+      "voice": [
+        {
+          "id": "S048_1",
+          "file": "voice/narrator/S048_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S048_2",
+          "file": "voice/narrator/S048_2.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S048_3",
+          "file": "voice/narrator/S048_3.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S049",
+      "chapter": 5,
+      "start": 283.1667,
+      "duration": 3.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S049.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S049.mp4",
+      "prompts": "prompts/shots/S049.json",
+      "voice": [
+        {
+          "id": "S049",
+          "file": "voice/narrator/S049.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S050",
+      "chapter": 5,
+      "start": 286.1667,
+      "duration": 3.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S050.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S050.mp4",
+      "prompts": "prompts/shots/S050.json",
+      "voice": [
+        {
+          "id": "J06",
+          "file": "voice/john/J06.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S051",
+      "chapter": 5,
+      "start": 289.1667,
+      "duration": 3.3333,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S051.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S051.mp4",
+      "prompts": "prompts/shots/S051.json",
+      "voice": [
+        {
+          "id": "G02",
+          "file": "voice/little_girl/G02.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S052",
+      "chapter": 5,
+      "start": 292.5,
+      "duration": 3.2083,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S052.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S052.mp4",
+      "prompts": "prompts/shots/S052.json",
+      "voice": [],
+      "sfx": [
+        "electric_flicker",
+        "glitch",
+        "footsteps_run"
+      ]
+    },
+    {
+      "shot": "S053",
+      "chapter": 6,
+      "start": 295.7083,
+      "duration": 5.3333,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S053.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S053.mp4",
+      "prompts": "prompts/shots/S053.json",
+      "voice": [
+        {
+          "id": "S053",
+          "file": "voice/narrator/S053.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S054",
+      "chapter": 6,
+      "start": 301.0417,
+      "duration": 9.1667,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S054.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S054.mp4",
+      "prompts": "prompts/shots/S054.json",
+      "voice": [
+        {
+          "id": "S054_1",
+          "file": "voice/narrator/S054_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S054_2",
+          "file": "voice/narrator/S054_2.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S054_3",
+          "file": "voice/narrator/S054_3.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "door_creak"
+      ]
+    },
+    {
+      "shot": "S055",
+      "chapter": 6,
+      "start": 310.2083,
+      "duration": 4.6667,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S055.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S055.mp4",
+      "prompts": "prompts/shots/S055.json",
+      "voice": [
+        {
+          "id": "S055",
+          "file": "voice/narrator/S055.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "flashlight_click"
+      ]
+    },
+    {
+      "shot": "S056",
+      "chapter": 6,
+      "start": 314.875,
+      "duration": 7.1667,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S056.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S056.mp4",
+      "prompts": "prompts/shots/S056.json",
+      "voice": [
+        {
+          "id": "S056_1",
+          "file": "voice/narrator/S056_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S056_2",
+          "file": "voice/narrator/S056_2.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "low_drone_swell"
+      ]
+    },
+    {
+      "shot": "S057",
+      "chapter": 6,
+      "start": 322.0417,
+      "duration": 10.375,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S057.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S057.mp4",
+      "prompts": "prompts/shots/S057.json",
+      "voice": [
+        {
+          "id": "S057_1",
+          "file": "voice/narrator/S057_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S057_2",
+          "file": "voice/narrator/S057_2.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S057_3",
+          "file": "voice/narrator/S057_3.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S057_4",
+          "file": "voice/narrator/S057_4.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S057_5",
+          "file": "voice/narrator/S057_5.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S058",
+      "chapter": 6,
+      "start": 332.4167,
+      "duration": 6.4583,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S058.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S058.mp4",
+      "prompts": "prompts/shots/S058.json",
+      "voice": [
+        {
+          "id": "S058_1",
+          "file": "voice/narrator/S058_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S058_2",
+          "file": "voice/narrator/S058_2.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "paper_turn"
+      ]
+    },
+    {
+      "shot": "S059",
+      "chapter": 6,
+      "start": 338.875,
+      "duration": 7.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S059.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S059.mp4",
+      "prompts": "prompts/shots/S059.json",
+      "voice": [],
+      "sfx": [
+        "heartbeat_slow"
+      ]
+    },
+    {
+      "shot": "S060",
+      "chapter": 6,
+      "start": 345.875,
+      "duration": 8.4583,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S060.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S060.mp4",
+      "prompts": "prompts/shots/S060.json",
+      "voice": [
+        {
+          "id": "S060_1",
+          "file": "voice/narrator/S060_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S060_2",
+          "file": "voice/narrator/S060_2.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "J21",
+          "file": "voice/john/J21.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "paper_turn"
+      ]
+    },
+    {
+      "shot": "S061",
+      "chapter": 6,
+      "start": 354.3333,
+      "duration": 7.5,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S061.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S061.mp4",
+      "prompts": "prompts/shots/S061.json",
+      "voice": [
+        {
+          "id": "S061_1",
+          "file": "voice/narrator/S061_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S061_2",
+          "file": "voice/narrator/S061_2.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S061_3",
+          "file": "voice/narrator/S061_3.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S061_4",
+          "file": "voice/narrator/S061_4.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "low_hit"
+      ]
+    },
+    {
+      "shot": "S062",
+      "chapter": 6,
+      "start": 361.8333,
+      "duration": 3.2083,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S062.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S062.mp4",
+      "prompts": "prompts/shots/S062.json",
+      "voice": [],
+      "sfx": [
+        "heartbeat_fast"
+      ]
+    },
+    {
+      "shot": "S063",
+      "chapter": 6,
+      "start": 365.0417,
+      "duration": 5.0417,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S063.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S063.mp4",
+      "prompts": "prompts/shots/S063.json",
+      "voice": [
+        {
+          "id": "S063",
+          "file": "voice/narrator/S063.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "OD01",
+          "file": "voice/old_doctor/OD01.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S064",
+      "chapter": 7,
+      "start": 370.0833,
+      "duration": 3.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S064.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S064.mp4",
+      "prompts": "prompts/shots/S064.json",
+      "voice": [
+        {
+          "id": "S064",
+          "file": "voice/narrator/S064.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S065",
+      "chapter": 7,
+      "start": 373.0833,
+      "duration": 5.25,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S065.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S065.mp4",
+      "prompts": "prompts/shots/S065.json",
+      "voice": [
+        {
+          "id": "S065_1",
+          "file": "voice/narrator/S065_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S065_2",
+          "file": "voice/narrator/S065_2.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S066",
+      "chapter": 7,
+      "start": 378.3333,
+      "duration": 8.3333,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S066.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S066.mp4",
+      "prompts": "prompts/shots/S066.json",
+      "voice": [
+        {
+          "id": "S066_1",
+          "file": "voice/narrator/S066_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S066_2",
+          "file": "voice/narrator/S066_2.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S067",
+      "chapter": 7,
+      "start": 386.6667,
+      "duration": 4.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S067.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S067.mp4",
+      "prompts": "prompts/shots/S067.json",
+      "voice": [
+        {
+          "id": "J08",
+          "file": "voice/john/J08.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "J09",
+          "file": "voice/john/J09.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S068",
+      "chapter": 7,
+      "start": 390.6667,
+      "duration": 3.4583,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S068.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S068.mp4",
+      "prompts": "prompts/shots/S068.json",
+      "voice": [
+        {
+          "id": "OD02",
+          "file": "voice/old_doctor/OD02.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S069",
+      "chapter": 7,
+      "start": 394.125,
+      "duration": 4.875,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S069.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S069.mp4",
+      "prompts": "prompts/shots/S069.json",
+      "voice": [
+        {
+          "id": "J10",
+          "file": "voice/john/J10.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "J11",
+          "file": "voice/john/J11.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S070",
+      "chapter": 7,
+      "start": 399.0,
+      "duration": 3.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S070.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S070.mp4",
+      "prompts": "prompts/shots/S070.json",
+      "voice": [
+        {
+          "id": "OD03",
+          "file": "voice/old_doctor/OD03.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S071",
+      "chapter": 7,
+      "start": 402.0,
+      "duration": 3.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S071.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S071.mp4",
+      "prompts": "prompts/shots/S071.json",
+      "voice": [
+        {
+          "id": "J12",
+          "file": "voice/john/J12.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S072",
+      "chapter": 7,
+      "start": 405.0,
+      "duration": 4.9167,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S072.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S072.mp4",
+      "prompts": "prompts/shots/S072.json",
+      "voice": [
+        {
+          "id": "OD04",
+          "file": "voice/old_doctor/OD04.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "OD05",
+          "file": "voice/old_doctor/OD05.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S073",
+      "chapter": 7,
+      "start": 409.9167,
+      "duration": 3.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S073.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S073.mp4",
+      "prompts": "prompts/shots/S073.json",
+      "voice": [
+        {
+          "id": "J13",
+          "file": "voice/john/J13.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S074",
+      "chapter": 7,
+      "start": 412.9167,
+      "duration": 3.375,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S074.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S074.mp4",
+      "prompts": "prompts/shots/S074.json",
+      "voice": [
+        {
+          "id": "OD06",
+          "file": "voice/old_doctor/OD06.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S075",
+      "chapter": 7,
+      "start": 416.2917,
+      "duration": 3.5833,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S075.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S075.mp4",
+      "prompts": "prompts/shots/S075.json",
+      "voice": [
+        {
+          "id": "S075",
+          "file": "voice/narrator/S075.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "power_down"
+      ]
+    },
+    {
+      "shot": "S076",
+      "chapter": 7,
+      "start": 419.875,
+      "duration": 7.8333,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S076.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S076.mp4",
+      "prompts": "prompts/shots/S076.json",
+      "voice": [
+        {
+          "id": "S076_1",
+          "file": "voice/narrator/S076_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S076_2",
+          "file": "voice/narrator/S076_2.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "hospital_bell"
+      ]
+    },
+    {
+      "shot": "S077",
+      "chapter": 8,
+      "start": 427.7083,
+      "duration": 6.0833,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S077.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S077.mp4",
+      "prompts": "prompts/shots/S077.json",
+      "voice": [
+        {
+          "id": "S077_1",
+          "file": "voice/narrator/S077_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S077_2",
+          "file": "voice/narrator/S077_2.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S077_3",
+          "file": "voice/narrator/S077_3.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "footsteps_run"
+      ]
+    },
+    {
+      "shot": "S078",
+      "chapter": 8,
+      "start": 433.7917,
+      "duration": 3.6667,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S078.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S078.mp4",
+      "prompts": "prompts/shots/S078.json",
+      "voice": [
+        {
+          "id": "S078_1",
+          "file": "voice/narrator/S078_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S078_2",
+          "file": "voice/narrator/S078_2.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "door_slam"
+      ]
+    },
+    {
+      "shot": "S079",
+      "chapter": 8,
+      "start": 437.4583,
+      "duration": 8.3333,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S079.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S079.mp4",
+      "prompts": "prompts/shots/S079.json",
+      "voice": [
+        {
+          "id": "S079_1",
+          "file": "voice/narrator/S079_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S079_2",
+          "file": "voice/narrator/S079_2.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S079_3",
+          "file": "voice/narrator/S079_3.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S079_4",
+          "file": "voice/narrator/S079_4.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S079_5",
+          "file": "voice/narrator/S079_5.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "door_slam",
+        "footsteps_run"
+      ]
+    },
+    {
+      "shot": "S080",
+      "chapter": 8,
+      "start": 445.7917,
+      "duration": 6.0417,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S080.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S080.mp4",
+      "prompts": "prompts/shots/S080.json",
+      "voice": [
+        {
+          "id": "S080_1",
+          "file": "voice/narrator/S080_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S080_2",
+          "file": "voice/narrator/S080_2.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S081",
+      "chapter": 8,
+      "start": 451.8333,
+      "duration": 3.375,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S081.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S081.mp4",
+      "prompts": "prompts/shots/S081.json",
+      "voice": [
+        {
+          "id": "G03",
+          "file": "voice/little_girl/G03.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S082",
+      "chapter": 8,
+      "start": 455.2083,
+      "duration": 6.3333,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S082.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S082.mp4",
+      "prompts": "prompts/shots/S082.json",
+      "voice": [
+        {
+          "id": "S082_1",
+          "file": "voice/narrator/S082_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S082_2",
+          "file": "voice/narrator/S082_2.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S082_3",
+          "file": "voice/narrator/S082_3.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "low_hit"
+      ]
+    },
+    {
+      "shot": "S083",
+      "chapter": 8,
+      "start": 461.5417,
+      "duration": 3.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S083.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S083.mp4",
+      "prompts": "prompts/shots/S083.json",
+      "voice": [
+        {
+          "id": "J20",
+          "file": "voice/john/J20.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S084",
+      "chapter": 8,
+      "start": 464.5417,
+      "duration": 8.25,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S084.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S084.mp4",
+      "prompts": "prompts/shots/S084.json",
+      "voice": [
+        {
+          "id": "S084_1",
+          "file": "voice/narrator/S084_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S084_2",
+          "file": "voice/narrator/S084_2.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S084_3",
+          "file": "voice/narrator/S084_3.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "whisper_swirl"
+      ]
+    },
+    {
+      "shot": "S085",
+      "chapter": 8,
+      "start": 472.7917,
+      "duration": 3.0417,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S085.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S085.mp4",
+      "prompts": "prompts/shots/S085.json",
+      "voice": [
+        {
+          "id": "S085",
+          "file": "voice/narrator/S085.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "footsteps_run",
+        "heartbeat_fast"
+      ]
+    },
+    {
+      "shot": "S086",
+      "chapter": 9,
+      "start": 475.8333,
+      "duration": 5.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S086.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S086.mp4",
+      "prompts": "prompts/shots/S086.json",
+      "voice": [
+        {
+          "id": "S086_1",
+          "file": "voice/narrator/S086_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S086_2",
+          "file": "voice/narrator/S086_2.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S086_3",
+          "file": "voice/narrator/S086_3.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S087",
+      "chapter": 9,
+      "start": 480.8333,
+      "duration": 5.875,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S087.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S087.mp4",
+      "prompts": "prompts/shots/S087.json",
+      "voice": [
+        {
+          "id": "S087_1",
+          "file": "voice/narrator/S087_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S087_2",
+          "file": "voice/narrator/S087_2.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S087_3",
+          "file": "voice/narrator/S087_3.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "button_press",
+        "button_press",
+        "elevator_doors",
+        "elevator_motor_start"
+      ]
+    },
+    {
+      "shot": "S088",
+      "chapter": 9,
+      "start": 486.7083,
+      "duration": 9.2083,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S088.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S088.mp4",
+      "prompts": "prompts/shots/S088.json",
+      "voice": [
+        {
+          "id": "PA01",
+          "file": "voice/pa/PA01.wav",
+          "exists": true,
+          "placeholder": true
+        },
+        {
+          "id": "J14",
+          "file": "voice/john/J14.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "pa_chime",
+        "static_burst",
+        "wall_thud",
+        "wall_thud",
+        "wall_thud"
+      ]
+    },
+    {
+      "shot": "S089",
+      "chapter": 9,
+      "start": 495.9167,
+      "duration": 4.4167,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S089.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S089.mp4",
+      "prompts": "prompts/shots/S089.json",
+      "voice": [
+        {
+          "id": "S089_1",
+          "file": "voice/narrator/S089_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S089_2",
+          "file": "voice/narrator/S089_2.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S089_3",
+          "file": "voice/narrator/S089_3.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S089_4",
+          "file": "voice/narrator/S089_4.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "cable_creak"
+      ]
+    },
+    {
+      "shot": "S090",
+      "chapter": 9,
+      "start": 500.3333,
+      "duration": 3.5833,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S090.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S090.mp4",
+      "prompts": "prompts/shots/S090.json",
+      "voice": [],
+      "sfx": [
+        "elevator_jolt"
+      ]
+    },
+    {
+      "shot": "S091",
+      "chapter": 9,
+      "start": 503.9167,
+      "duration": 4.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S091.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S091.mp4",
+      "prompts": "prompts/shots/S091.json",
+      "voice": [
+        {
+          "id": "S091_1",
+          "file": "voice/narrator/S091_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S091_2",
+          "file": "voice/narrator/S091_2.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "elevator_ding",
+        "elevator_doors"
+      ]
+    },
+    {
+      "shot": "S092",
+      "chapter": 9,
+      "start": 507.9167,
+      "duration": 3.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S092.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S092.mp4",
+      "prompts": "prompts/shots/S092.json",
+      "voice": [
+        {
+          "id": "S092",
+          "file": "voice/narrator/S092.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S093",
+      "chapter": 9,
+      "start": 510.9167,
+      "duration": 3.9167,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S093.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S093.mp4",
+      "prompts": "prompts/shots/S093.json",
+      "voice": [
+        {
+          "id": "S093",
+          "file": "voice/narrator/S093.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S094",
+      "chapter": 9,
+      "start": 514.8333,
+      "duration": 3.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S094.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S094.mp4",
+      "prompts": "prompts/shots/S094.json",
+      "voice": [
+        {
+          "id": "S094",
+          "file": "voice/narrator/S094.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "clock_tick"
+      ]
+    },
+    {
+      "shot": "S095",
+      "chapter": 10,
+      "start": 517.8333,
+      "duration": 8.875,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S095.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S095.mp4",
+      "prompts": "prompts/shots/S095.json",
+      "voice": [
+        {
+          "id": "S095_1",
+          "file": "voice/narrator/S095_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S095_2",
+          "file": "voice/narrator/S095_2.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S095_3",
+          "file": "voice/narrator/S095_3.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S095_4",
+          "file": "voice/narrator/S095_4.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S096",
+      "chapter": 10,
+      "start": 526.7083,
+      "duration": 3.5833,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S096.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S096.mp4",
+      "prompts": "prompts/shots/S096.json",
+      "voice": [
+        {
+          "id": "S096",
+          "file": "voice/narrator/S096.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "footsteps_walk"
+      ]
+    },
+    {
+      "shot": "S097",
+      "chapter": 10,
+      "start": 530.2917,
+      "duration": 5.375,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S097.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S097.mp4",
+      "prompts": "prompts/shots/S097.json",
+      "voice": [
+        {
+          "id": "N01",
+          "file": "voice/nurse/N01.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S098",
+      "chapter": 10,
+      "start": 535.6667,
+      "duration": 3.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S098.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S098.mp4",
+      "prompts": "prompts/shots/S098.json",
+      "voice": [
+        {
+          "id": "J15",
+          "file": "voice/john/J15.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S099",
+      "chapter": 10,
+      "start": 538.6667,
+      "duration": 3.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S099.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S099.mp4",
+      "prompts": "prompts/shots/S099.json",
+      "voice": [
+        {
+          "id": "N02",
+          "file": "voice/nurse/N02.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S100",
+      "chapter": 10,
+      "start": 541.6667,
+      "duration": 5.875,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S100.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S100.mp4",
+      "prompts": "prompts/shots/S100.json",
+      "voice": [
+        {
+          "id": "J18",
+          "file": "voice/john/J18.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "J16",
+          "file": "voice/john/J16.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S101",
+      "chapter": 10,
+      "start": 547.5417,
+      "duration": 4.4583,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S101.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S101.mp4",
+      "prompts": "prompts/shots/S101.json",
+      "voice": [
+        {
+          "id": "N03",
+          "file": "voice/nurse/N03.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S101A",
+      "chapter": 10,
+      "start": 552.0,
+      "duration": 3.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S101A.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S101A.mp4",
+      "prompts": "prompts/shots/S101A.json",
+      "voice": [
+        {
+          "id": "J17",
+          "file": "voice/john/J17.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S102",
+      "chapter": 10,
+      "start": 555.0,
+      "duration": 4.2083,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S102.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S102.mp4",
+      "prompts": "prompts/shots/S102.json",
+      "voice": [],
+      "sfx": [
+        "button_press"
+      ]
+    },
+    {
+      "shot": "S103",
+      "chapter": 10,
+      "start": 559.2083,
+      "duration": 5.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S103.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S103.mp4",
+      "prompts": "prompts/shots/S103.json",
+      "voice": [],
+      "sfx": [
+        "keyboard"
+      ]
+    },
+    {
+      "shot": "S104",
+      "chapter": 10,
+      "start": 564.2083,
+      "duration": 3.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S104.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S104.mp4",
+      "prompts": "prompts/shots/S104.json",
+      "voice": [
+        {
+          "id": "N04",
+          "file": "voice/nurse/N04.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S105",
+      "chapter": 10,
+      "start": 567.2083,
+      "duration": 3.2083,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S105.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S105.mp4",
+      "prompts": "prompts/shots/S105.json",
+      "voice": [
+        {
+          "id": "J19",
+          "file": "voice/john/J19.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S106",
+      "chapter": 10,
+      "start": 570.4167,
+      "duration": 5.625,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S106.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S106.mp4",
+      "prompts": "prompts/shots/S106.json",
+      "voice": [
+        {
+          "id": "S106_1",
+          "file": "voice/narrator/S106_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S106_2",
+          "file": "voice/narrator/S106_2.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S107",
+      "chapter": 10,
+      "start": 576.0417,
+      "duration": 11.75,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S107.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S107.mp4",
+      "prompts": "prompts/shots/S107.json",
+      "voice": [
+        {
+          "id": "S107_1",
+          "file": "voice/narrator/S107_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S107_2",
+          "file": "voice/narrator/S107_2.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S107_3",
+          "file": "voice/narrator/S107_3.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S107_4",
+          "file": "voice/narrator/S107_4.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "pages_flutter"
+      ]
+    },
+    {
+      "shot": "S108",
+      "chapter": 10,
+      "start": 587.7917,
+      "duration": 8.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S108.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S108.mp4",
+      "prompts": "prompts/shots/S108.json",
+      "voice": [
+        {
+          "id": "S108_1",
+          "file": "voice/narrator/S108_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S108_2",
+          "file": "voice/narrator/S108_2.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S108_3",
+          "file": "voice/narrator/S108_3.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S108_4",
+          "file": "voice/narrator/S108_4.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S108_5",
+          "file": "voice/narrator/S108_5.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S108_6",
+          "file": "voice/narrator/S108_6.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "pen_scratch",
+        "low_hit"
+      ]
+    },
+    {
+      "shot": "S109",
+      "chapter": 10,
+      "start": 595.7917,
+      "duration": 3.5,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S109.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S109.mp4",
+      "prompts": "prompts/shots/S109.json",
+      "voice": [],
+      "sfx": [
+        "heartbeat_slow"
+      ]
+    },
+    {
+      "shot": "S110",
+      "chapter": 10,
+      "start": 599.2917,
+      "duration": 2.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S110.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S110.mp4",
+      "prompts": "prompts/shots/S110.json",
+      "voice": [],
+      "sfx": [
+        "sub_drop"
+      ]
+    },
+    {
+      "shot": "S111",
+      "chapter": 10,
+      "start": 601.2917,
+      "duration": 6.0417,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S111.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S111.mp4",
+      "prompts": "prompts/shots/S111.json",
+      "voice": [
+        {
+          "id": "S111",
+          "file": "voice/narrator/S111.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S112",
+      "chapter": 10,
+      "start": 607.3333,
+      "duration": 7.9167,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S112.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S112.mp4",
+      "prompts": "prompts/shots/S112.json",
+      "voice": [
+        {
+          "id": "S112_1",
+          "file": "voice/narrator/S112_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S112_2",
+          "file": "voice/narrator/S112_2.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S112_3",
+          "file": "voice/narrator/S112_3.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "elevator_ding_detuned",
+        "elevator_doors_slow"
+      ]
+    },
+    {
+      "shot": "S113",
+      "chapter": 10,
+      "start": 615.25,
+      "duration": 4.625,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S113.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S113.mp4",
+      "prompts": "prompts/shots/S113.json",
+      "voice": [
+        {
+          "id": "S113_1",
+          "file": "voice/narrator/S113_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S113_2",
+          "file": "voice/narrator/S113_2.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S113_3",
+          "file": "voice/narrator/S113_3.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S114",
+      "chapter": 10,
+      "start": 619.875,
+      "duration": 6.3333,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S114.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S114.mp4",
+      "prompts": "prompts/shots/S114.json",
+      "voice": [
+        {
+          "id": "PA02",
+          "file": "voice/pa/PA02.wav",
+          "exists": true,
+          "placeholder": true
+        }
+      ],
+      "sfx": [
+        "pa_chime"
+      ]
+    },
+    {
+      "shot": "S115",
+      "chapter": 10,
+      "start": 626.2083,
+      "duration": 3.75,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S115.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S115.mp4",
+      "prompts": "prompts/shots/S115.json",
+      "voice": [
+        {
+          "id": "S115_1",
+          "file": "voice/narrator/S115_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S115_2",
+          "file": "voice/narrator/S115_2.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "phone_ring"
+      ]
+    },
+    {
+      "shot": "S116",
+      "chapter": 10,
+      "start": 629.9583,
+      "duration": 5.8333,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S116.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S116.mp4",
+      "prompts": "prompts/shots/S116.json",
+      "voice": [
+        {
+          "id": "PH01",
+          "file": "voice/phone_voice/PH01.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "PH02",
+          "file": "voice/phone_voice/PH02.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "phone_pickup"
+      ]
+    },
+    {
+      "shot": "S117",
+      "chapter": 10,
+      "start": 635.7917,
+      "duration": 3.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S117.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S117.mp4",
+      "prompts": "prompts/shots/S117.json",
+      "voice": [
+        {
+          "id": "N05",
+          "file": "voice/nurse/N05.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": []
+    },
+    {
+      "shot": "S118",
+      "chapter": 10,
+      "start": 638.7917,
+      "duration": 3.4583,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S118.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S118.mp4",
+      "prompts": "prompts/shots/S118.json",
+      "voice": [
+        {
+          "id": "PH03",
+          "file": "voice/phone_voice/PH03.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "static_burst"
+      ]
+    },
+    {
+      "shot": "S119",
+      "chapter": 10,
+      "start": 642.25,
+      "duration": 3.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S119.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S119.mp4",
+      "prompts": "prompts/shots/S119.json",
+      "voice": [
+        {
+          "id": "S119",
+          "file": "voice/narrator/S119.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "line_dead"
+      ]
+    },
+    {
+      "shot": "S120",
+      "chapter": 10,
+      "start": 645.25,
+      "duration": 5.6667,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S120.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S120.mp4",
+      "prompts": "prompts/shots/S120.json",
+      "voice": [
+        {
+          "id": "S120_1",
+          "file": "voice/narrator/S120_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S120_2",
+          "file": "voice/narrator/S120_2.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "elevator_doors_slow"
+      ]
+    },
+    {
+      "shot": "S121",
+      "chapter": 10,
+      "start": 650.9167,
+      "duration": 5.5,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S121.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S121.mp4",
+      "prompts": "prompts/shots/S121.json",
+      "voice": [
+        {
+          "id": "S121_1",
+          "file": "voice/narrator/S121_1.wav",
+          "exists": true,
+          "placeholder": false
+        },
+        {
+          "id": "S121_2",
+          "file": "voice/narrator/S121_2.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "low_drone_swell",
+        "elevator_doors_shut"
+      ]
+    },
+    {
+      "shot": "S122",
+      "chapter": 10,
+      "start": 656.4167,
+      "duration": 7.0,
+      "keyframe": "placeholder",
+      "keyframe_file": "scene_images/placeholder/S122.jpg",
+      "video": "animatic",
+      "rendered_shot": "editing/rendered_shots/S122.mp4",
+      "prompts": "prompts/shots/S122.json",
+      "voice": [
+        {
+          "id": "S122",
+          "file": "voice/narrator/S122.wav",
+          "exists": true,
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        "ecg_flatline"
+      ]
+    }
+  ]
+}
