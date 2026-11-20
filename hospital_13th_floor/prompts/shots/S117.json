@@ -1,0 +1,16 @@
+{
+  "shot": "S117",
+  "chapter": 10,
+  "duration": 3.0,
+  "image_prompt": "dark cinematic Japanese horror anime film still, detailed anime character design, hand-painted cinematic background, 2D anime characters integrated into realistic 3D hospital environment, cinematic lighting, volumetric fog, deep shadows, cold blue and desaturated teal palette, subtle red accent lighting, realistic reflections on hospital floor, flickering fluorescent light, film grain, atmospheric depth, horror film cinematography, 16:9 widescreen composition, high detail, close-up of the nurse, uneasy, glancing toward the elevator, 30-year-old Indian woman nurse, medium brown complexion, oval face, dark expressive brown eyes, dark hair tied in a neat bun, white nurse cap with blue stripe, white nurse uniform with light-blue trim, ID badge on lanyard, black clipboard, camera: Close-up, mood: Unease",
+  "negative_prompt": "comedy, chibi, bright cheerful colors, exaggerated expressions, cheap animation, character redesign, outfit change, inconsistent face, extra fingers, deformed hands, gore, blood splatter, visible injuries, text, subtitles, captions, watermark, logo, signature, low resolution, blurry face",
+  "video_prompt": "Close-up. glances sideways. Keep character design, face and outfit identical to the reference frame. Subtle natural motion, slow cinematic pacing, no cuts, 3.0 seconds, 24 fps, 16:9.",
+  "reference_images": [
+    "characters/refs/nurse_face.png",
+    "characters/refs/nurse_clipboard.png"
+  ],
+  "aspect_ratio": "16:9",
+  "output_keyframe": "scene_images/generated/S117.png",
+  "output_keyframe_b": null,
+  "output_clip": "video_clips/generated/S117.mp4"
+}

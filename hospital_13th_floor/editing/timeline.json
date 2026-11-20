@@ -1,0 +1,4847 @@
+{
+  "fps": 24,
+  "width": 1920,
+  "height": 1080,
+  "total_seconds": 652.417,
+  "shots": [
+    {
+      "id": "S001",
+      "chapter": 1,
+      "chapter_title": "THE LAST CALL",
+      "start": 0.0,
+      "duration": 7.0,
+      "end": 7.0,
+      "frames": 168,
+      "events": [],
+      "sfx": [
+        {
+          "id": "thunder_far",
+          "at": 1.2,
+          "gain_db": -6
+        }
+      ],
+      "amb": "rain_exterior",
+      "mus": "opening",
+      "amb_active": "rain_exterior",
+      "mus_active": "opening",
+      "fade_in": 2.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S002",
+      "chapter": 1,
+      "chapter_title": "THE LAST CALL",
+      "start": 7.0,
+      "duration": 7.0,
+      "end": 14.0,
+      "frames": 168,
+      "events": [],
+      "sfx": [
+        {
+          "id": "ecg_beep",
+          "at": 0.6,
+          "gain_db": -10
+        },
+        {
+          "id": "low_hit",
+          "at": 1.4,
+          "gain_db": -2
+        },
+        {
+          "id": "ecg_flatline",
+          "at": 4.6,
+          "gain_db": -14
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "rain_exterior",
+      "mus_active": "opening",
+      "fade_in": 0.0,
+      "fade_out": 0.8
+    },
+    {
+      "id": "S003",
+      "chapter": 1,
+      "chapter_title": "THE LAST CALL",
+      "start": 14.0,
+      "duration": 6.25,
+      "end": 20.25,
+      "frames": 150,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S003_1",
+          "file": "voice/narrator/S003_1.wav",
+          "start": 0.3,
+          "speech": 1.91,
+          "src_in": 0.04,
+          "src_out": 1.95,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S003_2",
+          "file": "voice/narrator/S003_2.wav",
+          "start": 2.51,
+          "speech": 3.24,
+          "src_in": 2.52,
+          "src_out": 5.76,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "fluoro_buzz",
+          "at": 0.0,
+          "gain_db": -14
+        }
+      ],
+      "amb": "hospital_night",
+      "mus": null,
+      "amb_active": "hospital_night",
+      "mus_active": "opening",
+      "fade_in": 1.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S004",
+      "chapter": 1,
+      "chapter_title": "THE LAST CALL",
+      "start": 20.25,
+      "duration": 11.1667,
+      "end": 31.4167,
+      "frames": 268,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S004",
+          "file": "voice/narrator/S004.wav",
+          "start": 0.3,
+          "speech": 10.38,
+          "src_in": 6.42,
+          "src_out": 16.8,
+          "text": ""
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "hospital_night",
+      "mus_active": "opening",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S005",
+      "chapter": 1,
+      "chapter_title": "THE LAST CALL",
+      "start": 31.4167,
+      "duration": 10.875,
+      "end": 42.2917,
+      "frames": 261,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S005",
+          "file": "voice/narrator/S005.wav",
+          "start": 0.3,
+          "speech": 10.08,
+          "src_in": 17.48,
+          "src_out": 27.56,
+          "text": ""
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "hospital_night",
+      "mus_active": "opening",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S006",
+      "chapter": 1,
+      "chapter_title": "THE LAST CALL",
+      "start": 42.2917,
+      "duration": 3.625,
+      "end": 45.9167,
+      "frames": 87,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S006",
+          "file": "voice/narrator/S006.wav",
+          "start": 0.3,
+          "speech": 2.82,
+          "src_in": 28.18,
+          "src_out": 31.0,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "phone_ring",
+          "at": 2.7,
+          "gain_db": -4
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "hospital_night",
+      "mus_active": "opening",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S007",
+      "chapter": 1,
+      "chapter_title": "THE LAST CALL",
+      "start": 45.9167,
+      "duration": 5.9167,
+      "end": 51.8333,
+      "frames": 142,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "PH00",
+          "char": "phone_voice",
+          "file": "voice/phone_voice/PH00.wav",
+          "start": 1.2,
+          "speech": 2.319,
+          "text": "Hello? Is there any doctor available?",
+          "placeholder": false
+        },
+        {
+          "type": "dialogue",
+          "id": "J01",
+          "char": "john",
+          "file": "voice/john/J01.wav",
+          "start": 4.019,
+          "speech": 1.411,
+          "text": "All right, I'm coming.",
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        {
+          "id": "phone_pickup",
+          "at": 0.3,
+          "gain_db": -6
+        },
+        {
+          "id": "phone_hangup",
+          "at": 5.6,
+          "gain_db": -6
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "hospital_night",
+      "mus_active": "opening",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S008",
+      "chapter": 1,
+      "chapter_title": "THE LAST CALL",
+      "start": 51.8333,
+      "duration": 3.25,
+      "end": 55.0833,
+      "frames": 78,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S008",
+          "file": "voice/narrator/S008.wav",
+          "start": 0.3,
+          "speech": 2.46,
+          "src_in": 31.7,
+          "src_out": 34.16,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "clock_tick",
+          "at": 0.0,
+          "gain_db": -10
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "hospital_night",
+      "mus_active": "opening",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S009",
+      "chapter": 1,
+      "chapter_title": "THE LAST CALL",
+      "start": 55.0833,
+      "duration": 5.5833,
+      "end": 60.6667,
+      "frames": 134,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S009",
+          "file": "voice/narrator/S009.wav",
+          "start": 0.3,
+          "speech": 4.8,
+          "src_in": 34.8,
+          "src_out": 39.6,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "footsteps_walk",
+          "at": 2.0,
+          "gain_db": -10
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "hospital_night",
+      "mus_active": "opening",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S010",
+      "chapter": 1,
+      "chapter_title": "THE LAST CALL",
+      "start": 60.6667,
+      "duration": 6.6667,
+      "end": 67.3333,
+      "frames": 160,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S010",
+          "file": "voice/narrator/S010.wav",
+          "start": 0.3,
+          "speech": 4.96,
+          "src_in": 40.2,
+          "src_out": 45.16,
+          "text": ""
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "hospital_night",
+      "mus_active": "opening",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S011",
+      "chapter": 2,
+      "chapter_title": "THE WRONG FLOOR",
+      "start": 67.3333,
+      "duration": 4.5417,
+      "end": 71.875,
+      "frames": 109,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S011",
+          "file": "voice/narrator/S011.wav",
+          "start": 0.3,
+          "speech": 3.74,
+          "src_in": 45.86,
+          "src_out": 49.6,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "elevator_ding",
+          "at": 0.1,
+          "gain_db": -8
+        },
+        {
+          "id": "button_press",
+          "at": 2.6,
+          "gain_db": -6
+        }
+      ],
+      "amb": "elevator",
+      "mus": null,
+      "amb_active": "elevator",
+      "mus_active": "opening",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S012",
+      "chapter": 2,
+      "chapter_title": "THE WRONG FLOOR",
+      "start": 71.875,
+      "duration": 4.0417,
+      "end": 75.9167,
+      "frames": 97,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S012",
+          "file": "voice/narrator/S012.wav",
+          "start": 0.3,
+          "speech": 3.24,
+          "src_in": 50.22,
+          "src_out": 53.46,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "elevator_doors",
+          "at": 0.2,
+          "gain_db": -6
+        },
+        {
+          "id": "elevator_motor_start",
+          "at": 2.2,
+          "gain_db": -6
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "elevator",
+      "mus_active": "opening",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S013",
+      "chapter": 2,
+      "chapter_title": "THE WRONG FLOOR",
+      "start": 75.9167,
+      "duration": 4.7917,
+      "end": 80.7083,
+      "frames": 115,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S013",
+          "file": "voice/narrator/S013.wav",
+          "start": 0.3,
+          "speech": 3.98,
+          "src_in": 54.08,
+          "src_out": 58.06,
+          "text": ""
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "elevator",
+      "mus_active": "opening",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S014",
+      "chapter": 2,
+      "chapter_title": "THE WRONG FLOOR",
+      "start": 80.7083,
+      "duration": 3.0,
+      "end": 83.7083,
+      "frames": 72,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S014",
+          "file": "voice/narrator/S014.wav",
+          "start": 0.3,
+          "speech": 1.56,
+          "src_in": 58.86,
+          "src_out": 60.42,
+          "text": ""
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "elevator",
+      "mus_active": "opening",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S015",
+      "chapter": 2,
+      "chapter_title": "THE WRONG FLOOR",
+      "start": 83.7083,
+      "duration": 6.3333,
+      "end": 90.0417,
+      "frames": 152,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S015_1",
+          "file": "voice/narrator/S015_1.wav",
+          "start": 0.3,
+          "speech": 1.56,
+          "src_in": 61.06,
+          "src_out": 62.62,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S015_2",
+          "file": "voice/narrator/S015_2.wav",
+          "start": 2.16,
+          "speech": 3.66,
+          "src_in": 63.08,
+          "src_out": 66.74,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "electric_flicker",
+          "at": 0.4,
+          "gain_db": -6
+        },
+        {
+          "id": "elevator_jolt",
+          "at": 1.8,
+          "gain_db": -2
+        },
+        {
+          "id": "cable_creak",
+          "at": 3.4,
+          "gain_db": -8
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "elevator",
+      "mus_active": "opening",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S016",
+      "chapter": 2,
+      "chapter_title": "THE WRONG FLOOR",
+      "start": 90.0417,
+      "duration": 9.5833,
+      "end": 99.625,
+      "frames": 230,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S016_1",
+          "file": "voice/narrator/S016_1.wav",
+          "start": 0.3,
+          "speech": 1.86,
+          "src_in": 67.22,
+          "src_out": 69.08,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S016_2",
+          "file": "voice/narrator/S016_2.wav",
+          "start": 2.46,
+          "speech": 4.54,
+          "src_in": 69.56,
+          "src_out": 74.1,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S016_3",
+          "file": "voice/narrator/S016_3.wav",
+          "start": 7.3,
+          "speech": 1.78,
+          "src_in": 74.62,
+          "src_out": 76.4,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "cable_creak",
+          "at": 6.0,
+          "gain_db": -10
+        }
+      ],
+      "amb": null,
+      "mus": "tension",
+      "amb_active": "elevator",
+      "mus_active": "tension",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S017",
+      "chapter": 2,
+      "chapter_title": "THE WRONG FLOOR",
+      "start": 99.625,
+      "duration": 6.2917,
+      "end": 105.9167,
+      "frames": 151,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S017_1",
+          "file": "voice/narrator/S017_1.wav",
+          "start": 0.3,
+          "speech": 1.72,
+          "src_in": 77.0,
+          "src_out": 78.72,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S017_2",
+          "file": "voice/narrator/S017_2.wav",
+          "start": 2.32,
+          "speech": 1.18,
+          "src_in": 79.1,
+          "src_out": 80.28,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S017_3",
+          "file": "voice/narrator/S017_3.wav",
+          "start": 3.8,
+          "speech": 2.0,
+          "src_in": 80.72,
+          "src_out": 82.72,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "glitch",
+          "at": 2.3,
+          "gain_db": -6
+        },
+        {
+          "id": "low_drone_swell",
+          "at": 3.0,
+          "gain_db": -8
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "elevator",
+      "mus_active": "tension",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S018",
+      "chapter": 2,
+      "chapter_title": "THE WRONG FLOOR",
+      "start": 105.9167,
+      "duration": 5.0417,
+      "end": 110.9583,
+      "frames": 121,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S018",
+          "file": "voice/narrator/S018.wav",
+          "start": 0.3,
+          "speech": 4.24,
+          "src_in": 83.38,
+          "src_out": 87.62,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "child_laugh",
+          "at": 4.4,
+          "gain_db": -8
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "elevator",
+      "mus_active": "tension",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S019",
+      "chapter": 2,
+      "chapter_title": "THE WRONG FLOOR",
+      "start": 110.9583,
+      "duration": 3.0,
+      "end": 113.9583,
+      "frames": 72,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "G00",
+          "char": "little_girl",
+          "file": "voice/little_girl/G00.wav",
+          "start": 0.6,
+          "speech": 1.443,
+          "text": "Doctor...",
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        {
+          "id": "heartbeat_slow",
+          "at": 0.0,
+          "gain_db": -10
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "elevator",
+      "mus_active": "tension",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S020",
+      "chapter": 2,
+      "chapter_title": "THE WRONG FLOOR",
+      "start": 113.9583,
+      "duration": 4.0417,
+      "end": 118.0,
+      "frames": 97,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S020_1",
+          "file": "voice/narrator/S020_1.wav",
+          "start": 0.3,
+          "speech": 1.16,
+          "src_in": 88.18,
+          "src_out": 89.34,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S020_2",
+          "file": "voice/narrator/S020_2.wav",
+          "start": 1.76,
+          "speech": 1.08,
+          "src_in": 89.84,
+          "src_out": 90.92,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "elevator_stop",
+          "at": 2.6,
+          "gain_db": -4
+        },
+        {
+          "id": "elevator_ding_detuned",
+          "at": 3.4,
+          "gain_db": -6
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "elevator",
+      "mus_active": "tension",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S021",
+      "chapter": 3,
+      "chapter_title": "THE FORBIDDEN WARD",
+      "start": 118.0,
+      "duration": 7.0417,
+      "end": 125.0417,
+      "frames": 169,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S021_1",
+          "file": "voice/narrator/S021_1.wav",
+          "start": 0.3,
+          "speech": 2.24,
+          "src_in": 91.5,
+          "src_out": 93.74,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S021_2",
+          "file": "voice/narrator/S021_2.wav",
+          "start": 2.84,
+          "speech": 3.7,
+          "src_in": 94.18,
+          "src_out": 97.88,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "elevator_doors_slow",
+          "at": 0.2,
+          "gain_db": -4
+        },
+        {
+          "id": "wind_gust",
+          "at": 1.0,
+          "gain_db": -10
+        }
+      ],
+      "amb": "ward13",
+      "mus": "none",
+      "amb_active": "ward13",
+      "mus_active": "none",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S022",
+      "chapter": 3,
+      "chapter_title": "THE FORBIDDEN WARD",
+      "start": 125.0417,
+      "duration": 4.125,
+      "end": 129.1667,
+      "frames": 99,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S022",
+          "file": "voice/narrator/S022.wav",
+          "start": 0.3,
+          "speech": 3.32,
+          "src_in": 98.46,
+          "src_out": 101.78,
+          "text": ""
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward13",
+      "mus_active": "none",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S023",
+      "chapter": 3,
+      "chapter_title": "THE FORBIDDEN WARD",
+      "start": 129.1667,
+      "duration": 12.2917,
+      "end": 141.4583,
+      "frames": 295,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S023_1",
+          "file": "voice/narrator/S023_1.wav",
+          "start": 0.3,
+          "speech": 2.36,
+          "src_in": 102.38,
+          "src_out": 104.74,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S023_2",
+          "file": "voice/narrator/S023_2.wav",
+          "start": 2.96,
+          "speech": 1.72,
+          "src_in": 105.22,
+          "src_out": 106.94,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S023_3",
+          "file": "voice/narrator/S023_3.wav",
+          "start": 4.98,
+          "speech": 6.8,
+          "src_in": 107.46,
+          "src_out": 114.26,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "wheelchair_creak",
+          "at": 9.6,
+          "gain_db": -10
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward13",
+      "mus_active": "none",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S024",
+      "chapter": 3,
+      "chapter_title": "THE FORBIDDEN WARD",
+      "start": 141.4583,
+      "duration": 6.0,
+      "end": 147.4583,
+      "frames": 144,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S024_1",
+          "file": "voice/narrator/S024_1.wav",
+          "start": 0.3,
+          "speech": 2.34,
+          "src_in": 114.82,
+          "src_out": 117.16,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S024_2",
+          "file": "voice/narrator/S024_2.wav",
+          "start": 2.94,
+          "speech": 2.58,
+          "src_in": 117.46,
+          "src_out": 120.04,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "electric_flicker",
+          "at": 0.3,
+          "gain_db": -6
+        },
+        {
+          "id": "electric_flicker",
+          "at": 2.0,
+          "gain_db": -8
+        },
+        {
+          "id": "electric_flicker",
+          "at": 3.6,
+          "gain_db": -8
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward13",
+      "mus_active": "none",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S025",
+      "chapter": 3,
+      "chapter_title": "THE FORBIDDEN WARD",
+      "start": 147.4583,
+      "duration": 7.875,
+      "end": 155.3333,
+      "frames": 189,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S025_1",
+          "file": "voice/narrator/S025_1.wav",
+          "start": 0.3,
+          "speech": 1.8,
+          "src_in": 120.62,
+          "src_out": 122.42,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S025_2",
+          "file": "voice/narrator/S025_2.wav",
+          "start": 2.4,
+          "speech": 4.96,
+          "src_in": 122.94,
+          "src_out": 127.9,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "sign_chain",
+          "at": 1.0,
+          "gain_db": -12
+        },
+        {
+          "id": "low_hit",
+          "at": 5.6,
+          "gain_db": -6
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward13",
+      "mus_active": "none",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S026",
+      "chapter": 3,
+      "chapter_title": "THE FORBIDDEN WARD",
+      "start": 155.3333,
+      "duration": 3.0417,
+      "end": 158.375,
+      "frames": 73,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "J07",
+          "char": "john",
+          "file": "voice/john/J07.wav",
+          "start": 0.3,
+          "speech": 2.249,
+          "text": "This hospital doesn't have a thirteenth floor.",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward13",
+      "mus_active": "none",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S027",
+      "chapter": 3,
+      "chapter_title": "THE FORBIDDEN WARD",
+      "start": 158.375,
+      "duration": 6.4167,
+      "end": 164.7917,
+      "frames": 154,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S027_1",
+          "file": "voice/narrator/S027_1.wav",
+          "start": 0.3,
+          "speech": 1.7,
+          "src_in": 128.5,
+          "src_out": 130.2,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S027_2",
+          "file": "voice/narrator/S027_2.wav",
+          "start": 2.3,
+          "speech": 1.25,
+          "src_in": 130.7,
+          "src_out": 131.95,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S027_3",
+          "file": "voice/narrator/S027_3.wav",
+          "start": 3.85,
+          "speech": 2.08,
+          "src_in": 132.38,
+          "src_out": 134.46,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "elevator_doors",
+          "at": 1.2,
+          "gain_db": -4
+        },
+        {
+          "id": "footsteps_run",
+          "at": 3.0,
+          "gain_db": -8
+        },
+        {
+          "id": "button_press",
+          "at": 5.0,
+          "gain_db": -4
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward13",
+      "mus_active": "none",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S028",
+      "chapter": 3,
+      "chapter_title": "THE FORBIDDEN WARD",
+      "start": 164.7917,
+      "duration": 6.5417,
+      "end": 171.3333,
+      "frames": 157,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S028_1",
+          "file": "voice/narrator/S028_1.wav",
+          "start": 0.3,
+          "speech": 0.9,
+          "src_in": 134.96,
+          "src_out": 135.86,
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "id": "J14",
+          "char": "john",
+          "file": "voice/john/J14.wav",
+          "start": 1.5,
+          "speech": 2.303,
+          "text": "Come on... open up, please!",
+          "placeholder": false
+        },
+        {
+          "type": "narration",
+          "id": "S028_2",
+          "file": "voice/narrator/S028_2.wav",
+          "start": 4.103,
+          "speech": 1.02,
+          "src_in": 136.22,
+          "src_out": 137.24,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S028_3",
+          "file": "voice/narrator/S028_3.wav",
+          "start": 5.423,
+          "speech": 0.6,
+          "src_in": 137.74,
+          "src_out": 138.34,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "button_press",
+          "at": 1.6,
+          "gain_db": -4
+        },
+        {
+          "id": "button_press",
+          "at": 2.2,
+          "gain_db": -4
+        },
+        {
+          "id": "button_press",
+          "at": 2.7,
+          "gain_db": -4
+        },
+        {
+          "id": "button_press",
+          "at": 5.8,
+          "gain_db": -4
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward13",
+      "mus_active": "none",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S029",
+      "chapter": 3,
+      "chapter_title": "THE FORBIDDEN WARD",
+      "start": 171.3333,
+      "duration": 6.3333,
+      "end": 177.6667,
+      "frames": 152,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S029_1",
+          "file": "voice/narrator/S029_1.wav",
+          "start": 0.3,
+          "speech": 1.66,
+          "src_in": 138.84,
+          "src_out": 140.5,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S029_2",
+          "file": "voice/narrator/S029_2.wav",
+          "start": 2.26,
+          "speech": 3.58,
+          "src_in": 140.96,
+          "src_out": 144.54,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "low_drone_swell",
+          "at": 0.0,
+          "gain_db": -8
+        },
+        {
+          "id": "wall_thud",
+          "at": 5.4,
+          "gain_db": -6
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward13",
+      "mus_active": "none",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S030",
+      "chapter": 3,
+      "chapter_title": "THE FORBIDDEN WARD",
+      "start": 177.6667,
+      "duration": 3.0,
+      "end": 180.6667,
+      "frames": 72,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "J02",
+          "char": "john",
+          "file": "voice/john/J02.wav",
+          "start": 0.3,
+          "speech": 1.096,
+          "text": "That's impossible.",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward13",
+      "mus_active": "none",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S031",
+      "chapter": 3,
+      "chapter_title": "THE FORBIDDEN WARD",
+      "start": 180.6667,
+      "duration": 3.9167,
+      "end": 184.5833,
+      "frames": 94,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "J03",
+          "char": "john",
+          "file": "voice/john/J03.wav",
+          "start": 0.3,
+          "speech": 0.753,
+          "text": "Hello?",
+          "placeholder": false
+        },
+        {
+          "type": "dialogue",
+          "id": "J04",
+          "char": "john",
+          "file": "voice/john/J04.wav",
+          "start": 1.853,
+          "speech": 0.872,
+          "text": "Anyone?",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward13",
+      "mus_active": "none",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S032",
+      "chapter": 3,
+      "chapter_title": "THE FORBIDDEN WARD",
+      "start": 184.5833,
+      "duration": 9.4167,
+      "end": 194.0,
+      "frames": 226,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S032_1",
+          "file": "voice/narrator/S032_1.wav",
+          "start": 0.3,
+          "speech": 2.42,
+          "src_in": 145.18,
+          "src_out": 147.6,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S032_2",
+          "file": "voice/narrator/S032_2.wav",
+          "start": 3.02,
+          "speech": 3.48,
+          "src_in": 148.1,
+          "src_out": 151.58,
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "id": "NW1",
+          "char": "nurse",
+          "file": "voice/nurse/NW1.wav",
+          "start": 6.9,
+          "speech": 2.01,
+          "text": "Doctor... (distant woman's call, Floor 13)",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward13",
+      "mus_active": "none",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S033",
+      "chapter": 3,
+      "chapter_title": "THE FORBIDDEN WARD",
+      "start": 194.0,
+      "duration": 4.625,
+      "end": 198.625,
+      "frames": 111,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S033",
+          "file": "voice/narrator/S033.wav",
+          "start": 0.3,
+          "speech": 3.82,
+          "src_in": 152.12,
+          "src_out": 155.94,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "flashlight_click",
+          "at": 0.1,
+          "gain_db": -6
+        },
+        {
+          "id": "footsteps_walk",
+          "at": 0.8,
+          "gain_db": -8
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward13",
+      "mus_active": "none",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S034",
+      "chapter": 4,
+      "chapter_title": "THE PATIENTS",
+      "start": 198.625,
+      "duration": 6.0,
+      "end": 204.625,
+      "frames": 144,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S034_1",
+          "file": "voice/narrator/S034_1.wav",
+          "start": 0.3,
+          "speech": 1.7,
+          "src_in": 156.44,
+          "src_out": 158.14,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S034_2",
+          "file": "voice/narrator/S034_2.wav",
+          "start": 2.3,
+          "speech": 1.22,
+          "src_in": 158.62,
+          "src_out": 159.84,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S034_3",
+          "file": "voice/narrator/S034_3.wav",
+          "start": 3.82,
+          "speech": 1.7,
+          "src_in": 160.28,
+          "src_out": 161.98,
+          "text": ""
+        }
+      ],
+      "sfx": [],
+      "amb": "ward_room",
+      "mus": "ward",
+      "amb_active": "ward_room",
+      "mus_active": "ward",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S035",
+      "chapter": 4,
+      "chapter_title": "THE PATIENTS",
+      "start": 204.625,
+      "duration": 4.6667,
+      "end": 209.2917,
+      "frames": 112,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S035_1",
+          "file": "voice/narrator/S035_1.wav",
+          "start": 0.3,
+          "speech": 2.34,
+          "src_in": 162.48,
+          "src_out": 164.82,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S035_2",
+          "file": "voice/narrator/S035_2.wav",
+          "start": 2.94,
+          "speech": 1.22,
+          "src_in": 165.14,
+          "src_out": 166.36,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "breath_unison",
+          "at": 0.5,
+          "gain_db": -14
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward_room",
+      "mus_active": "ward",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S036",
+      "chapter": 4,
+      "chapter_title": "THE PATIENTS",
+      "start": 209.2917,
+      "duration": 3.0,
+      "end": 212.2917,
+      "frames": 72,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S036",
+          "file": "voice/narrator/S036.wav",
+          "start": 0.3,
+          "speech": 1.76,
+          "src_in": 166.92,
+          "src_out": 168.68,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "footsteps_walk",
+          "at": 0.2,
+          "gain_db": -10
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward_room",
+      "mus_active": "ward",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S037",
+      "chapter": 4,
+      "chapter_title": "THE PATIENTS",
+      "start": 212.2917,
+      "duration": 8.8333,
+      "end": 221.125,
+      "frames": 212,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S037_1",
+          "file": "voice/narrator/S037_1.wav",
+          "start": 0.3,
+          "speech": 2.08,
+          "src_in": 169.18,
+          "src_out": 171.26,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S037_2",
+          "file": "voice/narrator/S037_2.wav",
+          "start": 2.68,
+          "speech": 1.38,
+          "src_in": 171.74,
+          "src_out": 173.12,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S037_3",
+          "file": "voice/narrator/S037_3.wav",
+          "start": 4.36,
+          "speech": 1.42,
+          "src_in": 173.52,
+          "src_out": 174.94,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S037_4",
+          "file": "voice/narrator/S037_4.wav",
+          "start": 6.08,
+          "speech": 2.24,
+          "src_in": 175.22,
+          "src_out": 177.46,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "bed_creak",
+          "at": 0.6,
+          "gain_db": -10
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward_room",
+      "mus_active": "ward",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S038",
+      "chapter": 4,
+      "chapter_title": "THE PATIENTS",
+      "start": 221.125,
+      "duration": 3.0,
+      "end": 224.125,
+      "frames": 72,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "P01",
+          "char": "patients",
+          "file": "voice/patients/P01.wav",
+          "start": 0.3,
+          "speech": 1.26,
+          "text": "You are late, Doctor.",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward_room",
+      "mus_active": "ward",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S039",
+      "chapter": 4,
+      "chapter_title": "THE PATIENTS",
+      "start": 224.125,
+      "duration": 3.0,
+      "end": 227.125,
+      "frames": 72,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "J05",
+          "char": "john",
+          "file": "voice/john/J05.wav",
+          "start": 0.3,
+          "speech": 1.274,
+          "text": "How do you know who I am?",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward_room",
+      "mus_active": "ward",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S040",
+      "chapter": 4,
+      "chapter_title": "THE PATIENTS",
+      "start": 227.125,
+      "duration": 4.5833,
+      "end": 231.7083,
+      "frames": 110,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "P02",
+          "char": "patients",
+          "file": "voice/patients/P02.wav",
+          "start": 0.3,
+          "speech": 1.635,
+          "text": "John K. Smith.",
+          "placeholder": false
+        },
+        {
+          "type": "dialogue",
+          "id": "P03",
+          "char": "patients",
+          "file": "voice/patients/P03.wav",
+          "start": 2.335,
+          "speech": 1.735,
+          "text": "We have been waiting for you.",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward_room",
+      "mus_active": "ward",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S041",
+      "chapter": 4,
+      "chapter_title": "THE PATIENTS",
+      "start": 231.7083,
+      "duration": 5.6667,
+      "end": 237.375,
+      "frames": 136,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S041_1",
+          "file": "voice/narrator/S041_1.wav",
+          "start": 0.3,
+          "speech": 1.98,
+          "src_in": 178.02,
+          "src_out": 180.0,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S041_2",
+          "file": "voice/narrator/S041_2.wav",
+          "start": 2.58,
+          "speech": 2.58,
+          "src_in": 180.46,
+          "src_out": 183.04,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "whisper_swirl",
+          "at": 2.6,
+          "gain_db": -10
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward_room",
+      "mus_active": "ward",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S042",
+      "chapter": 4,
+      "chapter_title": "THE PATIENTS",
+      "start": 237.375,
+      "duration": 6.75,
+      "end": 244.125,
+      "frames": 162,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S042",
+          "file": "voice/narrator/S042.wav",
+          "start": 0.3,
+          "speech": 2.14,
+          "src_in": 183.56,
+          "src_out": 185.7,
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "id": "P04",
+          "char": "patients",
+          "file": "voice/patients/P04.wav",
+          "start": 2.74,
+          "speech": 3.521,
+          "text": "(whisper) ...you forgot us.",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward_room",
+      "mus_active": "ward",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S043",
+      "chapter": 4,
+      "chapter_title": "THE PATIENTS",
+      "start": 244.125,
+      "duration": 7.2083,
+      "end": 251.3333,
+      "frames": 173,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S043_1",
+          "file": "voice/narrator/S043_1.wav",
+          "start": 0.3,
+          "speech": 1.04,
+          "src_in": 186.94,
+          "src_out": 187.98,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S043_2",
+          "file": "voice/narrator/S043_2.wav",
+          "start": 1.64,
+          "speech": 5.08,
+          "src_in": 188.36,
+          "src_out": 193.44,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "bed_creak",
+          "at": 1.6,
+          "gain_db": -8
+        },
+        {
+          "id": "low_hit",
+          "at": 3.0,
+          "gain_db": -4
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward_room",
+      "mus_active": "ward",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S044",
+      "chapter": 4,
+      "chapter_title": "THE PATIENTS",
+      "start": 251.3333,
+      "duration": 6.625,
+      "end": 257.9583,
+      "frames": 159,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S044",
+          "file": "voice/narrator/S044.wav",
+          "start": 0.3,
+          "speech": 1.1,
+          "src_in": 193.94,
+          "src_out": 195.04,
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "id": "P06",
+          "char": "patients",
+          "file": "voice/patients/P06.wav",
+          "start": 1.7,
+          "speech": 4.416,
+          "text": "You don't remember... but we remember you.",
+          "placeholder": true
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward_room",
+      "mus_active": "ward",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S045",
+      "chapter": 4,
+      "chapter_title": "THE PATIENTS",
+      "start": 257.9583,
+      "duration": 3.5,
+      "end": 261.4583,
+      "frames": 84,
+      "events": [],
+      "sfx": [
+        {
+          "id": "heartbeat_fast",
+          "at": 0.0,
+          "gain_db": -6
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward_room",
+      "mus_active": "ward",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S046",
+      "chapter": 5,
+      "chapter_title": "THE LITTLE GIRL",
+      "start": 261.4583,
+      "duration": 3.0,
+      "end": 264.4583,
+      "frames": 72,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S046",
+          "file": "voice/narrator/S046.wav",
+          "start": 0.3,
+          "speech": 1.6,
+          "src_in": 195.5,
+          "src_out": 197.1,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "footsteps_run",
+          "at": 0.0,
+          "gain_db": -6
+        }
+      ],
+      "amb": "ward13",
+      "mus": "none",
+      "amb_active": "ward13",
+      "mus_active": "none",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S047",
+      "chapter": 5,
+      "chapter_title": "THE LITTLE GIRL",
+      "start": 264.4583,
+      "duration": 7.25,
+      "end": 271.7083,
+      "frames": 174,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S047",
+          "file": "voice/narrator/S047.wav",
+          "start": 0.3,
+          "speech": 3.44,
+          "src_in": 197.58,
+          "src_out": 201.02,
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "id": "G01",
+          "char": "little_girl",
+          "file": "voice/little_girl/G01.wav",
+          "start": 4.24,
+          "speech": 2.514,
+          "text": "Doctor... don't leave.",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": "girl",
+      "amb_active": "ward13",
+      "mus_active": "girl",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S048",
+      "chapter": 5,
+      "chapter_title": "THE LITTLE GIRL",
+      "start": 271.7083,
+      "duration": 6.1667,
+      "end": 277.875,
+      "frames": 148,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S048_1",
+          "file": "voice/narrator/S048_1.wav",
+          "start": 0.3,
+          "speech": 0.68,
+          "src_in": 201.54,
+          "src_out": 202.22,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S048_2",
+          "file": "voice/narrator/S048_2.wav",
+          "start": 1.28,
+          "speech": 2.36,
+          "src_in": 202.72,
+          "src_out": 205.08,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S048_3",
+          "file": "voice/narrator/S048_3.wav",
+          "start": 3.94,
+          "speech": 1.74,
+          "src_in": 205.4,
+          "src_out": 207.14,
+          "text": ""
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward13",
+      "mus_active": "girl",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S049",
+      "chapter": 5,
+      "chapter_title": "THE LITTLE GIRL",
+      "start": 277.875,
+      "duration": 3.0,
+      "end": 280.875,
+      "frames": 72,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S049",
+          "file": "voice/narrator/S049.wav",
+          "start": 0.3,
+          "speech": 2.14,
+          "src_in": 207.68,
+          "src_out": 209.82,
+          "text": ""
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward13",
+      "mus_active": "girl",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S050",
+      "chapter": 5,
+      "chapter_title": "THE LITTLE GIRL",
+      "start": 280.875,
+      "duration": 3.0,
+      "end": 283.875,
+      "frames": 72,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "J06",
+          "char": "john",
+          "file": "voice/john/J06.wav",
+          "start": 0.3,
+          "speech": 1.202,
+          "text": "Why are you here?",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward13",
+      "mus_active": "girl",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S051",
+      "chapter": 5,
+      "chapter_title": "THE LITTLE GIRL",
+      "start": 283.875,
+      "duration": 3.3333,
+      "end": 287.2083,
+      "frames": 80,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "G02",
+          "char": "little_girl",
+          "file": "voice/little_girl/G02.wav",
+          "start": 0.3,
+          "speech": 2.542,
+          "text": "Because tonight... it's your turn.",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward13",
+      "mus_active": "girl",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S052",
+      "chapter": 5,
+      "chapter_title": "THE LITTLE GIRL",
+      "start": 287.2083,
+      "duration": 3.2083,
+      "end": 290.4167,
+      "frames": 77,
+      "events": [],
+      "sfx": [
+        {
+          "id": "electric_flicker",
+          "at": 0.1,
+          "gain_db": -4
+        },
+        {
+          "id": "glitch",
+          "at": 1.0,
+          "gain_db": -6
+        },
+        {
+          "id": "footsteps_run",
+          "at": 1.9,
+          "gain_db": -8
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward13",
+      "mus_active": "girl",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S053",
+      "chapter": 6,
+      "chapter_title": "THE MEDICAL RECORD",
+      "start": 290.4167,
+      "duration": 5.3333,
+      "end": 295.75,
+      "frames": 128,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S053",
+          "file": "voice/narrator/S053.wav",
+          "start": 0.3,
+          "speech": 4.54,
+          "src_in": 210.24,
+          "src_out": 214.78,
+          "text": ""
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": "none",
+      "amb_active": "ward13",
+      "mus_active": "none",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S054",
+      "chapter": 6,
+      "chapter_title": "THE MEDICAL RECORD",
+      "start": 295.75,
+      "duration": 9.1667,
+      "end": 304.9167,
+      "frames": 220,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S054_1",
+          "file": "voice/narrator/S054_1.wav",
+          "start": 0.3,
+          "speech": 1.0,
+          "src_in": 215.2,
+          "src_out": 216.2,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S054_2",
+          "file": "voice/narrator/S054_2.wav",
+          "start": 1.6,
+          "speech": 2.4,
+          "src_in": 216.7,
+          "src_out": 219.1,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S054_3",
+          "file": "voice/narrator/S054_3.wav",
+          "start": 4.3,
+          "speech": 4.36,
+          "src_in": 219.38,
+          "src_out": 223.74,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "door_creak",
+          "at": 0.0,
+          "gain_db": -6
+        }
+      ],
+      "amb": "records",
+      "mus": null,
+      "amb_active": "records",
+      "mus_active": "none",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S055",
+      "chapter": 6,
+      "chapter_title": "THE MEDICAL RECORD",
+      "start": 304.9167,
+      "duration": 4.6667,
+      "end": 309.5833,
+      "frames": 112,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S055",
+          "file": "voice/narrator/S055.wav",
+          "start": 0.3,
+          "speech": 3.86,
+          "src_in": 224.2,
+          "src_out": 228.06,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "flashlight_click",
+          "at": 0.1,
+          "gain_db": -8
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "records",
+      "mus_active": "none",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S056",
+      "chapter": 6,
+      "chapter_title": "THE MEDICAL RECORD",
+      "start": 309.5833,
+      "duration": 7.1667,
+      "end": 316.75,
+      "frames": 172,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S056_1",
+          "file": "voice/narrator/S056_1.wav",
+          "start": 0.3,
+          "speech": 3.24,
+          "src_in": 228.56,
+          "src_out": 231.8,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S056_2",
+          "file": "voice/narrator/S056_2.wav",
+          "start": 3.84,
+          "speech": 2.82,
+          "src_in": 232.28,
+          "src_out": 235.1,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "low_drone_swell",
+          "at": 2.0,
+          "gain_db": -8
+        }
+      ],
+      "amb": null,
+      "mus": "record",
+      "amb_active": "records",
+      "mus_active": "record",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S057",
+      "chapter": 6,
+      "chapter_title": "THE MEDICAL RECORD",
+      "start": 316.75,
+      "duration": 10.375,
+      "end": 327.125,
+      "frames": 249,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S057_1",
+          "file": "voice/narrator/S057_1.wav",
+          "start": 0.3,
+          "speech": 1.68,
+          "src_in": 235.58,
+          "src_out": 237.26,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S057_2",
+          "file": "voice/narrator/S057_2.wav",
+          "start": 2.28,
+          "speech": 2.02,
+          "src_in": 237.74,
+          "src_out": 239.76,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S057_3",
+          "file": "voice/narrator/S057_3.wav",
+          "start": 4.6,
+          "speech": 1.04,
+          "src_in": 240.18,
+          "src_out": 241.22,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S057_4",
+          "file": "voice/narrator/S057_4.wav",
+          "start": 5.94,
+          "speech": 0.98,
+          "src_in": 241.54,
+          "src_out": 242.52,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S057_5",
+          "file": "voice/narrator/S057_5.wav",
+          "start": 7.22,
+          "speech": 2.66,
+          "src_in": 242.94,
+          "src_out": 245.6,
+          "text": ""
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "records",
+      "mus_active": "record",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S058",
+      "chapter": 6,
+      "chapter_title": "THE MEDICAL RECORD",
+      "start": 327.125,
+      "duration": 6.4583,
+      "end": 333.5833,
+      "frames": 155,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S058_1",
+          "file": "voice/narrator/S058_1.wav",
+          "start": 0.3,
+          "speech": 2.64,
+          "src_in": 246.0,
+          "src_out": 248.64,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S058_2",
+          "file": "voice/narrator/S058_2.wav",
+          "start": 3.24,
+          "speech": 2.7,
+          "src_in": 249.14,
+          "src_out": 251.84,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "paper_turn",
+          "at": 0.8,
+          "gain_db": -6
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "records",
+      "mus_active": "record",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S059",
+      "chapter": 6,
+      "chapter_title": "THE MEDICAL RECORD",
+      "start": 333.5833,
+      "duration": 7.0,
+      "end": 340.5833,
+      "frames": 168,
+      "events": [],
+      "sfx": [
+        {
+          "id": "heartbeat_slow",
+          "at": 0.0,
+          "gain_db": -10
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "records",
+      "mus_active": "record",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S060",
+      "chapter": 6,
+      "chapter_title": "THE MEDICAL RECORD",
+      "start": 340.5833,
+      "duration": 6.5833,
+      "end": 347.1667,
+      "frames": 158,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S060_1",
+          "file": "voice/narrator/S060_1.wav",
+          "start": 0.3,
+          "speech": 1.46,
+          "src_in": 252.34,
+          "src_out": 253.8,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S060_2",
+          "file": "voice/narrator/S060_2.wav",
+          "start": 2.06,
+          "speech": 2.72,
+          "src_in": 254.28,
+          "src_out": 257.0,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "paper_turn",
+          "at": 0.1,
+          "gain_db": -6
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "records",
+      "mus_active": "record",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S061",
+      "chapter": 6,
+      "chapter_title": "THE MEDICAL RECORD",
+      "start": 347.1667,
+      "duration": 7.5,
+      "end": 354.6667,
+      "frames": 180,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S061_1",
+          "file": "voice/narrator/S061_1.wav",
+          "start": 0.3,
+          "speech": 1.22,
+          "src_in": 257.46,
+          "src_out": 258.68,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S061_2",
+          "file": "voice/narrator/S061_2.wav",
+          "start": 1.82,
+          "speech": 2.38,
+          "src_in": 258.96,
+          "src_out": 261.34,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S061_3",
+          "file": "voice/narrator/S061_3.wav",
+          "start": 4.5,
+          "speech": 0.82,
+          "src_in": 261.8,
+          "src_out": 262.62,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S061_4",
+          "file": "voice/narrator/S061_4.wav",
+          "start": 5.62,
+          "speech": 1.38,
+          "src_in": 263.0,
+          "src_out": 264.38,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "low_hit",
+          "at": 5.6,
+          "gain_db": -2
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "records",
+      "mus_active": "record",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S062",
+      "chapter": 6,
+      "chapter_title": "THE MEDICAL RECORD",
+      "start": 354.6667,
+      "duration": 3.2083,
+      "end": 357.875,
+      "frames": 77,
+      "events": [],
+      "sfx": [
+        {
+          "id": "heartbeat_fast",
+          "at": 0.0,
+          "gain_db": -6
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "records",
+      "mus_active": "record",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S063",
+      "chapter": 6,
+      "chapter_title": "THE MEDICAL RECORD",
+      "start": 357.875,
+      "duration": 5.0417,
+      "end": 362.9167,
+      "frames": 121,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S063",
+          "file": "voice/narrator/S063.wav",
+          "start": 0.3,
+          "speech": 1.9,
+          "src_in": 264.82,
+          "src_out": 266.72,
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "id": "OD01",
+          "char": "old_doctor",
+          "file": "voice/old_doctor/OD01.wav",
+          "start": 2.8,
+          "speech": 1.726,
+          "text": "Now you remember, Doctor.",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": "none",
+      "amb_active": "records",
+      "mus_active": "none",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S064",
+      "chapter": 7,
+      "chapter_title": "THE OLD DOCTOR",
+      "start": 362.9167,
+      "duration": 3.0,
+      "end": 365.9167,
+      "frames": 72,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S064",
+          "file": "voice/narrator/S064.wav",
+          "start": 0.3,
+          "speech": 1.5,
+          "src_in": 267.28,
+          "src_out": 268.78,
+          "text": ""
+        }
+      ],
+      "sfx": [],
+      "amb": "records",
+      "mus": "doctor",
+      "amb_active": "records",
+      "mus_active": "doctor",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S065",
+      "chapter": 7,
+      "chapter_title": "THE OLD DOCTOR",
+      "start": 365.9167,
+      "duration": 5.25,
+      "end": 371.1667,
+      "frames": 126,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S065_1",
+          "file": "voice/narrator/S065_1.wav",
+          "start": 0.3,
+          "speech": 2.06,
+          "src_in": 269.26,
+          "src_out": 271.32,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S065_2",
+          "file": "voice/narrator/S065_2.wav",
+          "start": 2.66,
+          "speech": 2.1,
+          "src_in": 271.62,
+          "src_out": 273.72,
+          "text": ""
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "records",
+      "mus_active": "doctor",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S066",
+      "chapter": 7,
+      "chapter_title": "THE OLD DOCTOR",
+      "start": 371.1667,
+      "duration": 8.3333,
+      "end": 379.5,
+      "frames": 200,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S066_1",
+          "file": "voice/narrator/S066_1.wav",
+          "start": 0.3,
+          "speech": 4.5,
+          "src_in": 274.2,
+          "src_out": 278.7,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S066_2",
+          "file": "voice/narrator/S066_2.wav",
+          "start": 5.1,
+          "speech": 2.72,
+          "src_in": 279.16,
+          "src_out": 281.88,
+          "text": ""
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "records",
+      "mus_active": "doctor",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S067",
+      "chapter": 7,
+      "chapter_title": "THE OLD DOCTOR",
+      "start": 379.5,
+      "duration": 4.0,
+      "end": 383.5,
+      "frames": 96,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "J08",
+          "char": "john",
+          "file": "voice/john/J08.wav",
+          "start": 0.3,
+          "speech": 1.179,
+          "text": "What is this place?",
+          "placeholder": false
+        },
+        {
+          "type": "dialogue",
+          "id": "J09",
+          "char": "john",
+          "file": "voice/john/J09.wav",
+          "start": 1.779,
+          "speech": 1.704,
+          "text": "Why is my name in that file?",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "records",
+      "mus_active": "doctor",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S068",
+      "chapter": 7,
+      "chapter_title": "THE OLD DOCTOR",
+      "start": 383.5,
+      "duration": 3.4583,
+      "end": 386.9583,
+      "frames": 83,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "OD02",
+          "char": "old_doctor",
+          "file": "voice/old_doctor/OD02.wav",
+          "start": 0.3,
+          "speech": 2.654,
+          "text": "This floor belongs to those who never left.",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "records",
+      "mus_active": "doctor",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S069",
+      "chapter": 7,
+      "chapter_title": "THE OLD DOCTOR",
+      "start": 386.9583,
+      "duration": 4.875,
+      "end": 391.8333,
+      "frames": 117,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "J10",
+          "char": "john",
+          "file": "voice/john/J10.wav",
+          "start": 0.3,
+          "speech": 2.715,
+          "text": "I'm alive! I was working downstairs!",
+          "placeholder": false
+        },
+        {
+          "type": "dialogue",
+          "id": "J11",
+          "char": "john",
+          "file": "voice/john/J11.wav",
+          "start": 3.215,
+          "speech": 1.17,
+          "text": "I need to get out of here!",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "records",
+      "mus_active": "doctor",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S070",
+      "chapter": 7,
+      "chapter_title": "THE OLD DOCTOR",
+      "start": 391.8333,
+      "duration": 3.0,
+      "end": 394.8333,
+      "frames": 72,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "OD03",
+          "char": "old_doctor",
+          "file": "voice/old_doctor/OD03.wav",
+          "start": 0.3,
+          "speech": 2.123,
+          "text": "Everyone says the same thing.",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "records",
+      "mus_active": "doctor",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S071",
+      "chapter": 7,
+      "chapter_title": "THE OLD DOCTOR",
+      "start": 394.8333,
+      "duration": 3.0,
+      "end": 397.8333,
+      "frames": 72,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "J12",
+          "char": "john",
+          "file": "voice/john/J12.wav",
+          "start": 0.3,
+          "speech": 1.117,
+          "text": "Where is the elevator?",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "records",
+      "mus_active": "doctor",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S072",
+      "chapter": 7,
+      "chapter_title": "THE OLD DOCTOR",
+      "start": 397.8333,
+      "duration": 4.9167,
+      "end": 402.75,
+      "frames": 118,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "OD04",
+          "char": "old_doctor",
+          "file": "voice/old_doctor/OD04.wav",
+          "start": 0.3,
+          "speech": 0.994,
+          "text": "Find it.",
+          "placeholder": false
+        },
+        {
+          "type": "dialogue",
+          "id": "OD05",
+          "char": "old_doctor",
+          "file": "voice/old_doctor/OD05.wav",
+          "start": 1.894,
+          "speech": 2.517,
+          "text": "If it allows you to return, you may leave.",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "records",
+      "mus_active": "doctor",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S073",
+      "chapter": 7,
+      "chapter_title": "THE OLD DOCTOR",
+      "start": 402.75,
+      "duration": 3.0,
+      "end": 405.75,
+      "frames": 72,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "J13",
+          "char": "john",
+          "file": "voice/john/J13.wav",
+          "start": 0.3,
+          "speech": 0.948,
+          "text": "And if it doesn't?",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "records",
+      "mus_active": "doctor",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S074",
+      "chapter": 7,
+      "chapter_title": "THE OLD DOCTOR",
+      "start": 405.75,
+      "duration": 3.375,
+      "end": 409.125,
+      "frames": 81,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "OD06",
+          "char": "old_doctor",
+          "file": "voice/old_doctor/OD06.wav",
+          "start": 0.3,
+          "speech": 2.058,
+          "text": "Then you'll be waiting for the next doctor.",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "records",
+      "mus_active": "doctor",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S075",
+      "chapter": 7,
+      "chapter_title": "THE OLD DOCTOR",
+      "start": 409.125,
+      "duration": 3.5833,
+      "end": 412.7083,
+      "frames": 86,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S075",
+          "file": "voice/narrator/S075.wav",
+          "start": 0.3,
+          "speech": 2.78,
+          "src_in": 282.26,
+          "src_out": 285.04,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "power_down",
+          "at": 0.6,
+          "gain_db": -2
+        }
+      ],
+      "amb": "dark",
+      "mus": "none",
+      "amb_active": "dark",
+      "mus_active": "none",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S076",
+      "chapter": 7,
+      "chapter_title": "THE OLD DOCTOR",
+      "start": 412.7083,
+      "duration": 7.8333,
+      "end": 420.5417,
+      "frames": 188,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S076_1",
+          "file": "voice/narrator/S076_1.wav",
+          "start": 0.3,
+          "speech": 2.68,
+          "src_in": 285.46,
+          "src_out": 288.14,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S076_2",
+          "file": "voice/narrator/S076_2.wav",
+          "start": 3.28,
+          "speech": 2.96,
+          "src_in": 288.52,
+          "src_out": 291.48,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "hospital_bell",
+          "at": 4.6,
+          "gain_db": -4
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "dark",
+      "mus_active": "none",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S077",
+      "chapter": 8,
+      "chapter_title": "THE CORRIDOR",
+      "start": 420.5417,
+      "duration": 6.0833,
+      "end": 426.625,
+      "frames": 146,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S077_1",
+          "file": "voice/narrator/S077_1.wav",
+          "start": 0.3,
+          "speech": 0.94,
+          "src_in": 291.98,
+          "src_out": 292.92,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S077_2",
+          "file": "voice/narrator/S077_2.wav",
+          "start": 1.54,
+          "speech": 1.62,
+          "src_in": 293.22,
+          "src_out": 294.84,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S077_3",
+          "file": "voice/narrator/S077_3.wav",
+          "start": 3.46,
+          "speech": 2.14,
+          "src_in": 295.1,
+          "src_out": 297.24,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "footsteps_run",
+          "at": 0.0,
+          "gain_db": -6
+        }
+      ],
+      "amb": "ward13",
+      "mus": "chase",
+      "amb_active": "ward13",
+      "mus_active": "chase",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S078",
+      "chapter": 8,
+      "chapter_title": "THE CORRIDOR",
+      "start": 426.625,
+      "duration": 3.6667,
+      "end": 430.2917,
+      "frames": 88,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S078_1",
+          "file": "voice/narrator/S078_1.wav",
+          "start": 0.3,
+          "speech": 1.1,
+          "src_in": 297.68,
+          "src_out": 298.78,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S078_2",
+          "file": "voice/narrator/S078_2.wav",
+          "start": 1.7,
+          "speech": 1.48,
+          "src_in": 299.12,
+          "src_out": 300.6,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "door_slam",
+          "at": 0.0,
+          "gain_db": -4
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward13",
+      "mus_active": "chase",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S079",
+      "chapter": 8,
+      "chapter_title": "THE CORRIDOR",
+      "start": 430.2917,
+      "duration": 8.3333,
+      "end": 438.625,
+      "frames": 200,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S079_1",
+          "file": "voice/narrator/S079_1.wav",
+          "start": 0.3,
+          "speech": 0.92,
+          "src_in": 300.98,
+          "src_out": 301.9,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S079_2",
+          "file": "voice/narrator/S079_2.wav",
+          "start": 1.52,
+          "speech": 1.24,
+          "src_in": 302.3,
+          "src_out": 303.54,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S079_3",
+          "file": "voice/narrator/S079_3.wav",
+          "start": 3.06,
+          "speech": 1.34,
+          "src_in": 303.9,
+          "src_out": 305.24,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S079_4",
+          "file": "voice/narrator/S079_4.wav",
+          "start": 4.7,
+          "speech": 1.74,
+          "src_in": 305.5,
+          "src_out": 307.24,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S079_5",
+          "file": "voice/narrator/S079_5.wav",
+          "start": 6.74,
+          "speech": 1.1,
+          "src_in": 307.62,
+          "src_out": 308.72,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "door_slam",
+          "at": 0.0,
+          "gain_db": -6
+        },
+        {
+          "id": "footsteps_run",
+          "at": 5.0,
+          "gain_db": -6
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward13",
+      "mus_active": "chase",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S080",
+      "chapter": 8,
+      "chapter_title": "THE CORRIDOR",
+      "start": 438.625,
+      "duration": 6.0417,
+      "end": 444.6667,
+      "frames": 145,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S080_1",
+          "file": "voice/narrator/S080_1.wav",
+          "start": 0.3,
+          "speech": 3.6,
+          "src_in": 309.1,
+          "src_out": 312.7,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S080_2",
+          "file": "voice/narrator/S080_2.wav",
+          "start": 4.2,
+          "speech": 1.36,
+          "src_in": 313.16,
+          "src_out": 314.52,
+          "text": ""
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward13",
+      "mus_active": "chase",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S081",
+      "chapter": 8,
+      "chapter_title": "THE CORRIDOR",
+      "start": 444.6667,
+      "duration": 3.375,
+      "end": 448.0417,
+      "frames": 81,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "G03",
+          "char": "little_girl",
+          "file": "voice/little_girl/G03.wav",
+          "start": 0.3,
+          "speech": 2.593,
+          "text": "Doctor... why are you running?",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward13",
+      "mus_active": "chase",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S082",
+      "chapter": 8,
+      "chapter_title": "THE CORRIDOR",
+      "start": 448.0417,
+      "duration": 6.3333,
+      "end": 454.375,
+      "frames": 152,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S082_1",
+          "file": "voice/narrator/S082_1.wav",
+          "start": 0.3,
+          "speech": 1.1,
+          "src_in": 314.94,
+          "src_out": 316.04,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S082_2",
+          "file": "voice/narrator/S082_2.wav",
+          "start": 1.7,
+          "speech": 0.98,
+          "src_in": 316.3,
+          "src_out": 317.28,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S082_3",
+          "file": "voice/narrator/S082_3.wav",
+          "start": 2.98,
+          "speech": 2.86,
+          "src_in": 317.78,
+          "src_out": 320.64,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "low_hit",
+          "at": 4.4,
+          "gain_db": -4
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward13",
+      "mus_active": "chase",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S083",
+      "chapter": 8,
+      "chapter_title": "THE CORRIDOR",
+      "start": 454.375,
+      "duration": 3.0,
+      "end": 457.375,
+      "frames": 72,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "J20",
+          "char": "john",
+          "file": "voice/john/J20.wav",
+          "start": 0.3,
+          "speech": 0.669,
+          "text": "No...",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward13",
+      "mus_active": "chase",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S084",
+      "chapter": 8,
+      "chapter_title": "THE CORRIDOR",
+      "start": 457.375,
+      "duration": 8.25,
+      "end": 465.625,
+      "frames": 198,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S084_1",
+          "file": "voice/narrator/S084_1.wav",
+          "start": 0.3,
+          "speech": 3.4,
+          "src_in": 321.1,
+          "src_out": 324.5,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S084_2",
+          "file": "voice/narrator/S084_2.wav",
+          "start": 4.0,
+          "speech": 2.62,
+          "src_in": 324.8,
+          "src_out": 327.42,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S084_3",
+          "file": "voice/narrator/S084_3.wav",
+          "start": 6.92,
+          "speech": 0.82,
+          "src_in": 327.72,
+          "src_out": 328.54,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "whisper_swirl",
+          "at": 1.0,
+          "gain_db": -12
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward13",
+      "mus_active": "chase",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S085",
+      "chapter": 8,
+      "chapter_title": "THE CORRIDOR",
+      "start": 465.625,
+      "duration": 3.0417,
+      "end": 468.6667,
+      "frames": 73,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S085",
+          "file": "voice/narrator/S085.wav",
+          "start": 0.3,
+          "speech": 2.24,
+          "src_in": 328.94,
+          "src_out": 331.18,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "footsteps_run",
+          "at": 0.0,
+          "gain_db": -4
+        },
+        {
+          "id": "heartbeat_fast",
+          "at": 0.0,
+          "gain_db": -10
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "ward13",
+      "mus_active": "chase",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S086",
+      "chapter": 9,
+      "chapter_title": "THE ESCAPE",
+      "start": 468.6667,
+      "duration": 5.0,
+      "end": 473.6667,
+      "frames": 120,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S086_1",
+          "file": "voice/narrator/S086_1.wav",
+          "start": 0.3,
+          "speech": 0.98,
+          "src_in": 331.52,
+          "src_out": 332.5,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S086_2",
+          "file": "voice/narrator/S086_2.wav",
+          "start": 1.58,
+          "speech": 0.88,
+          "src_in": 332.8,
+          "src_out": 333.68,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S086_3",
+          "file": "voice/narrator/S086_3.wav",
+          "start": 2.76,
+          "speech": 1.72,
+          "src_in": 334.0,
+          "src_out": 335.72,
+          "text": ""
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": "escape",
+      "amb_active": "ward13",
+      "mus_active": "escape",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S087",
+      "chapter": 9,
+      "chapter_title": "THE ESCAPE",
+      "start": 473.6667,
+      "duration": 5.875,
+      "end": 479.5417,
+      "frames": 141,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S087_1",
+          "file": "voice/narrator/S087_1.wav",
+          "start": 0.3,
+          "speech": 1.14,
+          "src_in": 336.06,
+          "src_out": 337.2,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S087_2",
+          "file": "voice/narrator/S087_2.wav",
+          "start": 1.74,
+          "speech": 1.16,
+          "src_in": 337.6,
+          "src_out": 338.76,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S087_3",
+          "file": "voice/narrator/S087_3.wav",
+          "start": 3.2,
+          "speech": 2.16,
+          "src_in": 339.08,
+          "src_out": 341.24,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "button_press",
+          "at": 1.0,
+          "gain_db": -4
+        },
+        {
+          "id": "button_press",
+          "at": 1.4,
+          "gain_db": -4
+        },
+        {
+          "id": "elevator_doors",
+          "at": 1.8,
+          "gain_db": -6
+        },
+        {
+          "id": "elevator_motor_start",
+          "at": 3.4,
+          "gain_db": -4
+        }
+      ],
+      "amb": "elevator",
+      "mus": null,
+      "amb_active": "elevator",
+      "mus_active": "escape",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S088",
+      "chapter": 9,
+      "chapter_title": "THE ESCAPE",
+      "start": 479.5417,
+      "duration": 6.7083,
+      "end": 486.25,
+      "frames": 161,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "PA01",
+          "char": "pa",
+          "file": "voice/pa/PA01.wav",
+          "start": 0.7,
+          "speech": 5.489,
+          "text": "Dr. John K. Smith... your shift is not over yet.",
+          "placeholder": true
+        }
+      ],
+      "sfx": [
+        {
+          "id": "pa_chime",
+          "at": 0.0,
+          "gain_db": -8
+        },
+        {
+          "id": "static_burst",
+          "at": 0.2,
+          "gain_db": -10
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "elevator",
+      "mus_active": "escape",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S089",
+      "chapter": 9,
+      "chapter_title": "THE ESCAPE",
+      "start": 486.25,
+      "duration": 4.4167,
+      "end": 490.6667,
+      "frames": 106,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S089_1",
+          "file": "voice/narrator/S089_1.wav",
+          "start": 0.3,
+          "speech": 0.76,
+          "src_in": 341.64,
+          "src_out": 342.4,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S089_2",
+          "file": "voice/narrator/S089_2.wav",
+          "start": 1.36,
+          "speech": 0.68,
+          "src_in": 342.82,
+          "src_out": 343.5,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S089_3",
+          "file": "voice/narrator/S089_3.wav",
+          "start": 2.34,
+          "speech": 0.7,
+          "src_in": 343.96,
+          "src_out": 344.66,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S089_4",
+          "file": "voice/narrator/S089_4.wav",
+          "start": 3.34,
+          "speech": 0.56,
+          "src_in": 345.14,
+          "src_out": 345.7,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "cable_creak",
+          "at": 1.0,
+          "gain_db": -8
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "elevator",
+      "mus_active": "escape",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S090",
+      "chapter": 9,
+      "chapter_title": "THE ESCAPE",
+      "start": 490.6667,
+      "duration": 3.5833,
+      "end": 494.25,
+      "frames": 86,
+      "events": [],
+      "sfx": [
+        {
+          "id": "elevator_jolt",
+          "at": 3.0,
+          "gain_db": -4
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "elevator",
+      "mus_active": "escape",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S091",
+      "chapter": 9,
+      "chapter_title": "THE ESCAPE",
+      "start": 494.25,
+      "duration": 4.0,
+      "end": 498.25,
+      "frames": 96,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S091_1",
+          "file": "voice/narrator/S091_1.wav",
+          "start": 0.3,
+          "speech": 1.92,
+          "src_in": 346.06,
+          "src_out": 347.98,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S091_2",
+          "file": "voice/narrator/S091_2.wav",
+          "start": 2.52,
+          "speech": 1.0,
+          "src_in": 348.34,
+          "src_out": 349.34,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "elevator_ding",
+          "at": 0.3,
+          "gain_db": -8
+        },
+        {
+          "id": "elevator_doors",
+          "at": 1.6,
+          "gain_db": -6
+        }
+      ],
+      "amb": null,
+      "mus": "none",
+      "amb_active": "elevator",
+      "mus_active": "none",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S092",
+      "chapter": 9,
+      "chapter_title": "THE ESCAPE",
+      "start": 498.25,
+      "duration": 3.0,
+      "end": 501.25,
+      "frames": 72,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S092",
+          "file": "voice/narrator/S092.wav",
+          "start": 0.3,
+          "speech": 1.94,
+          "src_in": 349.7,
+          "src_out": 351.64,
+          "text": ""
+        }
+      ],
+      "sfx": [],
+      "amb": "lobby_morning",
+      "mus": "relief",
+      "amb_active": "lobby_morning",
+      "mus_active": "relief",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S093",
+      "chapter": 9,
+      "chapter_title": "THE ESCAPE",
+      "start": 501.25,
+      "duration": 3.9167,
+      "end": 505.1667,
+      "frames": 94,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S093",
+          "file": "voice/narrator/S093.wav",
+          "start": 0.3,
+          "speech": 3.12,
+          "src_in": 352.08,
+          "src_out": 355.2,
+          "text": ""
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "lobby_morning",
+      "mus_active": "relief",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S094",
+      "chapter": 9,
+      "chapter_title": "THE ESCAPE",
+      "start": 505.1667,
+      "duration": 3.0,
+      "end": 508.1667,
+      "frames": 72,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S094",
+          "file": "voice/narrator/S094.wav",
+          "start": 0.3,
+          "speech": 1.28,
+          "src_in": 355.6,
+          "src_out": 356.88,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "clock_tick",
+          "at": 0.0,
+          "gain_db": -12
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "lobby_morning",
+      "mus_active": "relief",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S095",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 508.1667,
+      "duration": 8.875,
+      "end": 517.0417,
+      "frames": 213,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S095_1",
+          "file": "voice/narrator/S095_1.wav",
+          "start": 0.3,
+          "speech": 1.88,
+          "src_in": 357.3,
+          "src_out": 359.18,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S095_2",
+          "file": "voice/narrator/S095_2.wav",
+          "start": 2.48,
+          "speech": 1.92,
+          "src_in": 359.56,
+          "src_out": 361.48,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S095_3",
+          "file": "voice/narrator/S095_3.wav",
+          "start": 4.7,
+          "speech": 1.1,
+          "src_in": 361.74,
+          "src_out": 362.84,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S095_4",
+          "file": "voice/narrator/S095_4.wav",
+          "start": 6.1,
+          "speech": 2.28,
+          "src_in": 363.1,
+          "src_out": 365.38,
+          "text": ""
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "lobby_morning",
+      "mus_active": "relief",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S096",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 517.0417,
+      "duration": 3.5833,
+      "end": 520.625,
+      "frames": 86,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S096",
+          "file": "voice/narrator/S096.wav",
+          "start": 0.3,
+          "speech": 2.78,
+          "src_in": 365.5,
+          "src_out": 368.28,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "footsteps_walk",
+          "at": 0.4,
+          "gain_db": -10
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "lobby_morning",
+      "mus_active": "relief",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S097",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 520.625,
+      "duration": 5.375,
+      "end": 526.0,
+      "frames": 129,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "N01",
+          "char": "nurse",
+          "file": "voice/nurse/N01.wav",
+          "start": 0.3,
+          "speech": 4.587,
+          "text": "Dr. Smith! Where have you been? We've been looking for you all night!",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "lobby_morning",
+      "mus_active": "relief",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S098",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 526.0,
+      "duration": 4.2083,
+      "end": 530.2083,
+      "frames": 101,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "J15",
+          "char": "john",
+          "file": "voice/john/J15.wav",
+          "start": 0.3,
+          "speech": 3.404,
+          "text": "I was on the thirteenth floor. The elevator... it took me there.",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "lobby_morning",
+      "mus_active": "relief",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S099",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 530.2083,
+      "duration": 3.0,
+      "end": 533.2083,
+      "frames": 72,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "N02",
+          "char": "nurse",
+          "file": "voice/nurse/N02.wav",
+          "start": 0.3,
+          "speech": 1.332,
+          "text": "What thirteenth floor?",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "lobby_morning",
+      "mus_active": "relief",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S100",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 533.2083,
+      "duration": 6.375,
+      "end": 539.5833,
+      "frames": 153,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "J16",
+          "char": "john",
+          "file": "voice/john/J16.wav",
+          "start": 0.3,
+          "speech": 3.395,
+          "text": "The patients... an old doctor... a little girl...",
+          "placeholder": false
+        },
+        {
+          "type": "dialogue",
+          "id": "J17",
+          "char": "john",
+          "file": "voice/john/J17.wav",
+          "start": 4.095,
+          "speech": 1.774,
+          "text": "I swear it was there.",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "lobby_morning",
+      "mus_active": "relief",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S101",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 539.5833,
+      "duration": 4.4583,
+      "end": 544.0417,
+      "frames": 107,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "N03",
+          "char": "nurse",
+          "file": "voice/nurse/N03.wav",
+          "start": 0.3,
+          "speech": 3.667,
+          "text": "Doctor... this hospital has never had a thirteenth floor.",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": "twist",
+      "amb_active": "lobby_morning",
+      "mus_active": "twist",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S102",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 544.0417,
+      "duration": 4.2083,
+      "end": 548.25,
+      "frames": 101,
+      "events": [],
+      "sfx": [
+        {
+          "id": "button_press",
+          "at": 2.0,
+          "gain_db": -12
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "lobby_morning",
+      "mus_active": "twist",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S103",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 548.25,
+      "duration": 5.0,
+      "end": 553.25,
+      "frames": 120,
+      "events": [],
+      "sfx": [
+        {
+          "id": "keyboard",
+          "at": 0.3,
+          "gain_db": -12
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "lobby_morning",
+      "mus_active": "twist",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S104",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 553.25,
+      "duration": 3.0,
+      "end": 556.25,
+      "frames": 72,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "N04",
+          "char": "nurse",
+          "file": "voice/nurse/N04.wav",
+          "start": 0.3,
+          "speech": 2.098,
+          "text": "Maybe you need some rest, Doctor.",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "lobby_morning",
+      "mus_active": "twist",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S105",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 556.25,
+      "duration": 3.0,
+      "end": 559.25,
+      "frames": 72,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "J19",
+          "char": "john",
+          "file": "voice/john/J19.wav",
+          "start": 0.3,
+          "speech": 1.308,
+          "text": "Maybe I just need some rest.",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "lobby_morning",
+      "mus_active": "twist",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S106",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 559.25,
+      "duration": 5.625,
+      "end": 564.875,
+      "frames": 135,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S106_1",
+          "file": "voice/narrator/S106_1.wav",
+          "start": 0.3,
+          "speech": 1.38,
+          "src_in": 368.36,
+          "src_out": 369.74,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S106_2",
+          "file": "voice/narrator/S106_2.wav",
+          "start": 1.98,
+          "speech": 3.16,
+          "src_in": 370.02,
+          "src_out": 373.18,
+          "text": ""
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "lobby_morning",
+      "mus_active": "twist",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S107",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 564.875,
+      "duration": 11.75,
+      "end": 576.625,
+      "frames": 282,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S107_1",
+          "file": "voice/narrator/S107_1.wav",
+          "start": 0.3,
+          "speech": 1.9,
+          "src_in": 373.74,
+          "src_out": 375.64,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S107_2",
+          "file": "voice/narrator/S107_2.wav",
+          "start": 2.5,
+          "speech": 4.26,
+          "src_in": 375.98,
+          "src_out": 380.24,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S107_3",
+          "file": "voice/narrator/S107_3.wav",
+          "start": 7.06,
+          "speech": 2.02,
+          "src_in": 380.78,
+          "src_out": 382.8,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S107_4",
+          "file": "voice/narrator/S107_4.wav",
+          "start": 9.38,
+          "speech": 1.86,
+          "src_in": 383.34,
+          "src_out": 385.2,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "pages_flutter",
+          "at": 2.2,
+          "gain_db": -4
+        }
+      ],
+      "amb": null,
+      "mus": "none",
+      "amb_active": "lobby_morning",
+      "mus_active": "none",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S108",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 576.625,
+      "duration": 8.0,
+      "end": 584.625,
+      "frames": 192,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S108_1",
+          "file": "voice/narrator/S108_1.wav",
+          "start": 0.3,
+          "speech": 1.9,
+          "src_in": 385.8,
+          "src_out": 387.7,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S108_2",
+          "file": "voice/narrator/S108_2.wav",
+          "start": 2.5,
+          "speech": 0.52,
+          "src_in": 388.18,
+          "src_out": 388.7,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S108_3",
+          "file": "voice/narrator/S108_3.wav",
+          "start": 3.32,
+          "speech": 0.74,
+          "src_in": 389.0,
+          "src_out": 389.74,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S108_4",
+          "file": "voice/narrator/S108_4.wav",
+          "start": 4.36,
+          "speech": 0.54,
+          "src_in": 390.2,
+          "src_out": 390.74,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S108_5",
+          "file": "voice/narrator/S108_5.wav",
+          "start": 5.2,
+          "speech": 0.58,
+          "src_in": 391.14,
+          "src_out": 391.72,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S108_6",
+          "file": "voice/narrator/S108_6.wav",
+          "start": 6.08,
+          "speech": 1.42,
+          "src_in": 392.1,
+          "src_out": 393.52,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "pen_scratch",
+          "at": 0.3,
+          "gain_db": -8
+        },
+        {
+          "id": "low_hit",
+          "at": 7.2,
+          "gain_db": -4
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "lobby_morning",
+      "mus_active": "none",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S109",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 584.625,
+      "duration": 3.0,
+      "end": 587.625,
+      "frames": 72,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "J21",
+          "char": "john",
+          "file": "voice/john/J21.wav",
+          "start": 0.3,
+          "speech": 1.199,
+          "text": "This can't be happening...",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "lobby_morning",
+      "mus_active": "none",
+      "fade_in": 0.0,
+      "fade_out": 1.2
+    },
+    {
+      "id": "S110",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 587.625,
+      "duration": 2.0,
+      "end": 589.625,
+      "frames": 48,
+      "events": [],
+      "sfx": [
+        {
+          "id": "sub_drop",
+          "at": 0.2,
+          "gain_db": -6
+        }
+      ],
+      "amb": "none",
+      "mus": null,
+      "amb_active": "none",
+      "mus_active": "none",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S111",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 589.625,
+      "duration": 6.0417,
+      "end": 595.6667,
+      "frames": 145,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S111",
+          "file": "voice/narrator/S111.wav",
+          "start": 0.3,
+          "speech": 5.24,
+          "src_in": 394.1,
+          "src_out": 399.34,
+          "text": ""
+        }
+      ],
+      "sfx": [],
+      "amb": "cctv",
+      "mus": "final",
+      "amb_active": "cctv",
+      "mus_active": "final",
+      "fade_in": 0.5,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S112",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 595.6667,
+      "duration": 7.9167,
+      "end": 603.5833,
+      "frames": 190,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S112_1",
+          "file": "voice/narrator/S112_1.wav",
+          "start": 0.3,
+          "speech": 2.44,
+          "src_in": 399.86,
+          "src_out": 402.3,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S112_2",
+          "file": "voice/narrator/S112_2.wav",
+          "start": 3.04,
+          "speech": 2.7,
+          "src_in": 402.78,
+          "src_out": 405.48,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S112_3",
+          "file": "voice/narrator/S112_3.wav",
+          "start": 6.04,
+          "speech": 1.36,
+          "src_in": 405.94,
+          "src_out": 407.3,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "elevator_ding_detuned",
+          "at": 2.6,
+          "gain_db": -10
+        },
+        {
+          "id": "elevator_doors_slow",
+          "at": 3.0,
+          "gain_db": -10
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "cctv",
+      "mus_active": "final",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S113",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 603.5833,
+      "duration": 4.625,
+      "end": 608.2083,
+      "frames": 111,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S113_1",
+          "file": "voice/narrator/S113_1.wav",
+          "start": 0.3,
+          "speech": 2.1,
+          "src_in": 407.8,
+          "src_out": 409.9,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S113_2",
+          "file": "voice/narrator/S113_2.wav",
+          "start": 2.7,
+          "speech": 0.64,
+          "src_in": 410.46,
+          "src_out": 411.1,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S113_3",
+          "file": "voice/narrator/S113_3.wav",
+          "start": 3.64,
+          "speech": 0.5,
+          "src_in": 411.62,
+          "src_out": 412.12,
+          "text": ""
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "cctv",
+      "mus_active": "final",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S114",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 608.2083,
+      "duration": 6.4167,
+      "end": 614.625,
+      "frames": 154,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "PA02",
+          "char": "pa",
+          "file": "voice/pa/PA02.wav",
+          "start": 0.7,
+          "speech": 5.218,
+          "text": "Dr. John K. Smith... please report to Floor 13.",
+          "placeholder": true
+        }
+      ],
+      "sfx": [
+        {
+          "id": "pa_chime",
+          "at": 0.0,
+          "gain_db": -8
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "cctv",
+      "mus_active": "final",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S115",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 614.625,
+      "duration": 3.75,
+      "end": 618.375,
+      "frames": 90,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S115_1",
+          "file": "voice/narrator/S115_1.wav",
+          "start": 0.3,
+          "speech": 1.22,
+          "src_in": 412.64,
+          "src_out": 413.86,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S115_2",
+          "file": "voice/narrator/S115_2.wav",
+          "start": 1.82,
+          "speech": 1.44,
+          "src_in": 414.12,
+          "src_out": 415.56,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "phone_ring",
+          "at": 1.8,
+          "gain_db": -6
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "cctv",
+      "mus_active": "final",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S116",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 618.375,
+      "duration": 6.4583,
+      "end": 624.8333,
+      "frames": 155,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "PH01",
+          "char": "phone_voice",
+          "file": "voice/phone_voice/PH01.wav",
+          "start": 1.0,
+          "speech": 2.384,
+          "text": "Hello? Is there any doctor available?",
+          "placeholder": false
+        },
+        {
+          "type": "dialogue",
+          "id": "PH02",
+          "char": "phone_voice",
+          "file": "voice/phone_voice/PH02.wav",
+          "start": 3.684,
+          "speech": 2.283,
+          "text": "We have a new patient on the thirteenth floor.",
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        {
+          "id": "phone_pickup",
+          "at": 0.2,
+          "gain_db": -8
+        }
+      ],
+      "amb": "hospital_night",
+      "mus": null,
+      "amb_active": "hospital_night",
+      "mus_active": "final",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S117",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 624.8333,
+      "duration": 3.0,
+      "end": 627.8333,
+      "frames": 72,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "N05",
+          "char": "nurse",
+          "file": "voice/nurse/N05.wav",
+          "start": 0.3,
+          "speech": 1.332,
+          "text": "What thirteenth floor? (night, on the phone)",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "hospital_night",
+      "mus_active": "final",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S118",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 627.8333,
+      "duration": 3.4167,
+      "end": 631.25,
+      "frames": 82,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "PH03",
+          "char": "phone_voice",
+          "file": "voice/phone_voice/PH03.wav",
+          "start": 0.8,
+          "speech": 2.122,
+          "text": "His name is John K. Smith.",
+          "placeholder": false
+        }
+      ],
+      "sfx": [
+        {
+          "id": "static_burst",
+          "at": 3.0,
+          "gain_db": -8
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "hospital_night",
+      "mus_active": "final",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S119",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 631.25,
+      "duration": 3.0,
+      "end": 634.25,
+      "frames": 72,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S119",
+          "file": "voice/narrator/S119.wav",
+          "start": 0.3,
+          "speech": 1.28,
+          "src_in": 416.08,
+          "src_out": 417.36,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "line_dead",
+          "at": 0.0,
+          "gain_db": -8
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "hospital_night",
+      "mus_active": "final",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S120",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 634.25,
+      "duration": 5.6667,
+      "end": 639.9167,
+      "frames": 136,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S120_1",
+          "file": "voice/narrator/S120_1.wav",
+          "start": 0.3,
+          "speech": 2.42,
+          "src_in": 417.86,
+          "src_out": 420.28,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S120_2",
+          "file": "voice/narrator/S120_2.wav",
+          "start": 3.02,
+          "speech": 2.14,
+          "src_in": 420.72,
+          "src_out": 422.86,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "elevator_doors_slow",
+          "at": 0.3,
+          "gain_db": -6
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "hospital_night",
+      "mus_active": "final",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S121",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 639.9167,
+      "duration": 5.5,
+      "end": 645.4167,
+      "frames": 132,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S121_1",
+          "file": "voice/narrator/S121_1.wav",
+          "start": 0.3,
+          "speech": 1.94,
+          "src_in": 423.4,
+          "src_out": 425.34,
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "id": "S121_2",
+          "file": "voice/narrator/S121_2.wav",
+          "start": 2.54,
+          "speech": 2.56,
+          "src_in": 425.82,
+          "src_out": 428.38,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "low_drone_swell",
+          "at": 0.0,
+          "gain_db": -6
+        },
+        {
+          "id": "elevator_doors_shut",
+          "at": 4.7,
+          "gain_db": -4
+        }
+      ],
+      "amb": null,
+      "mus": null,
+      "amb_active": "hospital_night",
+      "mus_active": "final",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
+      "id": "S122",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 645.4167,
+      "duration": 7.0,
+      "end": 652.4167,
+      "frames": 168,
+      "events": [
+        {
+          "type": "narration",
+          "id": "S122",
+          "file": "voice/narrator/S122.wav",
+          "start": 1.9,
+          "speech": 0.8,
+          "src_in": 429.06,
+          "src_out": 429.86,
+          "text": ""
+        }
+      ],
+      "sfx": [
+        {
+          "id": "ecg_flatline",
+          "at": 0.2,
+          "gain_db": -16
+        }
+      ],
+      "amb": "none",
+      "mus": "none",
+      "amb_active": "none",
+      "mus_active": "none",
+      "fade_in": 0.0,
+      "fade_out": 2.0
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "shot": "S023",
+  "chapter": 3,
+  "duration": 12.2917,
+  "image_prompt": "dark cinematic Japanese horror anime film still, detailed anime character design, hand-painted cinematic background, 2D anime characters integrated into realistic 3D hospital environment, cinematic lighting, volumetric fog, deep shadows, cold blue and desaturated teal palette, subtle red accent lighting, realistic reflections on hospital floor, flickering fluorescent light, film grain, atmospheric depth, horror film cinematography, 16:9 widescreen composition, high detail, abandoned hospital corridor detail, rusty hospital beds, old wheelchairs against the walls, half-open doors into black rooms, dust, scattered papers, peeling paint, camera: Slow pan across decay — wheelchairs, rusted beds, half-open doors, mood: Unease",
+  "negative_prompt": "comedy, chibi, bright cheerful colors, exaggerated expressions, cheap animation, character redesign, outfit change, inconsistent face, extra fingers, deformed hands, gore, blood splatter, visible injuries, text, subtitles, captions, watermark, logo, signature, low resolution, blurry face",
+  "video_prompt": "Slow pan across decay — wheelchairs, rusted beds, half-open doors. a wheelchair wheel turns slightly on its own, dust motes float in the light. Keep character design, face and outfit identical to the reference frame. Subtle natural motion, slow cinematic pacing, no cuts, 12.3 seconds, 24 fps, 16:9.",
+  "reference_images": [],
+  "aspect_ratio": "16:9",
+  "output_keyframe": "scene_images/generated/S023.png",
+  "output_keyframe_b": null,
+  "output_clip": "video_clips/generated/S023.mp4"
+}

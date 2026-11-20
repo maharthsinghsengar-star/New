@@ -1,0 +1,338 @@
+{
+  "J01": {
+    "file": "voice/john/J01.wav",
+    "seconds": 2.11,
+    "speech_seconds": 1.411,
+    "placeholder": false,
+    "text": "All right, I'm coming."
+  },
+  "J02": {
+    "file": "voice/john/J02.wav",
+    "seconds": 3.05,
+    "speech_seconds": 1.096,
+    "placeholder": false,
+    "text": "That's impossible."
+  },
+  "J03": {
+    "file": "voice/john/J03.wav",
+    "seconds": 2.45,
+    "speech_seconds": 0.753,
+    "placeholder": false,
+    "text": "Hello?"
+  },
+  "J04": {
+    "file": "voice/john/J04.wav",
+    "seconds": 2.67,
+    "speech_seconds": 0.872,
+    "placeholder": false,
+    "text": "Anyone?"
+  },
+  "J05": {
+    "file": "voice/john/J05.wav",
+    "seconds": 3.25,
+    "speech_seconds": 1.274,
+    "placeholder": false,
+    "text": "How do you know who I am?"
+  },
+  "J06": {
+    "file": "voice/john/J06.wav",
+    "seconds": 3.03,
+    "speech_seconds": 1.202,
+    "placeholder": false,
+    "text": "Why are you here?"
+  },
+  "J07": {
+    "file": "voice/john/J07.wav",
+    "seconds": 4.25,
+    "speech_seconds": 2.249,
+    "placeholder": false,
+    "text": "This hospital doesn't have a thirteenth floor."
+  },
+  "J08": {
+    "file": "voice/john/J08.wav",
+    "seconds": 3.15,
+    "speech_seconds": 1.179,
+    "placeholder": false,
+    "text": "What is this place?"
+  },
+  "J09": {
+    "file": "voice/john/J09.wav",
+    "seconds": 3.67,
+    "speech_seconds": 1.704,
+    "placeholder": false,
+    "text": "Why is my name in that file?"
+  },
+  "J10": {
+    "file": "voice/john/J10.wav",
+    "seconds": 4.65,
+    "speech_seconds": 2.715,
+    "placeholder": false,
+    "text": "I'm alive! I was working downstairs!"
+  },
+  "J11": {
+    "file": "voice/john/J11.wav",
+    "seconds": 3.17,
+    "speech_seconds": 1.17,
+    "placeholder": false,
+    "text": "I need to get out of here!"
+  },
+  "J12": {
+    "file": "voice/john/J12.wav",
+    "seconds": 3.05,
+    "speech_seconds": 1.117,
+    "placeholder": false,
+    "text": "Where is the elevator?"
+  },
+  "J13": {
+    "file": "voice/john/J13.wav",
+    "seconds": 2.81,
+    "speech_seconds": 0.948,
+    "placeholder": false,
+    "text": "And if it doesn't?"
+  },
+  "J14": {
+    "file": "voice/john/J14.wav",
+    "seconds": 4.19,
+    "speech_seconds": 2.303,
+    "placeholder": false,
+    "text": "Come on... open up, please!"
+  },
+  "J15": {
+    "file": "voice/john/J15.wav",
+    "seconds": 4.57,
+    "speech_seconds": 3.404,
+    "placeholder": false,
+    "text": "I was on the thirteenth floor. The elevator... it took me there."
+  },
+  "J16": {
+    "file": "voice/john/J16.wav",
+    "seconds": 4.55,
+    "speech_seconds": 3.395,
+    "placeholder": false,
+    "text": "The patients... an old doctor... a little girl..."
+  },
+  "J17": {
+    "file": "voice/john/J17.wav",
+    "seconds": 2.95,
+    "speech_seconds": 1.774,
+    "placeholder": false,
+    "text": "I swear it was there."
+  },
+  "J19": {
+    "file": "voice/john/J19.wav",
+    "seconds": 2.47,
+    "speech_seconds": 1.308,
+    "placeholder": false,
+    "text": "Maybe I just need some rest."
+  },
+  "J20": {
+    "file": "voice/john/J20.wav",
+    "seconds": 2.43,
+    "speech_seconds": 0.669,
+    "placeholder": false,
+    "text": "No..."
+  },
+  "J21": {
+    "file": "voice/john/J21.wav",
+    "seconds": 2.53,
+    "speech_seconds": 1.199,
+    "placeholder": false,
+    "text": "This can't be happening..."
+  },
+  "OD01": {
+    "file": "voice/old_doctor/OD01.wav",
+    "seconds": 4.115,
+    "speech_seconds": 1.726,
+    "placeholder": false,
+    "text": "Now you remember, Doctor."
+  },
+  "OD02": {
+    "file": "voice/old_doctor/OD02.wav",
+    "seconds": 5.21,
+    "speech_seconds": 2.654,
+    "placeholder": false,
+    "text": "This floor belongs to those who never left."
+  },
+  "OD03": {
+    "file": "voice/old_doctor/OD03.wav",
+    "seconds": 4.556,
+    "speech_seconds": 2.123,
+    "placeholder": false,
+    "text": "Everyone says the same thing."
+  },
+  "OD04": {
+    "file": "voice/old_doctor/OD04.wav",
+    "seconds": 3.377,
+    "speech_seconds": 0.994,
+    "placeholder": false,
+    "text": "Find it."
+  },
+  "OD05": {
+    "file": "voice/old_doctor/OD05.wav",
+    "seconds": 5.056,
+    "speech_seconds": 2.517,
+    "placeholder": false,
+    "text": "If it allows you to return, you may leave."
+  },
+  "OD06": {
+    "file": "voice/old_doctor/OD06.wav",
+    "seconds": 4.833,
+    "speech_seconds": 2.058,
+    "placeholder": false,
+    "text": "Then you'll be waiting for the next doctor."
+  },
+  "G00": {
+    "file": "voice/little_girl/G00.wav",
+    "seconds": 5.233,
+    "speech_seconds": 1.443,
+    "placeholder": false,
+    "text": "Doctor..."
+  },
+  "G01": {
+    "file": "voice/little_girl/G01.wav",
+    "seconds": 6.226,
+    "speech_seconds": 2.514,
+    "placeholder": false,
+    "text": "Doctor... don't leave."
+  },
+  "G02": {
+    "file": "voice/little_girl/G02.wav",
+    "seconds": 6.169,
+    "speech_seconds": 2.542,
+    "placeholder": false,
+    "text": "Because tonight... it's your turn."
+  },
+  "G03": {
+    "file": "voice/little_girl/G03.wav",
+    "seconds": 6.151,
+    "speech_seconds": 2.593,
+    "placeholder": false,
+    "text": "Doctor... why are you running?"
+  },
+  "P01": {
+    "file": "voice/patients/P01.wav",
+    "seconds": 3.451,
+    "speech_seconds": 1.26,
+    "placeholder": false,
+    "text": "You are late, Doctor."
+  },
+  "P02": {
+    "file": "voice/patients/P02.wav",
+    "seconds": 3.764,
+    "speech_seconds": 1.635,
+    "placeholder": false,
+    "text": "John K. Smith."
+  },
+  "P03": {
+    "file": "voice/patients/P03.wav",
+    "seconds": 4.189,
+    "speech_seconds": 1.735,
+    "placeholder": false,
+    "text": "We have been waiting for you."
+  },
+  "P04": {
+    "file": "voice/patients/P04.wav",
+    "seconds": 6.731,
+    "speech_seconds": 3.521,
+    "placeholder": false,
+    "text": "(whisper) ...you forgot us."
+  },
+  "P05": {
+    "file": "voice/patients/P05.wav",
+    "seconds": 5.198,
+    "speech_seconds": 1.93,
+    "placeholder": false,
+    "text": "We have been waiting for you. (layered chorus)"
+  },
+  "P06": {
+    "file": "voice/patients/P06.wav",
+    "seconds": 7.796,
+    "speech_seconds": 4.416,
+    "placeholder": true,
+    "text": "You don't remember... but we remember you."
+  },
+  "N01": {
+    "file": "voice/nurse/N01.wav",
+    "seconds": 5.73,
+    "speech_seconds": 4.587,
+    "placeholder": false,
+    "text": "Dr. Smith! Where have you been? We've been looking for you all night!"
+  },
+  "N02": {
+    "file": "voice/nurse/N02.wav",
+    "seconds": 2.51,
+    "speech_seconds": 1.332,
+    "placeholder": false,
+    "text": "What thirteenth floor?"
+  },
+  "N03": {
+    "file": "voice/nurse/N03.wav",
+    "seconds": 4.81,
+    "speech_seconds": 3.667,
+    "placeholder": false,
+    "text": "Doctor... this hospital has never had a thirteenth floor."
+  },
+  "N04": {
+    "file": "voice/nurse/N04.wav",
+    "seconds": 3.35,
+    "speech_seconds": 2.098,
+    "placeholder": false,
+    "text": "Maybe you need some rest, Doctor."
+  },
+  "N05": {
+    "file": "voice/nurse/N05.wav",
+    "seconds": 2.27,
+    "speech_seconds": 1.332,
+    "placeholder": false,
+    "text": "What thirteenth floor? (night, on the phone)"
+  },
+  "NW1": {
+    "file": "voice/nurse/NW1.wav",
+    "seconds": 4.621,
+    "speech_seconds": 2.01,
+    "placeholder": false,
+    "text": "Doctor... (distant woman's call, Floor 13)"
+  },
+  "PH00": {
+    "file": "voice/phone_voice/PH00.wav",
+    "seconds": 2.4,
+    "speech_seconds": 2.319,
+    "placeholder": false,
+    "text": "Hello? Is there any doctor available?"
+  },
+  "PH01": {
+    "file": "voice/phone_voice/PH01.wav",
+    "seconds": 2.4,
+    "speech_seconds": 2.384,
+    "placeholder": false,
+    "text": "Hello? Is there any doctor available?"
+  },
+  "PH02": {
+    "file": "voice/phone_voice/PH02.wav",
+    "seconds": 2.3,
+    "speech_seconds": 2.283,
+    "placeholder": false,
+    "text": "We have a new patient on the thirteenth floor."
+  },
+  "PH03": {
+    "file": "voice/phone_voice/PH03.wav",
+    "seconds": 2.189,
+    "speech_seconds": 2.122,
+    "placeholder": false,
+    "text": "His name is John K. Smith."
+  },
+  "PA01": {
+    "file": "voice/pa/PA01.wav",
+    "seconds": 8.921,
+    "speech_seconds": 5.489,
+    "placeholder": true,
+    "text": "Dr. John K. Smith... your shift is not over yet."
+  },
+  "PA02": {
+    "file": "voice/pa/PA02.wav",
+    "seconds": 8.639,
+    "speech_seconds": 5.218,
+    "placeholder": true,
+    "text": "Dr. John K. Smith... please report to Floor 13."
+  }
+}

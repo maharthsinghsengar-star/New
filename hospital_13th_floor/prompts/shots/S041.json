@@ -1,0 +1,16 @@
+{
+  "shot": "S041",
+  "chapter": 4,
+  "duration": 5.6667,
+  "image_prompt": "dark cinematic Japanese horror anime film still, detailed anime character design, hand-painted cinematic background, 2D anime characters integrated into realistic 3D hospital environment, cinematic lighting, volumetric fog, deep shadows, cold blue and desaturated teal palette, subtle red accent lighting, realistic reflections on hospital floor, flickering fluorescent light, film grain, atmospheric depth, horror film cinematography, 16:9 widescreen composition, high detail, elderly woman patient with long grey hair and an old man beside her, both pale, staring upward, six hospital patients, mixed men and women aged 20 to 80, pale grey tired faces, hollow staring eyes, old faded spotted pale-blue hospital gowns, varied hairstyles and facial structures, no gore, no injuries, motionless, synchronized slow head turns, camera: Medium shot of the next bed; an elderly woman laughs softly, mood: Creeping dread",
+  "negative_prompt": "comedy, chibi, bright cheerful colors, exaggerated expressions, cheap animation, character redesign, outfit change, inconsistent face, extra fingers, deformed hands, gore, blood splatter, visible injuries, text, subtitles, captions, watermark, logo, signature, low resolution, blurry face",
+  "video_prompt": "Medium shot of the next bed; an elderly woman laughs softly. shoulders shake with silent laughter, head tilts. Keep character design, face and outfit identical to the reference frame. Subtle natural motion, slow cinematic pacing, no cuts, 5.7 seconds, 24 fps, 16:9.",
+  "reference_images": [
+    "characters/refs/patients_left.png",
+    "characters/refs/patients_right.png"
+  ],
+  "aspect_ratio": "16:9",
+  "output_keyframe": "scene_images/generated/S041.png",
+  "output_keyframe_b": null,
+  "output_clip": "video_clips/generated/S041.mp4"
+}

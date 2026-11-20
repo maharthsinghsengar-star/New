@@ -1,0 +1,16 @@
+{
+  "shot": "S106",
+  "chapter": 10,
+  "duration": 5.625,
+  "image_prompt": "dark cinematic Japanese horror anime film still, detailed anime character design, hand-painted cinematic background, 2D anime characters integrated into realistic 3D hospital environment, cinematic lighting, volumetric fog, deep shadows, cold blue and desaturated teal palette, subtle red accent lighting, realistic reflections on hospital floor, flickering fluorescent light, film grain, atmospheric depth, horror film cinematography, 16:9 widescreen composition, high detail, John seen from behind walking away across the sunlit lobby toward the reception desk, Dr. John K. Smith, 27-year-old male doctor, lean average build, dark messy short black hair, dark brown expressive eyes, slight stubble, tired face, white doctor's coat, blue formal shirt, dark navy trousers, black formal shoes, black stethoscope around neck, hospital ID badge clipped to coat, camera: Wide from behind as John walks away across the lobby, mood: Denial",
+  "negative_prompt": "comedy, chibi, bright cheerful colors, exaggerated expressions, cheap animation, character redesign, outfit change, inconsistent face, extra fingers, deformed hands, gore, blood splatter, visible injuries, text, subtitles, captions, watermark, logo, signature, low resolution, blurry face",
+  "video_prompt": "Wide from behind as John walks away across the lobby. slow walk, shoulders slumped. Keep character design, face and outfit identical to the reference frame. Subtle natural motion, slow cinematic pacing, no cuts, 5.6 seconds, 24 fps, 16:9.",
+  "reference_images": [
+    "characters/refs/john_face.png",
+    "characters/refs/john_medium.png"
+  ],
+  "aspect_ratio": "16:9",
+  "output_keyframe": "scene_images/generated/S106.png",
+  "output_keyframe_b": null,
+  "output_clip": "video_clips/generated/S106.mp4"
+}

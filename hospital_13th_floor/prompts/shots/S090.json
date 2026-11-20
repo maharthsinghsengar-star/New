@@ -1,0 +1,13 @@
+{
+  "shot": "S090",
+  "chapter": 9,
+  "duration": 3.5833,
+  "image_prompt": "dark cinematic Japanese horror anime film still, detailed anime character design, hand-painted cinematic background, 2D anime characters integrated into realistic 3D hospital environment, cinematic lighting, volumetric fog, deep shadows, cold blue and desaturated teal palette, subtle red accent lighting, realistic reflections on hospital floor, flickering fluorescent light, film grain, atmospheric depth, horror film cinematography, 16:9 widescreen composition, high detail, LED indicator racing down, the car vibrating, camera: Display racing down, camera shaking with the car, mood: Peak tension",
+  "negative_prompt": "comedy, chibi, bright cheerful colors, exaggerated expressions, cheap animation, character redesign, outfit change, inconsistent face, extra fingers, deformed hands, gore, blood splatter, visible injuries, text, subtitles, captions, watermark, logo, signature, low resolution, blurry face",
+  "video_prompt": "Display racing down, camera shaking with the car. digits race, shaking intensifies then stops. Keep character design, face and outfit identical to the reference frame. Subtle natural motion, slow cinematic pacing, no cuts, 3.6 seconds, 24 fps, 16:9.",
+  "reference_images": [],
+  "aspect_ratio": "16:9",
+  "output_keyframe": "scene_images/generated/S090.png",
+  "output_keyframe_b": null,
+  "output_clip": "video_clips/generated/S090.mp4"
+}

@@ -1,0 +1,1909 @@
+# MASTER SHOT LIST — "The Hospital's 13th Floor"
+# Single source of truth. Every script reads this file. Edit here, then re-run scripts/run_all.sh
+#
+# Per-shot fields
+#   id/ch/loc/chars       shot number, chapter, location, characters present
+#   cam                   camera angle + movement (directing note, goes into prompts)
+#   move                  animatic camera move: static|push|push_slow|dolly|pull|pan_l|pan_r|tilt_u|tilt_d|drift|handheld
+#   act / emo             character action / emotion
+#   desc                  visual description for the keyframe prompt (characters are auto-injected from characters.yaml)
+#   anim                  animation notes for the image-to-video prompt
+#   audio                 sequential events: {narr:[in,out]} narrator.mp3 range | {cue: ID} voice_cues.yaml | {gap: s}
+#                         Shot duration = head + events (+0.35 s default gaps) + tail, never below `dur`.
+#   sfx                   [[sound_effect_id, seconds_from_shot_start, gain_db], ...]
+#   amb / mus             ambience bed / music cue that STARTS at this shot (persists until changed; "none" stops)
+#   kf                    placeholder keyframe recipe for the animatic (scripts/05_make_keyframes.py)
+#   kf2                   optional second keyframe; the animatic crossfades kf -> kf2 over `x` (fractions of the shot)
+#   grade / fx            colour grade and per-frame effects for the animatic (flicker, flicker_hard, shake, cctv, blackout)
+#   fade_in / fade_out    seconds of fade from/to black
+
+defaults: {head: 0.3, tail: 0.5, gap: 0.3, dur: 3.0, move: push_slow, grade: night}
+
+chapters:
+  1: THE LAST CALL
+  2: THE WRONG FLOOR
+  3: THE FORBIDDEN WARD
+  4: THE PATIENTS
+  5: THE LITTLE GIRL
+  6: THE MEDICAL RECORD
+  7: THE OLD DOCTOR
+  8: THE CORRIDOR
+  9: THE ESCAPE
+  10: THE TWIST
+
+shots:
+# ═══════════════════════════════ CHAPTER 1 — THE LAST CALL ═══════════════════════════════
+- id: S001
+  ch: 1
+  loc: Hospital exterior, night
+  chars: []
+  cam: Wide establishing shot, low angle, very slow push-in toward the top floors
+  move: push_slow
+  act: Rain falls across an old twelve-storey city hospital; a single window glows red near the roof.
+  emo: Dread, loneliness
+  desc: old concrete city hospital at night under a full moon behind storm clouds, rain streaks, a few lit
+    windows, one window high on the building glows faint red with the number 13, mist around the base
+  anim: rain falling, clouds drifting slowly across the moon, one window light flickers, no people
+  audio: []
+  dur: 7.0
+  sfx: [[thunder_far, 1.2, -6]]
+  amb: rain_exterior
+  mus: opening
+  kf: {crop: building_night}
+  fade_in: 2.0
+
+- id: S002
+  ch: 1
+  loc: Title card
+  chars: [john, old_doctor, little_girl, nurse, patients]
+  cam: Slow push-in on the key art, title glowing
+  move: push_slow
+  act: Title card — THE HOSPITAL'S 13TH FLOOR
+  emo: Ominous
+  desc: title key art, the full cast under the hospital at night, red dripping title text
+  anim: title text pulses red like an ECG line, faint fog drift, characters breathe subtly
+  audio: []
+  dur: 7.0
+  sfx: [[ecg_beep, 0.6, -10], [low_hit, 1.4, -2], [ecg_flatline, 4.6, -14]]
+  kf: {crop: title_wide}
+  fade_out: 0.8
+
+- id: S003
+  ch: 1
+  loc: Ground-floor corridor, modern wing, 1:58 AM
+  chars: []
+  cam: Symmetrical one-point tracking shot gliding down an empty corridor
+  move: dolly
+  act: Empty corridor; fluorescent panels hum; a wet floor reflects the lights.
+  emo: Quiet, tired
+  desc: long empty modern hospital corridor at 2 AM, polished floor with long reflections, ceiling fluorescent
+    panels, closed doors, a wall clock, a cleaning sign, deep blue shadows, faint fog
+  anim: slow forward dolly, one light panel flickers once, reflections slide on the floor
+  audio: [{narr: [0.04, 1.95]}, {narr: [2.52, 5.76]}]
+  sfx: [[fluoro_buzz, 0.0, -14]]
+  amb: hospital_night
+  kf: {env: corridor, style: modern}
+  fade_in: 1.0
+
+- id: S004
+  ch: 1
+  loc: Doctors' office, ground floor
+  chars: []
+  cam: Slow lateral pan across a dark office toward the rain-streaked window
+  move: pan_r
+  act: Monitors idle, rain runs down the window, a desk lamp glows.
+  emo: Loneliness
+  desc: small cluttered doctors' office at night, desk lamp, idle computer monitor, coffee cup, stacked files,
+    large window streaked with rain, city lights blurred outside, cold blue light, warm lamp pool
+  anim: rain droplets running down the glass, monitor glow pulses, steam from coffee
+  audio: [{narr: [6.42, 16.80]}]
+  kf: {env: office}
+
+- id: S005
+  ch: 1
+  loc: Doctors' office
+  chars: [john]
+  cam: Medium shot, slow push-in on John at his desk
+  move: push_slow
+  act: John finishes his coffee, rubs his eyes, starts to pack up.
+  emo: Exhausted, calm
+  desc: John sitting at the desk under the lamp, exhausted after a 12-hour shift, coffee cup in hand,
+    stethoscope around his neck, tired eyes
+  anim: subtle breathing, slow blink, lifts cup, looks toward the window
+  audio: [{narr: [17.48, 27.56]}]
+  kf: {crop: john_medium}
+
+- id: S006
+  ch: 1
+  loc: Doctors' office
+  chars: []
+  cam: Close-up insert of the old desk telephone; static, then the phone rings
+  move: static
+  act: The beige desk phone's line light blinks red and it rings.
+  emo: Sudden unease
+  desc: close-up of an old beige office desk telephone with a blinking red line light on a cluttered desk,
+    lamp light, deep shadows
+  anim: red light blinks in time with the ring, handset vibrates slightly
+  audio: [{narr: [28.18, 31.00]}]
+  sfx: [[phone_ring, 2.7, -4]]
+  kf: {env: phone, light: night}
+
+- id: S007
+  ch: 1
+  loc: Doctors' office
+  chars: [john]
+  cam: Close-up on John, handset to his ear, slow push-in
+  move: push_slow
+  act: John answers; a distant, muffled voice asks for a doctor; he agrees to come.
+  emo: Tired professionalism, slight unease
+  desc: close-up of John holding a telephone handset to his ear, lamp light on one side of his face,
+    blue darkness on the other
+  anim: listens, slight frown, small exhale, nods
+  audio: [{gap: 0.9}, {cue: PH00}, {gap: 0.5}, {cue: J01}]
+  sfx: [[phone_pickup, 0.3, -6], [phone_hangup, 5.6, -6]]
+  kf: {crop: john_face}
+
+- id: S008
+  ch: 1
+  loc: Doctors' office
+  chars: []
+  cam: Extreme close-up of the wall clock, slow push-in
+  move: push
+  act: The clock reads 2:13.
+  emo: Ominous
+  desc: extreme close-up of an old analogue hospital wall clock reading 2:13, cracked glass, cold light
+  anim: second hand ticks, light flickers once
+  audio: [{narr: [31.70, 34.16]}]
+  sfx: [[clock_tick, 0.0, -10]]
+  kf: {env: clock, time: "2:13"}
+
+- id: S009
+  ch: 1
+  loc: Doctors' office -> corridor
+  chars: [john]
+  cam: Tight shot of John's chest as he slings the stethoscope on, tilt up
+  move: tilt_u
+  act: He grabs his stethoscope and heads out.
+  emo: Duty
+  desc: close-up of John's white coat, blue shirt, black stethoscope and hospital ID badge as he moves
+  anim: coat sways, stethoscope swings, he turns to leave
+  audio: [{narr: [34.80, 39.60]}]
+  sfx: [[footsteps_walk, 2.0, -10]]
+  kf: {crop: john_stethoscope}
+
+- id: S010
+  ch: 1
+  loc: Elevator lobby, ground floor
+  chars: []
+  cam: Low-angle wide shot of the elevator doors, very slow push-in
+  move: push_slow
+  act: Steel elevator doors under a floor indicator reading 1. A directory lists floors 1–12.
+  emo: Subtle unease
+  desc: low-angle shot of brushed steel elevator doors in a dim hospital lobby, small red LED floor indicator
+    above reading 1, floor directory sign beside it, polished floor reflections
+  anim: indicator glows, faint hum, reflections ripple
+  audio: [{narr: [40.20, 45.16]}]
+  tail: 1.4
+  kf: {env: elevator_out, style: lobby, display: "1"}
+
+# ═══════════════════════════════ CHAPTER 2 — THE WRONG FLOOR ═══════════════════════════════
+- id: S011
+  ch: 2
+  loc: Elevator interior
+  chars: [john]
+  cam: Insert of the button panel, John's finger presses 12
+  move: push
+  act: John steps in and presses 12.
+  emo: Routine
+  desc: elevator button panel close-up, buttons 1 to 12 in two columns, button 12 lit, worn metal, cold
+    fluorescent light
+  anim: finger presses 12, button lights up
+  audio: [{narr: [45.86, 49.60]}]
+  sfx: [[elevator_ding, 0.1, -8], [button_press, 2.6, -6]]
+  amb: elevator
+  kf: {env: panel, lit: "12"}
+
+- id: S012
+  ch: 2
+  loc: Elevator interior
+  chars: [john]
+  cam: Wide shot from the back corner of the car, doors closing on the lobby
+  move: static
+  act: Doors close. The car starts to rise.
+  emo: Calm
+  desc: inside a narrow old hospital elevator car, steel walls, handrail, flickering ceiling light, doors closing
+  anim: doors slide shut, light dips as the motor engages
+  audio: [{narr: [50.22, 53.46]}]
+  sfx: [[elevator_doors, 0.2, -6], [elevator_motor_start, 2.2, -6]]
+  kf: {env: elevator_in, display: "1"}
+
+- id: S013
+  ch: 2
+  loc: Elevator interior
+  chars: []
+  cam: Extreme close-up of the LED floor indicator
+  move: static
+  act: 3… 4… 5… 6…
+  emo: Normal
+  desc: extreme close-up of a red segmented LED elevator floor indicator with an up arrow
+  anim: numbers count up, arrow pulses
+  audio: [{narr: [54.08, 58.06]}]
+  kf: {env: display, seq: [[0, "2"], [0.6, "3"], [1.8, "4"], [2.9, "5"], [3.6, "6"]]}
+
+- id: S014
+  ch: 2
+  loc: Elevator interior
+  chars: [john]
+  cam: Close-up of John, static; he watches the numbers
+  move: static
+  act: John leans against the wall, half-asleep.
+  emo: Calm, tired
+  desc: close-up of John leaning back in the elevator, eyes half closed, fluorescent light above
+  anim: slow blink, breathing
+  audio: [{narr: [58.86, 60.42]}]
+  kf: {crop: john_face}
+
+- id: S015
+  ch: 2
+  loc: Elevator interior
+  chars: [john]
+  cam: Wide shot, the car JOLTS — handheld shake, lights stutter
+  move: handheld
+  act: Lights flicker, the elevator jerks violently, John grabs the handrail.
+  emo: Shock
+  desc: inside the elevator car, the ceiling light stuttering, shadows jumping, John grabbing the handrail
+  anim: violent jolt, camera shake, light flicker, dust falls from the ceiling
+  audio: [{narr: [61.06, 62.62]}, {narr: [63.08, 66.74]}]
+  sfx: [[electric_flicker, 0.4, -6], [elevator_jolt, 1.8, -2], [cable_creak, 3.4, -8]]
+  kf: {env: elevator_in, display: "7", dark: true}
+  fx: [flicker_hard, shake]
+
+- id: S016
+  ch: 2
+  loc: Elevator interior
+  chars: []
+  cam: Extreme close-up of the indicator, slight Dutch angle
+  move: push
+  act: 8… 9… 10… 11… 12… it does not stop.
+  emo: Rising dread
+  desc: extreme close-up of the red LED floor indicator counting past 12, Dutch angle
+  anim: digits climb, glitch slightly
+  audio: [{narr: [67.22, 69.08]}, {narr: [69.56, 74.10]}, {narr: [74.62, 76.40]}]
+  sfx: [[cable_creak, 6.0, -10]]
+  mus: tension
+  kf: {env: display, seq: [[0, "7"], [2.4, "8"], [3.3, "9"], [4.3, "10"], [5.2, "11"], [6.2, "12"]]}
+  fx: [flicker]
+
+- id: S017
+  ch: 2
+  loc: Elevator interior
+  chars: []
+  cam: Extreme close-up; the display glitches and turns blood-red, showing 13
+  move: push_slow
+  act: The display changes to 13. Breath fogs in the cold.
+  emo: Cold fear
+  desc: elevator LED indicator glitching into the number 13 glowing deep red, frost forming on the steel frame
+  anim: digits scramble then lock on 13, frost creeps, breath vapour drifts
+  audio: [{narr: [77.00, 78.72]}, {narr: [79.10, 80.28]}, {narr: [80.72, 82.72]}]
+  sfx: [[glitch, 2.3, -6], [low_drone_swell, 3.0, -8]]
+  kf: {env: display, seq: [[0, "12"], [2.3, "##"], [2.7, "13"]], red: true}
+
+- id: S018
+  ch: 2
+  loc: Elevator interior
+  chars: []
+  cam: Slow push into the empty back corner of the car
+  move: push_slow
+  act: A faint child's laugh echoes inside the car.
+  emo: Creeping horror
+  desc: dark empty corner of the elevator car, handrail, faint frost on the walls, the light dimming
+  anim: light dims, frost crawls, something like a shadow passes across the steel reflection
+  audio: [{narr: [83.38, 87.62]}]
+  sfx: [[child_laugh, 4.4, -8]]
+  kf: {env: elevator_in, display: "13", dark: true, red: true}
+
+- id: S019
+  ch: 2
+  loc: Elevator interior
+  chars: [john]
+  cam: Extreme close-up of John's eye and ear; a whisper circles him
+  move: push_slow
+  act: A child's whisper, right beside him — "Doctor…"
+  emo: Terror
+  desc: extreme close-up of John's face in red light, wide eyes, sweat, breath fogging
+  anim: pupils dilate, he holds his breath
+  audio: [{gap: 0.3}, {cue: G00}]
+  sfx: [[heartbeat_slow, 0.0, -10]]
+  kf: {crop: john_face}
+  grade: red
+
+- id: S020
+  ch: 2
+  loc: Elevator interior
+  chars: [john]
+  cam: Fast whip to the corner — static wide, empty
+  move: static
+  act: John turns around. Nobody is there.
+  emo: Fear
+  desc: wide view of the elevator interior, completely empty, red light from the indicator
+  anim: nothing moves; a single flicker
+  audio: [{narr: [88.18, 89.34]}, {narr: [89.84, 90.92]}]
+  sfx: [[elevator_stop, 2.6, -4], [elevator_ding_detuned, 3.4, -6]]
+  tail: 1.2
+  kf: {env: elevator_in, display: "13", red: true}
+  fx: [flicker]
+
+# ═══════════════════════════════ CHAPTER 3 — THE FORBIDDEN WARD ═══════════════════════════════
+- id: S021
+  ch: 3
+  loc: Elevator interior looking out -> Floor 13 corridor
+  chars: [john]
+  cam: Over-the-shoulder from inside the car as the doors slide open
+  move: push_slow
+  act: The doors open on an old, decayed corridor.
+  emo: Disbelief
+  desc: view from inside the elevator through opening doors onto a decayed 1980s hospital corridor, green-grey
+    peeling walls, fog, a single flickering tube light, abandoned wheelchair
+  anim: doors slide open, cold fog spills into the car
+  audio: [{narr: [91.50, 93.74]}, {narr: [94.18, 97.88]}]
+  sfx: [[elevator_doors_slow, 0.2, -4], [wind_gust, 1.0, -10]]
+  amb: ward13
+  mus: none
+  kf: {env: elevator_out, style: inside_open}
+  kf2: {env: corridor, style: old, frame: elevator}
+  x: [0.15, 0.75]
+
+- id: S022
+  ch: 3
+  loc: Floor 13 corridor
+  chars: []
+  cam: Wide symmetrical shot of the corridor, slow dolly forward
+  move: dolly
+  act: A long dark corridor stretches ahead.
+  emo: Dread
+  desc: very long dark abandoned hospital corridor, peeling paint, flickering fluorescent tubes, fog, wet floor
+  anim: fog drifts, tube lights flicker irregularly
+  audio: [{narr: [98.46, 101.78]}]
+  kf: {env: corridor, style: old}
+  grade: ward
+
+- id: S023
+  ch: 3
+  loc: Floor 13 corridor
+  chars: []
+  cam: Slow pan across decay — wheelchairs, rusted beds, half-open doors
+  move: pan_l
+  act: Peeling walls, dust on the floor, old wheelchairs and rusted beds outside half-open rooms.
+  emo: Unease
+  desc: abandoned hospital corridor detail, rusty hospital beds, old wheelchairs against the walls, half-open
+    doors into black rooms, dust, scattered papers, peeling paint
+  anim: a wheelchair wheel turns slightly on its own, dust motes float in the light
+  audio: [{narr: [102.38, 104.74]}, {narr: [105.22, 106.94]}, {narr: [107.46, 114.26]}]
+  sfx: [[wheelchair_creak, 9.6, -10]]
+  kf: {env: corridor, style: old, props: true}
+  grade: ward
+
+- id: S024
+  ch: 3
+  loc: Floor 13 corridor
+  chars: []
+  cam: Static deep shot; lights flicker on one after another toward camera
+  move: static
+  act: The lights flicker one after another, revealing the corridor in brief flashes.
+  emo: Suspense
+  desc: dark corridor lit only in brief flashes by successive fluorescent tubes, long shadows
+  anim: tube lights strobe one after another toward camera
+  audio: [{narr: [114.82, 117.16]}, {narr: [117.46, 120.04]}]
+  sfx: [[electric_flicker, 0.3, -6], [electric_flicker, 2.0, -8], [electric_flicker, 3.6, -8]]
+  kf: {env: corridor, style: old}
+  grade: ward
+  fx: [flicker_hard]
+
+- id: S025
+  ch: 3
+  loc: Floor 13 corridor
+  chars: []
+  cam: Low-angle tilt up to an old hanging sign
+  move: tilt_u
+  act: The sign reads FLOOR 13 — EMERGENCY WARD.
+  emo: Dread
+  desc: old hanging hospital sign, cracked enamel, reading FLOOR 13 EMERGENCY WARD, dim red light behind
+  anim: sign sways slightly on its chains, dust falls
+  audio: [{narr: [120.62, 122.42]}, {narr: [122.94, 127.90]}]
+  sfx: [[sign_chain, 1.0, -12], [low_hit, 5.6, -6]]
+  kf: {env: sign, text: "FLOOR 13 — EMERGENCY WARD"}
+  grade: ward
+
+- id: S026
+  ch: 3
+  loc: Floor 13 corridor
+  chars: [john]
+  cam: Close-up, slow push-in
+  move: push
+  act: John stares at the sign.
+  emo: Confused disbelief
+  desc: close-up of John in a dark corridor, green-tinted light, staring upward in disbelief
+  anim: swallows, breath unsteady
+  audio: [{cue: J07}]
+  kf: {crop: john_face}
+  grade: ward
+
+- id: S027
+  ch: 3
+  loc: Floor 13 corridor / elevator
+  chars: [john]
+  cam: Over-the-shoulder toward the elevator, doors closing
+  move: push
+  act: He turns back — the doors are closing. He rushes forward and presses the button.
+  emo: Panic
+  desc: elevator doors in the old corridor sliding shut, the gap of light narrowing
+  anim: doors close, the light inside vanishes
+  audio: [{narr: [128.50, 130.20]}, {narr: [130.70, 131.95]}, {narr: [132.38, 134.46]}]
+  sfx: [[elevator_doors, 1.2, -4], [footsteps_run, 3.0, -8], [button_press, 5.0, -4]]
+  kf: {env: elevator_out, style: old, doors: open}
+  kf2: {env: elevator_out, style: old, doors: closed}
+  x: [0.2, 0.55]
+  grade: ward
+
+- id: S028
+  ch: 3
+  loc: Floor 13 corridor
+  chars: [john]
+  cam: Close-up on John hammering the button
+  move: handheld
+  act: Nothing happens. He presses again. Nothing.
+  emo: Desperate
+  desc: close-up of John's face as he desperately presses the elevator call button
+  anim: frantic pressing, breathing hard
+  audio: [{narr: [134.96, 135.86]}, {cue: J14}, {narr: [136.22, 137.24]}, {narr: [137.74, 138.34]}]
+  sfx: [[button_press, 1.6, -4], [button_press, 2.2, -4], [button_press, 2.7, -4], [button_press, 5.8, -4]]
+  kf: {crop: john_face}
+  grade: ward
+  fx: [shake]
+
+- id: S029
+  ch: 3
+  loc: Floor 13 corridor
+  chars: []
+  cam: Static wide; the elevator dissolves into a solid wall
+  move: static
+  act: The elevator is gone. Only a solid, stained wall.
+  emo: Horror
+  desc: a solid stained hospital wall with peeling paint exactly where elevator doors used to be, no seam
+  anim: the doors melt into the wall texture, dust settles
+  audio: [{narr: [138.84, 140.50]}, {narr: [140.96, 144.54]}]
+  sfx: [[low_drone_swell, 0.0, -8], [wall_thud, 5.4, -6]]
+  kf: {env: elevator_out, style: old, doors: closed}
+  kf2: {env: wall}
+  x: [0.1, 0.6]
+  grade: ward
+
+- id: S030
+  ch: 3
+  loc: Floor 13 corridor
+  chars: [john]
+  cam: Close-up, static
+  move: static
+  act: John touches the wall. Impossible.
+  emo: Shock
+  desc: close-up of John, hand on the wall, face pale in the flicker
+  anim: hand trembles against the wall
+  audio: [{cue: J02}]
+  kf: {crop: john_face}
+  grade: ward
+  fx: [flicker]
+
+- id: S031
+  ch: 3
+  loc: Floor 13 corridor
+  chars: [john]
+  cam: Wide from behind John, he calls into the dark
+  move: static
+  act: 'John calls "Hello? … Anyone?" — his voice echoes away.'
+  emo: Fear
+  desc: John seen from behind, small figure in a long dark corridor, fog ahead
+  anim: fog drifts, his coat moves slightly
+  audio: [{cue: J03}, {gap: 0.8}, {cue: J04}]
+  tail: 1.2
+  kf: {env: corridor, style: old, figure_back: true}
+  grade: ward
+
+- id: S032
+  ch: 3
+  loc: Floor 13 corridor
+  chars: []
+  cam: Deep static shot down the corridor; a woman's voice calls from the dark
+  move: push_slow
+  act: From somewhere down the corridor a woman's voice calls, "Doctor…"
+  emo: Unease
+  desc: far end of the dark corridor, a half-open door with faint light, fog
+  anim: the door at the end creaks slightly, light pulses
+  audio: [{narr: [145.18, 147.60]}, {narr: [148.10, 151.58]}, {gap: 0.4}, {cue: NW1}]
+  kf: {env: corridor, style: old}
+  grade: ward
+
+- id: S033
+  ch: 3
+  loc: Floor 13 corridor
+  chars: [john]
+  cam: POV, handheld flashlight beam moving forward
+  move: dolly
+  act: John raises his flashlight and walks toward the sound.
+  emo: Cautious fear
+  desc: point-of-view flashlight beam cutting through fog in a dark abandoned corridor
+  anim: beam sways with footsteps, dust in the beam
+  audio: [{narr: [152.12, 155.94]}]
+  sfx: [[flashlight_click, 0.1, -6], [footsteps_walk, 0.8, -8]]
+  kf: {env: corridor, style: old, flashlight: true}
+  grade: ward
+
+# ═══════════════════════════════ CHAPTER 4 — THE PATIENTS ═══════════════════════════════
+- id: S034
+  ch: 4
+  loc: Floor 13 ward
+  chars: [patients]
+  cam: Wide establishing shot of the ward, slow push
+  move: push_slow
+  act: An old ward. Ten beds. Every bed occupied.
+  emo: Stillness, dread
+  desc: long old hospital ward with ten iron beds in two rows, a motionless patient in every bed facing the wall,
+    tall windows with moonlight, fog on the floor
+  anim: curtains stir, moonlight shifts, no one moves
+  audio: [{narr: [156.44, 158.14]}, {narr: [158.62, 159.84]}, {narr: [160.28, 161.98]}]
+  amb: ward_room
+  mus: ward
+  kf: {env: ward}
+  grade: ward
+
+- id: S035
+  ch: 4
+  loc: Floor 13 ward
+  chars: [patients]
+  cam: Slow pan along the beds
+  move: pan_r
+  act: The patients lie perfectly still, facing the walls.
+  emo: Unsettling calm
+  desc: patients in faded gowns lying perfectly still on their sides facing the wall, backs to camera
+  anim: slow breathing in perfect unison
+  audio: [{narr: [162.48, 164.82]}, {narr: [165.14, 166.36]}]
+  sfx: [[breath_unison, 0.5, -14]]
+  kf: {env: ward}
+  grade: ward
+
+- id: S036
+  ch: 4
+  loc: Floor 13 ward
+  chars: [john, patients]
+  cam: Low-angle tracking at bed height as John approaches the first bed
+  move: dolly
+  act: John approaches the first bed.
+  emo: Hesitation
+  desc: low angle along the iron bed frame toward a patient's back, John's legs approaching in the background
+  anim: footsteps, bed sheet rises with breath
+  audio: [{narr: [166.92, 168.68]}]
+  sfx: [[footsteps_walk, 0.2, -10]]
+  kf: {env: ward, close: true}
+  grade: ward
+
+- id: S037
+  ch: 4
+  loc: Floor 13 ward
+  chars: [patients]
+  cam: Medium close-up, slow push as the patient turns his head
+  move: push_slow
+  act: The patient slowly turns his head — pale face, sunken eyes, lips almost colourless.
+  emo: Horror
+  desc: young male patient, pale grey face, sunken hollow eyes, almost colourless lips, slowly turning his head
+    toward camera
+  anim: head turns very slowly, neck creaks, slow blink
+  audio: [{narr: [169.18, 171.26]}, {narr: [171.74, 173.12]}, {narr: [173.52, 174.94]}, {narr: [175.22, 177.46]}]
+  sfx: [[bed_creak, 0.6, -10]]
+  kf: {crop: patients_left}
+  grade: ward
+
+- id: S038
+  ch: 4
+  loc: Floor 13 ward
+  chars: [patients]
+  cam: Close-up, static
+  move: static
+  act: '"You are late, Doctor."'
+  emo: Eerie calm
+  desc: close-up of the young male patient staring at camera with hollow eyes
+  anim: lips barely move, unblinking
+  audio: [{cue: P01}]
+  kf: {crop: patients_left}
+  grade: ward
+
+- id: S039
+  ch: 4
+  loc: Floor 13 ward
+  chars: [john]
+  cam: Reverse close-up on John
+  move: push_slow
+  act: '"How do you know who I am?"'
+  emo: Confused
+  desc: close-up of John, confused and frightened, green ward light
+  anim: brow furrows, steps back half a step
+  audio: [{cue: J05}]
+  kf: {crop: john_face}
+  grade: ward
+
+- id: S040
+  ch: 4
+  loc: Floor 13 ward
+  chars: [patients]
+  cam: Close-up, very slow push
+  move: push_slow
+  act: '"John K. Smith. We have been waiting for you."'
+  emo: Menace
+  desc: the young patient's face, a faint unnatural smile forming
+  anim: slow unnatural smile, slow blink
+  audio: [{cue: P02}, {gap: 0.4}, {cue: P03}]
+  kf: {crop: patients_left}
+  grade: ward
+
+- id: S041
+  ch: 4
+  loc: Floor 13 ward
+  chars: [patients]
+  cam: Medium shot of the next bed; an elderly woman laughs softly
+  move: push_slow
+  act: John moves to the next bed. An elderly woman begins laughing softly.
+  emo: Creeping dread
+  desc: elderly woman patient with long grey hair and an old man beside her, both pale, staring upward
+  anim: shoulders shake with silent laughter, head tilts
+  audio: [{narr: [178.02, 180.00]}, {narr: [180.46, 183.04]}]
+  sfx: [[whisper_swirl, 2.6, -10]]
+  kf: {crop: patients_right}
+  grade: ward
+
+- id: S042
+  ch: 4
+  loc: Floor 13 ward, corner
+  chars: [patients]
+  cam: Rack focus to the dark corner of the ward
+  move: push
+  act: Another patient whispers from the corner — "You forgot us."
+  emo: Guilt, fear
+  desc: dark corner of the ward, a patient sitting upright in bed in shadow, only the outline visible
+  anim: the figure's head tilts, whisper
+  audio: [{narr: [183.56, 185.70]}, {cue: P04}]
+  kf: {env: ward, corner: true}
+  grade: ward
+
+- id: S043
+  ch: 4
+  loc: Floor 13 ward
+  chars: [patients]
+  cam: Wide static shot — every head turns at once
+  move: static
+  act: One by one — then all at once — every patient turns toward John, perfectly synchronized.
+  emo: Horror
+  desc: the whole ward, every patient now sitting up and facing camera, pale faces in the dark, perfectly still
+  anim: all heads turn in perfect synchronization, bed springs creak together
+  audio: [{narr: [186.94, 187.98]}, {narr: [188.36, 193.44]}]
+  sfx: [[bed_creak, 1.6, -8], [low_hit, 3.0, -4]]
+  kf: {env: ward}
+  kf2: {env: ward, turned: true}
+  x: [0.25, 0.55]
+  grade: ward
+
+- id: S044
+  ch: 4
+  loc: Floor 13 ward
+  chars: [patients]
+  cam: Slow push across the faces as they speak together
+  move: push_slow
+  act: 'Together: "You don''t remember… but we remember you."'
+  emo: Dread
+  desc: row of pale patients staring at camera, mouths moving together
+  anim: lips move in unison, slight smiles
+  audio: [{narr: [193.94, 195.04]}, {cue: P06}]
+  kf: {crop: patients_right}
+  grade: ward
+
+- id: S045
+  ch: 4
+  loc: Floor 13 ward
+  chars: [john]
+  cam: Close-up, camera pulls back as John backs away
+  move: pull
+  act: John backs away, heart pounding.
+  emo: Panic
+  desc: close-up of John backing away, terrified, sweat on his forehead
+  anim: backs away, breath shakes
+  audio: []
+  dur: 3.5
+  sfx: [[heartbeat_fast, 0.0, -6]]
+  kf: {crop: john_face}
+  grade: ward
+
+# ═══════════════════════════════ CHAPTER 5 — THE LITTLE GIRL ═══════════════════════════════
+- id: S046
+  ch: 5
+  loc: Floor 13 corridor
+  chars: [john]
+  cam: Handheld tracking shot, John runs from the ward
+  move: handheld
+  act: John runs out of the ward.
+  emo: Panic
+  desc: blurred dark corridor, motion, a doorway behind
+  anim: running motion blur, lights streak past
+  audio: [{narr: [195.50, 197.10]}]
+  sfx: [[footsteps_run, 0.0, -6]]
+  amb: ward13
+  mus: none
+  kf: {env: corridor, style: old}
+  grade: ward
+  fx: [shake]
+
+- id: S047
+  ch: 5
+  loc: Floor 13 corridor
+  chars: [john]
+  cam: Static; John stops dead as a child's voice speaks
+  move: static
+  act: A little girl's voice — "Doctor… don't leave."
+  emo: Startled
+  desc: dark corridor, a single bed visible in an alcove, fog
+  anim: fog curls, light hums
+  audio: [{narr: [197.58, 201.02]}, {gap: 0.5}, {cue: G01}]
+  mus: girl
+  kf: {env: corridor, style: old, girl_bed: true}
+  grade: ward
+
+- id: S048
+  ch: 5
+  loc: Floor 13 corridor alcove
+  chars: [little_girl]
+  cam: Medium shot, slow push-in
+  move: push_slow
+  act: A little girl sits on a hospital bed, hugging an old cloth doll.
+  emo: Innocent menace
+  desc: little girl sitting on an old hospital bed in a dark corridor, holding a worn cloth rag doll with button eyes
+  anim: she sways slightly, hair moves, she does not blink
+  audio: [{narr: [201.54, 202.22]}, {narr: [202.72, 205.08]}, {narr: [205.40, 207.14]}]
+  kf: {crop: girl_doll}
+  grade: ward
+
+- id: S049
+  ch: 5
+  loc: Floor 13 corridor alcove
+  chars: [little_girl]
+  cam: Close-up of her face, very slow push
+  move: push_slow
+  act: She stares directly at him.
+  emo: Unsettling
+  desc: close-up of the little girl's pale face, large dark-red eyes staring straight at camera, black hair
+  anim: unblinking stare, slow head tilt
+  audio: [{narr: [207.68, 209.82]}]
+  kf: {crop: girl_face}
+  grade: ward
+
+- id: S050
+  ch: 5
+  loc: Floor 13 corridor
+  chars: [john]
+  cam: Close-up of John
+  move: static
+  act: '"Why are you here?"'
+  emo: Fear, pity
+  desc: close-up of John looking down at the child, fearful but concerned
+  anim: speaks softly, swallows
+  audio: [{cue: J06}]
+  kf: {crop: john_face}
+  grade: ward
+
+- id: S051
+  ch: 5
+  loc: Floor 13 corridor alcove
+  chars: [little_girl]
+  cam: Extreme close-up, she tilts her head
+  move: push
+  act: '"Because tonight… it''s your turn."'
+  emo: Chilling innocence
+  desc: extreme close-up of the girl's eyes and face as she tilts her head
+  anim: slow head tilt, faint smile, doll's button eye glints
+  audio: [{cue: G02}]
+  kf: {crop: girl_face}
+  grade: ward
+
+- id: S052
+  ch: 5
+  loc: Floor 13 corridor
+  chars: []
+  cam: Static; the lights stutter — the bed is empty
+  move: static
+  act: The lights flicker. When they return, the bed is empty. John runs.
+  emo: Shock
+  desc: the empty hospital bed in the alcove, sheets still dented, lights strobing
+  anim: strobe flicker, the girl vanishes between flashes
+  audio: []
+  dur: 3.2
+  sfx: [[electric_flicker, 0.1, -4], [glitch, 1.0, -6], [footsteps_run, 1.9, -8]]
+  kf: {env: corridor, style: old, girl_bed: true, empty_bed: true}
+  grade: ward
+  fx: [flicker_hard]
+
+# ═══════════════════════════════ CHAPTER 6 — THE MEDICAL RECORD ═══════════════════════════════
+- id: S053
+  ch: 6
+  loc: Floor 13 corridor
+  chars: []
+  cam: Tracking shot ending on a door marked MEDICAL RECORDS
+  move: dolly
+  act: He runs until he finds a room marked Medical Records.
+  emo: Desperate hope
+  desc: old wooden door with frosted glass panel lettered MEDICAL RECORDS, in a dark corridor
+  anim: approach, the door handle rattles
+  audio: [{narr: [210.24, 214.78]}]
+  mus: none
+  kf: {env: door_sign, text: "MEDICAL RECORDS"}
+  grade: ward
+
+- id: S054
+  ch: 6
+  loc: Medical records room
+  chars: []
+  cam: Wide shot as the door creaks open, slow push
+  move: push_slow
+  act: Hundreds of old files, dusty cabinets, broken chairs, papers across the floor.
+  emo: Unease
+  desc: dusty medical records room, tall shelves of old files, metal filing cabinets, a broken chair, papers
+    scattered on the floor, moonlight through blinds
+  anim: dust drifts in the light, a paper slides on the floor
+  audio: [{narr: [215.20, 216.20]}, {narr: [216.70, 219.10]}, {narr: [219.38, 223.74]}]
+  sfx: [[door_creak, 0.0, -6]]
+  amb: records
+  kf: {env: records}
+  grade: ward
+
+- id: S055
+  ch: 6
+  loc: Medical records room
+  chars: [john]
+  cam: Flashlight POV sweeping the shelves
+  move: pan_r
+  act: He turns on his phone's flashlight and searches for a way out.
+  emo: Searching
+  desc: phone flashlight beam sweeping across dusty file shelves in a dark records room
+  anim: beam sweeps, dust in the light
+  audio: [{narr: [224.20, 228.06]}]
+  sfx: [[flashlight_click, 0.1, -8]]
+  kf: {env: records, flashlight: true}
+  grade: ward
+
+- id: S056
+  ch: 6
+  loc: Medical records room
+  chars: []
+  cam: Slow push-in on a single file lying open on a desk
+  move: push
+  act: A file lies open on the desk.
+  emo: Dread
+  desc: an old manila patient file lying on a dusty wooden desk in a flashlight beam
+  anim: beam settles on the file, dust motes
+  audio: [{narr: [228.56, 231.80]}, {narr: [232.28, 235.10]}]
+  sfx: [[low_drone_swell, 2.0, -8]]
+  mus: record
+  kf: {env: doc, page: cover, far: true}
+  grade: ward
+
+- id: S057
+  ch: 6
+  loc: Medical records room
+  chars: []
+  cam: Top-down insert of the file cover — his name, his photo
+  move: push_slow
+  act: 'JOHN K. SMITH — his photograph, date of birth, address, hospital ID number.'
+  emo: Blood runs cold
+  desc: top-down close-up of an old hospital patient file cover with a clipped photograph of John, typed name
+    JOHN K. SMITH, date of birth, address and ID number
+  anim: flashlight trembles over the cover
+  audio: [{narr: [235.58, 237.26]}, {narr: [237.74, 239.76]}, {narr: [240.18, 241.22]}, {narr: [241.54, 242.52]}, {narr: [242.94, 245.60]}]
+  kf: {env: doc, page: cover}
+  grade: paper
+
+- id: S058
+  ch: 6
+  loc: Medical records room
+  chars: [john]
+  cam: Insert; trembling hands open the file — handheld
+  move: handheld
+  act: John opens the file with trembling hands. The first page contains a disturbing report.
+  emo: Fear
+  desc: close-up of John's trembling hands opening the old file, flashlight in the other hand
+  anim: hands shake, page lifts
+  audio: [{narr: [246.00, 248.64]}, {narr: [249.14, 251.84]}]
+  sfx: [[paper_turn, 0.8, -6]]
+  kf: {env: doc, page: p1}
+  grade: paper
+  fx: [shake]
+
+- id: S059
+  ch: 6
+  loc: Medical records room
+  chars: []
+  cam: Slow push across the typed report (readable)
+  move: push_slow
+  act: '"Patient admitted at 2:13 AM. Patient repeatedly claims to be a doctor…"'
+  emo: Shock
+  desc: close-up of a typed old hospital admission report page, legible text, coffee stains, flashlight glow
+  anim: flashlight moves along the lines
+  audio: []
+  dur: 7.0
+  sfx: [[heartbeat_slow, 0.0, -10]]
+  kf: {env: doc, page: p1, close: true}
+  grade: paper
+
+- id: S060
+  ch: 6
+  loc: Medical records room
+  chars: []
+  cam: Page flip, push-in on the date
+  move: push
+  act: The next page — "Patient reports seeing Floor 13 in the elevator." Dated eighteen years ago.
+  emo: Disbelief
+  desc: second page of the old report, the date circled, typed line about Floor 13
+  anim: page flips, light settles on the date
+  audio: [{narr: [252.34, 253.80]}, {narr: [254.28, 257.00]}]
+  sfx: [[paper_turn, 0.1, -6]]
+  tail: 1.8
+  kf: {env: doc, page: p2}
+  grade: paper
+
+- id: S061
+  ch: 6
+  loc: Medical records room
+  chars: []
+  cam: Extreme close-up push on the final line in red ink
+  move: push
+  act: 'Final line, in red: "STATUS: NEVER DISCHARGED."'
+  emo: Terror
+  desc: extreme close-up of red handwritten ink at the bottom of the page reading STATUS NEVER DISCHARGED
+  anim: the red ink looks wet, flashlight trembles
+  audio: [{narr: [257.46, 258.68]}, {narr: [258.96, 261.34]}, {narr: [261.80, 262.62]}, {narr: [263.00, 264.38]}]
+  sfx: [[low_hit, 5.6, -2]]
+  kf: {env: doc, page: p3}
+  grade: paper
+
+- id: S062
+  ch: 6
+  loc: Medical records room
+  chars: [john]
+  cam: Close-up, Dutch angle, push
+  move: push
+  act: John begins to panic.
+  emo: Panic
+  desc: close-up of John in flashlight under-glow, horrified, Dutch angle
+  anim: rapid breathing, eyes dart
+  audio: []
+  dur: 3.2
+  sfx: [[heartbeat_fast, 0.0, -6]]
+  kf: {crop: john_face}
+  grade: ward
+
+- id: S063
+  ch: 6
+  loc: Medical records room
+  chars: [john]
+  cam: Static; a voice from behind him
+  move: static
+  act: A voice behind him — "Now you remember, Doctor."
+  emo: Frozen
+  desc: John's back in the foreground, the dark doorway behind him out of focus
+  anim: John freezes, does not turn yet
+  audio: [{narr: [264.82, 266.72]}, {gap: 0.6}, {cue: OD01}]
+  mus: none
+  kf: {env: doorway, figure: false}
+  grade: ward
+
+# ═══════════════════════════════ CHAPTER 7 — THE OLD DOCTOR ═══════════════════════════════
+- id: S064
+  ch: 7
+  loc: Medical records room
+  chars: [john]
+  cam: Close-up as he slowly turns
+  move: static
+  act: John slowly turns.
+  emo: Dread
+  desc: close-up of John turning his head over his shoulder, flashlight light from below
+  anim: slow turn, breath held
+  audio: [{narr: [267.28, 268.78]}]
+  amb: records
+  mus: doctor
+  kf: {crop: john_face}
+  grade: ward
+
+- id: S065
+  ch: 7
+  loc: Records room doorway
+  chars: [old_doctor]
+  cam: Wide static from John's POV; a silhouette in the doorway
+  move: push_slow
+  act: An old man stands in the doorway, wearing a faded white doctor's coat.
+  emo: Menace
+  desc: silhouette of a thin old doctor in a faded white coat standing in a dark doorway, backlit by a dim corridor light
+  anim: completely still, fog moves around his feet
+  audio: [{narr: [269.26, 271.32]}, {narr: [271.62, 273.72]}]
+  kf: {env: doorway, figure: true}
+  grade: ward
+
+- id: S066
+  ch: 7
+  loc: Records room
+  chars: [old_doctor]
+  cam: Slow push-in to his face
+  move: push_slow
+  act: Sunken eyes, deep wrinkles; he looks as though he hasn't slept in decades.
+  emo: Unnerving calm
+  desc: close-up of the old doctor's face, sunken eyes, deep wrinkles, faint scar, expressionless
+  anim: slow blink, no other movement
+  audio: [{narr: [274.20, 278.70]}, {narr: [279.16, 281.88]}]
+  kf: {crop: old_doctor_face}
+  grade: ward
+
+- id: S067
+  ch: 7
+  loc: Records room
+  chars: [john]
+  cam: Close-up of John
+  move: static
+  act: '"What is this place? Why is my name in that file?"'
+  emo: Frightened anger
+  desc: close-up of John confronting the old doctor, frightened, flashlight shaking
+  anim: speaks urgently
+  audio: [{cue: J08}, {gap: 0.3}, {cue: J09}]
+  kf: {crop: john_face}
+  grade: ward
+
+- id: S068
+  ch: 7
+  loc: Records room
+  chars: [old_doctor]
+  cam: Close-up, static
+  move: static
+  act: '"This floor belongs to those who never left."'
+  emo: Hollow calm
+  desc: the old doctor's face half in shadow
+  anim: lips move slowly, eyes unmoving
+  audio: [{cue: OD02}]
+  kf: {crop: old_doctor_face}
+  grade: ward
+
+- id: S069
+  ch: 7
+  loc: Records room
+  chars: [john, old_doctor]
+  cam: Medium two-shot, handheld
+  move: handheld
+  act: '"I''m alive! I was working downstairs! I need to get out of here!"'
+  emo: Desperate
+  desc: medium shot of John shouting, the old doctor's shoulder in the foreground
+  anim: John gestures, steps forward, breath ragged
+  audio: [{cue: J10}, {gap: 0.2}, {cue: J11}]
+  kf: {crop: john_medium}
+  grade: ward
+
+- id: S070
+  ch: 7
+  loc: Records room
+  chars: [old_doctor]
+  cam: Close-up, slow push
+  move: push_slow
+  act: '"Everyone says the same thing."'
+  emo: Indifferent
+  desc: the old doctor tilting his head slightly
+  anim: slow tilt, faint exhale
+  audio: [{cue: OD03}]
+  kf: {crop: old_doctor_face}
+  grade: ward
+
+- id: S071
+  ch: 7
+  loc: Records room
+  chars: [john]
+  cam: Close-up
+  move: static
+  act: '"Where is the elevator?"'
+  emo: Pleading
+  desc: close-up of John, pleading
+  anim: swallows, eyes wet
+  audio: [{cue: J12}]
+  kf: {crop: john_face}
+  grade: ward
+
+- id: S072
+  ch: 7
+  loc: Records room
+  chars: [old_doctor]
+  cam: Close-up, very slow push
+  move: push_slow
+  act: '"Find it. If it allows you to return, you may leave."'
+  emo: Cryptic
+  desc: the old doctor's face, a single light source above
+  anim: lips move slowly, long pause between sentences
+  audio: [{cue: OD04}, {gap: 0.6}, {cue: OD05}]
+  kf: {crop: old_doctor_face}
+  grade: ward
+
+- id: S073
+  ch: 7
+  loc: Records room
+  chars: [john]
+  cam: Close-up
+  move: push_slow
+  act: '"And if it doesn''t?"'
+  emo: Dread
+  desc: close-up of John, whispering
+  anim: barely audible, eyes fixed
+  audio: [{cue: J13}]
+  kf: {crop: john_face}
+  grade: ward
+
+- id: S074
+  ch: 7
+  loc: Records room
+  chars: [old_doctor]
+  cam: Extreme close-up push as he smiles
+  move: push
+  act: He smiles. '"Then you''ll be waiting for the next doctor."'
+  emo: Sinister
+  desc: extreme close-up of the old doctor's face as a thin smile spreads
+  anim: slow smile, eyes narrow
+  audio: [{cue: OD06}]
+  tail: 1.0
+  kf: {crop: old_doctor_face}
+  grade: ward
+
+- id: S075
+  ch: 7
+  loc: Records room / corridor
+  chars: []
+  cam: Static; every light dies
+  move: static
+  act: Suddenly every light in the corridor goes out.
+  emo: Shock
+  desc: total darkness, the last tube light dying
+  anim: lights cut out one by one
+  audio: [{narr: [282.26, 285.04]}]
+  sfx: [[power_down, 0.6, -2]]
+  amb: dark
+  mus: none
+  kf: {env: corridor, style: old}
+  grade: ward
+  fx: [blackout]
+
+- id: S076
+  ch: 7
+  loc: Floor 13 corridor, darkness
+  chars: []
+  cam: Slow push toward a glowing red EXIT sign in total darkness
+  move: push_slow
+  act: A red EXIT sign glows. Far away, a hospital bell rings.
+  emo: Dread
+  desc: a single red glowing EXIT sign in complete darkness, faint red haze on the ceiling
+  anim: sign buzzes and flickers faintly
+  audio: [{narr: [285.46, 288.14]}, {narr: [288.52, 291.48]}]
+  sfx: [[hospital_bell, 4.6, -4]]
+  tail: 1.6
+  kf: {env: exit}
+  grade: red
+
+# ═══════════════════════════════ CHAPTER 8 — THE CORRIDOR ═══════════════════════════════
+- id: S077
+  ch: 8
+  loc: Floor 13 corridor (red emergency light)
+  chars: [john]
+  cam: Fast handheld dolly down the red corridor
+  move: handheld
+  act: John runs. He doesn't know where — only that he has to escape.
+  emo: Panic
+  desc: long corridor lit only by red emergency light, motion, shadows
+  anim: running, lights streak, breathing loud
+  audio: [{narr: [291.98, 292.92]}, {narr: [293.22, 294.84]}, {narr: [295.10, 297.24]}]
+  sfx: [[footsteps_run, 0.0, -6]]
+  amb: ward13
+  mus: chase
+  kf: {env: corridor, style: old, red: true}
+  grade: red
+  fx: [shake]
+
+- id: S078
+  ch: 8
+  loc: Floor 13 corridor
+  chars: [john]
+  cam: Over-the-shoulder; he throws a door open onto… the same corridor
+  move: push
+  act: He opens a door — and finds the same hospital corridor.
+  emo: Confusion
+  desc: a door thrown open revealing an identical red-lit corridor beyond, like a mirror
+  anim: door swings, reveals the corridor
+  audio: [{narr: [297.68, 298.78]}, {narr: [299.12, 300.60]}]
+  sfx: [[door_slam, 0.0, -4]]
+  kf: {env: corridor, style: old, red: true, frame: door}
+  grade: red
+
+- id: S079
+  ch: 8
+  loc: Endless corridor
+  chars: [john]
+  cam: Locked-off repeating corridor — same doors, same wheelchairs, same lights
+  move: dolly
+  act: Another door. The same corridor. The same wheelchairs. The same flickering lights. He runs faster.
+  emo: Desperation
+  desc: impossibly repeating corridor, identical doors, wheelchairs and flickering lights receding forever
+  anim: the same flicker pattern repeats exactly, looping
+  audio: [{narr: [300.98, 301.90]}, {narr: [302.30, 303.54]}, {narr: [303.90, 305.24]}, {narr: [305.50, 307.24]}, {narr: [307.62, 308.72]}]
+  sfx: [[door_slam, 0.0, -6], [footsteps_run, 5.0, -6]]
+  kf: {env: corridor, style: endless, red: true, props: true}
+  grade: red
+  fx: [flicker]
+
+- id: S080
+  ch: 8
+  loc: Endless corridor
+  chars: [little_girl]
+  cam: Wide, static; the girl stands in the middle of the hallway
+  move: push_slow
+  act: The little girl stands in the middle of the hallway, holding her doll.
+  emo: Dread
+  desc: a small barefoot girl in a hospital gown standing in the middle of a long red-lit corridor, holding a doll
+  anim: she stands perfectly still, hair stirs
+  audio: [{narr: [309.10, 312.70]}, {narr: [313.16, 314.52]}]
+  kf: {env: corridor, style: old, red: true, girl_stand: true}
+  grade: red
+
+- id: S081
+  ch: 8
+  loc: Endless corridor
+  chars: [little_girl]
+  cam: Close-up
+  move: push_slow
+  act: '"Doctor… why are you running?"'
+  emo: Unsettling innocence
+  desc: close-up of the girl's face in red light
+  anim: head tilts, unblinking
+  audio: [{cue: G03}]
+  kf: {crop: girl_face}
+  grade: red
+
+- id: S082
+  ch: 8
+  loc: Endless corridor
+  chars: [little_girl]
+  cam: Slow push into the doll's face
+  move: push
+  act: The doll's face looks exactly like John's.
+  emo: Horror
+  desc: close-up of the cloth doll in the girl's arms; the doll's stitched face resembles John, with a tiny white coat
+  anim: the doll's button eye catches the light
+  audio: [{narr: [314.94, 316.04]}, {narr: [316.30, 317.28]}, {narr: [317.78, 320.64]}]
+  sfx: [[low_hit, 4.4, -4]]
+  kf: {crop: girl_doll, doll_john: true}
+  grade: red
+
+- id: S083
+  ch: 8
+  loc: Endless corridor
+  chars: [john]
+  cam: Close-up, static
+  move: static
+  act: '"No…"'
+  emo: Horror
+  desc: close-up of John's face drained of colour in red light
+  anim: shakes his head slightly
+  audio: [{cue: J20}]
+  kf: {crop: john_face}
+  grade: red
+
+- id: S084
+  ch: 8
+  loc: Endless corridor
+  chars: [patients]
+  cam: Wide static looking back; patients appear one by one behind him
+  move: static
+  act: Behind John, the patients appear — one by one. They don't run. They just stand, watching.
+  emo: Dread
+  desc: long red corridor with pale patients in gowns standing motionless at intervals, staring at camera
+  anim: figures fade into existence one at a time, never moving
+  audio: [{narr: [321.10, 324.50]}, {narr: [324.80, 327.42]}, {narr: [327.72, 328.54]}]
+  sfx: [[whisper_swirl, 1.0, -12]]
+  kf: {env: corridor, style: old, red: true}
+  kf2: {env: corridor, style: old, red: true, figures: 6}
+  x: [0.1, 0.8]
+  grade: red
+
+- id: S085
+  ch: 8
+  loc: Endless corridor
+  chars: [john]
+  cam: Handheld run toward the end of the hallway
+  move: handheld
+  act: John sprints toward the end of the hallway.
+  emo: Desperation
+  desc: red corridor rushing toward camera, a distant end wall
+  anim: sprinting, heavy breathing
+  audio: [{narr: [328.94, 331.18]}]
+  sfx: [[footsteps_run, 0.0, -4], [heartbeat_fast, 0.0, -10]]
+  kf: {env: corridor, style: old, red: true}
+  grade: red
+  fx: [shake]
+
+# ═══════════════════════════════ CHAPTER 9 — THE ESCAPE ═══════════════════════════════
+- id: S086
+  ch: 9
+  loc: End of the corridor
+  chars: []
+  cam: Slow push toward an elevator, its doors open, light spilling out
+  move: push
+  act: There it is — an elevator, doors already open.
+  emo: Hope
+  desc: an old elevator at the end of the dark corridor, doors open, cold white light spilling out onto the floor
+  anim: light flickers inside the car, doors twitch as if about to close
+  audio: [{narr: [331.52, 332.50]}, {narr: [332.80, 333.68]}, {narr: [334.00, 335.72]}]
+  mus: escape
+  kf: {env: elevator_out, style: old, doors: open}
+  grade: ward
+
+- id: S087
+  ch: 9
+  loc: Elevator interior
+  chars: [john]
+  cam: Insert; John hammers the button for floor 1
+  move: handheld
+  act: He jumps inside. The display flashes. The elevator suddenly begins to descend.
+  emo: Desperate hope
+  desc: elevator button panel, John's finger pressing 1 repeatedly, the indicator flashing
+  anim: frantic pressing, panel lights flash
+  audio: [{narr: [336.06, 337.20]}, {narr: [337.60, 338.76]}, {narr: [339.08, 341.24]}]
+  sfx: [[button_press, 1.0, -4], [button_press, 1.4, -4], [elevator_doors, 1.8, -6], [elevator_motor_start, 3.4, -4]]
+  amb: elevator
+  kf: {env: panel, lit: "1"}
+  grade: ward
+  fx: [flicker]
+
+- id: S088
+  ch: 9
+  loc: Elevator interior
+  chars: []
+  cam: Close-up of the indicator glitching; the PA crackles
+  move: push_slow
+  act: '"Dr. John K. Smith… your shift is not over yet."'
+  emo: Menace
+  desc: elevator speaker grille and red LED indicator glitching between symbols
+  anim: display glitches, speaker grille vibrates
+  audio: [{gap: 0.4}, {cue: PA01}]
+  sfx: [[pa_chime, 0.0, -8], [static_burst, 0.2, -10]]
+  kf: {env: display, seq: [[0, "13"], [1.5, "##"], [2.0, "13"], [4.0, "##"], [4.4, "13"]], red: true}
+  fx: [flicker]
+
+- id: S089
+  ch: 9
+  loc: Elevator interior
+  chars: []
+  cam: Extreme close-up of the display counting down
+  move: static
+  act: 13… 12… 11… 10…
+  emo: Suspense
+  desc: red LED indicator counting down with a down arrow
+  anim: digits count down, cable noise
+  audio: [{narr: [341.64, 342.40]}, {narr: [342.82, 343.50]}, {narr: [343.96, 344.66]}, {narr: [345.14, 345.70]}]
+  sfx: [[cable_creak, 1.0, -8]]
+  kf: {env: display, seq: [[0, "13"], [1.4, "12"], [2.4, "11"], [3.4, "10"]], down: true}
+
+- id: S090
+  ch: 9
+  loc: Elevator interior
+  chars: []
+  cam: Display racing down, camera shaking with the car
+  move: handheld
+  act: 9… 6… 3… 1 — the car brakes hard.
+  emo: Peak tension
+  desc: LED indicator racing down, the car vibrating
+  anim: digits race, shaking intensifies then stops
+  audio: []
+  dur: 3.6
+  sfx: [[elevator_jolt, 3.0, -4]]
+  kf: {env: display, seq: [[0, "9"], [0.5, "7"], [1.0, "5"], [1.5, "3"], [2.1, "2"], [2.8, "1"]], down: true}
+  fx: [shake]
+
+- id: S091
+  ch: 9
+  loc: Elevator -> lobby
+  chars: []
+  cam: From inside the car, the doors open onto blinding morning light
+  move: push_slow
+  act: The elevator stops. The doors open.
+  emo: Relief
+  desc: elevator doors opening onto a bright hospital lobby flooded with morning sunlight
+  anim: doors slide open, light floods in, lens bloom
+  audio: [{narr: [346.06, 347.98]}, {narr: [348.34, 349.34]}]
+  sfx: [[elevator_ding, 0.3, -8], [elevator_doors, 1.6, -6]]
+  mus: none
+  kf: {env: elevator_out, style: inside_closed_morning}
+  kf2: {env: lobby, frame: elevator}
+  x: [0.45, 0.95]
+  grade: morning
+
+- id: S092
+  ch: 9
+  loc: Hospital lobby, morning
+  chars: []
+  cam: Wide establishing shot, sunlight through tall windows
+  move: push_slow
+  act: Morning sunlight fills the lobby.
+  emo: Relief
+  desc: modern hospital lobby in warm morning sunlight, tall windows, reception desk, plants, soft lens flare
+  anim: dust in sunbeams, people pass in soft focus
+  audio: [{narr: [349.70, 351.64]}]
+  amb: lobby_morning
+  mus: relief
+  kf: {env: lobby}
+  grade: morning
+
+- id: S093
+  ch: 9
+  loc: Hospital lobby
+  chars: [john]
+  cam: Medium shot; John stumbles out, gasping
+  move: handheld
+  act: John stumbles out onto the floor, gasping for breath.
+  emo: Exhausted relief
+  desc: John stumbling out of the elevator into the bright lobby, sweat, gasping, coat dishevelled
+  anim: catches his breath, hand on knee
+  audio: [{narr: [352.08, 355.20]}]
+  kf: {crop: john_medium}
+  grade: morning
+
+- id: S094
+  ch: 9
+  loc: Hospital lobby
+  chars: []
+  cam: Insert of the lobby clock, static
+  move: push_slow
+  act: The clock reads 6:00 AM.
+  emo: Disorientation
+  desc: hospital lobby wall clock reading 6:00, morning light
+  anim: second hand ticks
+  audio: [{narr: [355.60, 356.88]}]
+  sfx: [[clock_tick, 0.0, -12]]
+  kf: {env: clock, time: "6:00"}
+  grade: morning
+
+# ═══════════════════════════════ CHAPTER 10 — THE TWIST ═══════════════════════════════
+- id: S095
+  ch: 10
+  loc: Hospital lobby
+  chars: [nurse]
+  cam: Slow pan across the busy lobby
+  move: pan_r
+  act: The lobby is busy again — nurses at desks, patients waiting, sunlight through the windows.
+  emo: Normality
+  desc: busy hospital lobby in the morning, nurses at the reception desk, patients waiting on chairs, sunlight
+  anim: people move naturally in soft focus
+  audio: [{narr: [357.30, 359.18]}, {narr: [359.56, 361.48]}, {narr: [361.74, 362.84]}, {narr: [363.10, 365.38]}]
+  kf: {env: lobby, people: true}
+  grade: morning
+
+- id: S096
+  ch: 10
+  loc: Hospital lobby
+  chars: [nurse]
+  cam: Medium shot; the nurse rushes toward camera
+  move: pull
+  act: A nurse sees John and rushes toward him.
+  emo: Worry
+  desc: the night nurse hurrying toward camera across the bright lobby, clipboard in hand
+  anim: walking quickly, worried face
+  audio: [{narr: [365.50, 368.28]}]
+  sfx: [[footsteps_walk, 0.4, -10]]
+  kf: {crop: nurse_clipboard}
+  grade: morning
+
+- id: S097
+  ch: 10
+  loc: Hospital lobby
+  chars: [nurse]
+  cam: Close-up
+  move: push_slow
+  act: '"Dr. Smith! Where have you been? We''ve been looking for you all night!"'
+  emo: Relieved worry
+  desc: close-up of the nurse, worried, in warm morning light
+  anim: speaks quickly, eyebrows raised
+  audio: [{cue: N01}]
+  kf: {crop: nurse_face}
+  grade: morning
+
+- id: S098
+  ch: 10
+  loc: Hospital lobby
+  chars: [john]
+  cam: Close-up
+  move: static
+  act: '"I was on the thirteenth floor…"'
+  emo: Shaken
+  desc: close-up of John in warm light, haunted eyes
+  anim: speaks haltingly
+  audio: [{cue: J15}]
+  kf: {crop: john_face}
+  grade: morning
+
+- id: S099
+  ch: 10
+  loc: Hospital lobby
+  chars: [nurse]
+  cam: Close-up
+  move: static
+  act: '"What thirteenth floor?"'
+  emo: Confused
+  desc: close-up of the nurse, puzzled
+  anim: tilts head, frowns
+  audio: [{cue: N02}]
+  kf: {crop: nurse_face}
+  grade: morning
+
+- id: S100
+  ch: 10
+  loc: Hospital lobby
+  chars: [john, nurse]
+  cam: Medium two-shot
+  move: push_slow
+  act: '"The patients… an old doctor… a little girl… I swear it was there."'
+  emo: Desperate to be believed
+  desc: medium shot of John explaining, the nurse beside him listening
+  anim: John gestures upward, the nurse listens with growing worry
+  audio: [{cue: J16}, {gap: 0.4}, {cue: J17}]
+  kf: {crop: john_medium}
+  grade: morning
+
+- id: S101
+  ch: 10
+  loc: Hospital lobby
+  chars: [nurse]
+  cam: Close-up, slow push
+  move: push_slow
+  act: '"Doctor… this hospital has never had a thirteenth floor."'
+  emo: Frightened
+  desc: close-up of the nurse looking frightened, voice low
+  anim: glances at the elevator, lowers her voice
+  audio: [{cue: N03}]
+  mus: twist
+  kf: {crop: nurse_face}
+  grade: morning
+
+- id: S102
+  ch: 10
+  loc: Lobby elevator
+  chars: []
+  cam: Insert of the elevator panel — buttons 1 to 12, nothing else
+  move: push_slow
+  act: John checks the panel. There is no 13.
+  emo: Disbelief
+  desc: close-up of the elevator button panel in daylight showing only buttons 1 to 12, no 13
+  anim: John's finger hovers over the space above 12
+  audio: []
+  dur: 4.2
+  sfx: [[button_press, 2.0, -12]]
+  kf: {env: panel, lit: ""}
+  grade: morning
+
+- id: S103
+  ch: 10
+  loc: Reception computer
+  chars: []
+  cam: Insert of the staff record on a screen
+  move: push_slow
+  act: The staff file — he joined the hospital yesterday. No Floor 13 in any record.
+  emo: Disbelief
+  desc: computer monitor at reception showing a staff record for Dr. John K. Smith with a start date of yesterday
+  anim: cursor blinks, screen glow
+  audio: []
+  dur: 5.0
+  sfx: [[keyboard, 0.3, -12]]
+  kf: {env: staff_record}
+  grade: morning
+
+- id: S104
+  ch: 10
+  loc: Hospital lobby
+  chars: [nurse]
+  cam: Medium close-up
+  move: static
+  act: '"Maybe you need some rest, Doctor."'
+  emo: Gentle concern
+  desc: the nurse with clipboard, speaking gently
+  anim: soft concerned smile, touches his arm
+  audio: [{cue: N04}]
+  kf: {crop: nurse_clipboard}
+  grade: morning
+
+- id: S105
+  ch: 10
+  loc: Hospital lobby
+  chars: [john]
+  cam: Close-up
+  move: push_slow
+  act: '"Maybe I just need some rest."'
+  emo: Hollow
+  desc: close-up of John, exhausted, trying to believe it
+  anim: nods slowly, looks down
+  audio: [{cue: J19}]
+  kf: {crop: john_face}
+  grade: morning
+
+- id: S106
+  ch: 10
+  loc: Hospital lobby
+  chars: [john]
+  cam: Wide from behind as John walks away across the lobby
+  move: static
+  act: John walks away, telling himself it was all just a nightmare.
+  emo: Denial
+  desc: John seen from behind walking away across the sunlit lobby toward the reception desk
+  anim: slow walk, shoulders slumped
+  audio: [{narr: [368.36, 369.74]}, {narr: [370.02, 373.18]}]
+  kf: {env: lobby, figure_back: true}
+  grade: morning
+
+- id: S107
+  ch: 10
+  loc: Reception desk
+  chars: []
+  cam: Slow push to an old register on the desk; its pages turn by themselves
+  move: push
+  act: An old register lying open begins turning pages by itself — then stops on a blank page.
+  emo: Creeping dread
+  desc: an old leather-bound register lying open on the reception desk, pages fluttering by themselves, no wind
+  anim: pages flip on their own, then stop on a blank page
+  audio: [{narr: [373.74, 375.64]}, {narr: [375.98, 380.24]}, {narr: [380.78, 382.80]}, {narr: [383.34, 385.20]}]
+  sfx: [[pages_flutter, 2.2, -4]]
+  mus: none
+  kf: {env: register, written: false}
+  grade: morning
+
+- id: S108
+  ch: 10
+  loc: Reception desk
+  chars: []
+  cam: Top-down extreme close-up; red handwriting appears letter by letter
+  move: push_slow
+  act: "DR. JOHN K. SMITH — FLOOR 13 — SHIFT TONIGHT: 2:13 AM."
+  emo: Horror
+  desc: top-down close-up of the register page as red ink handwriting appears by itself
+  anim: words write themselves in red ink
+  audio: [{narr: [385.80, 387.70]}, {narr: [388.18, 388.70]}, {narr: [389.00, 389.74]}, {narr: [390.20, 390.74]}, {narr: [391.14, 391.72]}, {narr: [392.10, 393.52]}]
+  sfx: [[pen_scratch, 0.3, -8], [low_hit, 7.2, -4]]
+  kf: {env: register, written: false}
+  kf2: {env: register, written: true}
+  x: [0.05, 0.85]
+  grade: morning
+
+- id: S109
+  ch: 10
+  loc: Reception desk
+  chars: [john]
+  cam: Close-up, slow push; the warmth drains from the image
+  move: push_slow
+  act: '"This can''t be happening…"'
+  emo: Traumatized
+  desc: close-up of John staring at the register, the warm light turning cold
+  anim: colour drains, his breath shakes
+  audio: [{cue: J21}]
+  tail: 1.0
+  kf: {crop: john_face}
+  grade: night
+  fade_out: 1.2
+
+- id: S110
+  ch: 10
+  loc: Black
+  chars: []
+  cam: Cut to black
+  move: static
+  act: Cut to night.
+  emo: Silence
+  desc: black
+  anim: none
+  audio: []
+  dur: 2.0
+  sfx: [[sub_drop, 0.2, -6]]
+  amb: none
+  kf: {env: black}
+
+- id: S111
+  ch: 10
+  loc: Reception, CCTV view, night
+  chars: []
+  cam: Locked-off high-angle CCTV camera
+  move: static
+  act: CCTV footage of the empty reception at night.
+  emo: Cold dread
+  desc: grainy black-and-white CCTV view from a high corner of an empty hospital reception at night, timestamp overlay
+  anim: video noise, scan lines, nothing moves
+  audio: [{narr: [394.10, 399.34]}]
+  amb: cctv
+  mus: final
+  kf: {env: cctv, view: reception}
+  grade: cctv
+  fx: [cctv]
+  fade_in: 0.5
+
+- id: S112
+  ch: 10
+  loc: Reception, CCTV view
+  chars: []
+  cam: Locked-off CCTV on the elevator; the doors open by themselves
+  move: static
+  act: At exactly 2:13 AM the elevator doors open by themselves. Nobody is inside.
+  emo: Dread
+  desc: CCTV view of the lobby elevator, doors sliding open by themselves onto an empty lit car
+  anim: doors open slowly, no one inside
+  audio: [{narr: [399.86, 402.30]}, {narr: [402.78, 405.48]}, {narr: [405.94, 407.30]}]
+  sfx: [[elevator_ding_detuned, 2.6, -10], [elevator_doors_slow, 3.0, -10]]
+  kf: {env: cctv, view: elevator, doors: closed}
+  kf2: {env: cctv, view: elevator, doors: open}
+  x: [0.35, 0.7]
+  grade: cctv
+  fx: [cctv]
+
+- id: S113
+  ch: 10
+  loc: Reception, CCTV view
+  chars: []
+  cam: CCTV digital zoom on the floor display
+  move: push_slow
+  act: The floor display begins changing… 12… 13.
+  emo: Dread
+  desc: CCTV digital zoom on the elevator floor indicator changing from 12 to 13
+  anim: pixelated zoom, digits change
+  audio: [{narr: [407.80, 409.90]}, {narr: [410.46, 411.10]}, {narr: [411.62, 412.12]}]
+  kf: {env: display, seq: [[0, "1"], [1.2, "7"], [2.2, "12"], [3.4, "13"]], red: true}
+  grade: cctv
+  fx: [cctv]
+
+- id: S114
+  ch: 10
+  loc: Reception, CCTV view
+  chars: []
+  cam: Locked-off CCTV wide; the PA speaks to an empty room
+  move: static
+  act: '"Dr. John K. Smith… please report to Floor 13."'
+  emo: Menace
+  desc: CCTV wide of the empty reception, ceiling PA speaker
+  anim: static noise flickers as the announcement plays
+  audio: [{gap: 0.4}, {cue: PA02}]
+  sfx: [[pa_chime, 0.0, -8]]
+  kf: {env: cctv, view: reception}
+  grade: cctv
+  fx: [cctv]
+
+- id: S115
+  ch: 10
+  loc: Reception, CCTV view
+  chars: []
+  cam: CCTV angle on the reception desk telephone
+  move: static
+  act: A few seconds later, the reception phone rings.
+  emo: Suspense
+  desc: CCTV view of the reception desk, an old desk telephone, the night nurse walking toward it
+  anim: phone light blinks, the nurse approaches
+  audio: [{narr: [412.64, 413.86]}, {narr: [414.12, 415.56]}]
+  sfx: [[phone_ring, 1.8, -6]]
+  kf: {env: cctv, view: desk}
+  grade: cctv
+  fx: [cctv]
+
+- id: S116
+  ch: 10
+  loc: Reception desk, night
+  chars: [nurse]
+  cam: Close-up of the nurse answering, cold night light
+  move: push_slow
+  act: '"Hello? Is there any doctor available? We have a new patient on the thirteenth floor…"'
+  emo: Confused
+  desc: close-up of the night nurse holding a telephone handset at the dark reception desk, cold blue light
+  anim: listens, frowns
+  audio: [{gap: 0.7}, {cue: PH01}, {gap: 0.3}, {cue: PH02}]
+  sfx: [[phone_pickup, 0.2, -8]]
+  amb: hospital_night
+  kf: {crop: nurse_face}
+  grade: night
+
+- id: S117
+  ch: 10
+  loc: Reception desk, night
+  chars: [nurse]
+  cam: Close-up
+  move: static
+  act: '"There is no thirteenth floor…" / "What thirteenth floor?"'
+  emo: Unease
+  desc: close-up of the nurse, uneasy, glancing toward the elevator
+  anim: glances sideways
+  audio: [{cue: N05}]
+  kf: {crop: nurse_face}
+  grade: night
+
+- id: S118
+  ch: 10
+  loc: Reception desk, night
+  chars: [nurse]
+  cam: Extreme close-up, very slow push; the whisper through the line
+  move: push_slow
+  act: 'A whisper through the telephone: "His name is John K. Smith."'
+  emo: Terror
+  desc: extreme close-up of the nurse's eye and ear against the handset, her face freezing
+  anim: her eyes widen slowly
+  audio: [{gap: 0.5}, {cue: PH03}]
+  sfx: [[static_burst, 3.0, -8]]
+  kf: {crop: nurse_face}
+  grade: night
+
+- id: S119
+  ch: 10
+  loc: Reception desk, night
+  chars: []
+  cam: Insert of the handset; the line dies
+  move: static
+  act: The phone goes dead.
+  emo: Shock
+  desc: close-up of the old desk telephone, handset off the hook, red light dead
+  anim: the red light dies
+  audio: [{narr: [416.08, 417.36]}]
+  sfx: [[line_dead, 0.0, -8]]
+  kf: {env: phone, light: off}
+  grade: night
+
+- id: S120
+  ch: 10
+  loc: Lobby elevator, night
+  chars: []
+  cam: Low-angle; the elevator doors slowly close under a red 13
+  move: push_slow
+  act: The elevator doors slowly close. The display remains glowing red — 13.
+  emo: Dread
+  desc: low-angle shot of the lobby elevator at night, doors slowly closing, LED indicator glowing red 13
+  anim: doors slide shut slowly, display glows
+  audio: [{narr: [417.86, 420.28]}, {narr: [420.72, 422.86]}]
+  sfx: [[elevator_doors_slow, 0.3, -6]]
+  kf: {env: elevator_out, style: lobby_night, doors: open, display: "13"}
+  kf2: {env: elevator_out, style: lobby_night, doors: closed, display: "13"}
+  x: [0.1, 0.7]
+  grade: night
+
+- id: S121
+  ch: 10
+  loc: Lobby elevator, night
+  chars: [john]
+  cam: Extreme slow push into the closing gap; a figure in a white coat behind the doors
+  move: push
+  act: Behind the doors, a man in a white coat is standing — waiting.
+  emo: Horror
+  desc: the last sliver of light between the elevator doors revealing a silhouette of a man in a white doctor's
+    coat standing perfectly still inside
+  anim: the gap narrows to darkness, the figure never moves
+  audio: [{narr: [423.40, 425.34]}, {narr: [425.82, 428.38]}]
+  sfx: [[low_drone_swell, 0.0, -6], [elevator_doors_shut, 4.7, -4]]
+  tail: 0.4
+  kf: {env: elevator_out, style: lobby_night, doors: gap, display: "13", figure: true}
+  grade: night
+
+- id: S122
+  ch: 10
+  loc: Black — end card
+  chars: []
+  cam: Cut to black, title fades in
+  move: static
+  act: THE END.
+  emo: Silence
+  desc: black screen with THE END in thin red serif letters
+  anim: text fades in slowly, faint ECG line flatlines
+  audio: [{gap: 1.6}, {narr: [429.06, 429.86]}]
+  dur: 7.0
+  sfx: [[ecg_flatline, 0.2, -16]]
+  mus: none
+  amb: none
+  kf: {env: black, text: "THE END"}
+  fade_in: 0.0
+  fade_out: 2.0

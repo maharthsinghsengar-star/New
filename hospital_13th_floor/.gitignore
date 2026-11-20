@@ -1,0 +1,14 @@
+# Regenerable media (rebuild with scripts/run_all.sh)
+voice/*/*.wav
+sound_effects/**/*.wav
+!sound_effects/overrides/**
+music/*.wav
+!music/overrides/**
+scene_images/placeholder/
+editing/stems/
+editing/rendered_shots/
+editing/*.wav
+editing/picture_lock.mp4
+editing/concat.txt
+editing/render_log.txt
+__pycache__/

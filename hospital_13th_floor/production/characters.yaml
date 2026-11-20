@@ -1,0 +1,100 @@
+# CHARACTER BIBLE — LOCKED DESIGNS
+# Source of truth for every image / video prompt. Prompt builders in scripts/ read this file.
+# Visual identity source: characters/key_art_master.png (user-supplied key art).
+# Where the written brief and the key art disagree, the KEY ART wins (brief rule: "use the provided
+# character reference images as the visual identity source"). Known differences are listed per character.
+
+style:
+  positive: >-
+    dark cinematic Japanese horror anime film still, detailed anime character design, hand-painted
+    cinematic background, 2D anime characters integrated into realistic 3D hospital environment,
+    cinematic lighting, volumetric fog, deep shadows, cold blue and desaturated teal palette, subtle red
+    accent lighting, realistic reflections on hospital floor, flickering fluorescent light, film grain,
+    atmospheric depth, horror film cinematography, 16:9 widescreen composition, high detail
+  negative: >-
+    comedy, chibi, bright cheerful colors, exaggerated expressions, cheap animation, character redesign,
+    outfit change, inconsistent face, extra fingers, deformed hands, gore, blood splatter, visible injuries,
+    text, subtitles, captions, watermark, logo, signature, low resolution, blurry face
+
+characters:
+  john:
+    name: Dr. John K. Smith
+    role: The Protagonist
+    lock: >-
+      Dr. John K. Smith, 27-year-old male doctor, lean average build, dark messy short black hair,
+      dark brown expressive eyes, slight stubble, tired face, white doctor's coat, blue formal shirt,
+      dark navy trousers, black formal shoes, black stethoscope around neck, hospital ID badge clipped to coat
+    key_art_note: Key art shows a deeper royal-blue shirt (brief says light blue) — follow the key art.
+    ref_crops: [john_face, john_medium, john_stethoscope]
+    voice: {profile: john, speed: 1.00, source: voice/_source/john.mp3}
+    arc: calm -> curious -> confused -> frightened -> panicked -> desperate -> traumatized
+
+  old_doctor:
+    name: The Old Doctor
+    role: The Keeper of Floor 13
+    lock: >-
+      frail elderly doctor about 65, thin, pale wheatish skin, deep wrinkles, sunken dark eyes with dark
+      circles, grey-white hair, faint grey moustache and stubble, faded stained old white doctor's coat,
+      pale grey shirt, dark brown tie, dark brown trousers, vintage stethoscope
+    key_art_note: Key art hair is wild/unkempt white rather than "combed backward"; a faint scar on the forehead.
+    ref_crops: [old_doctor_face]
+    voice: {profile: old_doctor, speed: 0.80, source: voice/_source/old_doctor.mp3}
+
+  little_girl:
+    name: The Little Girl
+    role: The Guide
+    lock: >-
+      8-year-old girl, small, pale skin, round delicate face, large eyes, long straight black hair with
+      bangs, old faded pale-blue spotted hospital gown, barefoot, holding a worn handmade cloth rag doll
+      with red yarn hair and mismatched button eyes
+    key_art_note: Key art gives her dark-red eyes and bangs (brief says dark eyes, centre part) — follow the key art.
+    ref_crops: [girl_face, girl_doll]
+    voice: {profile: little_girl, speed: 0.85, source: voice/_source/little_girl.mp3}
+
+  patients:
+    name: The Silent Patients
+    role: The Forgotten Souls
+    lock: >-
+      six hospital patients, mixed men and women aged 20 to 80, pale grey tired faces, hollow staring eyes,
+      old faded spotted pale-blue hospital gowns, varied hairstyles and facial structures, no gore, no injuries,
+      motionless, synchronized slow head turns
+    ref_crops: [patients_left, patients_right]
+    voice: {profile: patients, speed: 0.75, source: [voice/_source/patient_1.mp3, voice/_source/patients_2_and_1.mp3]}
+
+  nurse:
+    name: The Night Nurse
+    role: The Hospital Staff
+    lock: >-
+      30-year-old Indian woman nurse, medium brown complexion, oval face, dark expressive brown eyes,
+      dark hair tied in a neat bun, white nurse cap with blue stripe, white nurse uniform with light-blue trim,
+      ID badge on lanyard, black clipboard
+    key_art_note: Key art adds a nurse cap — keep it.
+    ref_crops: [nurse_face, nurse_clipboard]
+    voice: {profile: nurse, speed: 0.95, source: voice/_source/nurse.mp3}
+
+  pa:
+    name: Hospital PA System
+    voice: {profile: pa, speed: 0.90, source: "TTS placeholder (espeak-ng) — replace with a proper TTS voice"}
+
+  phone:
+    name: Phone Voice
+    voice: {profile: phone, speed: 0.85, source: voice/_source/phone_voice.mp3}
+
+  narrator:
+    name: Narrator
+    voice: {profile: narrator, speed: 0.90, source: voice/_source/narrator.mp3}
+
+# Crops of characters/key_art_master.png (x0, y0, x1, y1), all 16:9. Exported to characters/refs/.
+key_art_crops:
+  title_wide:       [176, 0, 1496, 743]
+  building_night:   [1200, 0, 1672, 265]
+  john_face:        [720, 200, 1180, 459]
+  john_medium:      [610, 205, 1250, 565]
+  john_stethoscope: [850, 560, 1230, 774]
+  old_doctor_face:  [440, 250, 740, 419]
+  girl_face:        [280, 480, 580, 649]
+  girl_doll:        [250, 560, 600, 757]
+  nurse_face:       [1080, 250, 1440, 452]
+  nurse_clipboard:  [1180, 520, 1520, 711]
+  patients_left:    [0, 220, 420, 456]
+  patients_right:   [1280, 250, 1672, 470]
