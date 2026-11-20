@@ -8,7 +8,7 @@
 :root{--bg:#050506;--fg:#e8e0d0;--accent:#c0392b;--muted:#9a8f80;--gold:#d4a72c}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(--fg);font-family:Georgia,'Times New Roman',serif;touch-action:none;user-select:none;-webkit-user-select:none}
-canvas{display:block;width:100vw;height:100vh;cursor:crosshair}
+canvas{display:block;position:fixed;inset:0;width:100vw;height:100vh;cursor:crosshair}
 .ov{position:fixed;inset:0;display:none;align-items:flex-start;justify-content:center;background:radial-gradient(ellipse at center,rgba(45,0,0,.6),rgba(0,0,0,.95));z-index:10;padding:16px;overflow-y:auto}
 .ov.show{display:flex}
 .box{max-width:780px;width:100%;text-align:center;margin:auto}
@@ -36,9 +36,9 @@ label{font-size:14px;color:#bdb3a2;cursor:pointer}
 #note .c{font-size:11px;color:#6a5030;margin-top:8px;text-align:right}
 #touch{display:none;position:fixed;inset:0;pointer-events:none;z-index:4}
 body.touch #touch{display:block}
-#joy{position:absolute;left:18px;bottom:22px;width:140px;height:140px;border-radius:50%;border:2px solid rgba(255,255,255,.18);background:rgba(255,255,255,.04);pointer-events:auto}
+#joy{position:absolute;left:calc(18px + env(safe-area-inset-left,0px));bottom:calc(22px + env(safe-area-inset-bottom,0px));width:140px;height:140px;border-radius:50%;border:2px solid rgba(255,255,255,.18);background:rgba(255,255,255,.04);pointer-events:auto}
 #knob{position:absolute;left:45px;top:45px;width:50px;height:50px;border-radius:50%;background:rgba(220,60,40,.35);border:2px solid rgba(255,200,180,.4)}
-#tbtns{position:absolute;right:12px;bottom:18px;display:grid;grid-template-columns:repeat(3,62px);gap:8px;pointer-events:auto}
+#tbtns{position:absolute;right:calc(12px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));display:grid;grid-template-columns:repeat(3,62px);gap:8px;pointer-events:auto}
 #tbtns div{width:62px;height:52px;border-radius:10px;background:rgba(30,8,6,.6);border:1px solid rgba(220,80,60,.5);color:#f0e0d0;font:bold 12px sans-serif;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.1}
 #tbtns div:active{background:rgba(160,30,20,.7)}
 #ttop{position:absolute;right:10px;top:175px;display:flex;flex-direction:column;gap:8px;pointer-events:auto}
