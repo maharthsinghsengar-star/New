@@ -1,0 +1,3 @@
+build/*
+!build/track.json
+node_modules
