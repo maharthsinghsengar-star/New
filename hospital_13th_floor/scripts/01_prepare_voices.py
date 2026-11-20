@@ -34,7 +34,7 @@ def static(n, level=0.02):
 
 
 def p_john(c, x, place):
-    return {"office": fx_room(x, 0.5, 0.12), "ward": fx_room(x, 1.6, 0.25, 0.35),
+    return {"office": fx_room(x, 0.5, 0.12), "elevator": fx_room(x, 0.6, 0.18, 0.4), "ward": fx_room(x, 1.6, 0.25, 0.35),
             "lobby": fx_room(x, 0.9, 0.15, 0.6)}[place]
 
 
@@ -103,6 +103,12 @@ def p_patients_tts(c):
 def process(cid, c):
     fx = c["fx"]
     if "tts" in c:
+        if fx == "phone_tts":
+            with tempfile.TemporaryDirectory() as td:
+                tts(c["tts"], f"{td}/p.wav", voice="en-us+f3", speed=150, pitch=45)
+                x = phone_band(read_audio(f"{td}/p.wav"), drive=4.0)
+            x = x + static(len(x), 0.02)
+            return stereo(butter(x, "low", 2400, 2) * 0.55, 0.35)
         return p_pa(c) if fx == "pa" else p_patients_tts(c)
     src = SRC / c["src"]
     raw = lambda: read_audio(src, c["in"], c["out"])

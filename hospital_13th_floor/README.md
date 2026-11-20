@@ -1,6 +1,6 @@
 # THE HOSPITAL'S 13TH FLOOR — production project
 
-A psychological / supernatural horror anime short (~10:52, 16:9, 1920×1080, 24 fps, stereo), built as a
+A psychological / supernatural horror anime short (~11:03, 16:9, 1920×1080, 24 fps, stereo), built as a
 **modular, resumable pipeline**. Everything about the film lives in three editable files in `production/`.
 The scripts in `scripts/` turn those files into a timed, mixed, rendered film.
 
@@ -15,12 +15,12 @@ The scripts in `scripts/` turn those files into a timed, mixed, rendered film.
 
 | Path | What it is | State |
 |---|---|---|
-| `production/shots.yaml` | **Master shot list** — 122 shots / 10 chapters: camera, action, emotion, dialogue, narration, SFX, ambience, music, keyframe recipe | ✅ written |
+| `production/shots.yaml` | **Master shot list** — 123 shots / 10 chapters: camera, action, emotion, dialogue, narration, SFX, ambience, music, keyframe recipe | ✅ written |
 | `production/characters.yaml` | **Locked character bible** + style prompts + key-art reference crops | ✅ |
-| `production/voice_cues.yaml` | Every dialogue line, cut from your recordings (source file, in/out, FX preset) | ✅ 46 lines from recordings, 3 TTS placeholders |
+| `production/voice_cues.yaml` | Every dialogue line, cut from your recordings (source file, in/out, FX preset) | ✅ cut from your recordings; 4 lines are TTS placeholders |
 | `production/SHOT_BREAKDOWN.md` | Human-readable breakdown of every shot with timecodes and prompts | ✅ generated |
 | `production/manifest.json`, `STATUS.md` | Per-shot asset status, derived from files on disk | ✅ generated |
-| `prompts/shots/S###_image.txt / _video.txt / .json` | Ready-to-paste keyframe and image-to-video prompts, with reference images | ✅ 122 shots |
+| `prompts/shots/S###_image.txt / _video.txt / .json` | Ready-to-paste keyframe and image-to-video prompts, with reference images | ✅ 123 shots |
 | `prompts/characters/*.txt` | Character-sheet prompts (generate these first for consistency) | ✅ |
 | `characters/key_art_master.png`, `characters/refs/` | Your key art + per-character reference crops | ✅ |
 | `voice/_source/` | Your 8 original recordings (renamed) | ✅ |
@@ -86,9 +86,9 @@ and picture and sound stay in sync (shot boundaries snap to whole frames).
 | Need | Why it isn't done here | Suggested tools | Where results go |
 |---|---|---|---|
 | Character sheets | no image model available | any model with reference/identity conditioning (e.g. Flux/SDXL + IP-Adapter or a character-reference feature) using `prompts/characters/*.txt` + `characters/refs/` | `characters/` |
-| 122 keyframes (+12 second frames for crossfade shots) | no image model | same tool, `prompts/shots/S###_image.txt` + listed reference images | `scene_images/generated/S###.png` (`S###_b.png`) |
+| 123 keyframes (+12 second frames for crossfade shots) | no image model | same tool, `prompts/shots/S###_image.txt` + listed reference images | `scene_images/generated/S###.png` (`S###_b.png`) |
 | Animated clips | no image-to-video model | any image-to-video model, `prompts/shots/S###_video.txt`, duration in the `.json` | `video_clips/generated/S###.mp4` |
-| 3 missing lines (PA ×2, patients' chorus) | not in your recordings; espeak-ng stand-ins used | any TTS / voice actor, then replace `voice/pa/PA01.wav`, `PA02.wav`, `voice/patients/P06.wav` | same paths |
+| 4 missing lines (PA ×2, patients' chorus, Ch.1 caller) | not in your recordings; espeak-ng stand-ins used | any TTS / voice actor, then replace `voice/pa/PA01.wav`, `PA02.wav`, `voice/patients/P06.wav`, `voice/phone_voice/PH04.wav` | same paths |
 
 Hook any of those tools in without editing code:
 
@@ -107,19 +107,26 @@ conformed to the exact shot length.
 
 ## 5. Script notes and deviations (please review)
 
-* **Lines not in the recordings** and how they were covered:
-  - Ch.1 caller asking for help on the 12th floor → the phone voice's *"Hello? Is there any doctor available?"*
-    leaks from John's handset (it is the same voice that calls at the end, which sets up the twist).
+* Dialogue placement follows the full story script (`production/narration.yaml` holds the narration text;
+  `voice_cues.yaml` the dialogue). The narrator recording is slightly abridged versus the script (e.g. the
+  emergency-button beat in the elevator is not narrated) — the picture/SFX still carry those beats.
+* **Script lines not in the recordings** and how they are covered:
+  - Ch.1 caller *"Doctor Smith? We need you on the twelfth floor…"* → **espeak-ng TTS placeholder** (PH04) heard
+    through John's handset.
   - Ch.2 whisper *"Doctor… you're finally here"* → the girl's *"Doctor…"*, processed as a circling ghost whisper.
   - Ch.3 woman's *"Doctor… please come here"* → a distant, pitched-down *"Doctor…"* from the nurse recording.
   - Ch.4 chorus *"You don't remember… but we remember you"* → **espeak-ng TTS placeholder** (P06), layered.
   - Ch.9/10 PA announcements → **espeak-ng TTS placeholders** (PA01, PA02) with PA processing.
-  - Ch.10 nurse on the phone *"There is no thirteenth floor"* → her *"What thirteenth floor?"* (N05).
-* Lines were transcribed automatically; cues marked `verify: true` in `voice_cues.yaml` (J04, J14, J15, J16,
-  J21, P01, P02) should be checked by ear and their in/out points nudged if needed.
+  - Ch.10 night nurse *"Hello?"* (not recorded, omitted) and *"What? There's no thirteenth floor."* → her
+    recorded *"What thirteenth floor?"* (N05).
+  - John's scream (Ch.8) is not recorded.
+* **Recorded lines that differ from the script** (kept as recorded, please check by ear — `verify: true`):
+  - J21 sounds like *"No… this can't be happening"* — used where the script has *"This is a mistake… this can't be real"* (Ch.6).
+  - J19 sounds like *"Maybe… maybe I just need some rest"* — used as John's reply to the nurse's *"Maybe you need some rest, Doctor."*
+  - J20 *"No…"* — used when John sees the doll's face (Ch.8).
 * Where the brief and the key art differ (John's shirt colour, the girl's red eyes and bangs, the old
   doctor's wild hair, the nurse's cap), the key art wins, as the brief asks. Noted in `characters.yaml`.
-* Runtime is ~10:52 rather than exactly 10:00 because the supplied narration alone runs 7:10; trimming
+* Runtime is ~11:03 rather than exactly 10:00 because the supplied narration alone runs 7:10; trimming
   pauses is a one-line change (`defaults` in `shots.yaml`).
 * On-screen text is limited to story props (elevator display, sign, file, register, CCTV overlay,
   THE END). No subtitles are burned in.

@@ -110,7 +110,7 @@ def render_stills(shot, tl, out):
     move = shot.get("move", "push_slow")
     z0, z1, p0, p1 = MOVES.get(move, MOVES["push_slow"])
     fx = set(shot.get("fx", []))
-    seed = int(sid[1:])
+    seed = sum(ord(c) * (k + 1) for k, c in enumerate(sid))
     shake = "shake" in fx or move == "handheld"
     amp = 14 if "shake" in fx else 6
     sx, sy = smooth_noise(n, 5, seed) * amp, smooth_noise(n, 5, seed + 1) * amp

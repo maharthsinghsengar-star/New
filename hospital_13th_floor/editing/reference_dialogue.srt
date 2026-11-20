@@ -1,832 +1,508 @@
 1
-00:00:14,300 --> 00:00:16,210
-[NARRATOR] (narration)
+00:00:14,300 --> 00:00:19,750
+[NARRATOR] It was nearly two in the morning. The old city hospital was unusually quiet.
 
 2
-00:00:16,510 --> 00:00:19,750
-[NARRATOR] (narration)
+00:00:20,550 --> 00:00:30,930
+[NARRATOR] Most of the staff had gone home, leaving behind the soft humming of machines, flickering fluorescent lights, and the distant sound of rain hitting the windows.
 
 3
-00:00:20,550 --> 00:00:30,930
-[NARRATOR] (narration)
+00:00:31,730 --> 00:00:41,810
+[NARRATOR] Dr. John K. Smith had been working for almost twelve hours. Exhausted, he sat at his desk, finishing his coffee and preparing to leave.
 
 4
-00:00:31,730 --> 00:00:41,810
-[NARRATOR] (narration)
+00:00:42,610 --> 00:00:45,430
+[NARRATOR] Just as he picked up his coat, the phone rang.
 
 5
-00:00:42,610 --> 00:00:45,430
-[NARRATOR] (narration)
+00:00:47,130 --> 00:00:53,557
+[PHONE VOICE] Doctor Smith? We need you on the twelfth floor. A patient's condition is suddenly getting worse.
 
 6
-00:00:47,130 --> 00:00:49,449
-[PHONE VOICE] Hello? Is there any doctor available?
-
-7
-00:00:49,949 --> 00:00:51,360
+00:00:54,157 --> 00:00:55,568
 [JOHN] All right, I'm coming.
 
+7
+00:00:56,368 --> 00:00:58,828
+[NARRATOR] The time was 2:13 AM.
+
 8
-00:00:52,160 --> 00:00:54,620
-[NARRATOR] (narration)
+00:00:59,628 --> 00:01:04,428
+[NARRATOR] He grabbed his stethoscope, stepped into the hallway, and headed toward the elevator.
 
 9
-00:00:55,420 --> 00:01:00,220
-[NARRATOR] (narration)
+00:01:05,228 --> 00:01:10,188
+[NARRATOR] The hospital had twelve floors. At least, that's what everyone believed.
 
 10
-00:01:01,020 --> 00:01:05,980
-[NARRATOR] (narration)
+00:01:11,888 --> 00:01:15,628
+[NARRATOR] John entered the elevator and pressed the button for the twelfth floor.
 
 11
-00:01:07,680 --> 00:01:11,420
-[NARRATOR] (narration)
+00:01:16,428 --> 00:01:19,668
+[NARRATOR] The doors closed. The elevator began moving.
 
 12
-00:01:12,220 --> 00:01:15,460
-[NARRATOR] (narration)
+00:01:20,468 --> 00:01:24,448
+[NARRATOR] Three… four… five… six…
 
 13
-00:01:16,260 --> 00:01:20,240
-[NARRATOR] (narration)
+00:01:25,248 --> 00:01:26,808
+[NARRATOR] Everything seemed normal.
 
 14
-00:01:21,040 --> 00:01:22,600
-[NARRATOR] (narration)
+00:01:28,248 --> 00:01:33,768
+[NARRATOR] Then the lights flickered. The elevator jerked violently, and John grabbed the handrail.
 
 15
-00:01:24,040 --> 00:01:25,600
-[NARRATOR] (narration)
+00:01:34,568 --> 00:01:43,348
+[NARRATOR] The display continued changing. Eight… nine… ten… eleven… twelve… But the elevator didn't stop.
 
 16
-00:01:25,900 --> 00:01:29,560
-[NARRATOR] (narration)
+00:01:44,148 --> 00:01:51,307
+[NARRATOR] John looked at the floor indicator. The number changed. … The elevator became colder.
 
 17
-00:01:30,360 --> 00:01:32,220
-[NARRATOR] (narration)
-
-18
-00:01:32,520 --> 00:01:37,060
-[NARRATOR] (narration)
-
-19
-00:01:37,360 --> 00:01:39,140
-[NARRATOR] (narration)
-
-20
-00:01:39,940 --> 00:01:41,660
-[NARRATOR] (narration)
-
-21
-00:01:41,960 --> 00:01:43,140
-[NARRATOR] (narration)
-
-22
-00:01:43,440 --> 00:01:45,440
-[NARRATOR] (narration)
-
-23
-00:01:46,240 --> 00:01:50,480
-[NARRATOR] (narration)
-
-24
-00:01:51,580 --> 00:01:53,023
-[LITTLE GIRL] Doctor...
-
-25
-00:01:54,280 --> 00:01:55,440
-[NARRATOR] (narration)
-
-26
-00:01:55,740 --> 00:01:56,820
-[NARRATOR] (narration)
-
-27
-00:01:58,320 --> 00:02:00,560
-[NARRATOR] (narration)
-
-28
-00:02:00,860 --> 00:02:04,560
-[NARRATOR] (narration)
-
-29
-00:02:05,360 --> 00:02:08,680
-[NARRATOR] (narration)
-
-30
-00:02:09,480 --> 00:02:11,840
-[NARRATOR] (narration)
-
-31
-00:02:12,140 --> 00:02:13,860
-[NARRATOR] (narration)
-
-32
-00:02:14,160 --> 00:02:20,960
-[NARRATOR] (narration)
-
-33
-00:02:21,760 --> 00:02:24,100
-[NARRATOR] (narration)
-
-34
-00:02:24,400 --> 00:02:26,980
-[NARRATOR] (narration)
-
-35
-00:02:27,780 --> 00:02:29,580
-[NARRATOR] (narration)
-
-36
-00:02:29,880 --> 00:02:34,840
-[NARRATOR] (narration)
-
-37
-00:02:35,640 --> 00:02:37,889
-[JOHN] This hospital doesn't have a thirteenth floor.
-
-38
-00:02:38,689 --> 00:02:40,389
-[NARRATOR] (narration)
-
-39
-00:02:40,689 --> 00:02:41,939
-[NARRATOR] (narration)
-
-40
-00:02:42,239 --> 00:02:44,319
-[NARRATOR] (narration)
-
-41
-00:02:45,119 --> 00:02:46,019
-[NARRATOR] (narration)
-
-42
-00:02:46,319 --> 00:02:48,622
-[JOHN] Come on... open up, please!
-
-43
-00:02:48,922 --> 00:02:49,942
-[NARRATOR] (narration)
-
-44
-00:02:50,242 --> 00:02:50,842
-[NARRATOR] (narration)
-
-45
-00:02:51,642 --> 00:02:53,302
-[NARRATOR] (narration)
-
-46
-00:02:53,602 --> 00:02:57,182
-[NARRATOR] (narration)
-
-47
-00:02:57,982 --> 00:02:59,078
+00:01:47,748 --> 00:01:48,807
 [JOHN] That's impossible.
 
-48
-00:03:00,982 --> 00:03:01,735
-[JOHN] Hello?
+18
+00:01:52,107 --> 00:01:56,347
+[NARRATOR] A faint sound of a child laughing echoed from somewhere inside.
 
-49
-00:03:02,535 --> 00:03:03,407
-[JOHN] Anyone?
+19
+00:01:57,447 --> 00:01:58,890
+[LITTLE GIRL] Doctor...
 
-50
-00:03:04,907 --> 00:03:07,327
-[NARRATOR] (narration)
+20
+00:02:00,147 --> 00:02:02,687
+[NARRATOR] John turned around. Nobody was there.
 
-51
-00:03:07,627 --> 00:03:11,107
-[NARRATOR] (narration)
+21
+00:02:04,187 --> 00:02:10,427
+[NARRATOR] The elevator doors slowly opened. And beyond them was a corridor he had never seen before.
 
-52
-00:03:11,507 --> 00:03:13,517
+22
+00:02:11,227 --> 00:02:14,547
+[NARRATOR] A long, dark corridor stretched in front of him.
+
+23
+00:02:15,347 --> 00:02:26,827
+[NARRATOR] The walls were covered in peeling paint. Dust lay across the floor. Old wheelchairs stood against the walls, and rusty hospital beds sat outside rooms with half-open doors.
+
+24
+00:02:27,627 --> 00:02:32,847
+[NARRATOR] The lights flickered one after another, illuminating the corridor in brief flashes.
+
+25
+00:02:33,647 --> 00:02:40,707
+[NARRATOR] John stepped out of the elevator. A sign above the hallway read: Floor 13 — Emergency Ward.
+
+26
+00:02:41,507 --> 00:02:43,756
+[JOHN] This hospital doesn't have a thirteenth floor.
+
+27
+00:02:44,556 --> 00:02:50,186
+[NARRATOR] He turned back toward the elevator. The doors closed. John rushed forward and pressed the button.
+
+28
+00:02:50,986 --> 00:02:54,406
+[NARRATOR] Nothing happened. He pressed it again. Nothing.
+
+29
+00:02:55,206 --> 00:03:00,746
+[NARRATOR] The elevator was gone. Where it had been, there was now nothing but a solid wall.
+
+30
+00:03:08,046 --> 00:03:14,246
+[NARRATOR] John stepped backward, breathing faster. From somewhere down the corridor, a woman's voice called out.
+
+31
+00:03:14,646 --> 00:03:16,656
 [NURSE] Doctor... (distant woman's call, Floor 13)
 
-53
-00:03:14,317 --> 00:03:18,137
-[NARRATOR] (narration)
+32
+00:03:17,456 --> 00:03:21,276
+[NARRATOR] John raised his flashlight and slowly walked toward the sound.
 
-54
-00:03:18,937 --> 00:03:20,637
-[NARRATOR] (narration)
+33
+00:03:22,076 --> 00:03:27,296
+[NARRATOR] He entered an old ward. There were ten beds. Every bed was occupied.
 
-55
-00:03:20,937 --> 00:03:22,157
-[NARRATOR] (narration)
+34
+00:03:28,096 --> 00:03:31,956
+[NARRATOR] The patients were lying perfectly still, facing the walls.
 
-56
-00:03:22,457 --> 00:03:24,157
-[NARRATOR] (narration)
+35
+00:03:32,756 --> 00:03:34,516
+[NARRATOR] John approached the first bed.
 
-57
-00:03:24,957 --> 00:03:27,297
-[NARRATOR] (narration)
+36
+00:03:34,916 --> 00:03:35,669
+[JOHN] Hello?
 
-58
-00:03:27,597 --> 00:03:28,817
-[NARRATOR] (narration)
+37
+00:03:36,269 --> 00:03:37,141
+[JOHN] Can you hear me?
 
-59
-00:03:29,617 --> 00:03:31,377
-[NARRATOR] (narration)
+38
+00:03:37,941 --> 00:03:45,961
+[NARRATOR] The patient slowly turned his head. His face was pale. His eyes were sunken, and his lips were almost colorless.
 
-60
-00:03:32,617 --> 00:03:34,697
-[NARRATOR] (narration)
-
-61
-00:03:34,997 --> 00:03:36,377
-[NARRATOR] (narration)
-
-62
-00:03:36,677 --> 00:03:38,097
-[NARRATOR] (narration)
-
-63
-00:03:38,397 --> 00:03:40,637
-[NARRATOR] (narration)
-
-64
-00:03:41,437 --> 00:03:42,697
+39
+00:03:46,761 --> 00:03:48,021
 [PATIENTS] You are late, Doctor.
 
-65
-00:03:44,437 --> 00:03:45,711
+40
+00:03:49,761 --> 00:03:51,035
 [JOHN] How do you know who I am?
 
-66
-00:03:47,437 --> 00:03:49,072
+41
+00:03:52,761 --> 00:03:54,396
 [PATIENTS] John K. Smith.
 
-67
-00:03:49,472 --> 00:03:51,207
+42
+00:03:54,796 --> 00:03:56,531
 [PATIENTS] We have been waiting for you.
 
-68
-00:03:52,007 --> 00:03:53,987
-[NARRATOR] (narration)
+43
+00:03:57,331 --> 00:04:02,191
+[NARRATOR] John moved toward the next bed. An elderly woman began laughing softly.
 
-69
-00:03:54,287 --> 00:03:56,867
-[NARRATOR] (narration)
+44
+00:04:02,991 --> 00:04:05,131
+[NARRATOR] Another patient whispered from the corner.
 
-70
-00:03:57,667 --> 00:03:59,807
-[NARRATOR] (narration)
-
-71
-00:04:00,107 --> 00:04:03,628
+45
+00:04:05,431 --> 00:04:08,952
 [PATIENTS] (whisper) ...you forgot us.
 
-72
-00:04:04,428 --> 00:04:05,468
-[NARRATOR] (narration)
+46
+00:04:09,752 --> 00:04:16,172
+[NARRATOR] Then, one by one, all the patients turned toward him. Their heads moved at exactly the same time.
 
-73
-00:04:05,768 --> 00:04:10,848
-[NARRATOR] (narration)
+47
+00:04:16,972 --> 00:04:18,072
+[NARRATOR] They spoke together.
 
-74
-00:04:11,648 --> 00:04:12,748
-[NARRATOR] (narration)
-
-75
-00:04:13,048 --> 00:04:17,464
+48
+00:04:18,372 --> 00:04:22,788
 [PATIENTS] You don't remember... but we remember you.
 
-76
-00:04:21,764 --> 00:04:23,364
-[NARRATOR] (narration)
+49
+00:04:27,088 --> 00:04:28,688
+[NARRATOR] John ran out of the ward.
 
-77
-00:04:24,764 --> 00:04:28,204
-[NARRATOR] (narration)
+50
+00:04:30,088 --> 00:04:33,528
+[NARRATOR] But as he reached the corridor, he heard a little girl's voice.
 
-78
-00:04:28,704 --> 00:04:31,218
-[LITTLE GIRL] Doctor... don't leave.
+51
+00:04:34,028 --> 00:04:36,542
+[LITTLE GIRL] Doctor Uncle... don't leave.
 
-79
-00:04:32,018 --> 00:04:32,698
-[NARRATOR] (narration)
+52
+00:04:37,342 --> 00:04:42,722
+[NARRATOR] He turned. A little girl was sitting on a hospital bed, holding an old cloth doll.
 
-80
-00:04:32,998 --> 00:04:35,358
-[NARRATOR] (narration)
+53
+00:04:43,522 --> 00:04:45,662
+[NARRATOR] She was staring directly at him.
 
-81
-00:04:35,658 --> 00:04:37,398
-[NARRATOR] (narration)
-
-82
-00:04:38,198 --> 00:04:40,338
-[NARRATOR] (narration)
-
-83
-00:04:41,198 --> 00:04:42,400
+54
+00:04:46,522 --> 00:04:47,724
 [JOHN] Why are you here?
 
-84
-00:04:44,198 --> 00:04:46,740
+55
+00:04:49,522 --> 00:04:52,064
 [LITTLE GIRL] Because tonight... it's your turn.
 
-85
-00:04:50,740 --> 00:04:55,280
-[NARRATOR] (narration)
+56
+00:04:56,064 --> 00:05:00,604
+[NARRATOR] John hurried down the hallway until he found a door marked Medical Records.
 
-86
-00:04:56,080 --> 00:04:57,080
-[NARRATOR] (narration)
+57
+00:05:01,404 --> 00:05:09,764
+[NARRATOR] He pushed it open. Inside were hundreds of old files, dusty cabinets, broken chairs, and papers scattered across the floor.
 
-87
-00:04:57,380 --> 00:04:59,780
-[NARRATOR] (narration)
+58
+00:05:10,564 --> 00:05:14,424
+[NARRATOR] He turned on his phone's flashlight and started searching for a way out.
 
-88
-00:05:00,080 --> 00:05:04,440
-[NARRATOR] (narration)
+59
+00:05:15,224 --> 00:05:21,584
+[NARRATOR] Then he noticed a file lying open on a desk. The name on it made his blood run cold.
 
-89
-00:05:05,240 --> 00:05:09,100
-[NARRATOR] (narration)
+60
+00:05:22,384 --> 00:05:31,964
+[NARRATOR] John K. Smith. His photograph was attached to the front. His date of birth. His home address. Even his current hospital ID number.
 
-90
-00:05:09,900 --> 00:05:13,140
-[NARRATOR] (narration)
+61
+00:05:32,764 --> 00:05:38,404
+[NARRATOR] John opened the file with trembling hands. The first page contained a disturbing report.
 
-91
-00:05:13,440 --> 00:05:16,260
-[NARRATOR] (narration)
+62
+00:05:46,204 --> 00:05:50,684
+[NARRATOR] He flipped to the next page. The next page was dated eighteen years ago.
 
-92
-00:05:17,060 --> 00:05:18,740
-[NARRATOR] (narration)
+63
+00:05:51,284 --> 00:05:52,566
+[JOHN] This can't be happening... (script: This can't be real)
 
-93
-00:05:19,040 --> 00:05:21,060
-[NARRATOR] (narration)
+64
+00:05:54,666 --> 00:06:01,366
+[NARRATOR] At the bottom of the file, a final line was written in red ink: Status — never discharged.
 
-94
-00:05:21,360 --> 00:05:22,400
-[NARRATOR] (narration)
+65
+00:06:05,366 --> 00:06:07,266
+[NARRATOR] A voice behind him said,
 
-95
-00:05:22,700 --> 00:05:23,680
-[NARRATOR] (narration)
+66
+00:06:07,866 --> 00:06:09,592
+[OLD DOCTOR] Now you remember, Doctor?
 
-96
-00:05:23,980 --> 00:05:26,640
-[NARRATOR] (narration)
+67
+00:06:10,392 --> 00:06:11,892
+[NARRATOR] John slowly turned.
 
-97
-00:05:27,440 --> 00:05:30,080
-[NARRATOR] (narration)
+68
+00:06:13,392 --> 00:06:17,852
+[NARRATOR] An old man stood in the doorway, wearing a faded white doctor's coat.
 
-98
-00:05:30,380 --> 00:05:33,080
-[NARRATOR] (narration)
+69
+00:06:18,652 --> 00:06:26,172
+[NARRATOR] The old doctor had sunken eyes and a face covered in deep wrinkles. He looked as though he hadn't slept in decades.
 
-99
-00:05:40,880 --> 00:05:42,340
-[NARRATOR] (narration)
-
-100
-00:05:42,640 --> 00:05:45,360
-[NARRATOR] (narration)
-
-101
-00:05:47,460 --> 00:05:48,680
-[NARRATOR] (narration)
-
-102
-00:05:48,980 --> 00:05:51,360
-[NARRATOR] (narration)
-
-103
-00:05:51,660 --> 00:05:52,480
-[NARRATOR] (narration)
-
-104
-00:05:52,780 --> 00:05:54,160
-[NARRATOR] (narration)
-
-105
-00:05:58,160 --> 00:06:00,060
-[NARRATOR] (narration)
-
-106
-00:06:00,660 --> 00:06:02,386
-[OLD DOCTOR] Now you remember, Doctor.
-
-107
-00:06:03,186 --> 00:06:04,686
-[NARRATOR] (narration)
-
-108
-00:06:06,186 --> 00:06:08,246
-[NARRATOR] (narration)
-
-109
-00:06:08,546 --> 00:06:10,646
-[NARRATOR] (narration)
-
-110
-00:06:11,446 --> 00:06:15,946
-[NARRATOR] (narration)
-
-111
-00:06:16,246 --> 00:06:18,966
-[NARRATOR] (narration)
-
-112
-00:06:19,766 --> 00:06:20,945
+70
+00:06:26,972 --> 00:06:28,151
 [JOHN] What is this place?
 
-113
-00:06:21,245 --> 00:06:22,949
+71
+00:06:28,451 --> 00:06:30,155
 [JOHN] Why is my name in that file?
 
-114
-00:06:23,749 --> 00:06:26,403
+72
+00:06:30,955 --> 00:06:33,609
 [OLD DOCTOR] This floor belongs to those who never left.
 
-115
-00:06:27,203 --> 00:06:29,918
+73
+00:06:34,409 --> 00:06:37,124
 [JOHN] I'm alive! I was working downstairs!
 
-116
-00:06:30,118 --> 00:06:31,288
+74
+00:06:37,324 --> 00:06:38,494
 [JOHN] I need to get out of here!
 
-117
-00:06:32,088 --> 00:06:34,211
+75
+00:06:39,294 --> 00:06:41,417
 [OLD DOCTOR] Everyone says the same thing.
 
-118
-00:06:35,088 --> 00:06:36,205
+76
+00:06:42,294 --> 00:06:43,411
 [JOHN] Where is the elevator?
 
-119
-00:06:38,088 --> 00:06:39,082
+77
+00:06:45,294 --> 00:06:46,288
 [OLD DOCTOR] Find it.
 
-120
-00:06:39,682 --> 00:06:42,199
+78
+00:06:46,888 --> 00:06:49,405
 [OLD DOCTOR] If it allows you to return, you may leave.
 
-121
-00:06:42,999 --> 00:06:43,947
+79
+00:06:50,205 --> 00:06:51,153
 [JOHN] And if it doesn't?
 
-122
-00:06:45,999 --> 00:06:48,057
+80
+00:06:53,205 --> 00:06:55,263
 [OLD DOCTOR] Then you'll be waiting for the next doctor.
 
-123
-00:06:49,357 --> 00:06:52,137
-[NARRATOR] (narration)
+81
+00:06:56,563 --> 00:06:59,343
+[NARRATOR] Suddenly, every light in the corridor went out.
 
-124
-00:06:52,937 --> 00:06:55,617
-[NARRATOR] (narration)
+82
+00:07:00,143 --> 00:07:06,083
+[NARRATOR] A red EXIT sign glowed in the darkness. And from somewhere far away, a bell rang.
 
-125
-00:06:55,917 --> 00:06:58,877
-[NARRATOR] (narration)
+83
+00:07:07,983 --> 00:07:13,283
+[NARRATOR] John ran. He didn't know where he was going. He only knew he had to escape.
 
-126
-00:07:00,777 --> 00:07:01,717
-[NARRATOR] (narration)
+84
+00:07:14,083 --> 00:07:16,963
+[NARRATOR] He opened one door — another hospital corridor.
 
-127
-00:07:02,017 --> 00:07:03,637
-[NARRATOR] (narration)
+85
+00:07:17,763 --> 00:07:25,303
+[NARRATOR] He opened another. The same corridor. The same wheelchairs. The same flickering lights. He ran faster.
 
-128
-00:07:03,937 --> 00:07:06,077
-[NARRATOR] (narration)
+86
+00:07:26,103 --> 00:07:31,363
+[NARRATOR] Then he saw the little girl standing in the middle of the hallway. She was holding her doll.
 
-129
-00:07:06,877 --> 00:07:07,977
-[NARRATOR] (narration)
-
-130
-00:07:08,277 --> 00:07:09,757
-[NARRATOR] (narration)
-
-131
-00:07:10,557 --> 00:07:11,477
-[NARRATOR] (narration)
-
-132
-00:07:11,777 --> 00:07:13,017
-[NARRATOR] (narration)
-
-133
-00:07:13,317 --> 00:07:14,657
-[NARRATOR] (narration)
-
-134
-00:07:14,957 --> 00:07:16,697
-[NARRATOR] (narration)
-
-135
-00:07:16,997 --> 00:07:18,097
-[NARRATOR] (narration)
-
-136
-00:07:18,897 --> 00:07:22,497
-[NARRATOR] (narration)
-
-137
-00:07:22,797 --> 00:07:24,157
-[NARRATOR] (narration)
-
-138
-00:07:24,957 --> 00:07:27,550
+87
+00:07:32,163 --> 00:07:34,756
 [LITTLE GIRL] Doctor... why are you running?
 
-139
-00:07:28,350 --> 00:07:29,450
-[NARRATOR] (narration)
+88
+00:07:35,556 --> 00:07:41,096
+[NARRATOR] But when he passed her, he noticed something. The doll's face looked exactly like his.
 
-140
-00:07:29,750 --> 00:07:30,730
-[NARRATOR] (narration)
-
-141
-00:07:31,030 --> 00:07:33,890
-[NARRATOR] (narration)
-
-142
-00:07:34,690 --> 00:07:35,359
+89
+00:07:41,896 --> 00:07:42,565
 [JOHN] No...
 
-143
-00:07:37,690 --> 00:07:41,090
-[NARRATOR] (narration)
+90
+00:07:44,896 --> 00:07:52,336
+[NARRATOR] Behind John, every patient began appearing in the corridor. One by one. Standing silently. Watching him.
 
-144
-00:07:41,390 --> 00:07:44,010
-[NARRATOR] (narration)
+91
+00:07:53,136 --> 00:07:55,376
+[NARRATOR] John sprinted toward the end of the hallway.
 
-145
-00:07:44,310 --> 00:07:45,130
-[NARRATOR] (narration)
+92
+00:07:56,176 --> 00:08:00,356
+[NARRATOR] And there it was. An elevator. Its doors were already open.
 
-146
-00:07:45,930 --> 00:07:48,170
-[NARRATOR] (narration)
+93
+00:08:01,156 --> 00:08:06,216
+[NARRATOR] He jumped inside. The display flashed. The elevator suddenly began descending.
 
-147
-00:07:48,970 --> 00:07:49,950
-[NARRATOR] (narration)
-
-148
-00:07:50,250 --> 00:07:51,130
-[NARRATOR] (narration)
-
-149
-00:07:51,430 --> 00:07:53,150
-[NARRATOR] (narration)
-
-150
-00:07:53,950 --> 00:07:55,090
-[NARRATOR] (narration)
-
-151
-00:07:55,390 --> 00:07:56,550
-[NARRATOR] (narration)
-
-152
-00:07:56,850 --> 00:07:59,010
-[NARRATOR] (narration)
-
-153
-00:08:00,210 --> 00:08:05,699
+94
+00:08:07,416 --> 00:08:12,808
 [PA] Dr. John K. Smith... your shift is not over yet.
 
-154
-00:08:06,499 --> 00:08:07,259
-[NARRATOR] (narration)
+95
+00:08:13,108 --> 00:08:15,411
+[JOHN] No! Open! Please!
 
-155
-00:08:07,559 --> 00:08:08,239
-[NARRATOR] (narration)
+96
+00:08:16,211 --> 00:08:19,811
+[NARRATOR] Thirteen… twelve… eleven… ten…
 
-156
-00:08:08,539 --> 00:08:09,239
-[NARRATOR] (narration)
+97
+00:08:24,211 --> 00:08:27,431
+[NARRATOR] Finally, the elevator stopped. The doors opened.
 
-157
-00:08:09,539 --> 00:08:10,099
-[NARRATOR] (narration)
+98
+00:08:28,231 --> 00:08:30,171
+[NARRATOR] Morning sunlight filled the lobby.
 
-158
-00:08:14,499 --> 00:08:16,419
-[NARRATOR] (narration)
+99
+00:08:31,231 --> 00:08:34,351
+[NARRATOR] John stumbled out onto the floor, gasping for breath.
 
-159
-00:08:16,719 --> 00:08:17,719
-[NARRATOR] (narration)
+100
+00:08:35,151 --> 00:08:36,431
+[NARRATOR] It was six in the morning.
 
-160
-00:08:18,519 --> 00:08:20,459
-[NARRATOR] (narration)
+101
+00:08:38,151 --> 00:08:46,231
+[NARRATOR] The hospital lobby was busy again. Nurses were moving between desks, patients were waiting, and sunlight streamed through the windows.
 
-161
-00:08:21,519 --> 00:08:24,639
-[NARRATOR] (narration)
+102
+00:08:47,031 --> 00:08:49,811
+[NARRATOR] A nurse saw John and rushed toward him.
 
-162
-00:08:25,439 --> 00:08:26,719
-[NARRATOR] (narration)
-
-163
-00:08:28,439 --> 00:08:30,319
-[NARRATOR] (narration)
-
-164
-00:08:30,619 --> 00:08:32,539
-[NARRATOR] (narration)
-
-165
-00:08:32,839 --> 00:08:33,939
-[NARRATOR] (narration)
-
-166
-00:08:34,239 --> 00:08:36,519
-[NARRATOR] (narration)
-
-167
-00:08:37,319 --> 00:08:40,099
-[NARRATOR] (narration)
-
-168
-00:08:40,899 --> 00:08:45,486
+103
+00:08:50,611 --> 00:08:55,198
 [NURSE] Dr. Smith! Where have you been? We've been looking for you all night!
 
-169
-00:08:46,286 --> 00:08:49,690
-[JOHN] I was on the thirteenth floor. The elevator... it took me there.
+104
+00:08:55,998 --> 00:08:57,806
+[JOHN] I was on the thirteenth floor.
 
-170
-00:08:50,490 --> 00:08:51,822
+105
+00:08:58,998 --> 00:09:00,330
 [NURSE] What thirteenth floor?
 
-171
-00:08:53,490 --> 00:08:56,885
-[JOHN] The patients... an old doctor... a little girl...
+106
+00:09:01,998 --> 00:09:03,382
+[JOHN] The elevator took me there.
 
-172
-00:08:57,285 --> 00:08:59,059
-[JOHN] I swear it was there.
+107
+00:09:03,682 --> 00:09:07,077
+[JOHN] There were patients... an old doctor... a little girl...
 
-173
-00:08:59,859 --> 00:09:03,526
+108
+00:09:07,877 --> 00:09:11,544
 [NURSE] Doctor... this hospital has never had a thirteenth floor.
 
-174
-00:09:13,526 --> 00:09:15,624
+109
+00:09:12,344 --> 00:09:14,118
+[JOHN] I saw it. I was there.
+
+110
+00:09:24,544 --> 00:09:26,642
 [NURSE] Maybe you need some rest, Doctor.
 
-175
-00:09:16,526 --> 00:09:17,834
-[JOHN] Maybe I just need some rest.
+111
+00:09:27,544 --> 00:09:29,932
+[JOHN] Maybe... maybe I just need some rest.
 
-176
-00:09:19,526 --> 00:09:20,906
-[NARRATOR] (narration)
+112
+00:09:30,732 --> 00:09:35,572
+[NARRATOR] John walked away, trying to convince himself it had all been a nightmare.
 
-177
-00:09:21,206 --> 00:09:24,366
-[NARRATOR] (narration)
+113
+00:09:36,372 --> 00:09:47,312
+[NARRATOR] But as he passed the reception desk, an old register lying open began turning pages by itself. It stopped on a blank page. A name slowly appeared.
 
-178
-00:09:25,166 --> 00:09:27,066
-[NARRATOR] (narration)
+114
+00:09:48,112 --> 00:09:55,312
+[NARRATOR] Dr. John K. Smith. Floor 13. Shift: tonight — 2:13 AM.
 
-179
-00:09:27,366 --> 00:09:31,626
-[NARRATOR] (narration)
+115
+00:10:01,612 --> 00:10:06,852
+[NARRATOR] That same night, the hospital CCTV cameras recorded an empty reception.
 
-180
-00:09:31,926 --> 00:09:33,946
-[NARRATOR] (narration)
+116
+00:10:07,652 --> 00:10:14,752
+[NARRATOR] At exactly 2:13 AM, the elevator doors opened by themselves. Nobody was inside.
 
-181
-00:09:34,246 --> 00:09:36,106
-[NARRATOR] (narration)
+117
+00:10:15,552 --> 00:10:19,392
+[NARRATOR] The floor indicator began changing. Twelve… then…
 
-182
-00:09:36,906 --> 00:09:38,806
-[NARRATOR] (narration)
-
-183
-00:09:39,106 --> 00:09:39,626
-[NARRATOR] (narration)
-
-184
-00:09:39,926 --> 00:09:40,666
-[NARRATOR] (narration)
-
-185
-00:09:40,966 --> 00:09:41,506
-[NARRATOR] (narration)
-
-186
-00:09:41,806 --> 00:09:42,386
-[NARRATOR] (narration)
-
-187
-00:09:42,686 --> 00:09:44,106
-[NARRATOR] (narration)
-
-188
-00:09:44,906 --> 00:09:46,105
-[JOHN] This can't be happening...
-
-189
-00:09:49,906 --> 00:09:55,146
-[NARRATOR] (narration)
-
-190
-00:09:55,946 --> 00:09:58,386
-[NARRATOR] (narration)
-
-191
-00:09:58,686 --> 00:10:01,386
-[NARRATOR] (narration)
-
-192
-00:10:01,686 --> 00:10:03,046
-[NARRATOR] (narration)
-
-193
-00:10:03,846 --> 00:10:05,946
-[NARRATOR] (narration)
-
-194
-00:10:06,246 --> 00:10:06,886
-[NARRATOR] (narration)
-
-195
-00:10:07,186 --> 00:10:07,686
-[NARRATOR] (narration)
-
-196
-00:10:08,886 --> 00:10:14,104
+118
+00:10:20,592 --> 00:10:25,718
 [PA] Dr. John K. Smith... please report to Floor 13.
 
-197
-00:10:14,904 --> 00:10:16,124
-[NARRATOR] (narration)
+119
+00:10:26,518 --> 00:10:29,478
+[NARRATOR] A few seconds later, the reception phone rang.
 
-198
-00:10:16,424 --> 00:10:17,864
-[NARRATOR] (narration)
+120
+00:10:30,978 --> 00:10:32,726
+[PHONE VOICE] Is there any doctor available?
 
-199
-00:10:19,364 --> 00:10:21,748
-[PHONE VOICE] Hello? Is there any doctor available?
-
-200
-00:10:22,048 --> 00:10:24,331
+121
+00:10:33,026 --> 00:10:35,294
 [PHONE VOICE] We have a new patient on the thirteenth floor.
 
-201
-00:10:25,131 --> 00:10:26,463
-[NURSE] What thirteenth floor? (night, on the phone)
+122
+00:10:36,094 --> 00:10:37,426
+[NURSE] What thirteenth floor? (stands in for: What? There's no thirteenth floor.)
 
-202
-00:10:28,631 --> 00:10:30,753
+123
+00:10:39,594 --> 00:10:41,748
 [PHONE VOICE] His name is John K. Smith.
 
-203
-00:10:31,553 --> 00:10:32,833
-[NARRATOR] (narration)
+124
+00:10:42,548 --> 00:10:43,828
+[NARRATOR] The phone went dead.
 
-204
-00:10:34,553 --> 00:10:36,973
-[NARRATOR] (narration)
+125
+00:10:45,548 --> 00:10:50,408
+[NARRATOR] The elevator doors slowly closed. The display remained glowing red.
 
-205
-00:10:37,273 --> 00:10:39,413
-[NARRATOR] (narration)
+126
+00:10:51,208 --> 00:10:56,008
+[NARRATOR] And somewhere behind those doors… a man in a white coat was waiting.
 
-206
-00:10:40,213 --> 00:10:42,153
-[NARRATOR] (narration)
-
-207
-00:10:42,453 --> 00:10:45,013
-[NARRATOR] (narration)
-
-208
-00:10:47,313 --> 00:10:48,113
-[NARRATOR] (narration)
+127
+00:10:58,308 --> 00:10:59,108
+[NARRATOR] The end.
 

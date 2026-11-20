@@ -67,7 +67,8 @@ def main():
                 flag = " *(TTS placeholder)*" if e.get("placeholder") else ""
                 lines.append(f"  - **{e['char'].replace('_', ' ').title()}** ({e['id']}, +{e['start']:.1f}s): “{e['text']}”{flag}")
             else:
-                lines.append(f"  - *Narrator* ({e['id']}, +{e['start']:.1f}s, narrator.mp3 {e['src_in']:.2f}–{e['src_out']:.2f})")
+                txt = f": “{e['text']}”" if e.get("text") else ""
+                lines.append(f"  - *Narrator* ({e['id']}, +{e['start']:.1f}s, narrator.mp3 {e['src_in']:.2f}–{e['src_out']:.2f}){txt}")
         sfx = ", ".join(f"{a} @{b}s ({g} dB)" for a, b, g in s.get("sfx", [])) or "—"
         md += [f"### {sid} · {tc(t.get('start', 0))} – {tc(t.get('end', 0))} · {dur:.1f}s",
                f"- **Location:** {s['loc']}  ",

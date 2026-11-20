@@ -8,8 +8,8 @@
   },
   "J02": {
     "file": "voice/john/J02.wav",
-    "seconds": 3.05,
-    "speech_seconds": 1.096,
+    "seconds": 1.85,
+    "speech_seconds": 1.059,
     "placeholder": false,
     "text": "That's impossible."
   },
@@ -25,7 +25,7 @@
     "seconds": 2.67,
     "speech_seconds": 0.872,
     "placeholder": false,
-    "text": "Anyone?"
+    "text": "Can you hear me?"
   },
   "J05": {
     "file": "voice/john/J05.wav",
@@ -95,35 +95,42 @@
     "seconds": 4.19,
     "speech_seconds": 2.303,
     "placeholder": false,
-    "text": "Come on... open up, please!"
+    "text": "No! Open! Please!"
   },
   "J15": {
     "file": "voice/john/J15.wav",
-    "seconds": 4.57,
-    "speech_seconds": 3.404,
+    "seconds": 2.92,
+    "speech_seconds": 1.808,
     "placeholder": false,
-    "text": "I was on the thirteenth floor. The elevator... it took me there."
+    "text": "I was on the thirteenth floor."
+  },
+  "J18": {
+    "file": "voice/john/J18.wav",
+    "seconds": 2.57,
+    "speech_seconds": 1.384,
+    "placeholder": false,
+    "text": "The elevator took me there."
   },
   "J16": {
     "file": "voice/john/J16.wav",
     "seconds": 4.55,
     "speech_seconds": 3.395,
     "placeholder": false,
-    "text": "The patients... an old doctor... a little girl..."
+    "text": "There were patients... an old doctor... a little girl..."
   },
   "J17": {
     "file": "voice/john/J17.wav",
     "seconds": 2.95,
     "speech_seconds": 1.774,
     "placeholder": false,
-    "text": "I swear it was there."
+    "text": "I saw it. I was there."
   },
   "J19": {
     "file": "voice/john/J19.wav",
-    "seconds": 2.47,
-    "speech_seconds": 1.308,
+    "seconds": 3.55,
+    "speech_seconds": 2.388,
     "placeholder": false,
-    "text": "Maybe I just need some rest."
+    "text": "Maybe... maybe I just need some rest."
   },
   "J20": {
     "file": "voice/john/J20.wav",
@@ -134,17 +141,17 @@
   },
   "J21": {
     "file": "voice/john/J21.wav",
-    "seconds": 2.53,
-    "speech_seconds": 1.199,
+    "seconds": 3.37,
+    "speech_seconds": 1.282,
     "placeholder": false,
-    "text": "This can't be happening..."
+    "text": "This can't be happening... (script: This can't be real)"
   },
   "OD01": {
     "file": "voice/old_doctor/OD01.wav",
     "seconds": 4.115,
     "speech_seconds": 1.726,
     "placeholder": false,
-    "text": "Now you remember, Doctor."
+    "text": "Now you remember, Doctor?"
   },
   "OD02": {
     "file": "voice/old_doctor/OD02.wav",
@@ -193,7 +200,7 @@
     "seconds": 6.226,
     "speech_seconds": 2.514,
     "placeholder": false,
-    "text": "Doctor... don't leave."
+    "text": "Doctor Uncle... don't leave."
   },
   "G02": {
     "file": "voice/little_girl/G02.wav",
@@ -284,7 +291,7 @@
     "seconds": 2.27,
     "speech_seconds": 1.332,
     "placeholder": false,
-    "text": "What thirteenth floor? (night, on the phone)"
+    "text": "What thirteenth floor? (stands in for: What? There's no thirteenth floor.)"
   },
   "NW1": {
     "file": "voice/nurse/NW1.wav",
@@ -302,36 +309,43 @@
   },
   "PH01": {
     "file": "voice/phone_voice/PH01.wav",
-    "seconds": 2.4,
-    "speech_seconds": 2.384,
+    "seconds": 1.78,
+    "speech_seconds": 1.748,
     "placeholder": false,
-    "text": "Hello? Is there any doctor available?"
+    "text": "Is there any doctor available?"
   },
   "PH02": {
     "file": "voice/phone_voice/PH02.wav",
     "seconds": 2.3,
-    "speech_seconds": 2.283,
+    "speech_seconds": 2.268,
     "placeholder": false,
     "text": "We have a new patient on the thirteenth floor."
   },
   "PH03": {
     "file": "voice/phone_voice/PH03.wav",
     "seconds": 2.189,
-    "speech_seconds": 2.122,
+    "speech_seconds": 2.154,
     "placeholder": false,
     "text": "His name is John K. Smith."
+  },
+  "PH04": {
+    "file": "voice/phone_voice/PH04.wav",
+    "seconds": 6.643,
+    "speech_seconds": 6.427,
+    "placeholder": true,
+    "text": "Doctor Smith? We need you on the twelfth floor. A patient's condition is suddenly getting worse."
   },
   "PA01": {
     "file": "voice/pa/PA01.wav",
     "seconds": 8.921,
-    "speech_seconds": 5.489,
+    "speech_seconds": 5.392,
     "placeholder": true,
     "text": "Dr. John K. Smith... your shift is not over yet."
   },
   "PA02": {
     "file": "voice/pa/PA02.wav",
     "seconds": 8.639,
-    "speech_seconds": 5.218,
+    "speech_seconds": 5.126,
     "placeholder": true,
     "text": "Dr. John K. Smith... please report to Floor 13."
   }

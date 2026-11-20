@@ -30,7 +30,7 @@ def main():
     shots = doc["shots"]
     cues = load_yaml("voice_cues.yaml")["cues"]
     report = load_json(PROD / "voice_report.json", {})
-    narr_text = (load_yaml("narration.yaml") or {}).get("lines", {}) if (PROD / "narration.yaml").exists() else {}
+    narr_text = (load_yaml("narration.yaml") or {}).get("shots", {}) if (PROD / "narration.yaml").exists() else {}
 
     t = 0.0
     out, srt = [], []
@@ -58,7 +58,7 @@ def main():
                 name = s["id"] if n_narr == 1 else f"{s['id']}_{narr_idx}"
                 events.append({"type": "narration", "id": name, "file": f"voice/narrator/{name}.wav",
                                "start": round(cur, 3), "speech": round(b - a, 3), "src_in": a, "src_out": b,
-                               "text": narr_text.get(name, "")})
+                               "text": narr_text.get(s["id"], "") if narr_idx == 1 else ""})
                 cur += b - a
             elif "cue" in e:
                 cid = e["cue"]
@@ -89,10 +89,16 @@ def main():
             "amb_active": amb, "mus_active": mus,
             "fade_in": s.get("fade_in", 0.0), "fade_out": s.get("fade_out", 0.0),
         })
+        narr = [ev for ev in events if ev["type"] == "narration"]
+        if narr:  # one subtitle spanning the shot's narration
+            srt.append((t + narr[0]["start"], t + narr[-1]["start"] + narr[-1]["speech"],
+                        f"[NARRATOR] {narr_text.get(s['id'], '(narration)')}"))
         for ev in events:
+            if ev["type"] == "narration":
+                continue
             a = t + ev["start"]
             label = ev.get("char", "narrator").upper().replace("_", " ")
-            srt.append((a, a + ev["speech"], f"[{label}] {ev['text'] or '(narration)'}"))
+            srt.append((a, a + ev["speech"], f"[{label}] {ev['text']}"))
         t += dur
 
     # snap shot boundaries to whole frames so video and audio never drift

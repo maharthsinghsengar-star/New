@@ -134,13 +134,13 @@ shots:
   chars: [john]
   cam: Close-up on John, handset to his ear, slow push-in
   move: push_slow
-  act: John answers; a distant, muffled voice asks for a doctor; he agrees to come.
+  act: '"Doctor Smith? We need you on the twelfth floor…" John sighs, checks his watch — "Alright. I''m coming."'
   emo: Tired professionalism, slight unease
   desc: close-up of John holding a telephone handset to his ear, lamp light on one side of his face,
     blue darkness on the other
   anim: listens, slight frown, small exhale, nods
-  audio: [{gap: 0.9}, {cue: PH00}, {gap: 0.5}, {cue: J01}]
-  sfx: [[phone_pickup, 0.3, -6], [phone_hangup, 5.6, -6]]
+  audio: [{gap: 0.9}, {cue: PH04}, {gap: 0.6}, {cue: J01}]
+  sfx: [[phone_pickup, 0.3, -6], [phone_hangup, 9.2, -6]]
   kf: {crop: john_face}
 
 - id: S008
@@ -280,12 +280,12 @@ shots:
   chars: []
   cam: Extreme close-up; the display glitches and turns blood-red, showing 13
   move: push_slow
-  act: The display changes to 13. Breath fogs in the cold.
+  act: 'The display changes to 13. John frowns — "That''s impossible…" Breath fogs in the cold.'
   emo: Cold fear
   desc: elevator LED indicator glitching into the number 13 glowing deep red, frost forming on the steel frame
   anim: digits scramble then lock on 13, frost creeps, breath vapour drifts
-  audio: [{narr: [77.00, 78.72]}, {narr: [79.10, 80.28]}, {narr: [80.72, 82.72]}]
-  sfx: [[glitch, 2.3, -6], [low_drone_swell, 3.0, -8]]
+  audio: [{narr: [77.00, 78.72]}, {narr: [79.10, 80.28]}, {gap: 0.4}, {cue: J02}, {gap: 0.5}, {narr: [80.72, 82.72]}]
+  sfx: [[glitch, 2.3, -6], [button_press, 5.4, -8], [button_press, 5.9, -8], [low_drone_swell, 6.0, -8]]
   kf: {env: display, seq: [[0, "12"], [2.3, "##"], [2.7, "13"]], red: true}
 
 - id: S018
@@ -455,8 +455,8 @@ shots:
   emo: Desperate
   desc: close-up of John's face as he desperately presses the elevator call button
   anim: frantic pressing, breathing hard
-  audio: [{narr: [134.96, 135.86]}, {cue: J14}, {narr: [136.22, 137.24]}, {narr: [137.74, 138.34]}]
-  sfx: [[button_press, 1.6, -4], [button_press, 2.2, -4], [button_press, 2.7, -4], [button_press, 5.8, -4]]
+  audio: [{narr: [134.96, 135.86]}, {gap: 0.6}, {narr: [136.22, 137.24]}, {narr: [137.74, 138.34]}]
+  sfx: [[button_press, 1.6, -4], [button_press, 2.2, -4], [button_press, 2.7, -4], [button_press, 3.2, -4]]
   kf: {crop: john_face}
   grade: ward
   fx: [shake]
@@ -484,11 +484,13 @@ shots:
   chars: [john]
   cam: Close-up, static
   move: static
-  act: John touches the wall. Impossible.
+  act: John touches the wall, breathing faster.
   emo: Shock
   desc: close-up of John, hand on the wall, face pale in the flicker
   anim: hand trembles against the wall
-  audio: [{cue: J02}]
+  audio: []
+  dur: 3.0
+  sfx: [[heartbeat_slow, 0.0, -10]]
   kf: {crop: john_face}
   grade: ward
   fx: [flicker]
@@ -497,13 +499,14 @@ shots:
   ch: 3
   loc: Floor 13 corridor
   chars: [john]
-  cam: Wide from behind John, he calls into the dark
+  cam: Wide from behind John, static
   move: static
-  act: 'John calls "Hello? … Anyone?" — his voice echoes away.'
+  act: John stands alone in the corridor, listening to the dark.
   emo: Fear
   desc: John seen from behind, small figure in a long dark corridor, fog ahead
   anim: fog drifts, his coat moves slightly
-  audio: [{cue: J03}, {gap: 0.8}, {cue: J04}]
+  audio: []
+  dur: 3.5
   tail: 1.2
   kf: {env: corridor, style: old, figure_back: true}
   grade: ward
@@ -576,11 +579,11 @@ shots:
   chars: [john, patients]
   cam: Low-angle tracking at bed height as John approaches the first bed
   move: dolly
-  act: John approaches the first bed.
+  act: 'John approaches the first bed. "Hello? … Can you hear me?"'
   emo: Hesitation
   desc: low angle along the iron bed frame toward a patient's back, John's legs approaching in the background
   anim: footsteps, bed sheet rises with breath
-  audio: [{narr: [166.92, 168.68]}]
+  audio: [{narr: [166.92, 168.68]}, {gap: 0.4}, {cue: J03}, {gap: 0.6}, {cue: J04}]
   sfx: [[footsteps_walk, 0.2, -10]]
   kf: {env: ward, close: true}
   grade: ward
@@ -944,10 +947,10 @@ shots:
   cam: Page flip, push-in on the date
   move: push
   act: The next page — "Patient reports seeing Floor 13 in the elevator." Dated eighteen years ago.
-  emo: Disbelief
+  emo: Disbelief — he whispers "This can't be…"
   desc: second page of the old report, the date circled, typed line about Floor 13
   anim: page flips, light settles on the date
-  audio: [{narr: [252.34, 253.80]}, {narr: [254.28, 257.00]}]
+  audio: [{narr: [252.34, 253.80]}, {narr: [254.28, 257.00]}, {gap: 0.6}, {cue: J21}]
   sfx: [[paper_turn, 0.1, -6]]
   tail: 1.8
   kf: {env: doc, page: p2}
@@ -1290,7 +1293,7 @@ shots:
   chars: [john]
   cam: Close-up, static
   move: static
-  act: '"No…"'
+  act: 'He stops. "No…"'
   emo: Horror
   desc: close-up of John's face drained of colour in red light
   anim: shakes his head slightly
@@ -1370,12 +1373,12 @@ shots:
   chars: []
   cam: Close-up of the indicator glitching; the PA crackles
   move: push_slow
-  act: '"Dr. John K. Smith… your shift is not over yet."'
+  act: '"Dr. John K. Smith… your shift is not over yet." John pounds the doors — "No! Open! Please!"'
   emo: Menace
   desc: elevator speaker grille and red LED indicator glitching between symbols
   anim: display glitches, speaker grille vibrates
-  audio: [{gap: 0.4}, {cue: PA01}]
-  sfx: [[pa_chime, 0.0, -8], [static_burst, 0.2, -10]]
+  audio: [{gap: 0.4}, {cue: PA01}, {gap: 0.3}, {cue: J14}]
+  sfx: [[pa_chime, 0.0, -8], [static_burst, 0.2, -10], [wall_thud, 6.2, -5], [wall_thud, 6.9, -5], [wall_thud, 7.8, -5]]
   kf: {env: display, seq: [[0, "13"], [1.5, "##"], [2.0, "13"], [4.0, "##"], [4.4, "13"]], red: true}
   fx: [flicker]
 
@@ -1550,11 +1553,11 @@ shots:
   chars: [john, nurse]
   cam: Medium two-shot
   move: push_slow
-  act: '"The patients… an old doctor… a little girl… I swear it was there."'
+  act: '"The elevator took me there. There were patients… an old doctor… a little girl…" The nurse exchanges a glance with a colleague.'
   emo: Desperate to be believed
   desc: medium shot of John explaining, the nurse beside him listening
   anim: John gestures upward, the nurse listens with growing worry
-  audio: [{cue: J16}, {gap: 0.4}, {cue: J17}]
+  audio: [{cue: J18}, {gap: 0.3}, {cue: J16}]
   kf: {crop: john_medium}
   grade: morning
 
@@ -1571,6 +1574,20 @@ shots:
   audio: [{cue: N03}]
   mus: twist
   kf: {crop: nurse_face}
+  grade: morning
+
+- id: S101A
+  ch: 10
+  loc: Hospital lobby
+  chars: [john]
+  cam: Close-up, slight handheld
+  move: handheld
+  act: '"I saw it. I was there." He insists they check the records.'
+  emo: Desperate
+  desc: close-up of John in warm lobby light, insisting, eyes wide
+  anim: shakes his head, grips the nurse's arm
+  audio: [{cue: J17}]
+  kf: {crop: john_face}
   grade: morning
 
 - id: S102
@@ -1686,11 +1703,13 @@ shots:
   chars: [john]
   cam: Close-up, slow push; the warmth drains from the image
   move: push_slow
-  act: '"This can''t be happening…"'
+  act: John stares at the register; the warmth drains from the image.
   emo: Traumatized
   desc: close-up of John staring at the register, the warm light turning cold
   anim: colour drains, his breath shakes
-  audio: [{cue: J21}]
+  audio: []
+  dur: 3.5
+  sfx: [[heartbeat_slow, 0.0, -10]]
   tail: 1.0
   kf: {crop: john_face}
   grade: night
@@ -1801,7 +1820,7 @@ shots:
   chars: [nurse]
   cam: Close-up of the nurse answering, cold night light
   move: push_slow
-  act: '"Hello? Is there any doctor available? We have a new patient on the thirteenth floor…"'
+  act: '"Hello?" — a frightened voice: "Is there any doctor available? We have a new patient on the thirteenth floor…"'
   emo: Confused
   desc: close-up of the night nurse holding a telephone handset at the dark reception desk, cold blue light
   anim: listens, frowns
@@ -1817,7 +1836,7 @@ shots:
   chars: [nurse]
   cam: Close-up
   move: static
-  act: '"There is no thirteenth floor…" / "What thirteenth floor?"'
+  act: '"What? There''s no thirteenth floor." (recorded line used: "What thirteenth floor?")'
   emo: Unease
   desc: close-up of the nurse, uneasy, glancing toward the elevator
   anim: glances sideways

@@ -2,7 +2,7 @@
   "fps": 24,
   "width": 1920,
   "height": 1080,
-  "total_seconds": 652.417,
+  "total_seconds": 663.417,
   "shots": [
     {
       "id": "S001",
@@ -77,7 +77,7 @@
           "speech": 1.91,
           "src_in": 0.04,
           "src_out": 1.95,
-          "text": ""
+          "text": "It was nearly two in the morning. The old city hospital was unusually quiet."
         },
         {
           "type": "narration",
@@ -121,7 +121,7 @@
           "speech": 10.38,
           "src_in": 6.42,
           "src_out": 16.8,
-          "text": ""
+          "text": "Most of the staff had gone home, leaving behind the soft humming of machines, flickering fluorescent lights, and the distant sound of rain hitting the windows."
         }
       ],
       "sfx": [],
@@ -149,7 +149,7 @@
           "speech": 10.08,
           "src_in": 17.48,
           "src_out": 27.56,
-          "text": ""
+          "text": "Dr. John K. Smith had been working for almost twelve hours. Exhausted, he sat at his desk, finishing his coffee and preparing to leave."
         }
       ],
       "sfx": [],
@@ -177,7 +177,7 @@
           "speech": 2.82,
           "src_in": 28.18,
           "src_out": 31.0,
-          "text": ""
+          "text": "Just as he picked up his coat, the phone rang."
         }
       ],
       "sfx": [
@@ -199,26 +199,26 @@
       "chapter": 1,
       "chapter_title": "THE LAST CALL",
       "start": 45.9167,
-      "duration": 5.9167,
-      "end": 51.8333,
-      "frames": 142,
+      "duration": 10.125,
+      "end": 56.0417,
+      "frames": 243,
       "events": [
         {
           "type": "dialogue",
-          "id": "PH00",
+          "id": "PH04",
           "char": "phone_voice",
-          "file": "voice/phone_voice/PH00.wav",
+          "file": "voice/phone_voice/PH04.wav",
           "start": 1.2,
-          "speech": 2.319,
-          "text": "Hello? Is there any doctor available?",
-          "placeholder": false
+          "speech": 6.427,
+          "text": "Doctor Smith? We need you on the twelfth floor. A patient's condition is suddenly getting worse.",
+          "placeholder": true
         },
         {
           "type": "dialogue",
           "id": "J01",
           "char": "john",
           "file": "voice/john/J01.wav",
-          "start": 4.019,
+          "start": 8.227,
           "speech": 1.411,
           "text": "All right, I'm coming.",
           "placeholder": false
@@ -232,7 +232,7 @@
         },
         {
           "id": "phone_hangup",
-          "at": 5.6,
+          "at": 9.2,
           "gain_db": -6
         }
       ],
@@ -247,9 +247,9 @@
       "id": "S008",
       "chapter": 1,
       "chapter_title": "THE LAST CALL",
-      "start": 51.8333,
+      "start": 56.0417,
       "duration": 3.25,
-      "end": 55.0833,
+      "end": 59.2917,
       "frames": 78,
       "events": [
         {
@@ -260,7 +260,7 @@
           "speech": 2.46,
           "src_in": 31.7,
           "src_out": 34.16,
-          "text": ""
+          "text": "The time was 2:13 AM."
         }
       ],
       "sfx": [
@@ -281,9 +281,9 @@
       "id": "S009",
       "chapter": 1,
       "chapter_title": "THE LAST CALL",
-      "start": 55.0833,
+      "start": 59.2917,
       "duration": 5.5833,
-      "end": 60.6667,
+      "end": 64.875,
       "frames": 134,
       "events": [
         {
@@ -294,7 +294,7 @@
           "speech": 4.8,
           "src_in": 34.8,
           "src_out": 39.6,
-          "text": ""
+          "text": "He grabbed his stethoscope, stepped into the hallway, and headed toward the elevator."
         }
       ],
       "sfx": [
@@ -315,9 +315,9 @@
       "id": "S010",
       "chapter": 1,
       "chapter_title": "THE LAST CALL",
-      "start": 60.6667,
+      "start": 64.875,
       "duration": 6.6667,
-      "end": 67.3333,
+      "end": 71.5417,
       "frames": 160,
       "events": [
         {
@@ -328,7 +328,7 @@
           "speech": 4.96,
           "src_in": 40.2,
           "src_out": 45.16,
-          "text": ""
+          "text": "The hospital had twelve floors. At least, that's what everyone believed."
         }
       ],
       "sfx": [],
@@ -343,9 +343,9 @@
       "id": "S011",
       "chapter": 2,
       "chapter_title": "THE WRONG FLOOR",
-      "start": 67.3333,
+      "start": 71.5417,
       "duration": 4.5417,
-      "end": 71.875,
+      "end": 76.0833,
       "frames": 109,
       "events": [
         {
@@ -356,7 +356,7 @@
           "speech": 3.74,
           "src_in": 45.86,
           "src_out": 49.6,
-          "text": ""
+          "text": "John entered the elevator and pressed the button for the twelfth floor."
         }
       ],
       "sfx": [
@@ -382,9 +382,9 @@
       "id": "S012",
       "chapter": 2,
       "chapter_title": "THE WRONG FLOOR",
-      "start": 71.875,
+      "start": 76.0833,
       "duration": 4.0417,
-      "end": 75.9167,
+      "end": 80.125,
       "frames": 97,
       "events": [
         {
@@ -395,7 +395,7 @@
           "speech": 3.24,
           "src_in": 50.22,
           "src_out": 53.46,
-          "text": ""
+          "text": "The doors closed. The elevator began moving."
         }
       ],
       "sfx": [
@@ -421,9 +421,9 @@
       "id": "S013",
       "chapter": 2,
       "chapter_title": "THE WRONG FLOOR",
-      "start": 75.9167,
+      "start": 80.125,
       "duration": 4.7917,
-      "end": 80.7083,
+      "end": 84.9167,
       "frames": 115,
       "events": [
         {
@@ -434,7 +434,7 @@
           "speech": 3.98,
           "src_in": 54.08,
           "src_out": 58.06,
-          "text": ""
+          "text": "Three… four… five… six…"
         }
       ],
       "sfx": [],
@@ -449,9 +449,9 @@
       "id": "S014",
       "chapter": 2,
       "chapter_title": "THE WRONG FLOOR",
-      "start": 80.7083,
+      "start": 84.9167,
       "duration": 3.0,
-      "end": 83.7083,
+      "end": 87.9167,
       "frames": 72,
       "events": [
         {
@@ -462,7 +462,7 @@
           "speech": 1.56,
           "src_in": 58.86,
           "src_out": 60.42,
-          "text": ""
+          "text": "Everything seemed normal."
         }
       ],
       "sfx": [],
@@ -477,9 +477,9 @@
       "id": "S015",
       "chapter": 2,
       "chapter_title": "THE WRONG FLOOR",
-      "start": 83.7083,
+      "start": 87.9167,
       "duration": 6.3333,
-      "end": 90.0417,
+      "end": 94.25,
       "frames": 152,
       "events": [
         {
@@ -490,7 +490,7 @@
           "speech": 1.56,
           "src_in": 61.06,
           "src_out": 62.62,
-          "text": ""
+          "text": "Then the lights flickered. The elevator jerked violently, and John grabbed the handrail."
         },
         {
           "type": "narration",
@@ -531,9 +531,9 @@
       "id": "S016",
       "chapter": 2,
       "chapter_title": "THE WRONG FLOOR",
-      "start": 90.0417,
+      "start": 94.25,
       "duration": 9.5833,
-      "end": 99.625,
+      "end": 103.8333,
       "frames": 230,
       "events": [
         {
@@ -544,7 +544,7 @@
           "speech": 1.86,
           "src_in": 67.22,
           "src_out": 69.08,
-          "text": ""
+          "text": "The display continued changing. Eight… nine… ten… eleven… twelve… But the elevator didn't stop."
         },
         {
           "type": "narration",
@@ -585,10 +585,10 @@
       "id": "S017",
       "chapter": 2,
       "chapter_title": "THE WRONG FLOOR",
-      "start": 99.625,
-      "duration": 6.2917,
-      "end": 105.9167,
-      "frames": 151,
+      "start": 103.8333,
+      "duration": 7.9583,
+      "end": 111.7917,
+      "frames": 191,
       "events": [
         {
           "type": "narration",
@@ -598,7 +598,7 @@
           "speech": 1.72,
           "src_in": 77.0,
           "src_out": 78.72,
-          "text": ""
+          "text": "John looked at the floor indicator. The number changed. … The elevator became colder."
         },
         {
           "type": "narration",
@@ -611,10 +611,20 @@
           "text": ""
         },
         {
+          "type": "dialogue",
+          "id": "J02",
+          "char": "john",
+          "file": "voice/john/J02.wav",
+          "start": 3.9,
+          "speech": 1.059,
+          "text": "That's impossible.",
+          "placeholder": false
+        },
+        {
           "type": "narration",
           "id": "S017_3",
           "file": "voice/narrator/S017_3.wav",
-          "start": 3.8,
+          "start": 5.459,
           "speech": 2.0,
           "src_in": 80.72,
           "src_out": 82.72,
@@ -628,8 +638,18 @@
           "gain_db": -6
         },
         {
+          "id": "button_press",
+          "at": 5.4,
+          "gain_db": -8
+        },
+        {
+          "id": "button_press",
+          "at": 5.9,
+          "gain_db": -8
+        },
+        {
           "id": "low_drone_swell",
-          "at": 3.0,
+          "at": 6.0,
           "gain_db": -8
         }
       ],
@@ -644,9 +664,9 @@
       "id": "S018",
       "chapter": 2,
       "chapter_title": "THE WRONG FLOOR",
-      "start": 105.9167,
+      "start": 111.7917,
       "duration": 5.0417,
-      "end": 110.9583,
+      "end": 116.8333,
       "frames": 121,
       "events": [
         {
@@ -657,7 +677,7 @@
           "speech": 4.24,
           "src_in": 83.38,
           "src_out": 87.62,
-          "text": ""
+          "text": "A faint sound of a child laughing echoed from somewhere inside."
         }
       ],
       "sfx": [
@@ -678,9 +698,9 @@
       "id": "S019",
       "chapter": 2,
       "chapter_title": "THE WRONG FLOOR",
-      "start": 110.9583,
+      "start": 116.8333,
       "duration": 3.0,
-      "end": 113.9583,
+      "end": 119.8333,
       "frames": 72,
       "events": [
         {
@@ -712,9 +732,9 @@
       "id": "S020",
       "chapter": 2,
       "chapter_title": "THE WRONG FLOOR",
-      "start": 113.9583,
+      "start": 119.8333,
       "duration": 4.0417,
-      "end": 118.0,
+      "end": 123.875,
       "frames": 97,
       "events": [
         {
@@ -725,7 +745,7 @@
           "speech": 1.16,
           "src_in": 88.18,
           "src_out": 89.34,
-          "text": ""
+          "text": "John turned around. Nobody was there."
         },
         {
           "type": "narration",
@@ -761,9 +781,9 @@
       "id": "S021",
       "chapter": 3,
       "chapter_title": "THE FORBIDDEN WARD",
-      "start": 118.0,
+      "start": 123.875,
       "duration": 7.0417,
-      "end": 125.0417,
+      "end": 130.9167,
       "frames": 169,
       "events": [
         {
@@ -774,7 +794,7 @@
           "speech": 2.24,
           "src_in": 91.5,
           "src_out": 93.74,
-          "text": ""
+          "text": "The elevator doors slowly opened. And beyond them was a corridor he had never seen before."
         },
         {
           "type": "narration",
@@ -810,9 +830,9 @@
       "id": "S022",
       "chapter": 3,
       "chapter_title": "THE FORBIDDEN WARD",
-      "start": 125.0417,
+      "start": 130.9167,
       "duration": 4.125,
-      "end": 129.1667,
+      "end": 135.0417,
       "frames": 99,
       "events": [
         {
@@ -823,7 +843,7 @@
           "speech": 3.32,
           "src_in": 98.46,
           "src_out": 101.78,
-          "text": ""
+          "text": "A long, dark corridor stretched in front of him."
         }
       ],
       "sfx": [],
@@ -838,9 +858,9 @@
       "id": "S023",
       "chapter": 3,
       "chapter_title": "THE FORBIDDEN WARD",
-      "start": 129.1667,
+      "start": 135.0417,
       "duration": 12.2917,
-      "end": 141.4583,
+      "end": 147.3333,
       "frames": 295,
       "events": [
         {
@@ -851,7 +871,7 @@
           "speech": 2.36,
           "src_in": 102.38,
           "src_out": 104.74,
-          "text": ""
+          "text": "The walls were covered in peeling paint. Dust lay across the floor. Old wheelchairs stood against the walls, and rusty hospital beds sat outside rooms with half-open doors."
         },
         {
           "type": "narration",
@@ -892,9 +912,9 @@
       "id": "S024",
       "chapter": 3,
       "chapter_title": "THE FORBIDDEN WARD",
-      "start": 141.4583,
+      "start": 147.3333,
       "duration": 6.0,
-      "end": 147.4583,
+      "end": 153.3333,
       "frames": 144,
       "events": [
         {
@@ -905,7 +925,7 @@
           "speech": 2.34,
           "src_in": 114.82,
           "src_out": 117.16,
-          "text": ""
+          "text": "The lights flickered one after another, illuminating the corridor in brief flashes."
         },
         {
           "type": "narration",
@@ -946,9 +966,9 @@
       "id": "S025",
       "chapter": 3,
       "chapter_title": "THE FORBIDDEN WARD",
-      "start": 147.4583,
+      "start": 153.3333,
       "duration": 7.875,
-      "end": 155.3333,
+      "end": 161.2083,
       "frames": 189,
       "events": [
         {
@@ -959,7 +979,7 @@
           "speech": 1.8,
           "src_in": 120.62,
           "src_out": 122.42,
-          "text": ""
+          "text": "John stepped out of the elevator. A sign above the hallway read: Floor 13 — Emergency Ward."
         },
         {
           "type": "narration",
@@ -995,9 +1015,9 @@
       "id": "S026",
       "chapter": 3,
       "chapter_title": "THE FORBIDDEN WARD",
-      "start": 155.3333,
+      "start": 161.2083,
       "duration": 3.0417,
-      "end": 158.375,
+      "end": 164.25,
       "frames": 73,
       "events": [
         {
@@ -1023,9 +1043,9 @@
       "id": "S027",
       "chapter": 3,
       "chapter_title": "THE FORBIDDEN WARD",
-      "start": 158.375,
+      "start": 164.25,
       "duration": 6.4167,
-      "end": 164.7917,
+      "end": 170.6667,
       "frames": 154,
       "events": [
         {
@@ -1036,7 +1056,7 @@
           "speech": 1.7,
           "src_in": 128.5,
           "src_out": 130.2,
-          "text": ""
+          "text": "He turned back toward the elevator. The doors closed. John rushed forward and pressed the button."
         },
         {
           "type": "narration",
@@ -1087,10 +1107,10 @@
       "id": "S028",
       "chapter": 3,
       "chapter_title": "THE FORBIDDEN WARD",
-      "start": 164.7917,
-      "duration": 6.5417,
-      "end": 171.3333,
-      "frames": 157,
+      "start": 170.6667,
+      "duration": 4.2083,
+      "end": 174.875,
+      "frames": 101,
       "events": [
         {
           "type": "narration",
@@ -1100,23 +1120,13 @@
           "speech": 0.9,
           "src_in": 134.96,
           "src_out": 135.86,
-          "text": ""
-        },
-        {
-          "type": "dialogue",
-          "id": "J14",
-          "char": "john",
-          "file": "voice/john/J14.wav",
-          "start": 1.5,
-          "speech": 2.303,
-          "text": "Come on... open up, please!",
-          "placeholder": false
+          "text": "Nothing happened. He pressed it again. Nothing."
         },
         {
           "type": "narration",
           "id": "S028_2",
           "file": "voice/narrator/S028_2.wav",
-          "start": 4.103,
+          "start": 1.8,
           "speech": 1.02,
           "src_in": 136.22,
           "src_out": 137.24,
@@ -1126,7 +1136,7 @@
           "type": "narration",
           "id": "S028_3",
           "file": "voice/narrator/S028_3.wav",
-          "start": 5.423,
+          "start": 3.12,
           "speech": 0.6,
           "src_in": 137.74,
           "src_out": 138.34,
@@ -1151,7 +1161,7 @@
         },
         {
           "id": "button_press",
-          "at": 5.8,
+          "at": 3.2,
           "gain_db": -4
         }
       ],
@@ -1166,9 +1176,9 @@
       "id": "S029",
       "chapter": 3,
       "chapter_title": "THE FORBIDDEN WARD",
-      "start": 171.3333,
+      "start": 174.875,
       "duration": 6.3333,
-      "end": 177.6667,
+      "end": 181.2083,
       "frames": 152,
       "events": [
         {
@@ -1179,7 +1189,7 @@
           "speech": 1.66,
           "src_in": 138.84,
           "src_out": 140.5,
-          "text": ""
+          "text": "The elevator was gone. Where it had been, there was now nothing but a solid wall."
         },
         {
           "type": "narration",
@@ -1215,23 +1225,18 @@
       "id": "S030",
       "chapter": 3,
       "chapter_title": "THE FORBIDDEN WARD",
-      "start": 177.6667,
+      "start": 181.2083,
       "duration": 3.0,
-      "end": 180.6667,
+      "end": 184.2083,
       "frames": 72,
-      "events": [
+      "events": [],
+      "sfx": [
         {
-          "type": "dialogue",
-          "id": "J02",
-          "char": "john",
-          "file": "voice/john/J02.wav",
-          "start": 0.3,
-          "speech": 1.096,
-          "text": "That's impossible.",
-          "placeholder": false
+          "id": "heartbeat_slow",
+          "at": 0.0,
+          "gain_db": -10
         }
       ],
-      "sfx": [],
       "amb": null,
       "mus": null,
       "amb_active": "ward13",
@@ -1243,32 +1248,11 @@
       "id": "S031",
       "chapter": 3,
       "chapter_title": "THE FORBIDDEN WARD",
-      "start": 180.6667,
-      "duration": 3.9167,
-      "end": 184.5833,
-      "frames": 94,
-      "events": [
-        {
-          "type": "dialogue",
-          "id": "J03",
-          "char": "john",
-          "file": "voice/john/J03.wav",
-          "start": 0.3,
-          "speech": 0.753,
-          "text": "Hello?",
-          "placeholder": false
-        },
-        {
-          "type": "dialogue",
-          "id": "J04",
-          "char": "john",
-          "file": "voice/john/J04.wav",
-          "start": 1.853,
-          "speech": 0.872,
-          "text": "Anyone?",
-          "placeholder": false
-        }
-      ],
+      "start": 184.2083,
+      "duration": 3.5,
+      "end": 187.7083,
+      "frames": 84,
+      "events": [],
       "sfx": [],
       "amb": null,
       "mus": null,
@@ -1281,9 +1265,9 @@
       "id": "S032",
       "chapter": 3,
       "chapter_title": "THE FORBIDDEN WARD",
-      "start": 184.5833,
+      "start": 187.7083,
       "duration": 9.4167,
-      "end": 194.0,
+      "end": 197.125,
       "frames": 226,
       "events": [
         {
@@ -1294,7 +1278,7 @@
           "speech": 2.42,
           "src_in": 145.18,
           "src_out": 147.6,
-          "text": ""
+          "text": "John stepped backward, breathing faster. From somewhere down the corridor, a woman's voice called out."
         },
         {
           "type": "narration",
@@ -1329,9 +1313,9 @@
       "id": "S033",
       "chapter": 3,
       "chapter_title": "THE FORBIDDEN WARD",
-      "start": 194.0,
+      "start": 197.125,
       "duration": 4.625,
-      "end": 198.625,
+      "end": 201.75,
       "frames": 111,
       "events": [
         {
@@ -1342,7 +1326,7 @@
           "speech": 3.82,
           "src_in": 152.12,
           "src_out": 155.94,
-          "text": ""
+          "text": "John raised his flashlight and slowly walked toward the sound."
         }
       ],
       "sfx": [
@@ -1368,9 +1352,9 @@
       "id": "S034",
       "chapter": 4,
       "chapter_title": "THE PATIENTS",
-      "start": 198.625,
+      "start": 201.75,
       "duration": 6.0,
-      "end": 204.625,
+      "end": 207.75,
       "frames": 144,
       "events": [
         {
@@ -1381,7 +1365,7 @@
           "speech": 1.7,
           "src_in": 156.44,
           "src_out": 158.14,
-          "text": ""
+          "text": "He entered an old ward. There were ten beds. Every bed was occupied."
         },
         {
           "type": "narration",
@@ -1416,9 +1400,9 @@
       "id": "S035",
       "chapter": 4,
       "chapter_title": "THE PATIENTS",
-      "start": 204.625,
+      "start": 207.75,
       "duration": 4.6667,
-      "end": 209.2917,
+      "end": 212.4167,
       "frames": 112,
       "events": [
         {
@@ -1429,7 +1413,7 @@
           "speech": 2.34,
           "src_in": 162.48,
           "src_out": 164.82,
-          "text": ""
+          "text": "The patients were lying perfectly still, facing the walls."
         },
         {
           "type": "narration",
@@ -1460,10 +1444,10 @@
       "id": "S036",
       "chapter": 4,
       "chapter_title": "THE PATIENTS",
-      "start": 209.2917,
-      "duration": 3.0,
-      "end": 212.2917,
-      "frames": 72,
+      "start": 212.4167,
+      "duration": 5.1667,
+      "end": 217.5833,
+      "frames": 124,
       "events": [
         {
           "type": "narration",
@@ -1473,7 +1457,27 @@
           "speech": 1.76,
           "src_in": 166.92,
           "src_out": 168.68,
-          "text": ""
+          "text": "John approached the first bed."
+        },
+        {
+          "type": "dialogue",
+          "id": "J03",
+          "char": "john",
+          "file": "voice/john/J03.wav",
+          "start": 2.46,
+          "speech": 0.753,
+          "text": "Hello?",
+          "placeholder": false
+        },
+        {
+          "type": "dialogue",
+          "id": "J04",
+          "char": "john",
+          "file": "voice/john/J04.wav",
+          "start": 3.813,
+          "speech": 0.872,
+          "text": "Can you hear me?",
+          "placeholder": false
         }
       ],
       "sfx": [
@@ -1494,9 +1498,9 @@
       "id": "S037",
       "chapter": 4,
       "chapter_title": "THE PATIENTS",
-      "start": 212.2917,
+      "start": 217.5833,
       "duration": 8.8333,
-      "end": 221.125,
+      "end": 226.4167,
       "frames": 212,
       "events": [
         {
@@ -1507,7 +1511,7 @@
           "speech": 2.08,
           "src_in": 169.18,
           "src_out": 171.26,
-          "text": ""
+          "text": "The patient slowly turned his head. His face was pale. His eyes were sunken, and his lips were almost colorless."
         },
         {
           "type": "narration",
@@ -1558,9 +1562,9 @@
       "id": "S038",
       "chapter": 4,
       "chapter_title": "THE PATIENTS",
-      "start": 221.125,
+      "start": 226.4167,
       "duration": 3.0,
-      "end": 224.125,
+      "end": 229.4167,
       "frames": 72,
       "events": [
         {
@@ -1586,9 +1590,9 @@
       "id": "S039",
       "chapter": 4,
       "chapter_title": "THE PATIENTS",
-      "start": 224.125,
+      "start": 229.4167,
       "duration": 3.0,
-      "end": 227.125,
+      "end": 232.4167,
       "frames": 72,
       "events": [
         {
@@ -1614,9 +1618,9 @@
       "id": "S040",
       "chapter": 4,
       "chapter_title": "THE PATIENTS",
-      "start": 227.125,
+      "start": 232.4167,
       "duration": 4.5833,
-      "end": 231.7083,
+      "end": 237.0,
       "frames": 110,
       "events": [
         {
@@ -1652,9 +1656,9 @@
       "id": "S041",
       "chapter": 4,
       "chapter_title": "THE PATIENTS",
-      "start": 231.7083,
+      "start": 237.0,
       "duration": 5.6667,
-      "end": 237.375,
+      "end": 242.6667,
       "frames": 136,
       "events": [
         {
@@ -1665,7 +1669,7 @@
           "speech": 1.98,
           "src_in": 178.02,
           "src_out": 180.0,
-          "text": ""
+          "text": "John moved toward the next bed. An elderly woman began laughing softly."
         },
         {
           "type": "narration",
@@ -1696,9 +1700,9 @@
       "id": "S042",
       "chapter": 4,
       "chapter_title": "THE PATIENTS",
-      "start": 237.375,
+      "start": 242.6667,
       "duration": 6.75,
-      "end": 244.125,
+      "end": 249.4167,
       "frames": 162,
       "events": [
         {
@@ -1709,7 +1713,7 @@
           "speech": 2.14,
           "src_in": 183.56,
           "src_out": 185.7,
-          "text": ""
+          "text": "Another patient whispered from the corner."
         },
         {
           "type": "dialogue",
@@ -1734,9 +1738,9 @@
       "id": "S043",
       "chapter": 4,
       "chapter_title": "THE PATIENTS",
-      "start": 244.125,
+      "start": 249.4167,
       "duration": 7.2083,
-      "end": 251.3333,
+      "end": 256.625,
       "frames": 173,
       "events": [
         {
@@ -1747,7 +1751,7 @@
           "speech": 1.04,
           "src_in": 186.94,
           "src_out": 187.98,
-          "text": ""
+          "text": "Then, one by one, all the patients turned toward him. Their heads moved at exactly the same time."
         },
         {
           "type": "narration",
@@ -1783,9 +1787,9 @@
       "id": "S044",
       "chapter": 4,
       "chapter_title": "THE PATIENTS",
-      "start": 251.3333,
+      "start": 256.625,
       "duration": 6.625,
-      "end": 257.9583,
+      "end": 263.25,
       "frames": 159,
       "events": [
         {
@@ -1796,7 +1800,7 @@
           "speech": 1.1,
           "src_in": 193.94,
           "src_out": 195.04,
-          "text": ""
+          "text": "They spoke together."
         },
         {
           "type": "dialogue",
@@ -1821,9 +1825,9 @@
       "id": "S045",
       "chapter": 4,
       "chapter_title": "THE PATIENTS",
-      "start": 257.9583,
+      "start": 263.25,
       "duration": 3.5,
-      "end": 261.4583,
+      "end": 266.75,
       "frames": 84,
       "events": [],
       "sfx": [
@@ -1844,9 +1848,9 @@
       "id": "S046",
       "chapter": 5,
       "chapter_title": "THE LITTLE GIRL",
-      "start": 261.4583,
+      "start": 266.75,
       "duration": 3.0,
-      "end": 264.4583,
+      "end": 269.75,
       "frames": 72,
       "events": [
         {
@@ -1857,7 +1861,7 @@
           "speech": 1.6,
           "src_in": 195.5,
           "src_out": 197.1,
-          "text": ""
+          "text": "John ran out of the ward."
         }
       ],
       "sfx": [
@@ -1878,9 +1882,9 @@
       "id": "S047",
       "chapter": 5,
       "chapter_title": "THE LITTLE GIRL",
-      "start": 264.4583,
+      "start": 269.75,
       "duration": 7.25,
-      "end": 271.7083,
+      "end": 277.0,
       "frames": 174,
       "events": [
         {
@@ -1891,7 +1895,7 @@
           "speech": 3.44,
           "src_in": 197.58,
           "src_out": 201.02,
-          "text": ""
+          "text": "But as he reached the corridor, he heard a little girl's voice."
         },
         {
           "type": "dialogue",
@@ -1900,7 +1904,7 @@
           "file": "voice/little_girl/G01.wav",
           "start": 4.24,
           "speech": 2.514,
-          "text": "Doctor... don't leave.",
+          "text": "Doctor Uncle... don't leave.",
           "placeholder": false
         }
       ],
@@ -1916,9 +1920,9 @@
       "id": "S048",
       "chapter": 5,
       "chapter_title": "THE LITTLE GIRL",
-      "start": 271.7083,
+      "start": 277.0,
       "duration": 6.1667,
-      "end": 277.875,
+      "end": 283.1667,
       "frames": 148,
       "events": [
         {
@@ -1929,7 +1933,7 @@
           "speech": 0.68,
           "src_in": 201.54,
           "src_out": 202.22,
-          "text": ""
+          "text": "He turned. A little girl was sitting on a hospital bed, holding an old cloth doll."
         },
         {
           "type": "narration",
@@ -1964,9 +1968,9 @@
       "id": "S049",
       "chapter": 5,
       "chapter_title": "THE LITTLE GIRL",
-      "start": 277.875,
+      "start": 283.1667,
       "duration": 3.0,
-      "end": 280.875,
+      "end": 286.1667,
       "frames": 72,
       "events": [
         {
@@ -1977,7 +1981,7 @@
           "speech": 2.14,
           "src_in": 207.68,
           "src_out": 209.82,
-          "text": ""
+          "text": "She was staring directly at him."
         }
       ],
       "sfx": [],
@@ -1992,9 +1996,9 @@
       "id": "S050",
       "chapter": 5,
       "chapter_title": "THE LITTLE GIRL",
-      "start": 280.875,
+      "start": 286.1667,
       "duration": 3.0,
-      "end": 283.875,
+      "end": 289.1667,
       "frames": 72,
       "events": [
         {
@@ -2020,9 +2024,9 @@
       "id": "S051",
       "chapter": 5,
       "chapter_title": "THE LITTLE GIRL",
-      "start": 283.875,
+      "start": 289.1667,
       "duration": 3.3333,
-      "end": 287.2083,
+      "end": 292.5,
       "frames": 80,
       "events": [
         {
@@ -2048,9 +2052,9 @@
       "id": "S052",
       "chapter": 5,
       "chapter_title": "THE LITTLE GIRL",
-      "start": 287.2083,
+      "start": 292.5,
       "duration": 3.2083,
-      "end": 290.4167,
+      "end": 295.7083,
       "frames": 77,
       "events": [],
       "sfx": [
@@ -2081,9 +2085,9 @@
       "id": "S053",
       "chapter": 6,
       "chapter_title": "THE MEDICAL RECORD",
-      "start": 290.4167,
+      "start": 295.7083,
       "duration": 5.3333,
-      "end": 295.75,
+      "end": 301.0417,
       "frames": 128,
       "events": [
         {
@@ -2094,7 +2098,7 @@
           "speech": 4.54,
           "src_in": 210.24,
           "src_out": 214.78,
-          "text": ""
+          "text": "John hurried down the hallway until he found a door marked Medical Records."
         }
       ],
       "sfx": [],
@@ -2109,9 +2113,9 @@
       "id": "S054",
       "chapter": 6,
       "chapter_title": "THE MEDICAL RECORD",
-      "start": 295.75,
+      "start": 301.0417,
       "duration": 9.1667,
-      "end": 304.9167,
+      "end": 310.2083,
       "frames": 220,
       "events": [
         {
@@ -2122,7 +2126,7 @@
           "speech": 1.0,
           "src_in": 215.2,
           "src_out": 216.2,
-          "text": ""
+          "text": "He pushed it open. Inside were hundreds of old files, dusty cabinets, broken chairs, and papers scattered across the floor."
         },
         {
           "type": "narration",
@@ -2163,9 +2167,9 @@
       "id": "S055",
       "chapter": 6,
       "chapter_title": "THE MEDICAL RECORD",
-      "start": 304.9167,
+      "start": 310.2083,
       "duration": 4.6667,
-      "end": 309.5833,
+      "end": 314.875,
       "frames": 112,
       "events": [
         {
@@ -2176,7 +2180,7 @@
           "speech": 3.86,
           "src_in": 224.2,
           "src_out": 228.06,
-          "text": ""
+          "text": "He turned on his phone's flashlight and started searching for a way out."
         }
       ],
       "sfx": [
@@ -2197,9 +2201,9 @@
       "id": "S056",
       "chapter": 6,
       "chapter_title": "THE MEDICAL RECORD",
-      "start": 309.5833,
+      "start": 314.875,
       "duration": 7.1667,
-      "end": 316.75,
+      "end": 322.0417,
       "frames": 172,
       "events": [
         {
@@ -2210,7 +2214,7 @@
           "speech": 3.24,
           "src_in": 228.56,
           "src_out": 231.8,
-          "text": ""
+          "text": "Then he noticed a file lying open on a desk. The name on it made his blood run cold."
         },
         {
           "type": "narration",
@@ -2241,9 +2245,9 @@
       "id": "S057",
       "chapter": 6,
       "chapter_title": "THE MEDICAL RECORD",
-      "start": 316.75,
+      "start": 322.0417,
       "duration": 10.375,
-      "end": 327.125,
+      "end": 332.4167,
       "frames": 249,
       "events": [
         {
@@ -2254,7 +2258,7 @@
           "speech": 1.68,
           "src_in": 235.58,
           "src_out": 237.26,
-          "text": ""
+          "text": "John K. Smith. His photograph was attached to the front. His date of birth. His home address. Even his current hospital ID number."
         },
         {
           "type": "narration",
@@ -2309,9 +2313,9 @@
       "id": "S058",
       "chapter": 6,
       "chapter_title": "THE MEDICAL RECORD",
-      "start": 327.125,
+      "start": 332.4167,
       "duration": 6.4583,
-      "end": 333.5833,
+      "end": 338.875,
       "frames": 155,
       "events": [
         {
@@ -2322,7 +2326,7 @@
           "speech": 2.64,
           "src_in": 246.0,
           "src_out": 248.64,
-          "text": ""
+          "text": "John opened the file with trembling hands. The first page contained a disturbing report."
         },
         {
           "type": "narration",
@@ -2353,9 +2357,9 @@
       "id": "S059",
       "chapter": 6,
       "chapter_title": "THE MEDICAL RECORD",
-      "start": 333.5833,
+      "start": 338.875,
       "duration": 7.0,
-      "end": 340.5833,
+      "end": 345.875,
       "frames": 168,
       "events": [],
       "sfx": [
@@ -2376,10 +2380,10 @@
       "id": "S060",
       "chapter": 6,
       "chapter_title": "THE MEDICAL RECORD",
-      "start": 340.5833,
-      "duration": 6.5833,
-      "end": 347.1667,
-      "frames": 158,
+      "start": 345.875,
+      "duration": 8.4583,
+      "end": 354.3333,
+      "frames": 203,
       "events": [
         {
           "type": "narration",
@@ -2389,7 +2393,7 @@
           "speech": 1.46,
           "src_in": 252.34,
           "src_out": 253.8,
-          "text": ""
+          "text": "He flipped to the next page. The next page was dated eighteen years ago."
         },
         {
           "type": "narration",
@@ -2400,6 +2404,16 @@
           "src_in": 254.28,
           "src_out": 257.0,
           "text": ""
+        },
+        {
+          "type": "dialogue",
+          "id": "J21",
+          "char": "john",
+          "file": "voice/john/J21.wav",
+          "start": 5.38,
+          "speech": 1.282,
+          "text": "This can't be happening... (script: This can't be real)",
+          "placeholder": false
         }
       ],
       "sfx": [
@@ -2420,9 +2434,9 @@
       "id": "S061",
       "chapter": 6,
       "chapter_title": "THE MEDICAL RECORD",
-      "start": 347.1667,
+      "start": 354.3333,
       "duration": 7.5,
-      "end": 354.6667,
+      "end": 361.8333,
       "frames": 180,
       "events": [
         {
@@ -2433,7 +2447,7 @@
           "speech": 1.22,
           "src_in": 257.46,
           "src_out": 258.68,
-          "text": ""
+          "text": "At the bottom of the file, a final line was written in red ink: Status — never discharged."
         },
         {
           "type": "narration",
@@ -2484,9 +2498,9 @@
       "id": "S062",
       "chapter": 6,
       "chapter_title": "THE MEDICAL RECORD",
-      "start": 354.6667,
+      "start": 361.8333,
       "duration": 3.2083,
-      "end": 357.875,
+      "end": 365.0417,
       "frames": 77,
       "events": [],
       "sfx": [
@@ -2507,9 +2521,9 @@
       "id": "S063",
       "chapter": 6,
       "chapter_title": "THE MEDICAL RECORD",
-      "start": 357.875,
+      "start": 365.0417,
       "duration": 5.0417,
-      "end": 362.9167,
+      "end": 370.0833,
       "frames": 121,
       "events": [
         {
@@ -2520,7 +2534,7 @@
           "speech": 1.9,
           "src_in": 264.82,
           "src_out": 266.72,
-          "text": ""
+          "text": "A voice behind him said,"
         },
         {
           "type": "dialogue",
@@ -2529,7 +2543,7 @@
           "file": "voice/old_doctor/OD01.wav",
           "start": 2.8,
           "speech": 1.726,
-          "text": "Now you remember, Doctor.",
+          "text": "Now you remember, Doctor?",
           "placeholder": false
         }
       ],
@@ -2545,9 +2559,9 @@
       "id": "S064",
       "chapter": 7,
       "chapter_title": "THE OLD DOCTOR",
-      "start": 362.9167,
+      "start": 370.0833,
       "duration": 3.0,
-      "end": 365.9167,
+      "end": 373.0833,
       "frames": 72,
       "events": [
         {
@@ -2558,7 +2572,7 @@
           "speech": 1.5,
           "src_in": 267.28,
           "src_out": 268.78,
-          "text": ""
+          "text": "John slowly turned."
         }
       ],
       "sfx": [],
@@ -2573,9 +2587,9 @@
       "id": "S065",
       "chapter": 7,
       "chapter_title": "THE OLD DOCTOR",
-      "start": 365.9167,
+      "start": 373.0833,
       "duration": 5.25,
-      "end": 371.1667,
+      "end": 378.3333,
       "frames": 126,
       "events": [
         {
@@ -2586,7 +2600,7 @@
           "speech": 2.06,
           "src_in": 269.26,
           "src_out": 271.32,
-          "text": ""
+          "text": "An old man stood in the doorway, wearing a faded white doctor's coat."
         },
         {
           "type": "narration",
@@ -2611,9 +2625,9 @@
       "id": "S066",
       "chapter": 7,
       "chapter_title": "THE OLD DOCTOR",
-      "start": 371.1667,
+      "start": 378.3333,
       "duration": 8.3333,
-      "end": 379.5,
+      "end": 386.6667,
       "frames": 200,
       "events": [
         {
@@ -2624,7 +2638,7 @@
           "speech": 4.5,
           "src_in": 274.2,
           "src_out": 278.7,
-          "text": ""
+          "text": "The old doctor had sunken eyes and a face covered in deep wrinkles. He looked as though he hadn't slept in decades."
         },
         {
           "type": "narration",
@@ -2649,9 +2663,9 @@
       "id": "S067",
       "chapter": 7,
       "chapter_title": "THE OLD DOCTOR",
-      "start": 379.5,
+      "start": 386.6667,
       "duration": 4.0,
-      "end": 383.5,
+      "end": 390.6667,
       "frames": 96,
       "events": [
         {
@@ -2687,9 +2701,9 @@
       "id": "S068",
       "chapter": 7,
       "chapter_title": "THE OLD DOCTOR",
-      "start": 383.5,
+      "start": 390.6667,
       "duration": 3.4583,
-      "end": 386.9583,
+      "end": 394.125,
       "frames": 83,
       "events": [
         {
@@ -2715,9 +2729,9 @@
       "id": "S069",
       "chapter": 7,
       "chapter_title": "THE OLD DOCTOR",
-      "start": 386.9583,
+      "start": 394.125,
       "duration": 4.875,
-      "end": 391.8333,
+      "end": 399.0,
       "frames": 117,
       "events": [
         {
@@ -2753,9 +2767,9 @@
       "id": "S070",
       "chapter": 7,
       "chapter_title": "THE OLD DOCTOR",
-      "start": 391.8333,
+      "start": 399.0,
       "duration": 3.0,
-      "end": 394.8333,
+      "end": 402.0,
       "frames": 72,
       "events": [
         {
@@ -2781,9 +2795,9 @@
       "id": "S071",
       "chapter": 7,
       "chapter_title": "THE OLD DOCTOR",
-      "start": 394.8333,
+      "start": 402.0,
       "duration": 3.0,
-      "end": 397.8333,
+      "end": 405.0,
       "frames": 72,
       "events": [
         {
@@ -2809,9 +2823,9 @@
       "id": "S072",
       "chapter": 7,
       "chapter_title": "THE OLD DOCTOR",
-      "start": 397.8333,
+      "start": 405.0,
       "duration": 4.9167,
-      "end": 402.75,
+      "end": 409.9167,
       "frames": 118,
       "events": [
         {
@@ -2847,9 +2861,9 @@
       "id": "S073",
       "chapter": 7,
       "chapter_title": "THE OLD DOCTOR",
-      "start": 402.75,
+      "start": 409.9167,
       "duration": 3.0,
-      "end": 405.75,
+      "end": 412.9167,
       "frames": 72,
       "events": [
         {
@@ -2875,9 +2889,9 @@
       "id": "S074",
       "chapter": 7,
       "chapter_title": "THE OLD DOCTOR",
-      "start": 405.75,
+      "start": 412.9167,
       "duration": 3.375,
-      "end": 409.125,
+      "end": 416.2917,
       "frames": 81,
       "events": [
         {
@@ -2903,9 +2917,9 @@
       "id": "S075",
       "chapter": 7,
       "chapter_title": "THE OLD DOCTOR",
-      "start": 409.125,
+      "start": 416.2917,
       "duration": 3.5833,
-      "end": 412.7083,
+      "end": 419.875,
       "frames": 86,
       "events": [
         {
@@ -2916,7 +2930,7 @@
           "speech": 2.78,
           "src_in": 282.26,
           "src_out": 285.04,
-          "text": ""
+          "text": "Suddenly, every light in the corridor went out."
         }
       ],
       "sfx": [
@@ -2937,9 +2951,9 @@
       "id": "S076",
       "chapter": 7,
       "chapter_title": "THE OLD DOCTOR",
-      "start": 412.7083,
+      "start": 419.875,
       "duration": 7.8333,
-      "end": 420.5417,
+      "end": 427.7083,
       "frames": 188,
       "events": [
         {
@@ -2950,7 +2964,7 @@
           "speech": 2.68,
           "src_in": 285.46,
           "src_out": 288.14,
-          "text": ""
+          "text": "A red EXIT sign glowed in the darkness. And from somewhere far away, a bell rang."
         },
         {
           "type": "narration",
@@ -2981,9 +2995,9 @@
       "id": "S077",
       "chapter": 8,
       "chapter_title": "THE CORRIDOR",
-      "start": 420.5417,
+      "start": 427.7083,
       "duration": 6.0833,
-      "end": 426.625,
+      "end": 433.7917,
       "frames": 146,
       "events": [
         {
@@ -2994,7 +3008,7 @@
           "speech": 0.94,
           "src_in": 291.98,
           "src_out": 292.92,
-          "text": ""
+          "text": "John ran. He didn't know where he was going. He only knew he had to escape."
         },
         {
           "type": "narration",
@@ -3035,9 +3049,9 @@
       "id": "S078",
       "chapter": 8,
       "chapter_title": "THE CORRIDOR",
-      "start": 426.625,
+      "start": 433.7917,
       "duration": 3.6667,
-      "end": 430.2917,
+      "end": 437.4583,
       "frames": 88,
       "events": [
         {
@@ -3048,7 +3062,7 @@
           "speech": 1.1,
           "src_in": 297.68,
           "src_out": 298.78,
-          "text": ""
+          "text": "He opened one door — another hospital corridor."
         },
         {
           "type": "narration",
@@ -3079,9 +3093,9 @@
       "id": "S079",
       "chapter": 8,
       "chapter_title": "THE CORRIDOR",
-      "start": 430.2917,
+      "start": 437.4583,
       "duration": 8.3333,
-      "end": 438.625,
+      "end": 445.7917,
       "frames": 200,
       "events": [
         {
@@ -3092,7 +3106,7 @@
           "speech": 0.92,
           "src_in": 300.98,
           "src_out": 301.9,
-          "text": ""
+          "text": "He opened another. The same corridor. The same wheelchairs. The same flickering lights. He ran faster."
         },
         {
           "type": "narration",
@@ -3158,9 +3172,9 @@
       "id": "S080",
       "chapter": 8,
       "chapter_title": "THE CORRIDOR",
-      "start": 438.625,
+      "start": 445.7917,
       "duration": 6.0417,
-      "end": 444.6667,
+      "end": 451.8333,
       "frames": 145,
       "events": [
         {
@@ -3171,7 +3185,7 @@
           "speech": 3.6,
           "src_in": 309.1,
           "src_out": 312.7,
-          "text": ""
+          "text": "Then he saw the little girl standing in the middle of the hallway. She was holding her doll."
         },
         {
           "type": "narration",
@@ -3196,9 +3210,9 @@
       "id": "S081",
       "chapter": 8,
       "chapter_title": "THE CORRIDOR",
-      "start": 444.6667,
+      "start": 451.8333,
       "duration": 3.375,
-      "end": 448.0417,
+      "end": 455.2083,
       "frames": 81,
       "events": [
         {
@@ -3224,9 +3238,9 @@
       "id": "S082",
       "chapter": 8,
       "chapter_title": "THE CORRIDOR",
-      "start": 448.0417,
+      "start": 455.2083,
       "duration": 6.3333,
-      "end": 454.375,
+      "end": 461.5417,
       "frames": 152,
       "events": [
         {
@@ -3237,7 +3251,7 @@
           "speech": 1.1,
           "src_in": 314.94,
           "src_out": 316.04,
-          "text": ""
+          "text": "But when he passed her, he noticed something. The doll's face looked exactly like his."
         },
         {
           "type": "narration",
@@ -3278,9 +3292,9 @@
       "id": "S083",
       "chapter": 8,
       "chapter_title": "THE CORRIDOR",
-      "start": 454.375,
+      "start": 461.5417,
       "duration": 3.0,
-      "end": 457.375,
+      "end": 464.5417,
       "frames": 72,
       "events": [
         {
@@ -3306,9 +3320,9 @@
       "id": "S084",
       "chapter": 8,
       "chapter_title": "THE CORRIDOR",
-      "start": 457.375,
+      "start": 464.5417,
       "duration": 8.25,
-      "end": 465.625,
+      "end": 472.7917,
       "frames": 198,
       "events": [
         {
@@ -3319,7 +3333,7 @@
           "speech": 3.4,
           "src_in": 321.1,
           "src_out": 324.5,
-          "text": ""
+          "text": "Behind John, every patient began appearing in the corridor. One by one. Standing silently. Watching him."
         },
         {
           "type": "narration",
@@ -3360,9 +3374,9 @@
       "id": "S085",
       "chapter": 8,
       "chapter_title": "THE CORRIDOR",
-      "start": 465.625,
+      "start": 472.7917,
       "duration": 3.0417,
-      "end": 468.6667,
+      "end": 475.8333,
       "frames": 73,
       "events": [
         {
@@ -3373,7 +3387,7 @@
           "speech": 2.24,
           "src_in": 328.94,
           "src_out": 331.18,
-          "text": ""
+          "text": "John sprinted toward the end of the hallway."
         }
       ],
       "sfx": [
@@ -3399,9 +3413,9 @@
       "id": "S086",
       "chapter": 9,
       "chapter_title": "THE ESCAPE",
-      "start": 468.6667,
+      "start": 475.8333,
       "duration": 5.0,
-      "end": 473.6667,
+      "end": 480.8333,
       "frames": 120,
       "events": [
         {
@@ -3412,7 +3426,7 @@
           "speech": 0.98,
           "src_in": 331.52,
           "src_out": 332.5,
-          "text": ""
+          "text": "And there it was. An elevator. Its doors were already open."
         },
         {
           "type": "narration",
@@ -3447,9 +3461,9 @@
       "id": "S087",
       "chapter": 9,
       "chapter_title": "THE ESCAPE",
-      "start": 473.6667,
+      "start": 480.8333,
       "duration": 5.875,
-      "end": 479.5417,
+      "end": 486.7083,
       "frames": 141,
       "events": [
         {
@@ -3460,7 +3474,7 @@
           "speech": 1.14,
           "src_in": 336.06,
           "src_out": 337.2,
-          "text": ""
+          "text": "He jumped inside. The display flashed. The elevator suddenly began descending."
         },
         {
           "type": "narration",
@@ -3516,10 +3530,10 @@
       "id": "S088",
       "chapter": 9,
       "chapter_title": "THE ESCAPE",
-      "start": 479.5417,
-      "duration": 6.7083,
-      "end": 486.25,
-      "frames": 161,
+      "start": 486.7083,
+      "duration": 9.2083,
+      "end": 495.9167,
+      "frames": 221,
       "events": [
         {
           "type": "dialogue",
@@ -3527,9 +3541,19 @@
           "char": "pa",
           "file": "voice/pa/PA01.wav",
           "start": 0.7,
-          "speech": 5.489,
+          "speech": 5.392,
           "text": "Dr. John K. Smith... your shift is not over yet.",
           "placeholder": true
+        },
+        {
+          "type": "dialogue",
+          "id": "J14",
+          "char": "john",
+          "file": "voice/john/J14.wav",
+          "start": 6.392,
+          "speech": 2.303,
+          "text": "No! Open! Please!",
+          "placeholder": false
         }
       ],
       "sfx": [
@@ -3542,6 +3566,21 @@
           "id": "static_burst",
           "at": 0.2,
           "gain_db": -10
+        },
+        {
+          "id": "wall_thud",
+          "at": 6.2,
+          "gain_db": -5
+        },
+        {
+          "id": "wall_thud",
+          "at": 6.9,
+          "gain_db": -5
+        },
+        {
+          "id": "wall_thud",
+          "at": 7.8,
+          "gain_db": -5
         }
       ],
       "amb": null,
@@ -3555,9 +3594,9 @@
       "id": "S089",
       "chapter": 9,
       "chapter_title": "THE ESCAPE",
-      "start": 486.25,
+      "start": 495.9167,
       "duration": 4.4167,
-      "end": 490.6667,
+      "end": 500.3333,
       "frames": 106,
       "events": [
         {
@@ -3568,7 +3607,7 @@
           "speech": 0.76,
           "src_in": 341.64,
           "src_out": 342.4,
-          "text": ""
+          "text": "Thirteen… twelve… eleven… ten…"
         },
         {
           "type": "narration",
@@ -3619,9 +3658,9 @@
       "id": "S090",
       "chapter": 9,
       "chapter_title": "THE ESCAPE",
-      "start": 490.6667,
+      "start": 500.3333,
       "duration": 3.5833,
-      "end": 494.25,
+      "end": 503.9167,
       "frames": 86,
       "events": [],
       "sfx": [
@@ -3642,9 +3681,9 @@
       "id": "S091",
       "chapter": 9,
       "chapter_title": "THE ESCAPE",
-      "start": 494.25,
+      "start": 503.9167,
       "duration": 4.0,
-      "end": 498.25,
+      "end": 507.9167,
       "frames": 96,
       "events": [
         {
@@ -3655,7 +3694,7 @@
           "speech": 1.92,
           "src_in": 346.06,
           "src_out": 347.98,
-          "text": ""
+          "text": "Finally, the elevator stopped. The doors opened."
         },
         {
           "type": "narration",
@@ -3691,9 +3730,9 @@
       "id": "S092",
       "chapter": 9,
       "chapter_title": "THE ESCAPE",
-      "start": 498.25,
+      "start": 507.9167,
       "duration": 3.0,
-      "end": 501.25,
+      "end": 510.9167,
       "frames": 72,
       "events": [
         {
@@ -3704,7 +3743,7 @@
           "speech": 1.94,
           "src_in": 349.7,
           "src_out": 351.64,
-          "text": ""
+          "text": "Morning sunlight filled the lobby."
         }
       ],
       "sfx": [],
@@ -3719,9 +3758,9 @@
       "id": "S093",
       "chapter": 9,
       "chapter_title": "THE ESCAPE",
-      "start": 501.25,
+      "start": 510.9167,
       "duration": 3.9167,
-      "end": 505.1667,
+      "end": 514.8333,
       "frames": 94,
       "events": [
         {
@@ -3732,7 +3771,7 @@
           "speech": 3.12,
           "src_in": 352.08,
           "src_out": 355.2,
-          "text": ""
+          "text": "John stumbled out onto the floor, gasping for breath."
         }
       ],
       "sfx": [],
@@ -3747,9 +3786,9 @@
       "id": "S094",
       "chapter": 9,
       "chapter_title": "THE ESCAPE",
-      "start": 505.1667,
+      "start": 514.8333,
       "duration": 3.0,
-      "end": 508.1667,
+      "end": 517.8333,
       "frames": 72,
       "events": [
         {
@@ -3760,7 +3799,7 @@
           "speech": 1.28,
           "src_in": 355.6,
           "src_out": 356.88,
-          "text": ""
+          "text": "It was six in the morning."
         }
       ],
       "sfx": [
@@ -3781,9 +3820,9 @@
       "id": "S095",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 508.1667,
+      "start": 517.8333,
       "duration": 8.875,
-      "end": 517.0417,
+      "end": 526.7083,
       "frames": 213,
       "events": [
         {
@@ -3794,7 +3833,7 @@
           "speech": 1.88,
           "src_in": 357.3,
           "src_out": 359.18,
-          "text": ""
+          "text": "The hospital lobby was busy again. Nurses were moving between desks, patients were waiting, and sunlight streamed through the windows."
         },
         {
           "type": "narration",
@@ -3839,9 +3878,9 @@
       "id": "S096",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 517.0417,
+      "start": 526.7083,
       "duration": 3.5833,
-      "end": 520.625,
+      "end": 530.2917,
       "frames": 86,
       "events": [
         {
@@ -3852,7 +3891,7 @@
           "speech": 2.78,
           "src_in": 365.5,
           "src_out": 368.28,
-          "text": ""
+          "text": "A nurse saw John and rushed toward him."
         }
       ],
       "sfx": [
@@ -3873,9 +3912,9 @@
       "id": "S097",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 520.625,
+      "start": 530.2917,
       "duration": 5.375,
-      "end": 526.0,
+      "end": 535.6667,
       "frames": 129,
       "events": [
         {
@@ -3901,10 +3940,10 @@
       "id": "S098",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 526.0,
-      "duration": 4.2083,
-      "end": 530.2083,
-      "frames": 101,
+      "start": 535.6667,
+      "duration": 3.0,
+      "end": 538.6667,
+      "frames": 72,
       "events": [
         {
           "type": "dialogue",
@@ -3912,8 +3951,8 @@
           "char": "john",
           "file": "voice/john/J15.wav",
           "start": 0.3,
-          "speech": 3.404,
-          "text": "I was on the thirteenth floor. The elevator... it took me there.",
+          "speech": 1.808,
+          "text": "I was on the thirteenth floor.",
           "placeholder": false
         }
       ],
@@ -3929,9 +3968,9 @@
       "id": "S099",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 530.2083,
+      "start": 538.6667,
       "duration": 3.0,
-      "end": 533.2083,
+      "end": 541.6667,
       "frames": 72,
       "events": [
         {
@@ -3957,29 +3996,29 @@
       "id": "S100",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 533.2083,
-      "duration": 6.375,
-      "end": 539.5833,
-      "frames": 153,
+      "start": 541.6667,
+      "duration": 5.875,
+      "end": 547.5417,
+      "frames": 141,
       "events": [
+        {
+          "type": "dialogue",
+          "id": "J18",
+          "char": "john",
+          "file": "voice/john/J18.wav",
+          "start": 0.3,
+          "speech": 1.384,
+          "text": "The elevator took me there.",
+          "placeholder": false
+        },
         {
           "type": "dialogue",
           "id": "J16",
           "char": "john",
           "file": "voice/john/J16.wav",
-          "start": 0.3,
+          "start": 1.984,
           "speech": 3.395,
-          "text": "The patients... an old doctor... a little girl...",
-          "placeholder": false
-        },
-        {
-          "type": "dialogue",
-          "id": "J17",
-          "char": "john",
-          "file": "voice/john/J17.wav",
-          "start": 4.095,
-          "speech": 1.774,
-          "text": "I swear it was there.",
+          "text": "There were patients... an old doctor... a little girl...",
           "placeholder": false
         }
       ],
@@ -3995,9 +4034,9 @@
       "id": "S101",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 539.5833,
+      "start": 547.5417,
       "duration": 4.4583,
-      "end": 544.0417,
+      "end": 552.0,
       "frames": 107,
       "events": [
         {
@@ -4020,12 +4059,40 @@
       "fade_out": 0.0
     },
     {
+      "id": "S101A",
+      "chapter": 10,
+      "chapter_title": "THE TWIST",
+      "start": 552.0,
+      "duration": 3.0,
+      "end": 555.0,
+      "frames": 72,
+      "events": [
+        {
+          "type": "dialogue",
+          "id": "J17",
+          "char": "john",
+          "file": "voice/john/J17.wav",
+          "start": 0.3,
+          "speech": 1.774,
+          "text": "I saw it. I was there.",
+          "placeholder": false
+        }
+      ],
+      "sfx": [],
+      "amb": null,
+      "mus": null,
+      "amb_active": "lobby_morning",
+      "mus_active": "twist",
+      "fade_in": 0.0,
+      "fade_out": 0.0
+    },
+    {
       "id": "S102",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 544.0417,
+      "start": 555.0,
       "duration": 4.2083,
-      "end": 548.25,
+      "end": 559.2083,
       "frames": 101,
       "events": [],
       "sfx": [
@@ -4046,9 +4113,9 @@
       "id": "S103",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 548.25,
+      "start": 559.2083,
       "duration": 5.0,
-      "end": 553.25,
+      "end": 564.2083,
       "frames": 120,
       "events": [],
       "sfx": [
@@ -4069,9 +4136,9 @@
       "id": "S104",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 553.25,
+      "start": 564.2083,
       "duration": 3.0,
-      "end": 556.25,
+      "end": 567.2083,
       "frames": 72,
       "events": [
         {
@@ -4097,10 +4164,10 @@
       "id": "S105",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 556.25,
-      "duration": 3.0,
-      "end": 559.25,
-      "frames": 72,
+      "start": 567.2083,
+      "duration": 3.2083,
+      "end": 570.4167,
+      "frames": 77,
       "events": [
         {
           "type": "dialogue",
@@ -4108,8 +4175,8 @@
           "char": "john",
           "file": "voice/john/J19.wav",
           "start": 0.3,
-          "speech": 1.308,
-          "text": "Maybe I just need some rest.",
+          "speech": 2.388,
+          "text": "Maybe... maybe I just need some rest.",
           "placeholder": false
         }
       ],
@@ -4125,9 +4192,9 @@
       "id": "S106",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 559.25,
+      "start": 570.4167,
       "duration": 5.625,
-      "end": 564.875,
+      "end": 576.0417,
       "frames": 135,
       "events": [
         {
@@ -4138,7 +4205,7 @@
           "speech": 1.38,
           "src_in": 368.36,
           "src_out": 369.74,
-          "text": ""
+          "text": "John walked away, trying to convince himself it had all been a nightmare."
         },
         {
           "type": "narration",
@@ -4163,9 +4230,9 @@
       "id": "S107",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 564.875,
+      "start": 576.0417,
       "duration": 11.75,
-      "end": 576.625,
+      "end": 587.7917,
       "frames": 282,
       "events": [
         {
@@ -4176,7 +4243,7 @@
           "speech": 1.9,
           "src_in": 373.74,
           "src_out": 375.64,
-          "text": ""
+          "text": "But as he passed the reception desk, an old register lying open began turning pages by itself. It stopped on a blank page. A name slowly appeared."
         },
         {
           "type": "narration",
@@ -4227,9 +4294,9 @@
       "id": "S108",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 576.625,
+      "start": 587.7917,
       "duration": 8.0,
-      "end": 584.625,
+      "end": 595.7917,
       "frames": 192,
       "events": [
         {
@@ -4240,7 +4307,7 @@
           "speech": 1.9,
           "src_in": 385.8,
           "src_out": 387.7,
-          "text": ""
+          "text": "Dr. John K. Smith. Floor 13. Shift: tonight — 2:13 AM."
         },
         {
           "type": "narration",
@@ -4316,23 +4383,18 @@
       "id": "S109",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 584.625,
-      "duration": 3.0,
-      "end": 587.625,
-      "frames": 72,
-      "events": [
+      "start": 595.7917,
+      "duration": 3.5,
+      "end": 599.2917,
+      "frames": 84,
+      "events": [],
+      "sfx": [
         {
-          "type": "dialogue",
-          "id": "J21",
-          "char": "john",
-          "file": "voice/john/J21.wav",
-          "start": 0.3,
-          "speech": 1.199,
-          "text": "This can't be happening...",
-          "placeholder": false
+          "id": "heartbeat_slow",
+          "at": 0.0,
+          "gain_db": -10
         }
       ],
-      "sfx": [],
       "amb": null,
       "mus": null,
       "amb_active": "lobby_morning",
@@ -4344,9 +4406,9 @@
       "id": "S110",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 587.625,
+      "start": 599.2917,
       "duration": 2.0,
-      "end": 589.625,
+      "end": 601.2917,
       "frames": 48,
       "events": [],
       "sfx": [
@@ -4367,9 +4429,9 @@
       "id": "S111",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 589.625,
+      "start": 601.2917,
       "duration": 6.0417,
-      "end": 595.6667,
+      "end": 607.3333,
       "frames": 145,
       "events": [
         {
@@ -4380,7 +4442,7 @@
           "speech": 5.24,
           "src_in": 394.1,
           "src_out": 399.34,
-          "text": ""
+          "text": "That same night, the hospital CCTV cameras recorded an empty reception."
         }
       ],
       "sfx": [],
@@ -4395,9 +4457,9 @@
       "id": "S112",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 595.6667,
+      "start": 607.3333,
       "duration": 7.9167,
-      "end": 603.5833,
+      "end": 615.25,
       "frames": 190,
       "events": [
         {
@@ -4408,7 +4470,7 @@
           "speech": 2.44,
           "src_in": 399.86,
           "src_out": 402.3,
-          "text": ""
+          "text": "At exactly 2:13 AM, the elevator doors opened by themselves. Nobody was inside."
         },
         {
           "type": "narration",
@@ -4454,9 +4516,9 @@
       "id": "S113",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 603.5833,
+      "start": 615.25,
       "duration": 4.625,
-      "end": 608.2083,
+      "end": 619.875,
       "frames": 111,
       "events": [
         {
@@ -4467,7 +4529,7 @@
           "speech": 2.1,
           "src_in": 407.8,
           "src_out": 409.9,
-          "text": ""
+          "text": "The floor indicator began changing. Twelve… then…"
         },
         {
           "type": "narration",
@@ -4502,10 +4564,10 @@
       "id": "S114",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 608.2083,
-      "duration": 6.4167,
-      "end": 614.625,
-      "frames": 154,
+      "start": 619.875,
+      "duration": 6.3333,
+      "end": 626.2083,
+      "frames": 152,
       "events": [
         {
           "type": "dialogue",
@@ -4513,7 +4575,7 @@
           "char": "pa",
           "file": "voice/pa/PA02.wav",
           "start": 0.7,
-          "speech": 5.218,
+          "speech": 5.126,
           "text": "Dr. John K. Smith... please report to Floor 13.",
           "placeholder": true
         }
@@ -4536,9 +4598,9 @@
       "id": "S115",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 614.625,
+      "start": 626.2083,
       "duration": 3.75,
-      "end": 618.375,
+      "end": 629.9583,
       "frames": 90,
       "events": [
         {
@@ -4549,7 +4611,7 @@
           "speech": 1.22,
           "src_in": 412.64,
           "src_out": 413.86,
-          "text": ""
+          "text": "A few seconds later, the reception phone rang."
         },
         {
           "type": "narration",
@@ -4580,10 +4642,10 @@
       "id": "S116",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 618.375,
-      "duration": 6.4583,
-      "end": 624.8333,
-      "frames": 155,
+      "start": 629.9583,
+      "duration": 5.8333,
+      "end": 635.7917,
+      "frames": 140,
       "events": [
         {
           "type": "dialogue",
@@ -4591,8 +4653,8 @@
           "char": "phone_voice",
           "file": "voice/phone_voice/PH01.wav",
           "start": 1.0,
-          "speech": 2.384,
-          "text": "Hello? Is there any doctor available?",
+          "speech": 1.748,
+          "text": "Is there any doctor available?",
           "placeholder": false
         },
         {
@@ -4600,8 +4662,8 @@
           "id": "PH02",
           "char": "phone_voice",
           "file": "voice/phone_voice/PH02.wav",
-          "start": 3.684,
-          "speech": 2.283,
+          "start": 3.048,
+          "speech": 2.268,
           "text": "We have a new patient on the thirteenth floor.",
           "placeholder": false
         }
@@ -4624,9 +4686,9 @@
       "id": "S117",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 624.8333,
+      "start": 635.7917,
       "duration": 3.0,
-      "end": 627.8333,
+      "end": 638.7917,
       "frames": 72,
       "events": [
         {
@@ -4636,7 +4698,7 @@
           "file": "voice/nurse/N05.wav",
           "start": 0.3,
           "speech": 1.332,
-          "text": "What thirteenth floor? (night, on the phone)",
+          "text": "What thirteenth floor? (stands in for: What? There's no thirteenth floor.)",
           "placeholder": false
         }
       ],
@@ -4652,10 +4714,10 @@
       "id": "S118",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 627.8333,
-      "duration": 3.4167,
-      "end": 631.25,
-      "frames": 82,
+      "start": 638.7917,
+      "duration": 3.4583,
+      "end": 642.25,
+      "frames": 83,
       "events": [
         {
           "type": "dialogue",
@@ -4663,7 +4725,7 @@
           "char": "phone_voice",
           "file": "voice/phone_voice/PH03.wav",
           "start": 0.8,
-          "speech": 2.122,
+          "speech": 2.154,
           "text": "His name is John K. Smith.",
           "placeholder": false
         }
@@ -4686,9 +4748,9 @@
       "id": "S119",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 631.25,
+      "start": 642.25,
       "duration": 3.0,
-      "end": 634.25,
+      "end": 645.25,
       "frames": 72,
       "events": [
         {
@@ -4699,7 +4761,7 @@
           "speech": 1.28,
           "src_in": 416.08,
           "src_out": 417.36,
-          "text": ""
+          "text": "The phone went dead."
         }
       ],
       "sfx": [
@@ -4720,9 +4782,9 @@
       "id": "S120",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 634.25,
+      "start": 645.25,
       "duration": 5.6667,
-      "end": 639.9167,
+      "end": 650.9167,
       "frames": 136,
       "events": [
         {
@@ -4733,7 +4795,7 @@
           "speech": 2.42,
           "src_in": 417.86,
           "src_out": 420.28,
-          "text": ""
+          "text": "The elevator doors slowly closed. The display remained glowing red."
         },
         {
           "type": "narration",
@@ -4764,9 +4826,9 @@
       "id": "S121",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 639.9167,
+      "start": 650.9167,
       "duration": 5.5,
-      "end": 645.4167,
+      "end": 656.4167,
       "frames": 132,
       "events": [
         {
@@ -4777,7 +4839,7 @@
           "speech": 1.94,
           "src_in": 423.4,
           "src_out": 425.34,
-          "text": ""
+          "text": "And somewhere behind those doors… a man in a white coat was waiting."
         },
         {
           "type": "narration",
@@ -4813,9 +4875,9 @@
       "id": "S122",
       "chapter": 10,
       "chapter_title": "THE TWIST",
-      "start": 645.4167,
+      "start": 656.4167,
       "duration": 7.0,
-      "end": 652.4167,
+      "end": 663.4167,
       "frames": 168,
       "events": [
         {
@@ -4826,7 +4888,7 @@
           "speech": 0.8,
           "src_in": 429.06,
           "src_out": 429.86,
-          "text": ""
+          "text": "The end."
         }
       ],
       "sfx": [

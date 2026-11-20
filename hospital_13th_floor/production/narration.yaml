@@ -1,0 +1,83 @@
+# Narration text per shot (from the story script), matched to the narrator.mp3 ranges in shots.yaml.
+# Used for editing/reference_dialogue.srt and SHOT_BREAKDOWN.md. The narrator recording is slightly
+# abridged versus the full story; text here follows what is actually spoken.
+shots:
+  S003: It was nearly two in the morning. The old city hospital was unusually quiet.
+  S004: Most of the staff had gone home, leaving behind the soft humming of machines, flickering fluorescent lights, and the distant sound of rain hitting the windows.
+  S005: Dr. John K. Smith had been working for almost twelve hours. Exhausted, he sat at his desk, finishing his coffee and preparing to leave.
+  S006: Just as he picked up his coat, the phone rang.
+  S008: The time was 2:13 AM.
+  S009: He grabbed his stethoscope, stepped into the hallway, and headed toward the elevator.
+  S010: The hospital had twelve floors. At least, that's what everyone believed.
+  S011: John entered the elevator and pressed the button for the twelfth floor.
+  S012: The doors closed. The elevator began moving.
+  S013: Three… four… five… six…
+  S014: Everything seemed normal.
+  S015: Then the lights flickered. The elevator jerked violently, and John grabbed the handrail.
+  S016: The display continued changing. Eight… nine… ten… eleven… twelve… But the elevator didn't stop.
+  S017: John looked at the floor indicator. The number changed. … The elevator became colder.
+  S018: A faint sound of a child laughing echoed from somewhere inside.
+  S020: John turned around. Nobody was there.
+  S021: The elevator doors slowly opened. And beyond them was a corridor he had never seen before.
+  S022: A long, dark corridor stretched in front of him.
+  S023: The walls were covered in peeling paint. Dust lay across the floor. Old wheelchairs stood against the walls, and rusty hospital beds sat outside rooms with half-open doors.
+  S024: The lights flickered one after another, illuminating the corridor in brief flashes.
+  S025: "John stepped out of the elevator. A sign above the hallway read: Floor 13 — Emergency Ward."
+  S027: He turned back toward the elevator. The doors closed. John rushed forward and pressed the button.
+  S028: Nothing happened. He pressed it again. Nothing.
+  S029: The elevator was gone. Where it had been, there was now nothing but a solid wall.
+  S032: John stepped backward, breathing faster. From somewhere down the corridor, a woman's voice called out.
+  S033: John raised his flashlight and slowly walked toward the sound.
+  S034: He entered an old ward. There were ten beds. Every bed was occupied.
+  S035: The patients were lying perfectly still, facing the walls.
+  S036: John approached the first bed.
+  S037: The patient slowly turned his head. His face was pale. His eyes were sunken, and his lips were almost colorless.
+  S041: John moved toward the next bed. An elderly woman began laughing softly.
+  S042: Another patient whispered from the corner.
+  S043: Then, one by one, all the patients turned toward him. Their heads moved at exactly the same time.
+  S044: They spoke together.
+  S046: John ran out of the ward.
+  S047: But as he reached the corridor, he heard a little girl's voice.
+  S048: He turned. A little girl was sitting on a hospital bed, holding an old cloth doll.
+  S049: She was staring directly at him.
+  S053: John hurried down the hallway until he found a door marked Medical Records.
+  S054: He pushed it open. Inside were hundreds of old files, dusty cabinets, broken chairs, and papers scattered across the floor.
+  S055: He turned on his phone's flashlight and started searching for a way out.
+  S056: Then he noticed a file lying open on a desk. The name on it made his blood run cold.
+  S057: John K. Smith. His photograph was attached to the front. His date of birth. His home address. Even his current hospital ID number.
+  S058: John opened the file with trembling hands. The first page contained a disturbing report.
+  S060: He flipped to the next page. The next page was dated eighteen years ago.
+  S061: "At the bottom of the file, a final line was written in red ink: Status — never discharged."
+  S063: A voice behind him said,
+  S064: John slowly turned.
+  S065: An old man stood in the doorway, wearing a faded white doctor's coat.
+  S066: The old doctor had sunken eyes and a face covered in deep wrinkles. He looked as though he hadn't slept in decades.
+  S075: Suddenly, every light in the corridor went out.
+  S076: A red EXIT sign glowed in the darkness. And from somewhere far away, a bell rang.
+  S077: John ran. He didn't know where he was going. He only knew he had to escape.
+  S078: He opened one door — another hospital corridor.
+  S079: He opened another. The same corridor. The same wheelchairs. The same flickering lights. He ran faster.
+  S080: Then he saw the little girl standing in the middle of the hallway. She was holding her doll.
+  S082: But when he passed her, he noticed something. The doll's face looked exactly like his.
+  S084: Behind John, every patient began appearing in the corridor. One by one. Standing silently. Watching him.
+  S085: John sprinted toward the end of the hallway.
+  S086: And there it was. An elevator. Its doors were already open.
+  S087: He jumped inside. The display flashed. The elevator suddenly began descending.
+  S089: Thirteen… twelve… eleven… ten…
+  S091: Finally, the elevator stopped. The doors opened.
+  S092: Morning sunlight filled the lobby.
+  S093: John stumbled out onto the floor, gasping for breath.
+  S094: It was six in the morning.
+  S095: The hospital lobby was busy again. Nurses were moving between desks, patients were waiting, and sunlight streamed through the windows.
+  S096: A nurse saw John and rushed toward him.
+  S106: John walked away, trying to convince himself it had all been a nightmare.
+  S107: But as he passed the reception desk, an old register lying open began turning pages by itself. It stopped on a blank page. A name slowly appeared.
+  S108: "Dr. John K. Smith. Floor 13. Shift: tonight — 2:13 AM."
+  S111: That same night, the hospital CCTV cameras recorded an empty reception.
+  S112: At exactly 2:13 AM, the elevator doors opened by themselves. Nobody was inside.
+  S113: The floor indicator began changing. Twelve… then…
+  S115: A few seconds later, the reception phone rang.
+  S119: The phone went dead.
+  S120: The elevator doors slowly closed. The display remained glowing red.
+  S121: And somewhere behind those doors… a man in a white coat was waiting.
+  S122: The end.

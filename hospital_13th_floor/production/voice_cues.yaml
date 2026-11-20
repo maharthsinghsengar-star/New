@@ -8,9 +8,9 @@
 cues:
   # ---------------- Dr. John K. Smith ----------------
   J01: {char: john, src: john.mp3, in: 0.00, out: 1.50, fx: john_office,   text: "All right, I'm coming."}
-  J02: {char: john, src: john.mp3, in: 2.08, out: 3.20, fx: john_ward,     text: "That's impossible."}
+  J02: {char: john, src: john.mp3, in: 2.08, out: 3.20, fx: john_elevator,     text: "That's impossible."}
   J03: {char: john, src: john.mp3, in: 3.78, out: 4.30, fx: john_ward,     text: "Hello?"}
-  J04: {char: john, src: john.mp3, in: 4.58, out: 5.32, fx: john_ward,     text: "Anyone?", verify: true}
+  J04: {char: john, src: john.mp3, in: 4.58, out: 5.32, fx: john_ward,     text: "Can you hear me?"}
   J05: {char: john, src: john.mp3, in: 5.84, out: 7.16, fx: john_ward,     text: "How do you know who I am?"}
   J06: {char: john, src: john.mp3, in: 7.58, out: 8.68, fx: john_ward,     text: "Why are you here?"}
   J07: {char: john, src: john.mp3, in: 9.20, out: 11.52, fx: john_ward,    text: "This hospital doesn't have a thirteenth floor."}
@@ -20,16 +20,17 @@ cues:
   J11: {char: john, src: john.mp3, in: 19.02, out: 20.26, fx: john_ward,   text: "I need to get out of here!"}
   J12: {char: john, src: john.mp3, in: 20.56, out: 21.68, fx: john_ward,   text: "Where is the elevator?"}
   J13: {char: john, src: john.mp3, in: 22.18, out: 23.06, fx: john_ward,   text: "And if it doesn't?"}
-  J14: {char: john, src: john.mp3, in: 23.36, out: 25.62, fx: john_ward,   text: "Come on... open up, please!", verify: true}
-  J15: {char: john, src: john.mp3, in: 26.12, out: 29.60, fx: john_lobby,  text: "I was on the thirteenth floor. The elevator... it took me there.", verify: true}
-  J16: {char: john, src: john.mp3, in: 30.08, out: 33.54, fx: john_lobby,  text: "The patients... an old doctor... a little girl...", verify: true}
-  J17: {char: john, src: john.mp3, in: 34.10, out: 35.96, fx: john_lobby,  text: "I swear it was there."}
-  J19: {char: john, src: john.mp3, in: 37.74, out: 39.12, fx: john_lobby,  text: "Maybe I just need some rest."}
+  J14: {char: john, src: john.mp3, in: 23.36, out: 25.62, fx: john_ward,   text: "No! Open! Please!"}
+  J15: {char: john, src: john.mp3, in: 26.12, out: 27.95, fx: john_lobby,  text: "I was on the thirteenth floor."}
+  J18: {char: john, src: john.mp3, in: 28.14, out: 29.62, fx: john_lobby,  text: "The elevator took me there."}
+  J16: {char: john, src: john.mp3, in: 30.08, out: 33.54, fx: john_lobby,  text: "There were patients... an old doctor... a little girl..."}
+  J17: {char: john, src: john.mp3, in: 34.10, out: 35.96, fx: john_lobby,  text: "I saw it. I was there."}
+  J19: {char: john, src: john.mp3, in: 36.66, out: 39.12, fx: john_lobby,  text: "Maybe... maybe I just need some rest.", verify: true}
   J20: {char: john, src: john.mp3, in: 39.66, out: 40.16, fx: john_ward,   text: "No..."}
-  J21: {char: john, src: john.mp3, in: 40.56, out: 42.03, fx: john_lobby,  text: "This can't be happening...", verify: true}
+  J21: {char: john, src: john.mp3, in: 40.56, out: 42.03, fx: john_ward,   text: "This can't be happening... (script: This can't be real)", verify: true}
 
   # ---------------- The Old Doctor ----------------
-  OD01: {char: old_doctor, src: old_doctor.mp3, in: 0.00, out: 1.50, fx: old_doctor, text: "Now you remember, Doctor."}
+  OD01: {char: old_doctor, src: old_doctor.mp3, in: 0.00, out: 1.50, fx: old_doctor, text: "Now you remember, Doctor?"}
   OD02: {char: old_doctor, src: old_doctor.mp3, in: 1.86, out: 4.50, fx: old_doctor, text: "This floor belongs to those who never left."}
   OD03: {char: old_doctor, src: old_doctor.mp3, in: 4.88, out: 6.84, fx: old_doctor, text: "Everyone says the same thing."}
   OD04: {char: old_doctor, src: old_doctor.mp3, in: 7.14, out: 7.88, fx: old_doctor, text: "Find it."}
@@ -38,13 +39,13 @@ cues:
 
   # ---------------- The Little Girl ----------------
   G00: {char: little_girl, src: little_girl.mp3, in: 0.04, out: 0.66, fx: girl_ghost_elevator, text: "Doctor..."}
-  G01: {char: little_girl, src: little_girl.mp3, in: 0.00, out: 2.24, fx: little_girl, text: "Doctor... don't leave."}
+  G01: {char: little_girl, src: little_girl.mp3, in: 0.00, out: 2.24, fx: little_girl, text: "Doctor Uncle... don't leave."}
   G02: {char: little_girl, src: little_girl.mp3, in: 2.44, out: 4.62, fx: little_girl, text: "Because tonight... it's your turn."}
   G03: {char: little_girl, src: little_girl.mp3, in: 5.10, out: 7.26, fx: little_girl, text: "Doctor... why are you running?"}
 
   # ---------------- The Silent Patients ----------------
-  P01: {char: patients, src: patient_1.mp3, in: 0.00, out: 1.06, fx: patient_solo, text: "You are late, Doctor.", verify: true}
-  P02: {char: patients, src: patient_1.mp3, in: 1.32, out: 2.66, fx: patient_solo, text: "John K. Smith.", verify: true}
+  P01: {char: patients, src: patient_1.mp3, in: 0.00, out: 1.06, fx: patient_solo, text: "You are late, Doctor."}
+  P02: {char: patients, src: patient_1.mp3, in: 1.32, out: 2.66, fx: patient_solo, text: "John K. Smith."}
   P03: {char: patients, src: patient_1.mp3, in: 3.10, out: 4.82, fx: patient_solo, text: "We have been waiting for you."}
   P04: {char: patients, src: patients_2_and_1.mp3, in: 0.00, out: 3.02, fx: patients_chorus, text: "(whisper) ...you forgot us."}
   P05: {char: patients, src: patient_1.mp3, in: 3.10, out: 4.82, fx: patients_chorus, text: "We have been waiting for you. (layered chorus)"}
@@ -57,14 +58,19 @@ cues:
   N02: {char: nurse, src: nurse.mp3, in: 5.10, out: 6.52, fx: nurse_lobby, text: "What thirteenth floor?"}
   N03: {char: nurse, src: nurse.mp3, in: 6.86, out: 10.58, fx: nurse_lobby, text: "Doctor... this hospital has never had a thirteenth floor."}
   N04: {char: nurse, src: nurse.mp3, in: 11.02, out: 13.30, fx: nurse_lobby, text: "Maybe you need some rest, Doctor."}
-  N05: {char: nurse, src: nurse.mp3, in: 5.10, out: 6.52, fx: nurse_night_phone, text: "What thirteenth floor? (night, on the phone)"}
+  N05: {char: nurse, src: nurse.mp3, in: 5.10, out: 6.52, fx: nurse_night_phone, text: "What thirteenth floor? (stands in for: What? There's no thirteenth floor.)"}
   NW1: {char: nurse, src: nurse.mp3, in: 6.86, out: 7.44, fx: woman_far_call, text: "Doctor... (distant woman's call, Floor 13)"}
 
   # ---------------- Phone voice ----------------
   PH00: {char: phone_voice, src: phone_voice.mp3, in: 0.00, out: 2.40, fx: phone_earpiece, text: "Hello? Is there any doctor available?"}
-  PH01: {char: phone_voice, src: phone_voice.mp3, in: 0.00, out: 2.40, fx: phone, text: "Hello? Is there any doctor available?"}
+  PH01: {char: phone_voice, src: phone_voice.mp3, in: 0.62, out: 2.40, fx: phone, text: "Is there any doctor available?"}
   PH02: {char: phone_voice, src: phone_voice.mp3, in: 2.64, out: 4.94, fx: phone, text: "We have a new patient on the thirteenth floor."}
   PH03: {char: phone_voice, src: phone_voice.mp3, in: 5.18, out: 7.24, fx: phone_whisper, text: "His name is John K. Smith."}
+
+  # Ch.1 caller (story line not in the recordings -> TTS through the phone earpiece)
+  PH04: {char: phone_voice, tts: "Doctor Smith? We need you on the twelfth floor. A patient's condition is suddenly getting worse.",
+         fx: phone_tts, placeholder: true,
+         text: "Doctor Smith? We need you on the twelfth floor. A patient's condition is suddenly getting worse."}
 
   # ---------------- Hospital PA (not in recordings -> TTS placeholder) ----------------
   PA01: {char: pa, tts: "Doctor John K. Smith... your shift... is not over yet.", fx: pa, placeholder: true,
