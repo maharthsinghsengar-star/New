@@ -6,7 +6,7 @@ const http = require('http');
 const path = require('path');
 const fs = require('fs');
 
-const FPS = 30, DURATION = 43.6;
+const FPS = 30, DURATION = +(process.env.DUR || 43.6);
 const FONT_DIR = '/usr/share/fonts/opentype/inter';
 const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.otf': 'font/otf' };
 
