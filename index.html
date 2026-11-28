@@ -291,6 +291,9 @@
   form .btn { width: 100%; justify-content: center; font-size: 2.8cqw; padding: 3.6cqw; margin-top: 1cqh; }
   form .btn[disabled] { opacity: .6; cursor: progress; }
   .status { min-height: 3cqh; margin-top: 2cqh; text-align: center; font-size: 4cqw; font-style: italic; color: var(--maroon); }
+  .alt { display: flex; flex-direction: column; align-items: center; gap: 2.2cqw; margin-top: 1cqh; padding: 4cqw; border: 1px solid var(--hair); background: rgba(255,255,255,.5); font-style: normal; }
+  .alt p { color: var(--ink-soft); font-size: 4cqw; line-height: 1.45; font-style: italic; margin-bottom: 1cqw; }
+  .alt .btn { width: 100%; justify-content: center; font-size: 2.5cqw; padding: 3cqw; margin: 0; }
   .thanks { display: none; text-align: center; padding: 4cqh 0 1cqh; }
   .thanks .script { font-size: 12cqw; }
   .thanks p { font-size: 4.6cqw; font-weight: 300; color: var(--ink-soft); margin-top: 1.4cqh; line-height: 1.5; }
@@ -614,6 +617,8 @@
   var VENUE_Q = encodeURIComponent(VENUE);
   var EVENT_START = new Date("2026-12-01T07:45:00+05:30");
   var MAPS_URL = "https://www.google.com/maps/search/?api=1&query=" + VENUE_Q;
+  var LIVE_URL = "https://maharthsinghsengar-star.github.io/New/";
+  var IS_WEB = /^https?:$/.test(location.protocol) && location.origin !== "null";
 
   var stage = document.getElementById("stage");
   var content = document.getElementById("content");
@@ -766,13 +771,54 @@
       } else { throw new Error(res.j.message || "failed"); }
     })
     .catch(function () {
-      var body = "Name: " + name + "\nContact: " + contact + "\nBusiness: " + (business || "-") + "\n\nI confirm my presence at the Business Growth Meet, 1 Dec 2026, 7:45 AM.";
-      status.innerHTML = 'Could not send automatically. <a href="mailto:' + RSVP_EMAIL + '?subject=' +
-        encodeURIComponent("RSVP: " + name + " · Business Growth Meet") + '&body=' + encodeURIComponent(body) +
-        '" style="color:inherit">Tap here to send by email</a>.';
-      btn.disabled = false; btn.textContent = "CONFIRM MY PRESENCE";
+      // Backup route for real web pages: a plain form post, which is not subject to the browser's cross-site rules.
+      if (IS_WEB) { postViaFrame(payload, function () { done(name); }); }
+      else { offerAlternatives(name, contact, business); }
     });
   });
+
+  function done(name) {
+    document.getElementById("thanksMsg").textContent = "Dear " + name + ", your details have been received. We look forward to welcoming you on 1st December.";
+    rsvp.classList.add("sent");
+  }
+
+  function postViaFrame(payload, cb) {
+    var frameName = "rsvpFrame" + Date.now();
+    var iframe = document.createElement("iframe");
+    iframe.name = frameName; iframe.style.display = "none";
+    document.body.appendChild(iframe);
+    var f = document.createElement("form");
+    f.method = "POST"; f.action = "https://formsubmit.co/" + RSVP_EMAIL; f.target = frameName; f.style.display = "none";
+    Object.keys(payload).forEach(function (k) {
+      var i = document.createElement("input"); i.type = "hidden"; i.name = k; i.value = payload[k]; f.appendChild(i);
+    });
+    var fired = false;
+    iframe.addEventListener("load", function () { if (!fired) { fired = true; cb(); } });
+    document.body.appendChild(f);
+    f.submit();
+    setTimeout(function () { if (!fired) { fired = true; cb(); } }, 6000);
+  }
+
+  // Shown only where the page cannot reach the internet itself (e.g. opened as a file inside an app viewer).
+  function offerAlternatives(name, contact, business) {
+    var body = "Name: " + name + "\nContact: " + contact + "\nBusiness: " + (business || "-") + "\n\nI confirm my presence at the Business Growth Meet, 1 Dec 2026, 7:45 AM.";
+    var mail = "mailto:" + RSVP_EMAIL + "?subject=" + encodeURIComponent("RSVP: " + name + " · Business Growth Meet") + "&body=" + encodeURIComponent(body);
+    status.innerHTML =
+      '<div class="alt">' +
+        '<p>This preview can’t send your RSVP.<br>Open the live invitation to confirm in one tap.</p>' +
+        '<a class="btn" href="' + LIVE_URL + '#rsvp" target="_blank" rel="noopener">OPEN LIVE INVITATION</a>' +
+        '<a class="btn ghost" href="' + mail + '">SEND BY EMAIL INSTEAD</a>' +
+      '</div>';
+    btn.disabled = false; btn.textContent = "CONFIRM MY PRESENCE";
+  }
+
+  /* ---------- deep link: …#rsvp opens straight to the form ---------- */
+  if (location.hash === "#rsvp") {
+    openScroll();
+    setTimeout(function () {
+      content.scrollTo({ top: rsvp.offsetTop - 20, behavior: reduceMotion ? "auto" : "smooth" });
+    }, 2300);
+  }
 })();
 </script>
 </body>
